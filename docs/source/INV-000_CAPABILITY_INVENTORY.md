@@ -1,6 +1,6 @@
 # INV-000 — Capability inventory of prior code
 
-Status: draft v0.1. As of 2026-11-15. Sources: `CDM2/azi-hub` main at 95d4feb, `CDM2/autonomous-startup-engine` at 159c1b1.
+Status: draft v0.2 (adds conversation modes and the organization graph as their own rows). As of 2026-11-15. Sources: `CDM2/azi-hub` main at 95d4feb, `CDM2/autonomous-startup-engine` at 159c1b1.
 
 Dispositions: **Pattern** = carry the idea, rebuild the code. **Port** = move the code with changes. **Decide** = a research report settles it. **Drop** = do not carry.
 
@@ -28,7 +28,8 @@ Dispositions: **Pattern** = carry the idea, rebuild the code. **Port** = move th
 | Headless Claude Code delegation and `ralph_loop` | `core/tools/` | Superseded by the build loop | ENG-001 |
 | Container hardening and mount boundary | `docker-compose.yml` | Pattern | R-07 |
 | Deploy workflow: push to main, two test files, SSH as root | `.github/workflows/deploy.yml` | Drop | ENG-001 |
-| React client: chat modes, agent roster, 3D graph | `core/src/client/` | Port selectively, later | Phase 5 |
+| Conversation modes: single agent, group, and ordered chain (agents run in a set 1-2-3 order) | `core/src/client/hooks/useChat.ts`, `useGroupChat.ts`, `components/OrgChatPanel.tsx` | Pattern (requirement to keep all three); mechanism depends on the orchestration model | R-03 |
+| React client: agent roster, 3D knowledge graph | `core/src/client/` | Port selectively, later | Phase 5 |
 | Reservation booking (Resy, OpenTable) | `core/tools/` | Port to the personal layer first | Phase 5, milestone 1 |
 | Crypto wallet, virtual cards, balance monitors, SMS, call bots | `core/tools/`, `callbot/`, `sms/` | Instance-level; port only on need | Phase 5 |
 | CAPTCHA solver | `core/tools/captchaSolve.tool.ts` | Drop | — |
@@ -52,3 +53,9 @@ Dispositions: **Pattern** = carry the idea, rebuild the code. **Port** = move th
 | Sales and meetings apps, Streamlit agents | `deployments/` | Drop (venture-specific demos) | — |
 | Dashboard and Drizzle schemas | `dashboard/`, `shared/db/` | Reference only | — |
 | Duplicate `coordination/` folder | `coordination/` | Ignore (copy of `engine/`) | — |
+
+## Concepts not in code
+
+| Capability | Where | Disposition | Settled in |
+| --- | --- | --- | --- |
+| Organization graph ("enterprise brain"): people, agents, procedures and tools as nodes, with ownership and access as edges, and named human roles per agent | Conducting AI concept, `prior-art/gemini/CAT_HANDOFF_DOSSIER.md` part II. Never built. AZI Hub's nearest piece is the wiki knowledge graph and agent cards. | Decide | R-04 for the graph, R-05 for roles and access |

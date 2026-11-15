@@ -34,7 +34,7 @@ Manifest v1, 2026-11-15. This file says what each source is and how much authori
 | --- | --- | --- | --- |
 | P-000 | `P-000_RESTART_FINDINGS_AND_PLAN.md` | 2026-11-15 | Proposed |
 | V-000 | `V-000_VISION_BASELINE_AND_DRIFT_AUDIT.md` | 0.2 | Proposed; founder answers folded in; accepted when its pull request is merged (Gate G0) |
-| INV-000 | `INV-000_CAPABILITY_INVENTORY.md` | 0.1 | Draft |
+| INV-000 | `INV-000_CAPABILITY_INVENTORY.md` | 0.2 | Draft |
 
 ## Rules
 
