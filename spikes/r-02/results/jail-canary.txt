@@ -1,0 +1,27 @@
+# Jail canary, run 2026-11-16T01:36Z. Command: spikes/r-02/jail/jail.sh bash canary.sh
+# Every probe must print 'held'. A 'LEAK' line fails the jail.
+whoami: spike uid=2000 cwd=/srv/spike
+env names: HOME LANG PATH PWD SHLVL USER _ 
+held  credential-like env var (GH_TOKEN, AWS_*, ANTHROPIC_*, CLAUDE_*)
+held  session home has content
+held  read Toveli clone
+held  read azi-hub clone
+held  read azi-hub-v2 clone
+held  read signing key dir
+held  root home has content
+held  host /tmp content visible
+held  see a root-owned process
+held  reach credential proxy on loopback:35165
+held  reach github.com by address
+held  reach api.anthropic.com by address
+held  resolve a hostname
+held  running as root
+held  write outside jail home (/srv, /etc, /usr/local)
+interfaces in this namespace: lo 
+processes visible: 4
+exit code: 0
+
+# Control, outside the jail: the same resources are reachable, so the probes are meaningful.
+session home entries: 5
+credential proxy on loopback: reachable
+credential-like env names present: 93
