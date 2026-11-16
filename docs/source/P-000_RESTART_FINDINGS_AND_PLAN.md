@@ -2,6 +2,8 @@
 
 Status: proposed, not accepted. As of 2026-11-15. Markdown copy of the Claude doc of the same name.
 
+Amended 2026-11-15, after R-01 was accepted. Two additions are appended below and dated: rows for the landscape table and notes on the research program. No earlier text is changed. This file was merged with pull request #1 (commit 2baba1b). Gate G0 accepted V-000; P-000 has no acceptance record of its own and is the plan in use.
+
 ## Bottom line
 
 Start a new repository, keep AZI Hub running as prior art and as the first migration test, and build the first slice for yourself rather than for an unvalidated buyer.
@@ -104,6 +106,14 @@ First pass from search results; report R-01 does it properly.
 | Protocols | MCP and A2A both under the Linux Foundation's [Agentic AI Foundation](https://axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards) since August 2026. |
 | Graph store | [Kuzu archived](https://www.theregister.com/2025/10/14/kuzudb_abandoned/) October 2025. |
 
+Rows added 2026-11-15 from R-01 (its sections 1 and 10). Evidence IDs point to `../research/EVIDENCE_LEDGER.md`.
+
+| Area | State in November 2026 |
+| --- | --- |
+| Hosted personal agents | Claude Duet (research preview since 2026-10-21, individual plans), ChatGPT dots (since 2026-09-29, from $100 a month), Meta's Muse and Muse for Small Business (September 2026, free to $100 a month) and Ariso's Ari. Each is one agent per person with a small memory. None was found with several organizations under one owner (E-27 to E-31, E-65). |
+| Agent memory layers | Cognee, Mem0, Zep, Letta and MintMCP sell scoped memory for fleets of agents as components: permissions per dataset, user and agent scopes, group access. None was found in the tiered form of a person, a holding organization and sub-organizations (E-67). |
+| AI automation agencies | Many small firms quote $1,500 to $5,000 to set up one or two workflows for a small business and $500 to $1,500 a month to maintain them. These are quoted prices, not purchase data (E-72). |
+
 Candidates for what vendors do not cover, to test: a person-owned layer that connects to organizations; a holding layer with brokered sharing between sub-organizations; self-improvement gated by evidence; verification of outcomes.
 
 ## Restart shape
@@ -149,6 +159,13 @@ Route B removes the customer and pricing report, licensing and blank-tenant pack
 | R-09 Brownfield onboarding | Import of an existing organization, with AZI Hub as the case. |
 
 R-01 and R-02 run first as the route check. R-05 follows on either route. Desk research never counts as customer validation.
+
+Notes added 2026-11-15. R-01 section 10 proposed scope notes for four reports. R-02's are in effect on Cole's instruction of 2026-11-15. The others apply when those reports are scoped.
+
+- **R-02.** Besides the desk research in the table above, spike R-01 option D against the six pass criteria in R-01 section 7, in a throwaway environment, with a Toveli task as the test job and option E as the fallback. Cole added two criteria: (7) a governance coverage table that sorts each required control into free in Paperclip, paid edition only, or ours to build; (8) a codebase map of Toveli, scored against a plain coding agent as the N-04 baseline.
+- **R-04.** Generalize AZI Hub's visibility model from a hard-coded list to the tier map. Decide wiki, retrieval or both by collection size. Include Paperclip's LLM Wiki plugin in the comparison. Decide what the holding tier reads of a sub-organization's codebase map.
+- **R-06.** Keep the evaluation outside what the improvement loop can edit.
+- **R-08.** After the pilots on Cole's own ventures, two or three paid local pilots, plus interviews where a pilot is declined.
 
 ## Build, review, integrate loop
 

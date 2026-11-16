@@ -1,6 +1,8 @@
 # Source manifest — azi-hub-v2
 
-Manifest v1, 2026-11-15. This file says what each source is and how much authority it has. It is metadata, not evidence.
+Manifest v1.1, 2026-11-15. This file says what each source is and how much authority it has. It is metadata, not evidence.
+
+v1.1 amends v1 of the same day, on the founder's instruction in the R-02 brief: the status cells of the canonical artifacts are brought up to date with the two merges, and S-015 is added.
 
 ## Source classes
 
@@ -29,18 +31,21 @@ Manifest v1, 2026-11-15. This file says what each source is and how much authori
 | S-012 | `CDM2/toveli` ENG-001, A-001, A-002, repository controls | Process template | Structure borrowed. No product content carried over. |
 | S-013 | `paperclipai/paperclip` at da8cfda (2026-11-15), MIT | Research evidence | Read as source for R-01. Not installed, not run, not copied into this repository. |
 | S-014 | External web sources gathered 2026-11-15 for R-01 | Research evidence | Recorded claim by claim in `../research/EVIDENCE_LEDGER.md`, each row with how it was read and a confidence grade. Rows E-01 to E-08, E-47 to E-53 and E-73 are S-013; rows E-57 to E-60 and E-74 are S-004. |
+| S-015 | Founder inputs after the R-01 merge and the brief for R-02, 2026-11-15 (chat) | Founder input | Same authority as S-001. Governance in this version and the codebase map. Recorded in V-000 section 2a as F-23 and F-24. |
 
 ## Canonical artifacts
 
 | ID | File | Version | Status |
 | --- | --- | --- | --- |
-| P-000 | `P-000_RESTART_FINDINGS_AND_PLAN.md` | 2026-11-15 | Proposed |
-| V-000 | `V-000_VISION_BASELINE_AND_DRIFT_AUDIT.md` | 0.2 | Proposed; founder answers folded in; accepted when its pull request is merged (Gate G0) |
-| INV-000 | `INV-000_CAPABILITY_INVENTORY.md` | 0.2 | Draft |
-| R-01 | `../research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` | 1.0, 2026-11-15 | Final for acceptance. Accepted when its pull request is merged. Not attacked in a separate review session. v0.2 added a second research pass and a reading of S-004; v1.0 folds in the founder's answers of 2026-11-15. |
-| LEDGER | `../research/EVIDENCE_LEDGER.md` | v1.2, 2026-11-15 | Open, 74 rows. Rows are added by each research report. |
+| P-000 | `P-000_RESTART_FINDINGS_AND_PLAN.md` | 2026-11-15, amended the same day | The plan in use. Merged with pull request #1 (2baba1b). Gate G0 accepted V-000; P-000 has no acceptance record of its own. The amendments of 2026-11-15 are proposed in the pull request that carries V-000 v0.3. |
+| V-000 | `V-000_VISION_BASELINE_AND_DRIFT_AUDIT.md` | 0.3 | v0.2 accepted at Gate G0: pull request #1 merged on 2026-11-15 (2baba1b). v0.3 proposed; accepted when its pull request is merged. |
+| INV-000 | `INV-000_CAPABILITY_INVENTORY.md` | 0.3 | Draft. v0.3 appends two amendments from R-01 section 10 and three rows for capability C-23. |
+| R-01 | `../research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` | 1.0, 2026-11-15 | Accepted: pull request #2 squash-merged on 2026-11-15 (546715c). Not attacked in a separate review session. v0.2 added a second research pass and a reading of S-004; v1.0 folds in the founder's answers of 2026-11-15. |
+| LEDGER | `../research/EVIDENCE_LEDGER.md` | v1.2, 2026-11-15 | Open, 74 rows; the next row is E-75. Rows are added by each research report. |
 
 Gate G0 note: pull request #1, which carried V-000 v0.2, was merged on 2026-11-15 (commit 2baba1b). The status cells above for P-000 and V-000, and V-000's own acceptance record, were written before that merge and are left for the founder to update.
+
+Update, 2026-11-15: the founder asked for those records to be brought up to date. The status cells above, V-000's acceptance record and the README status now reflect pull request #1 (2baba1b) and pull request #2 (546715c). The note above is kept as written.
 
 ## Rules
 
