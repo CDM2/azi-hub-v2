@@ -1,6 +1,6 @@
 # Evidence ledger — azi-hub-v2
 
-Ledger v1.1. Opened 2026-11-15 with report R-01; rows E-47 to E-72 were added the same day for R-01 v0.2. One row per sourced claim. Research reports cite rows by ID. Rows are added, never renumbered; a row that turns out wrong is struck through and kept.
+Ledger v1.2. Opened 2026-11-15 with report R-01; rows E-47 to E-72 were added the same day for R-01 v0.2, and E-73 and E-74 for v1.0. One row per sourced claim. Research reports cite rows by ID. Rows are added, never renumbered; a row that turns out wrong is struck through and kept.
 
 All rows below were gathered on 2026-11-15 for R-01. Rows E-01 to E-46 belong to the first pass, E-47 to E-72 to the second.
 
@@ -162,8 +162,16 @@ Repository `CDM2/azi-hub`, main at `95d4feb` (2026-06-23). Read, not run.
 | E-71 | Small-business use of AI is real but shallow. The Census Bureau's business survey has 24.6% of US employer businesses using AI in a business function in the period ending 2026-10-18, up from 19.8% in May. McKinsey has smaller organizations scaling agents flat at 22% year on year, against 40% of large ones. An advocacy group's survey has 58% of small employers using AI agents regularly or occasionally. Bank transaction data from December 2025 has 17.7% of small businesses having paid for an AI tool. | [hostinger.com](https://www.hostinger.com/tutorials/ai-agent-for-business/) (reports the Census figure), [mckinsey.com](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), [sbecouncil.org](https://sbecouncil.org/2026/09/30/ai-agents-are-moving-into-the-small-business-mainstream/), [factoryjet.com](https://factoryjet.com/blog/ai-adoption-us-small-businesses-2026) | Excerpt | Survey, Blog | Med | H-A1, H-A2, RANK |
 | E-72 | Agencies that automate small businesses with AI quote $1,500 to $5,000 to set up one or two workflows and $500 to $1,500 a month to maintain them, across several 2026 pricing guides. Agencies selling to local businesses on one shared platform quote $1,500 to $3,000 and $500 to $1,500 a month for an AI receptionist, missed-call text-back, database reactivation and a review engine. These are quoted prices and guides, not purchase data. | [taskip.net](https://taskip.net/ai-automation-agency-pricing/), [cloudmotiv.ai](https://cloudmotiv.ai/ai-automation-agency-pricing-usa), [automatonagency.com](https://automatonagency.com/insights/creative-technology-agency-cost), [rocketlauncher.ai](https://rocketlauncher.ai/ai-automation-agency) | Excerpt | Vendor blog | Med | H-A2, RANK |
 
+### Size of the two codebases (added for R-01 v1.0)
+
+| ID | Claim | Source | Read | Type | Conf. | Bears on |
+| --- | --- | --- | --- | --- | --- | --- |
+| E-73 | Paperclip holds about 1.5 million lines of TypeScript outside its tests, in about 5,600 files: roughly 717,000 in the server, 404,000 in the interface, 374,000 in packages and 30,000 in the command line. It also has 486 database migrations, 12 adapter packages and 34 release-note files. Counted with `git ls-files` and `wc -l`, leaving out test, story and fixture files; the largest files are hand-written modules, not generated code. | `paperclipai/paperclip` at `da8cfda` | Code | Primary | High | OPT |
+| E-74 | AZI Hub holds about 29,400 lines of TypeScript: roughly 13,500 in the server, 7,100 in tools and 8,900 in the client. Counted with `wc -l`. | `CDM2/azi-hub` at `95d4feb` | Code | Prior code | High | OPT |
+
 ## Not in this ledger
 
 - Customer interviews. None were held. Nothing in this ledger is customer validation.
+- Founder input. Cole's answers and mission statement of 2026-11-15 are recorded in R-01 section 11 under S-001. They state intent and are not evidence rows.
 - Hands-on use of any product. Paperclip and AZI Hub were read as source. No control plane, personal agent or company builder was signed up for or run.
 - Health-data connectors, authorization engines, durable-execution engines and payment rails. R-01 did not research them; R-02, R-04 and R-05 own those.

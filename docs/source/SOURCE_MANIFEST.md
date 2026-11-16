@@ -28,7 +28,7 @@ Manifest v1, 2026-11-15. This file says what each source is and how much authori
 | S-011 | `prior-art/gemini/CAT_HANDOFF_DOSSIER.md` | Model-synthesized artifact | Not a faithful summary. Use S-006 to S-009 where they differ. |
 | S-012 | `CDM2/toveli` ENG-001, A-001, A-002, repository controls | Process template | Structure borrowed. No product content carried over. |
 | S-013 | `paperclipai/paperclip` at da8cfda (2026-11-15), MIT | Research evidence | Read as source for R-01. Not installed, not run, not copied into this repository. |
-| S-014 | External web sources gathered 2026-11-15 for R-01 | Research evidence | Recorded claim by claim in `../research/EVIDENCE_LEDGER.md`, each row with how it was read and a confidence grade. Rows E-01 to E-08 and E-47 to E-53 are S-013; rows E-57 to E-60 are S-004. |
+| S-014 | External web sources gathered 2026-11-15 for R-01 | Research evidence | Recorded claim by claim in `../research/EVIDENCE_LEDGER.md`, each row with how it was read and a confidence grade. Rows E-01 to E-08, E-47 to E-53 and E-73 are S-013; rows E-57 to E-60 and E-74 are S-004. |
 
 ## Canonical artifacts
 
@@ -37,8 +37,8 @@ Manifest v1, 2026-11-15. This file says what each source is and how much authori
 | P-000 | `P-000_RESTART_FINDINGS_AND_PLAN.md` | 2026-11-15 | Proposed |
 | V-000 | `V-000_VISION_BASELINE_AND_DRIFT_AUDIT.md` | 0.2 | Proposed; founder answers folded in; accepted when its pull request is merged (Gate G0) |
 | INV-000 | `INV-000_CAPABILITY_INVENTORY.md` | 0.2 | Draft |
-| R-01 | `../research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` | 0.2, 2026-11-15 | Draft for review. Not accepted. Not yet attacked in a separate review session. v0.2 adds a second research pass and a reading of S-004 after the founder's review of v0.1. |
-| LEDGER | `../research/EVIDENCE_LEDGER.md` | v1.1, 2026-11-15 | Open, 72 rows. Rows are added by each research report. |
+| R-01 | `../research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` | 1.0, 2026-11-15 | Final for acceptance. Accepted when its pull request is merged. Not attacked in a separate review session. v0.2 added a second research pass and a reading of S-004; v1.0 folds in the founder's answers of 2026-11-15. |
+| LEDGER | `../research/EVIDENCE_LEDGER.md` | v1.2, 2026-11-15 | Open, 74 rows. Rows are added by each research report. |
 
 Gate G0 note: pull request #1, which carried V-000 v0.2, was merged on 2026-11-15 (commit 2baba1b). The status cells above for P-000 and V-000, and V-000's own acceptance record, were written before that merge and are left for the founder to update.
 
