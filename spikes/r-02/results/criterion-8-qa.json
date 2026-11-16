@@ -1,0 +1,3383 @@
+{
+ "model": "claude-sonnet-5-5",
+ "commit": "0abafdc",
+ "runs_per_arm": 2,
+ "questions": 20,
+ "max_turns": 24,
+ "prices_usd_per_million": {
+  "in": 2.0,
+  "out": 10.0,
+  "cache_write": 2.5,
+  "cache_read": 0.1
+ },
+ "spend_this_run_usd": 1.204,
+ "spend_total_usd": 1.336,
+ "errors": [],
+ "summary": {
+  "a": {
+   "name": "map only",
+   "answers": 40,
+   "correct": 32,
+   "accuracy": 0.8,
+   "correct_per_run": {
+    "1": "16/20",
+    "2": "16/20"
+   },
+   "mean_input_tokens": 11740,
+   "mean_output_tokens": 455,
+   "mean_seconds": 7.1,
+   "mean_tool_calls": 3.6,
+   "mean_cost_usd": 0.011,
+   "total_cost_usd": 0.441,
+   "by_category": {
+    "build": "12/12",
+    "code detail": "2/6",
+    "dependencies": "10/10",
+    "entry points": "4/4",
+    "what a file does": "2/4",
+    "where things live": "2/4"
+   }
+  },
+  "b": {
+   "name": "map, then raw code",
+   "answers": 40,
+   "correct": 40,
+   "accuracy": 1.0,
+   "correct_per_run": {
+    "1": "20/20",
+    "2": "20/20"
+   },
+   "mean_input_tokens": 9875,
+   "mean_output_tokens": 399,
+   "mean_seconds": 4.7,
+   "mean_tool_calls": 2.9,
+   "mean_cost_usd": 0.0098,
+   "total_cost_usd": 0.391,
+   "by_category": {
+    "build": "12/12",
+    "code detail": "6/6",
+    "dependencies": "10/10",
+    "entry points": "4/4",
+    "what a file does": "4/4",
+    "where things live": "4/4"
+   }
+  },
+  "c": {
+   "name": "plain agent, no map",
+   "answers": 40,
+   "correct": 40,
+   "accuracy": 1.0,
+   "correct_per_run": {
+    "1": "20/20",
+    "2": "20/20"
+   },
+   "mean_input_tokens": 6718,
+   "mean_output_tokens": 527,
+   "mean_seconds": 6.7,
+   "mean_tool_calls": 4.1,
+   "mean_cost_usd": 0.0093,
+   "total_cost_usd": 0.372,
+   "by_category": {
+    "build": "12/12",
+    "code detail": "6/6",
+    "dependencies": "10/10",
+    "entry points": "4/4",
+    "what a file does": "4/4",
+    "where things live": "4/4"
+   }
+  }
+ },
+ "rows": [
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q01",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "pnpm@11.28.2, pinned in the root package.json `packageManager` field",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4444,
+   "output_tokens": 203,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 4438,
+    "output": 203
+   },
+   "cost_usd": 0.00249,
+   "seconds": 3.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q02",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": ".nvmrc pins Node 24.22.2; root package.json engines allows node \">=24.21.0 <25\" (and pnpm \">=11.28.2 <12\").",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 8744,
+   "output_tokens": 425,
+   "usage": {
+    "input": 8,
+    "cache_write": 3287,
+    "cache_read": 5449,
+    "output": 425
+   },
+   "cost_usd": 0.01303,
+   "seconds": 4.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q03",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "check \u2014 chains typecheck, lint, test",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4438,
+   "output_tokens": 122,
+   "usage": {
+    "input": 6,
+    "cache_write": 2852,
+    "cache_read": 1580,
+    "output": 122
+   },
+   "cost_usd": 0.00852,
+   "seconds": 2.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q04",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "ci.yml defines job \"api-checks\" (id `api`); mobile.yml defines job \"mobile-checks\" (id `mobile`)",
+   "turns": 2,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_list": 1,
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 5290,
+   "output_tokens": 373,
+   "usage": {
+    "input": 6,
+    "cache_write": 3702,
+    "cache_read": 1582,
+    "output": 373
+   },
+   "cost_usd": 0.01316,
+   "seconds": 6.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q05",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Workspace package `@toveli/db` (packages/db); its `migrate` script runs via `tsx` (`tsx src/migrate.ts`); source file `packages/db/src/migrate.ts`.",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 8539,
+   "output_tokens": 394,
+   "usage": {
+    "input": 8,
+    "cache_write": 3302,
+    "cache_read": 5229,
+    "output": 394
+   },
+   "cost_usd": 0.01273,
+   "seconds": 7.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q06",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "No \u2014 no production deployment workflow and no API image Dockerfile; the only Dockerfile is `.devcontainer/Dockerfile` (the dev container).",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 4765,
+   "output_tokens": 385,
+   "usage": {
+    "input": 6,
+    "cache_write": 3146,
+    "cache_read": 1613,
+    "output": 385
+   },
+   "cost_usd": 0.01189,
+   "seconds": 3.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q07",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'db', 'domain'] want ['adapters', 'contracts', 'db', 'domain']",
+   "answer": "adapters, contracts, db, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 6181,
+   "output_tokens": 186,
+   "usage": {
+    "input": 6,
+    "cache_write": 4592,
+    "cache_read": 1583,
+    "output": 186
+   },
+   "cost_usd": 0.01351,
+   "seconds": 7.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q08",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'domain'] want ['adapters', 'contracts', 'domain']",
+   "answer": "adapters, contracts, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 7376,
+   "output_tokens": 177,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 7370,
+    "output": 177
+   },
+   "cost_usd": 0.00252,
+   "seconds": 2.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q09",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['contracts', 'domain', 'mobile'] want ['contracts', 'domain', 'mobile']",
+   "answer": "mobile, contracts, domain",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4456,
+   "output_tokens": 112,
+   "usage": {
+    "input": 6,
+    "cache_write": 2861,
+    "cache_read": 1589,
+    "output": 112
+   },
+   "cost_usd": 0.00844,
+   "seconds": 3.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q10",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'api', 'db', 'worker'] want ['adapters', 'api', 'db', 'worker']",
+   "answer": "adapters, api, db, worker",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4470,
+   "output_tokens": 178,
+   "usage": {
+    "input": 6,
+    "cache_write": 2868,
+    "cache_read": 1596,
+    "output": 178
+   },
+   "cost_usd": 0.00912,
+   "seconds": 3.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q11",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Drizzle ORM (drizzle-orm 0.45.4; migration generator drizzle-kit 0.31.11), configured in packages/db/drizzle.config.ts",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 7384,
+   "output_tokens": 307,
+   "usage": {
+    "input": 6,
+    "cache_write": 5791,
+    "cache_read": 1587,
+    "output": 307
+   },
+   "cost_usd": 0.01772,
+   "seconds": 7.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q12",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Entry file: apps/api/src/main.ts; the exported function buildApp in apps/api/src/app.ts builds the Fastify app.",
+   "turns": 4,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_get": 2,
+    "map_overview": 1
+   },
+   "input_tokens": 13001,
+   "output_tokens": 501,
+   "usage": {
+    "input": 10,
+    "cache_write": 3806,
+    "cache_read": 9185,
+    "output": 501
+   },
+   "cost_usd": 0.01546,
+   "seconds": 7.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q13",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "apps/mobile/index.ts; it calls registerRootComponent (from expo) with the App component from App.tsx",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 8378,
+   "output_tokens": 293,
+   "usage": {
+    "input": 8,
+    "cache_write": 3177,
+    "cache_read": 5193,
+    "output": 293
+   },
+   "cost_usd": 0.01141,
+   "seconds": 8.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q14",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "It guards destructive test DB helpers: `assertSafeTestDatabase` throws `UnsafeTestDatabaseError` unless the connection target is a safe test database (e.g. loopback host), so tests can't wipe a real database. It's used by test-db.ts and several tests.",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_get": 1
+   },
+   "input_tokens": 2131,
+   "output_tokens": 538,
+   "usage": {
+    "input": 6,
+    "cache_write": 547,
+    "cache_read": 1578,
+    "output": 538
+   },
+   "cost_usd": 0.00692,
+   "seconds": 10.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q15",
+   "category": "where things live",
+   "correct": false,
+   "score": 0.333,
+   "detail": "groups matched 1/3",
+   "answer": "apps/api/src/auth/rate-limits.ts defines them (OTP_RATE_LIMITS); the per-email limit and window are not recorded in the map, so I could not determine them.",
+   "turns": 5,
+   "tool_calls": 6,
+   "tools_used": {
+    "map_get": 2,
+    "map_search": 4
+   },
+   "input_tokens": 9039,
+   "output_tokens": 694,
+   "usage": {
+    "input": 12,
+    "cache_write": 1868,
+    "cache_read": 7159,
+    "output": 694
+   },
+   "cost_usd": 0.01235,
+   "seconds": 6.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q16",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "packages/db/migrations/0005_core_records.sql \u2014 15 CREATE TABLE statements",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 6640,
+   "output_tokens": 363,
+   "usage": {
+    "input": 6,
+    "cache_write": 5045,
+    "cache_read": 1589,
+    "output": 363
+   },
+   "cost_usd": 0.01641,
+   "seconds": 3.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q17",
+   "category": "what a file does",
+   "correct": false,
+   "score": 0.5,
+   "detail": "groups matched 1/2",
+   "answer": "Not determinable from the map: it says the runner wraps every handler in the capability gate, but not what happens to the handler on denial. Likely not invoked, but that is unconfirmed.",
+   "turns": 6,
+   "tool_calls": 10,
+   "tools_used": {
+    "map_get": 7,
+    "map_overview": 1,
+    "map_search": 2
+   },
+   "input_tokens": 30655,
+   "output_tokens": 1086,
+   "usage": {
+    "input": 14,
+    "cache_write": 7138,
+    "cache_read": 23503,
+    "output": 1086
+   },
+   "cost_usd": 0.03108,
+   "seconds": 13.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q18",
+   "category": "code detail",
+   "correct": false,
+   "score": 0.0,
+   "detail": "groups matched 0/1",
+   "answer": "Undetermined: the codebase map doesn't record the status code sent for client_blocked; it would be in sendGateDenial in apps/api/src/gates/plugin.ts",
+   "turns": 6,
+   "tool_calls": 10,
+   "tools_used": {
+    "map_get": 4,
+    "map_overview": 1,
+    "map_search": 5
+   },
+   "input_tokens": 31334,
+   "output_tokens": 888,
+   "usage": {
+    "input": 14,
+    "cache_write": 1892,
+    "cache_read": 29428,
+    "output": 888
+   },
+   "cost_usd": 0.01658,
+   "seconds": 10.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q19",
+   "category": "code detail",
+   "correct": false,
+   "score": 0.0,
+   "detail": "groups matched 0/2",
+   "answer": "Could not determine from the codebase map: it doesn't show the default PORT/HOST values, which would be in apps/api/src/config.ts (loadConfig).",
+   "turns": 4,
+   "tool_calls": 8,
+   "tools_used": {
+    "map_get": 5,
+    "map_overview": 1,
+    "map_search": 2
+   },
+   "input_tokens": 27966,
+   "output_tokens": 718,
+   "usage": {
+    "input": 10,
+    "cache_write": 10336,
+    "cache_read": 17620,
+    "output": 718
+   },
+   "cost_usd": 0.0348,
+   "seconds": 8.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 1,
+   "id": "Q20",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "Likely `fake` and `supabase` (inferred, not verified); with supabase, likely SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY become required (inferred; config.ts logic not visible in map)",
+   "turns": 9,
+   "tool_calls": 11,
+   "tools_used": {
+    "map_get": 5,
+    "map_list": 2,
+    "map_overview": 1,
+    "map_search": 3
+   },
+   "input_tokens": 44268,
+   "output_tokens": 1201,
+   "usage": {
+    "input": 20,
+    "cache_write": 6722,
+    "cache_read": 37526,
+    "output": 1201
+   },
+   "cost_usd": 0.03261,
+   "seconds": 13.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q01",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "pnpm@11.28.2, pinned in the root package.json (`packageManager` field)",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4444,
+   "output_tokens": 199,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 4438,
+    "output": 199
+   },
+   "cost_usd": 0.00245,
+   "seconds": 6.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q02",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": ".nvmrc pins Node 24.22.2; root package.json engines allows node \">=24.21.0 <25\" (and pnpm \">=11.28.2 <12\")",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 8757,
+   "output_tokens": 387,
+   "usage": {
+    "input": 8,
+    "cache_write": 186,
+    "cache_read": 8563,
+    "output": 387
+   },
+   "cost_usd": 0.00521,
+   "seconds": 3.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q03",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "check \u2014 chains typecheck, lint, test (`pnpm typecheck && pnpm lint && pnpm test`)",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4438,
+   "output_tokens": 118,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 4432,
+    "output": 118
+   },
+   "cost_usd": 0.00164,
+   "seconds": 4.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q04",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": ".github/workflows/ci.yml defines job `api` (name `api-checks`); .github/workflows/mobile.yml defines job `mobile` (name `mobile-checks`)",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_list": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 4625,
+   "output_tokens": 306,
+   "usage": {
+    "input": 6,
+    "cache_write": 2941,
+    "cache_read": 1678,
+    "output": 306
+   },
+   "cost_usd": 0.01059,
+   "seconds": 10.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q05",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Workspace package `@toveli/db` (packages/db); root `db:migrate` runs `pnpm --filter @toveli/db run migrate`, which runs `tsx src/migrate.ts`, i.e. `packages/db/src/migrate.ts`.",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 8539,
+   "output_tokens": 426,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 8531,
+    "output": 426
+   },
+   "cost_usd": 0.00513,
+   "seconds": 7.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q06",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "No \u2014 no production deployment workflow and no API image Dockerfile; the only Dockerfile is .devcontainer/Dockerfile (dev container).",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 4765,
+   "output_tokens": 341,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 4759,
+    "output": 341
+   },
+   "cost_usd": 0.0039,
+   "seconds": 3.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q07",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'db', 'domain'] want ['adapters', 'contracts', 'db', 'domain']",
+   "answer": "adapters, contracts, db, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 6181,
+   "output_tokens": 186,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 6175,
+    "output": 186
+   },
+   "cost_usd": 0.00249,
+   "seconds": 3.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q08",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'domain'] want ['adapters', 'contracts', 'domain']",
+   "answer": "adapters, contracts, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 7376,
+   "output_tokens": 169,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 7370,
+    "output": 169
+   },
+   "cost_usd": 0.00244,
+   "seconds": 2.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q09",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['contracts', 'domain', 'mobile'] want ['contracts', 'domain', 'mobile']",
+   "answer": "mobile, contracts, domain",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4456,
+   "output_tokens": 99,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 4450,
+    "output": 99
+   },
+   "cost_usd": 0.00145,
+   "seconds": 6.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q10",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'api', 'db', 'worker'] want ['adapters', 'api', 'db', 'worker']",
+   "answer": "adapters, api, db, worker",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 4470,
+   "output_tokens": 142,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 4464,
+    "output": 142
+   },
+   "cost_usd": 0.00188,
+   "seconds": 3.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q11",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Drizzle ORM (drizzle-orm 0.45.4; migrations via drizzle-kit 0.31.11), configured in packages/db/drizzle.config.ts",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 7384,
+   "output_tokens": 291,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 7378,
+    "output": 291
+   },
+   "cost_usd": 0.00366,
+   "seconds": 6.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q12",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/main.ts is the entry; buildApp, exported from apps/api/src/app.ts, builds the Fastify app",
+   "turns": 4,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_get": 2,
+    "map_overview": 1
+   },
+   "input_tokens": 13001,
+   "output_tokens": 495,
+   "usage": {
+    "input": 10,
+    "cache_write": 0,
+    "cache_read": 12991,
+    "output": 495
+   },
+   "cost_usd": 0.00627,
+   "seconds": 6.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q13",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "apps/mobile/index.ts \u2014 it calls registerRootComponent (from expo) with the App component from App.tsx",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 8378,
+   "output_tokens": 251,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 8370,
+    "output": 251
+   },
+   "cost_usd": 0.00336,
+   "seconds": 7.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q14",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "It guards destructive test DB helpers (used by test-db.ts and several tests). It validates the connection target, with a loopback check, and throws UnsafeTestDatabaseError so tests can't wipe a non-test or remote database.",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_get": 1
+   },
+   "input_tokens": 2131,
+   "output_tokens": 575,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 2125,
+    "output": 575
+   },
+   "cost_usd": 0.00597,
+   "seconds": 6.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q15",
+   "category": "where things live",
+   "correct": false,
+   "score": 0.333,
+   "detail": "groups matched 1/3",
+   "answer": "Defined in apps/api/src/auth/rate-limits.ts (OTP_RATE_LIMITS); the per-email limit and window aren't stated in the map, so I couldn't determine them.",
+   "turns": 7,
+   "tool_calls": 8,
+   "tools_used": {
+    "map_get": 4,
+    "map_search": 4
+   },
+   "input_tokens": 15451,
+   "output_tokens": 913,
+   "usage": {
+    "input": 16,
+    "cache_write": 1099,
+    "cache_read": 14336,
+    "output": 913
+   },
+   "cost_usd": 0.01334,
+   "seconds": 8.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q16",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "packages/db/migrations/0005_core_records.sql \u2014 15 CREATE TABLE statements",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 6640,
+   "output_tokens": 332,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 6634,
+    "output": 332
+   },
+   "cost_usd": 0.004,
+   "seconds": 2.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q17",
+   "category": "what a file does",
+   "correct": false,
+   "score": 0.5,
+   "detail": "groups matched 1/2",
+   "answer": "Undetermined from the map: it only says every handler is wrapped in the capability gate. It gives no detail on what happens to the handler on denial (likely not invoked, but unconfirmed).",
+   "turns": 5,
+   "tool_calls": 8,
+   "tools_used": {
+    "map_get": 6,
+    "map_search": 2
+   },
+   "input_tokens": 12699,
+   "output_tokens": 913,
+   "usage": {
+    "input": 12,
+    "cache_write": 3389,
+    "cache_read": 9298,
+    "output": 913
+   },
+   "cost_usd": 0.01856,
+   "seconds": 14.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q18",
+   "category": "code detail",
+   "correct": false,
+   "score": 0.0,
+   "detail": "groups matched 0/1",
+   "answer": "Could not be determined from the map; it doesn't state the status code, which is set in apps/api/src/gates/plugin.ts (sendGateDenial).",
+   "turns": 5,
+   "tool_calls": 8,
+   "tools_used": {
+    "map_get": 4,
+    "map_overview": 1,
+    "map_search": 3
+   },
+   "input_tokens": 22827,
+   "output_tokens": 728,
+   "usage": {
+    "input": 12,
+    "cache_write": 1522,
+    "cache_read": 21293,
+    "output": 728
+   },
+   "cost_usd": 0.01324,
+   "seconds": 13.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q19",
+   "category": "code detail",
+   "correct": false,
+   "score": 0.0,
+   "detail": "groups matched 0/2",
+   "answer": "Could not be determined from the map; the PORT/HOST defaults in apps/api/src/config.ts are not recorded.",
+   "turns": 5,
+   "tool_calls": 11,
+   "tools_used": {
+    "map_get": 5,
+    "map_overview": 1,
+    "map_search": 5
+   },
+   "input_tokens": 39336,
+   "output_tokens": 875,
+   "usage": {
+    "input": 12,
+    "cache_write": 2721,
+    "cache_read": 36603,
+    "output": 875
+   },
+   "cost_usd": 0.01924,
+   "seconds": 11.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "a",
+   "run": 2,
+   "id": "Q20",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "Likely `fake` and `supabase` (unconfirmed); setting `supabase` most likely requires SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY. The map doesn't show the code, so I couldn't verify this.",
+   "turns": 9,
+   "tool_calls": 11,
+   "tools_used": {
+    "map_get": 5,
+    "map_list": 2,
+    "map_overview": 1,
+    "map_search": 3
+   },
+   "input_tokens": 44201,
+   "output_tokens": 1329,
+   "usage": {
+    "input": 20,
+    "cache_write": 3137,
+    "cache_read": 41044,
+    "output": 1329
+   },
+   "cost_usd": 0.02528,
+   "seconds": 21.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q01",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "pnpm@11.28.2, pinned in the root package.json (`packageManager` field)",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 9336,
+   "output_tokens": 298,
+   "usage": {
+    "input": 8,
+    "cache_write": 143,
+    "cache_read": 9185,
+    "output": 298
+   },
+   "cost_usd": 0.00427,
+   "seconds": 4.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q02",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": ".nvmrc pins 24.22.2; root package.json engines allows node \">=24.21.0 <25\"",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "map_overview": 1,
+    "read_file": 1
+   },
+   "input_tokens": 9683,
+   "output_tokens": 385,
+   "usage": {
+    "input": 8,
+    "cache_write": 3221,
+    "cache_read": 6454,
+    "output": 385
+   },
+   "cost_usd": 0.01256,
+   "seconds": 8.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q03",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "check \u2014 chains typecheck, lint, test (`pnpm typecheck && pnpm lint && pnpm test`)",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5204,
+   "output_tokens": 165,
+   "usage": {
+    "input": 6,
+    "cache_write": 2852,
+    "cache_read": 2346,
+    "output": 165
+   },
+   "cost_usd": 0.00903,
+   "seconds": 2.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q04",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "ci.yml defines job \"api-checks\" (id api); mobile.yml defines job \"mobile-checks\" (id mobile)",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 10067,
+   "output_tokens": 436,
+   "usage": {
+    "input": 8,
+    "cache_write": 3603,
+    "cache_read": 6456,
+    "output": 436
+   },
+   "cost_usd": 0.01403,
+   "seconds": 5.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q05",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Root script runs `pnpm --filter @toveli/db run migrate`; package `@toveli/db` (packages/db); its `migrate` script runs `tsx src/migrate.ts`; source file `packages/db/src/migrate.ts`.",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5258,
+   "output_tokens": 377,
+   "usage": {
+    "input": 6,
+    "cache_write": 2879,
+    "cache_read": 2373,
+    "output": 377
+   },
+   "cost_usd": 0.01122,
+   "seconds": 4.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q06",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "No \u2014 no production deployment workflow and no API image Dockerfile; the only Dockerfile is .devcontainer/Dockerfile (dev container).",
+   "turns": 2,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 2,
+    "map_overview": 1
+   },
+   "input_tokens": 5488,
+   "output_tokens": 420,
+   "usage": {
+    "input": 6,
+    "cache_write": 3103,
+    "cache_read": 2379,
+    "output": 420
+   },
+   "cost_usd": 0.01221,
+   "seconds": 4.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q07",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'db', 'domain'] want ['adapters', 'contracts', 'db', 'domain']",
+   "answer": "adapters, contracts, db, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 6947,
+   "output_tokens": 166,
+   "usage": {
+    "input": 6,
+    "cache_write": 4592,
+    "cache_read": 2349,
+    "output": 166
+   },
+   "cost_usd": 0.01339,
+   "seconds": 3.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q08",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'domain'] want ['adapters', 'contracts', 'domain']",
+   "answer": "adapters, contracts, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 8142,
+   "output_tokens": 178,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 8136,
+    "output": 178
+   },
+   "cost_usd": 0.00261,
+   "seconds": 2.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q09",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['contracts', 'domain', 'mobile'] want ['contracts', 'domain', 'mobile']",
+   "answer": "mobile, contracts, domain",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5222,
+   "output_tokens": 45,
+   "usage": {
+    "input": 6,
+    "cache_write": 2861,
+    "cache_read": 2355,
+    "output": 45
+   },
+   "cost_usd": 0.00785,
+   "seconds": 2.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q10",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'api', 'db', 'worker'] want ['adapters', 'api', 'db', 'worker']",
+   "answer": "adapters, api, db, worker",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5236,
+   "output_tokens": 263,
+   "usage": {
+    "input": 6,
+    "cache_write": 2868,
+    "cache_read": 2362,
+    "output": 263
+   },
+   "cost_usd": 0.01005,
+   "seconds": 2.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q11",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "drizzle-orm 0.45.4 (with drizzle-kit 0.31.11); the migration generator is configured in packages/db/drizzle.config.ts",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 15270,
+   "output_tokens": 406,
+   "usage": {
+    "input": 8,
+    "cache_write": 5992,
+    "cache_read": 9270,
+    "output": 406
+   },
+   "cost_usd": 0.01998,
+   "seconds": 3.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q12",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/main.ts is the entry file; buildApp, exported from apps/api/src/app.ts, builds the Fastify app.",
+   "turns": 5,
+   "tool_calls": 6,
+   "tools_used": {
+    "grep": 3,
+    "map_get": 2,
+    "map_overview": 1
+   },
+   "input_tokens": 20132,
+   "output_tokens": 664,
+   "usage": {
+    "input": 12,
+    "cache_write": 4313,
+    "cache_read": 15807,
+    "output": 664
+   },
+   "cost_usd": 0.01903,
+   "seconds": 7.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q13",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "apps/mobile/index.ts \u2014 it calls registerRootComponent(App) (imported from 'expo')",
+   "turns": 4,
+   "tool_calls": 4,
+   "tools_used": {
+    "grep": 1,
+    "map_get": 1,
+    "map_overview": 1,
+    "read_file": 1
+   },
+   "input_tokens": 14193,
+   "output_tokens": 388,
+   "usage": {
+    "input": 10,
+    "cache_write": 3538,
+    "cache_read": 10645,
+    "output": 388
+   },
+   "cost_usd": 0.01381,
+   "seconds": 4.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q14",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "It's a safety guard for destructive DB tests: assertSafeTestDatabase throws UnsafeTestDatabaseError unless DATABASE_URL has no override params, targets a local/allow-listed host, and uses database \"toveli\" or \"*_test\", so schema drops never hit a real DB.",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "read_file": 1
+   },
+   "input_tokens": 6145,
+   "output_tokens": 796,
+   "usage": {
+    "input": 8,
+    "cache_write": 2120,
+    "cache_read": 4017,
+    "output": 796
+   },
+   "cost_usd": 0.01368,
+   "seconds": 6.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q15",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/auth/rate-limits.ts \u2014 OTP_RATE_LIMITS.requestPerEmail: 5 requests per email per 15 minutes (900,000 ms)",
+   "turns": 5,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 1,
+    "grep": 2,
+    "map_overview": 1,
+    "map_search": 1,
+    "read_file": 1
+   },
+   "input_tokens": 17364,
+   "output_tokens": 575,
+   "usage": {
+    "input": 12,
+    "cache_write": 4559,
+    "cache_read": 12793,
+    "output": 575
+   },
+   "cost_usd": 0.01845,
+   "seconds": 7.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q16",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "packages/db/migrations/0005_core_records.sql \u2014 15 CREATE TABLE statements",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 10218,
+   "output_tokens": 537,
+   "usage": {
+    "input": 8,
+    "cache_write": 3868,
+    "cache_read": 6342,
+    "output": 537
+   },
+   "cost_usd": 0.01569,
+   "seconds": 5.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q17",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "The handler is never called. run() throws GateDeniedError(command, decision) before invoking it. The denial decision is still recorded and available through lastDecision(job).",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_overview": 1,
+    "map_search": 1,
+    "read_file": 1
+   },
+   "input_tokens": 12595,
+   "output_tokens": 567,
+   "usage": {
+    "input": 8,
+    "cache_write": 5533,
+    "cache_read": 7054,
+    "output": 567
+   },
+   "cost_usd": 0.02022,
+   "seconds": 6.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q18",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 1/1",
+   "answer": "426",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "map_search": 1,
+    "read_file": 1
+   },
+   "input_tokens": 8149,
+   "output_tokens": 376,
+   "usage": {
+    "input": 8,
+    "cache_write": 814,
+    "cache_read": 7327,
+    "output": 376
+   },
+   "cost_usd": 0.00654,
+   "seconds": 3.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q19",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "PORT=3000, HOST=127.0.0.1",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 14572,
+   "output_tokens": 313,
+   "usage": {
+    "input": 8,
+    "cache_write": 5700,
+    "cache_read": 8864,
+    "output": 313
+   },
+   "cost_usd": 0.01828,
+   "seconds": 3.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 1,
+   "id": "Q20",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "fake and supabase; with supabase, SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY become required",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "grep": 1,
+    "map_search": 1,
+    "read_file": 2
+   },
+   "input_tokens": 8230,
+   "output_tokens": 605,
+   "usage": {
+    "input": 8,
+    "cache_write": 3395,
+    "cache_read": 4827,
+    "output": 605
+   },
+   "cost_usd": 0.01504,
+   "seconds": 6.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q01",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "pnpm@11.28.2, pinned in the root package.json (\"packageManager\" field)",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 9334,
+   "output_tokens": 279,
+   "usage": {
+    "input": 8,
+    "cache_write": 141,
+    "cache_read": 9185,
+    "output": 279
+   },
+   "cost_usd": 0.00408,
+   "seconds": 4.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q02",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": ".nvmrc pins 24.22.2; root package.json engines node allows >=24.21.0 <25",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "map_overview": 1,
+    "read_file": 1
+   },
+   "input_tokens": 9667,
+   "output_tokens": 357,
+   "usage": {
+    "input": 8,
+    "cache_write": 235,
+    "cache_read": 9424,
+    "output": 357
+   },
+   "cost_usd": 0.00512,
+   "seconds": 4.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q03",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "`pnpm check` chains `typecheck`, `lint` and `test` (`pnpm typecheck && pnpm lint && pnpm test`).",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5204,
+   "output_tokens": 129,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 5198,
+    "output": 129
+   },
+   "cost_usd": 0.00182,
+   "seconds": 2.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q04",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "ci.yml defines job \"api-checks\" (id api); mobile.yml defines job \"mobile-checks\" (id mobile)",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 10069,
+   "output_tokens": 463,
+   "usage": {
+    "input": 8,
+    "cache_write": 623,
+    "cache_read": 9438,
+    "output": 463
+   },
+   "cost_usd": 0.00715,
+   "seconds": 5.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q05",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "`@toveli/db` (packages/db), run via `tsx` (`migrate` = `tsx src/migrate.ts`), source file `packages/db/src/migrate.ts`",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 9688,
+   "output_tokens": 430,
+   "usage": {
+    "input": 8,
+    "cache_write": 423,
+    "cache_read": 9257,
+    "output": 430
+   },
+   "cost_usd": 0.0063,
+   "seconds": 5.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q06",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "No \u2014 the only Dockerfile is .devcontainer/Dockerfile (a dev container); the workflows (ci.yml, mobile.yml) only run checks, with no production deployment and no API image build.",
+   "turns": 2,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 2,
+    "map_overview": 1
+   },
+   "input_tokens": 5488,
+   "output_tokens": 443,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 5482,
+    "output": 443
+   },
+   "cost_usd": 0.00499,
+   "seconds": 4.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q07",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'db', 'domain'] want ['adapters', 'contracts', 'db', 'domain']",
+   "answer": "adapters, contracts, db, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 6947,
+   "output_tokens": 171,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 6941,
+    "output": 171
+   },
+   "cost_usd": 0.00242,
+   "seconds": 3.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q08",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'domain'] want ['adapters', 'contracts', 'domain']",
+   "answer": "adapters, contracts, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 8142,
+   "output_tokens": 197,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 8136,
+    "output": 197
+   },
+   "cost_usd": 0.0028,
+   "seconds": 3.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q09",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['contracts', 'domain', 'mobile'] want ['contracts', 'domain', 'mobile']",
+   "answer": "mobile, contracts, domain",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5222,
+   "output_tokens": 72,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 5216,
+    "output": 72
+   },
+   "cost_usd": 0.00125,
+   "seconds": 2.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q10",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'api', 'db', 'worker'] want ['adapters', 'api', 'db', 'worker']",
+   "answer": "adapters, api, db, worker",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "map_overview": 1
+   },
+   "input_tokens": 5236,
+   "output_tokens": 298,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 5230,
+    "output": 298
+   },
+   "cost_usd": 0.00351,
+   "seconds": 3.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q11",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Drizzle ORM (drizzle-orm 0.45.4, with drizzle-kit 0.31.11); the migration generator is configured in packages/db/drizzle.config.ts",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "grep": 1,
+    "map_get": 1,
+    "map_overview": 1,
+    "read_file": 1
+   },
+   "input_tokens": 15597,
+   "output_tokens": 484,
+   "usage": {
+    "input": 8,
+    "cache_write": 528,
+    "cache_read": 15061,
+    "output": 484
+   },
+   "cost_usd": 0.00768,
+   "seconds": 4.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q12",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/main.ts is the entry file; buildApp, exported from apps/api/src/app.ts, builds the Fastify app.",
+   "turns": 5,
+   "tool_calls": 6,
+   "tools_used": {
+    "grep": 3,
+    "map_get": 2,
+    "map_overview": 1
+   },
+   "input_tokens": 20132,
+   "output_tokens": 677,
+   "usage": {
+    "input": 12,
+    "cache_write": 0,
+    "cache_read": 20120,
+    "output": 677
+   },
+   "cost_usd": 0.00881,
+   "seconds": 7.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q13",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "apps/mobile/index.ts \u2014 it calls registerRootComponent(App) (from 'expo')",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_get": 1,
+    "map_overview": 1,
+    "read_file": 1
+   },
+   "input_tokens": 9753,
+   "output_tokens": 291,
+   "usage": {
+    "input": 8,
+    "cache_write": 542,
+    "cache_read": 9203,
+    "output": 291
+   },
+   "cost_usd": 0.0052,
+   "seconds": 3.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q14",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "It's a safety guard for destructive DB test helpers (e.g. schema drops in migrate.test.ts). assertSafeTestDatabase throws UnsafeTestDatabaseError unless the URL has no override params, the host is local (localhost, 127/8, ::1, db, or an allow-listed host), and the DB is `toveli` or `*_test`.",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "map_get": 1,
+    "read_file": 1
+   },
+   "input_tokens": 6146,
+   "output_tokens": 844,
+   "usage": {
+    "input": 8,
+    "cache_write": 1574,
+    "cache_read": 4564,
+    "output": 844
+   },
+   "cost_usd": 0.01285,
+   "seconds": 7.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q15",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/auth/rate-limits.ts \u2014 OTP_RATE_LIMITS.requestPerEmail: 5 requests per email per 15-minute window (windowMs 15*60_000)",
+   "turns": 5,
+   "tool_calls": 7,
+   "tools_used": {
+    "glob": 1,
+    "grep": 3,
+    "map_overview": 1,
+    "map_search": 1,
+    "read_file": 1
+   },
+   "input_tokens": 17564,
+   "output_tokens": 673,
+   "usage": {
+    "input": 12,
+    "cache_write": 1502,
+    "cache_read": 16050,
+    "output": 673
+   },
+   "cost_usd": 0.01211,
+   "seconds": 7.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q16",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "packages/db/migrations/0005_core_records.sql \u2014 15 CREATE TABLE statements",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "map_overview": 1
+   },
+   "input_tokens": 9945,
+   "output_tokens": 395,
+   "usage": {
+    "input": 8,
+    "cache_write": 734,
+    "cache_read": 9203,
+    "output": 395
+   },
+   "cost_usd": 0.00672,
+   "seconds": 4.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q17",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "The handler is never called; run() records the decision and throws GateDeniedError(command, decision) before invoking the handler.",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "map_overview": 1,
+    "map_search": 1,
+    "read_file": 1
+   },
+   "input_tokens": 12595,
+   "output_tokens": 482,
+   "usage": {
+    "input": 8,
+    "cache_write": 5432,
+    "cache_read": 7155,
+    "output": 482
+   },
+   "cost_usd": 0.01913,
+   "seconds": 5.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q18",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 1/1",
+   "answer": "426",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "map_search": 1,
+    "read_file": 1
+   },
+   "input_tokens": 8149,
+   "output_tokens": 373,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 8141,
+    "output": 373
+   },
+   "cost_usd": 0.00456,
+   "seconds": 3.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q19",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "PORT defaults to 3000 and HOST defaults to 127.0.0.1",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "map_overview": 1,
+    "map_search": 1
+   },
+   "input_tokens": 14572,
+   "output_tokens": 354,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 14564,
+    "output": 354
+   },
+   "cost_usd": 0.00501,
+   "seconds": 3.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "b",
+   "run": 2,
+   "id": "Q20",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "AUTH_PROVIDER is `fake` or `supabase`; with `supabase`, SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY become required.",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "grep": 1,
+    "map_search": 1,
+    "read_file": 2
+   },
+   "input_tokens": 8115,
+   "output_tokens": 573,
+   "usage": {
+    "input": 8,
+    "cache_write": 1939,
+    "cache_read": 6168,
+    "output": 573
+   },
+   "cost_usd": 0.01121,
+   "seconds": 6.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q01",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "pnpm 11.28.2, pinned in the root package.json via \"packageManager\": \"pnpm@11.28.2\"",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 4747,
+   "output_tokens": 394,
+   "usage": {
+    "input": 8,
+    "cache_write": 610,
+    "cache_read": 4129,
+    "output": 394
+   },
+   "cost_usd": 0.00589,
+   "seconds": 8.4,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q02",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": ".nvmrc pins Node 24.22.2; package.json engines allows node \">=24.21.0 <25\" (and pnpm \">=11.28.2 <12\").",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "read_file": 2
+   },
+   "input_tokens": 3565,
+   "output_tokens": 431,
+   "usage": {
+    "input": 8,
+    "cache_write": 923,
+    "cache_read": 2634,
+    "output": 431
+   },
+   "cost_usd": 0.0069,
+   "seconds": 8.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q03",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "check \u2014 chains typecheck, lint, test (`pnpm typecheck && pnpm lint && pnpm test`)",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 3916,
+   "output_tokens": 352,
+   "usage": {
+    "input": 8,
+    "cache_write": 1102,
+    "cache_read": 2806,
+    "output": 352
+   },
+   "cost_usd": 0.00657,
+   "seconds": 3.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q04",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "ci.yml \u2192 job \"api-checks\" (job id api); mobile.yml \u2192 job \"mobile-checks\" (job id mobile)",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 1,
+    "read_file": 2
+   },
+   "input_tokens": 5117,
+   "output_tokens": 330,
+   "usage": {
+    "input": 8,
+    "cache_write": 2609,
+    "cache_read": 2500,
+    "output": 330
+   },
+   "cost_usd": 0.01009,
+   "seconds": 7.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q05",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Workspace package `@toveli/db` (packages/db), run by `tsx` via its `migrate` script (`tsx src/migrate.ts`), in the source file `packages/db/src/migrate.ts`.",
+   "turns": 4,
+   "tool_calls": 5,
+   "tools_used": {
+    "grep": 3,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 15852,
+   "output_tokens": 731,
+   "usage": {
+    "input": 10,
+    "cache_write": 5020,
+    "cache_read": 10822,
+    "output": 731
+   },
+   "cost_usd": 0.02096,
+   "seconds": 9.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q06",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "No \u2014 the only Dockerfile is .devcontainer/Dockerfile (a dev environment image, not the API); the only workflows are ci.yml and mobile.yml, with no production deploy.",
+   "turns": 3,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 2,
+    "list_dir": 1,
+    "read_file": 3
+   },
+   "input_tokens": 6426,
+   "output_tokens": 797,
+   "usage": {
+    "input": 8,
+    "cache_write": 3539,
+    "cache_read": 2879,
+    "output": 797
+   },
+   "cost_usd": 0.01712,
+   "seconds": 8.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q07",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'db', 'domain'] want ['adapters', 'contracts', 'db', 'domain']",
+   "answer": "adapters, contracts, db, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "glob": 1,
+    "read_file": 1
+   },
+   "input_tokens": 2303,
+   "output_tokens": 240,
+   "usage": {
+    "input": 6,
+    "cache_write": 720,
+    "cache_read": 1577,
+    "output": 240
+   },
+   "cost_usd": 0.00437,
+   "seconds": 2.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q08",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'domain'] want ['adapters', 'contracts', 'domain']",
+   "answer": "adapters, domain, contracts",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "read_file": 1
+   },
+   "input_tokens": 2381,
+   "output_tokens": 208,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 2375,
+    "output": 208
+   },
+   "cost_usd": 0.00233,
+   "seconds": 2.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q09",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['contracts', 'domain', 'mobile'] want ['contracts', 'domain', 'mobile']",
+   "answer": "mobile, contracts, domain",
+   "turns": 3,
+   "tool_calls": 10,
+   "tools_used": {
+    "glob": 1,
+    "list_dir": 1,
+    "read_file": 8
+   },
+   "input_tokens": 7042,
+   "output_tokens": 747,
+   "usage": {
+    "input": 8,
+    "cache_write": 4252,
+    "cache_read": 2782,
+    "output": 747
+   },
+   "cost_usd": 0.01839,
+   "seconds": 10.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q10",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'api', 'db', 'worker'] want ['adapters', 'api', 'db', 'worker']",
+   "answer": "api, worker, adapters, db",
+   "turns": 4,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 1,
+    "grep": 4,
+    "list_dir": 1
+   },
+   "input_tokens": 11433,
+   "output_tokens": 694,
+   "usage": {
+    "input": 10,
+    "cache_write": 3250,
+    "cache_read": 8173,
+    "output": 694
+   },
+   "cost_usd": 0.0159,
+   "seconds": 7.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q11",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Drizzle ORM (drizzle-orm 0.45.4, with drizzle-kit 0.31.11); migration generator configured in packages/db/drizzle.config.ts",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "list_dir": 1,
+    "read_file": 2
+   },
+   "input_tokens": 4283,
+   "output_tokens": 484,
+   "usage": {
+    "input": 8,
+    "cache_write": 1492,
+    "cache_read": 2783,
+    "output": 484
+   },
+   "cost_usd": 0.00886,
+   "seconds": 4.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q12",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Entry file is apps/api/src/main.ts; the exported function buildApp in apps/api/src/app.ts builds the Fastify app.",
+   "turns": 4,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 1,
+    "grep": 4,
+    "list_dir": 1
+   },
+   "input_tokens": 6739,
+   "output_tokens": 683,
+   "usage": {
+    "input": 10,
+    "cache_write": 1606,
+    "cache_read": 5123,
+    "output": 683
+   },
+   "cost_usd": 0.01138,
+   "seconds": 7.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q13",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "index.ts (apps/mobile/index.ts) \u2014 it calls registerRootComponent(App)",
+   "turns": 4,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "list_dir": 1,
+    "read_file": 2
+   },
+   "input_tokens": 5535,
+   "output_tokens": 349,
+   "usage": {
+    "input": 10,
+    "cache_write": 1207,
+    "cache_read": 4318,
+    "output": 349
+   },
+   "cost_usd": 0.00696,
+   "seconds": 4.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q14",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "It's a safety guard for destructive DB tests. `assertSafeTestDatabase` throws `UnsafeTestDatabaseError` unless the URL has no override params, the host is local (or allow-listed), and the database is `toveli` or `*_test`.",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "read_file": 1
+   },
+   "input_tokens": 3972,
+   "output_tokens": 756,
+   "usage": {
+    "input": 6,
+    "cache_write": 2394,
+    "cache_read": 1572,
+    "output": 756
+   },
+   "cost_usd": 0.01371,
+   "seconds": 10.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q15",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/auth/rate-limits.ts \u2014 OTP_RATE_LIMITS.requestPerEmail: 5 requests per email per 15 minutes (15*60_000 ms)",
+   "turns": 5,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 1,
+    "grep": 3,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 7683,
+   "output_tokens": 572,
+   "usage": {
+    "input": 12,
+    "cache_write": 2046,
+    "cache_read": 5625,
+    "output": 572
+   },
+   "cost_usd": 0.01142,
+   "seconds": 5.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q16",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "packages/db/migrations/0005_core_records.sql \u2014 15 CREATE TABLE statements",
+   "turns": 5,
+   "tool_calls": 5,
+   "tools_used": {
+    "glob": 2,
+    "grep": 3
+   },
+   "input_tokens": 10716,
+   "output_tokens": 842,
+   "usage": {
+    "input": 12,
+    "cache_write": 2640,
+    "cache_read": 8064,
+    "output": 842
+   },
+   "cost_usd": 0.01585,
+   "seconds": 9.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q17",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "The handler is never called: `run()` throws `GateDeniedError` (after recording the decision for `lastDecision`) before the handler executes. There is no bypass flag.",
+   "turns": 4,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 12674,
+   "output_tokens": 542,
+   "usage": {
+    "input": 10,
+    "cache_write": 4544,
+    "cache_read": 8120,
+    "output": 542
+   },
+   "cost_usd": 0.01761,
+   "seconds": 5.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q18",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 1/1",
+   "answer": "426",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "read_file": 1
+   },
+   "input_tokens": 7026,
+   "output_tokens": 408,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 7018,
+    "output": 408
+   },
+   "cost_usd": 0.0048,
+   "seconds": 5.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q19",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "PORT=3000, HOST=127.0.0.1",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 7915,
+   "output_tokens": 452,
+   "usage": {
+    "input": 8,
+    "cache_write": 3151,
+    "cache_read": 4756,
+    "output": 452
+   },
+   "cost_usd": 0.01289,
+   "seconds": 11.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 1,
+   "id": "Q20",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "AUTH_PROVIDER: `fake` or `supabase`; with `supabase`, `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` become required.",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "read_file": 2
+   },
+   "input_tokens": 6601,
+   "output_tokens": 525,
+   "usage": {
+    "input": 8,
+    "cache_write": 3102,
+    "cache_read": 3491,
+    "output": 525
+   },
+   "cost_usd": 0.01337,
+   "seconds": 9.6,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q01",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "pnpm 11.28.2, pinned in the root package.json via \"packageManager\": \"pnpm@11.28.2\"",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 4747,
+   "output_tokens": 379,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 4739,
+    "output": 379
+   },
+   "cost_usd": 0.00428,
+   "seconds": 5.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q02",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": ".nvmrc pins Node 24.22.2; package.json engines.node allows \">=24.21.0 <25\"",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "read_file": 2
+   },
+   "input_tokens": 3565,
+   "output_tokens": 410,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 3557,
+    "output": 410
+   },
+   "cost_usd": 0.00447,
+   "seconds": 4.8,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q03",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "check \u2014 chains typecheck, lint, test (`pnpm typecheck && pnpm lint && pnpm test`)",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 3916,
+   "output_tokens": 365,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 3908,
+    "output": 365
+   },
+   "cost_usd": 0.00406,
+   "seconds": 3.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q04",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "ci.yml \u2192 api-checks (job id `api`); mobile.yml \u2192 mobile-checks (job id `mobile`)",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "glob": 1,
+    "read_file": 2
+   },
+   "input_tokens": 5117,
+   "output_tokens": 384,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 5109,
+    "output": 384
+   },
+   "cost_usd": 0.00437,
+   "seconds": 5.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q05",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Root script runs `pnpm --filter @toveli/db run migrate` (package @toveli/db, packages/db), which runs `tsx src/migrate.ts`; source file is packages/db/src/migrate.ts (runMigrations using drizzle-orm's migrate).",
+   "turns": 4,
+   "tool_calls": 4,
+   "tools_used": {
+    "grep": 2,
+    "read_file": 2
+   },
+   "input_tokens": 17059,
+   "output_tokens": 664,
+   "usage": {
+    "input": 10,
+    "cache_write": 5202,
+    "cache_read": 11847,
+    "output": 664
+   },
+   "cost_usd": 0.02085,
+   "seconds": 7.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q06",
+   "category": "build",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "No \u2014 the only Dockerfile is .devcontainer/Dockerfile (a dev-container image, not the API); workflows are just ci.yml and mobile.yml, with no production deploy.",
+   "turns": 3,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 2,
+    "list_dir": 1,
+    "read_file": 3
+   },
+   "input_tokens": 6426,
+   "output_tokens": 760,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 6418,
+    "output": 760
+   },
+   "cost_usd": 0.00826,
+   "seconds": 8.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q07",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'db', 'domain'] want ['adapters', 'contracts', 'db', 'domain']",
+   "answer": "adapters, contracts, db, domain",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "glob": 1,
+    "read_file": 1
+   },
+   "input_tokens": 2303,
+   "output_tokens": 262,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 2297,
+    "output": 262
+   },
+   "cost_usd": 0.00286,
+   "seconds": 2.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q08",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'contracts', 'domain'] want ['adapters', 'contracts', 'domain']",
+   "answer": "adapters, domain, contracts",
+   "turns": 2,
+   "tool_calls": 1,
+   "tools_used": {
+    "read_file": 1
+   },
+   "input_tokens": 2381,
+   "output_tokens": 205,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 2375,
+    "output": 205
+   },
+   "cost_usd": 0.0023,
+   "seconds": 2.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q09",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['contracts', 'domain', 'mobile'] want ['contracts', 'domain', 'mobile']",
+   "answer": "mobile, contracts, domain",
+   "turns": 3,
+   "tool_calls": 10,
+   "tools_used": {
+    "glob": 1,
+    "list_dir": 1,
+    "read_file": 8
+   },
+   "input_tokens": 7042,
+   "output_tokens": 725,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 7034,
+    "output": 725
+   },
+   "cost_usd": 0.00797,
+   "seconds": 7.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q10",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "got ['adapters', 'api', 'db', 'worker'] want ['adapters', 'api', 'db', 'worker']",
+   "answer": "api, worker, adapters, db",
+   "turns": 4,
+   "tool_calls": 7,
+   "tools_used": {
+    "glob": 1,
+    "grep": 5,
+    "list_dir": 1
+   },
+   "input_tokens": 11541,
+   "output_tokens": 845,
+   "usage": {
+    "input": 10,
+    "cache_write": 1066,
+    "cache_read": 10465,
+    "output": 845
+   },
+   "cost_usd": 0.01218,
+   "seconds": 11.1,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q11",
+   "category": "dependencies",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Drizzle ORM (drizzle-orm 0.45.4, with drizzle-kit 0.31.11); migration generator configured in packages/db/drizzle.config.ts",
+   "turns": 3,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "list_dir": 1,
+    "read_file": 2
+   },
+   "input_tokens": 4283,
+   "output_tokens": 492,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 4275,
+    "output": 492
+   },
+   "cost_usd": 0.00536,
+   "seconds": 4.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q12",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "Entry file: apps/api/src/main.ts; the exported function buildApp in apps/api/src/app.ts builds the Fastify app.",
+   "turns": 4,
+   "tool_calls": 6,
+   "tools_used": {
+    "glob": 1,
+    "grep": 4,
+    "list_dir": 1
+   },
+   "input_tokens": 6739,
+   "output_tokens": 671,
+   "usage": {
+    "input": 10,
+    "cache_write": 962,
+    "cache_read": 5767,
+    "output": 671
+   },
+   "cost_usd": 0.00971,
+   "seconds": 10.0,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q13",
+   "category": "entry points",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "index.ts (apps/mobile/index.ts) \u2014 it calls registerRootComponent(App) from 'expo'",
+   "turns": 4,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "list_dir": 1,
+    "read_file": 2
+   },
+   "input_tokens": 5535,
+   "output_tokens": 391,
+   "usage": {
+    "input": 10,
+    "cache_write": 0,
+    "cache_read": 5525,
+    "output": 391
+   },
+   "cost_usd": 0.00448,
+   "seconds": 4.9,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q14",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "It's a safety guard for destructive DB tests. `assertSafeTestDatabase` throws `UnsafeTestDatabaseError` unless `DATABASE_URL` has no override params, a local host (or the allow-listed one), and database `toveli` or `*_test`. This stops `migrate.test.ts` from dropping schemas on a real database.",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "read_file": 1
+   },
+   "input_tokens": 3972,
+   "output_tokens": 889,
+   "usage": {
+    "input": 6,
+    "cache_write": 0,
+    "cache_read": 3966,
+    "output": 889
+   },
+   "cost_usd": 0.0093,
+   "seconds": 7.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q15",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 3/3",
+   "answer": "apps/api/src/auth/rate-limits.ts \u2014 OTP_RATE_LIMITS.requestPerEmail: 5 requests per 15 minutes (windowMs 15*60_000)",
+   "turns": 7,
+   "tool_calls": 9,
+   "tools_used": {
+    "glob": 1,
+    "grep": 4,
+    "list_dir": 3,
+    "read_file": 1
+   },
+   "input_tokens": 10802,
+   "output_tokens": 735,
+   "usage": {
+    "input": 16,
+    "cache_write": 2123,
+    "cache_read": 8663,
+    "output": 735
+   },
+   "cost_usd": 0.01356,
+   "seconds": 7.5,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q16",
+   "category": "where things live",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "packages/db/migrations/0005_core_records.sql \u2014 15 CREATE TABLE statements",
+   "turns": 2,
+   "tool_calls": 2,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1
+   },
+   "input_tokens": 3166,
+   "output_tokens": 519,
+   "usage": {
+    "input": 6,
+    "cache_write": 1474,
+    "cache_read": 1686,
+    "output": 519
+   },
+   "cost_usd": 0.00906,
+   "seconds": 5.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q17",
+   "category": "what a file does",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "The handler is never invoked: run() throws GateDeniedError (with the command and decision) before calling the handler. The denied decision is still recorded for lastDecision.",
+   "turns": 4,
+   "tool_calls": 4,
+   "tools_used": {
+    "glob": 1,
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 12674,
+   "output_tokens": 487,
+   "usage": {
+    "input": 10,
+    "cache_write": 0,
+    "cache_read": 12664,
+    "output": 487
+   },
+   "cost_usd": 0.00616,
+   "seconds": 5.2,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q18",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 1/1",
+   "answer": "426",
+   "turns": 3,
+   "tool_calls": 2,
+   "tools_used": {
+    "grep": 1,
+    "read_file": 1
+   },
+   "input_tokens": 7026,
+   "output_tokens": 370,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 7018,
+    "output": 370
+   },
+   "cost_usd": 0.00442,
+   "seconds": 4.3,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q19",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 2/2",
+   "answer": "PORT defaults to 3000 and HOST defaults to 127.0.0.1",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "list_dir": 1,
+    "read_file": 1
+   },
+   "input_tokens": 7918,
+   "output_tokens": 468,
+   "usage": {
+    "input": 8,
+    "cache_write": 717,
+    "cache_read": 7193,
+    "output": 468
+   },
+   "cost_usd": 0.00721,
+   "seconds": 5.7,
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "arm": "c",
+   "run": 2,
+   "id": "Q20",
+   "category": "code detail",
+   "correct": true,
+   "score": 1.0,
+   "detail": "groups matched 4/4",
+   "answer": "Values: fake or supabase; with supabase, SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY are required.",
+   "turns": 3,
+   "tool_calls": 3,
+   "tools_used": {
+    "grep": 1,
+    "read_file": 2
+   },
+   "input_tokens": 6601,
+   "output_tokens": 531,
+   "usage": {
+    "input": 8,
+    "cache_write": 0,
+    "cache_read": 6593,
+    "output": 531
+   },
+   "cost_usd": 0.00599,
+   "seconds": 10.3,
+   "model": "claude-sonnet-5-5"
+  }
+ ]
+}

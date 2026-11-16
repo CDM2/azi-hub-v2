@@ -1,0 +1,28 @@
+# Throwaway spike runner for CDM2/azi-hub-v2 report R-02. Delete this repository when the spike is done.
+# No marketplace actions are used, so there is nothing to pin.
+name: spike
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: spike
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - name: Check out
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" src
+      - name: Run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SPIKE_MODEL_KEY: ${{ secrets.SPIKE_MODEL_KEY }}
+        run: |
+          cd src && bash run.sh
