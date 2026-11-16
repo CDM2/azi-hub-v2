@@ -1,0 +1,290 @@
+{
+ "paperclip_version": "2026.1023.0",
+ "probes": [
+  {
+   "control": "baseline",
+   "probe": "scripted agent runs one heartbeat and calls two tools through the gateway",
+   "observed": {
+    "statuses": [
+     200,
+     200
+    ],
+    "has_run_token": true,
+    "fatal": null
+   },
+   "verdict": "works"
+  },
+  {
+   "control": "tool and MCP policy",
+   "probe": "a block rule on one tool, for one company; then the rule is deleted",
+   "observed": {
+    "policy_create_status": 201,
+    "policy_create_body": "{\"id\":\"dadbe7f9-f1cd-4b16-9eb3-8c3dbb843d5c\",\"companyId\":\"52412990-46f2-42cd-ba04-c9799db3bddd\",\"name\":\"spike: block brain_list\",\"description\":null,\"policyType\"",
+    "tool_still_listed_to_the_agent": false,
+    "call_by_plain_name": {
+     "status": 404,
+     "raw": "{\"error\":\"Tool \\\"brain_list\\\" not found\",\"reasonCode\":\"tool_not_found\",\"tool\":\"brain_list\"}"
+    },
+    "call_by_the_gateway_name_it_knew": {
+     "status": 403,
+     "raw": "{\"error\":\"Tool access is blocked by policy.\",\"reasonCode\":\"deny_policy_block\",\"invocationId\":\"d3b40447-6b2e-4244-bf4e-435dbe391a1a\",\"tool\":\"mcp.app-gallery-link-f664fb57-e200-4ad5-b350-f9e8923be86e-11aa1199:brain-list\",\"decision\":\"deny\",\"matchedPolicyIds\":[\"da"
+    },
+    "other_tool_status": 200,
+    "after_delete_status": [
+     200
+    ]
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "pause",
+   "probe": "pause the agent, trigger a heartbeat, resume, trigger again",
+   "observed": {
+    "pause_status": 200,
+    "agent_status_after_pause": "paused",
+    "invoke_while_paused": {
+     "status": 409,
+     "body": {
+      "error": "Agent is not invokable in its current state",
+      "details": {
+       "status": "paused",
+       "reason": "paused",
+       "invalidOrgChain": false,
+       "agentId": "a0d95a45-3551-47a7-9c7c-550076040942",
+       "agentStatus": "paused"
+      }
+     }
+    },
+    "ran_while_paused": false,
+    "resume_status": 200,
+    "ran_after_resume": true
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "kill",
+   "probe": "cancel a heartbeat run while the agent's process is still working",
+   "observed": {
+    "process_started": true,
+    "cancel_status": 200,
+    "cancel_body": "{\"id\":\"df389d07-aa70-44c3-8939-ba196fa2d1f3\",\"companyId\":\"52412990-46f2-42cd-ba04-c9799db3bddd\",\"agentId\":\"a0d95a45-3551-47a7-9c7c-550076040942\",\"scopeKind\":\"company\",\"issueId\":null,\"invocationSource\"",
+    "process_alive_after_cancel": false,
+    "seconds_to_stop": 2.2,
+    "run_status_after": "cancelled",
+    "run_error_code": "cancelled",
+    "agent_finished_its_work": false
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "secrets",
+   "probe": "store a secret, bind it to the agent's environment by reference, run the agent, have the agent print it, read the run log",
+   "observed": {
+    "create_status": 201,
+    "create_response_contains_value": false,
+    "bind_status": 200,
+    "bind_body": "ok",
+    "agent_config_read_contains_value": false,
+    "agent_process_received_value": true,
+    "run_log_status": 200,
+    "run_log_has_the_echo_line": true,
+    "run_log_contains_value": true,
+    "value_found_in": [
+     "run log",
+     "run record"
+    ],
+    "fatal": null
+   },
+   "verdict": "partly works"
+  },
+  {
+   "control": "company boundary",
+   "probe": "an agent uses its own run token to read its own company, another company's agents and another company's gateway audit",
+   "observed": {
+    "own_company_agents": 200,
+    "other_company_agents": 403,
+    "other_company_gateway_audit": 403,
+    "has_run_token": true
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "spend caps",
+   "probe": "a second agent runs once; set a $1.00 monthly budget on it, report $1.50 of cost, trigger a heartbeat, raise the budget, trigger again",
+   "observed": {
+    "ran_before_the_budget": true,
+    "set_budget_status": 200,
+    "cost_event_status": 201,
+    "cost_event_body": "ok",
+    "agent_status_after": "paused",
+    "pause_reason": "budget",
+    "invoke_over_budget": {
+     "status": 409,
+     "body": {
+      "error": "Agent cannot start work because recorded usage has no reliable price.",
+      "details": {
+       "scopeType": "agent",
+       "scopeId": "3ac2221c-c98c-41f7-a95b-44ebf7d9a6fe"
+      }
+     }
+    },
+    "ran_over_budget": false,
+    "overview_status": 200,
+    "overview": {
+     "companyId": "52412990-46f2-42cd-ba04-c9799db3bddd",
+     "policies": [
+      {
+       "policyId": "cf6d0935-84db-4520-bc8b-37a062536af4",
+       "companyId": "52412990-46f2-42cd-ba04-c9799db3bddd",
+       "scopeType": "agent",
+       "scopeId": "3ac2221c-c98c-41f7-a95b-44ebf7d9a6fe",
+       "scopeName": "gov-old-budget-probe",
+       "metric": "billed_cents",
+       "windowKind": "calendar_month_utc",
+       "amount": 100,
+       "observedAmount": 150,
+       "observedAmountExact": "150.0000000",
+       "reservationCents": "0.0000000",
+       "unpricedEventCount": 1,
+       "pendingRunCount": 0,
+       "unpricedUsagePolicy": "block",
+       "remainingAmount": 0,
+       "utilizationPercent": 150,
+       "warnPercent": 80,
+       "hardStopEnabled": true,
+       "notifyEnabled": true,
+       "isActive": true,
+       "status": "hard_stop",
+       "paused": true,
+       "pauseReason": "budget",
+       "windowStart": "2026-11-01T00:00:00.000Z",
+       "windowEnd": "2026-12-01T00:00:00.000Z"
+      }
+     ],
+     "activeIncidents": [
+      {
+       "id": "9fd7998d-1d43-44c7-961b-71fa4df625c3",
+       "companyId": "52412990-46f2-42cd-ba04-c9799db3bddd",
+       "policyId": "cf6d0935-84db-4520-bc8b-37a062536af4",
+       "scopeType": "agent",
+       "scopeId": "3ac2221c-c98c-41f7-a95b-44ebf7d9a6fe",
+       "scopeName": "gov-old-budget-probe",
+       "metric": "billed_cents",
+       "windowKind": "calendar_month_utc",
+       "windowStart": "2026-11-01T00:00:00.000Z",
+       "windowEnd": "2026-12-01T00:00:00.000Z",
+       "thresholdType": "hard",
+       "amountLimit": 100,
+       "amountObserved": 0,
+       "status": "open",
+       "approvalId": "18dea250-0ed1-4a9b-b766-4d9105cfd7ed",
+       "approvalStatus": "pending",
+       "resolvedAt": null,
+       "createdAt": "2026-11-16T03:06:46.834Z",
+       "updatedAt": "2026-11-16T03:06:46.834Z"
+      }
+     ],
+     "pausedAgentCount": 1,
+     "pausedProjectCount": 0,
+     "pendingApprovalCount": 1
+    },
+    "raise_status": 200,
+    "resume_status": 200,
+    "resume_body": "{\"id\":\"3ac2221c-c98c-41f7-a95b-44ebf7d9a6fe\",\"companyId\":\"52412990-46f2-42cd-ba04-c9799db3bddd\",\"name\":\"gov-old-budget-probe\",\"role\":\"general\",\"title\":null,\"icon\":null,\"appearance\":{\"schemaVersion\":1,",
+    "ran_after_raise": false
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "approvals: hiring an agent",
+   "probe": "require approval for new agents, try to create one directly, request a hire, approve it",
+   "observed": {
+    "setting_status": 200,
+    "direct_create_status": 409,
+    "direct_create_body": "{\"error\":\"Direct agent creation requires board approval. Use POST /api/companies/:companyId/agent-hires to create a pending hire approval.\"}",
+    "hire_request_status": 201,
+    "hire_keys": [
+     "agent",
+     "approval"
+    ],
+    "agent_status_before_approval": "pending_approval",
+    "approval_type": "hire_agent",
+    "approval_status": "pending",
+    "pending_count": 2,
+    "approve_status": 200,
+    "approve_body": "ok",
+    "agent_status_after_approval": "paused"
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "audit log",
+   "probe": "read the company activity log and the tool gateway audit after the probes above",
+   "observed": {
+    "activity_status": 200,
+    "activity_rows": 101,
+    "actions_seen": [
+     "agent.created",
+     "agent.hire_created",
+     "agent.identity.created",
+     "agent.paused",
+     "agent.resumed",
+     "agent.updated",
+     "approval.approved",
+     "approval.created",
+     "budget.policy_upserted",
+     "company.created",
+     "company.updated",
+     "cost.reported",
+     "environment.lease_acquired",
+     "environment.lease_released",
+     "heartbeat.cancelled",
+     "heartbeat.invoked",
+     "issue.created",
+     "primary_agent.initialized",
+     "secret.binding.created",
+     "secret.created",
+     "tool_app.connected",
+     "tool_app.finished",
+     "tool_gateway.call_allowed",
+     "tool_gateway.call_completed",
+     "tool_gateway.call_denied",
+     "tool_gateway.discovery",
+     "tool_gateway.runtime_mcp_delivery",
+     "tool_gateway.session_created",
+     "tool_policy.created",
+     "tool_policy.deleted"
+    ],
+    "gateway_audit_events": 8,
+    "gateway_outcomes": [
+     "allowed",
+     "unknown"
+    ]
+   },
+   "verdict": "works in the free edition"
+  },
+  {
+   "control": "terminate",
+   "probe": "terminate the agent, then trigger a heartbeat",
+   "observed": {
+    "terminate_status": 200,
+    "agent_status": "terminated",
+    "invoke_after": {
+     "status": 409,
+     "body": {
+      "error": "Agent is not invokable in its current state",
+      "details": {
+       "status": "terminated",
+       "reason": "terminated",
+       "invalidOrgChain": false,
+       "agentId": "a0d95a45-3551-47a7-9c7c-550076040942",
+       "agentStatus": "terminated"
+      }
+     }
+    },
+    "ran_after_terminate": false
+   },
+   "verdict": "works in the free edition"
+  }
+ ]
+}

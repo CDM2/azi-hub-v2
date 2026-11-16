@@ -1,0 +1,474 @@
+{
+ "orgs": {
+  "mgmt": {
+   "company_id": "65656e35-a63c-465d-a7df-c1c434acebfc",
+   "agent_id": "f2144a71-4510-41b8-a51d-1ef1edd8ad05",
+   "agent_status": "paused",
+   "issue_id": "fc1fe3c0-df2c-4309-8134-bde0e9332d2b",
+   "issue_create": 201,
+   "connection_id": "186ff8c6-6b91-474b-beee-3cf0e8bb2864",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "c0d1217c-587d-44a6-a9c8-0c84c523a3e5",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "3a7a0b09-4718-487a-bf9c-aa1ba43e3312",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "e5d83b3c-f87f-447f-9630-0fc3fc1e3e5b",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "c15534b8-f758-4914-bcd8-06d5864e22df",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "26a2af88-7e79-4534-9c8c-98f4cac21c49",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "64c6e2cf-6e92-4dc0-905b-db0226c05256",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "toveli": {
+   "company_id": "93538400-e145-4ed3-ae7d-14e445530bde",
+   "agent_id": "696f7f6b-7c31-44dc-9eea-dddeb4e05bbc",
+   "agent_status": "paused",
+   "issue_id": "9c6dbf47-e9e3-4989-8720-fea37e646b45",
+   "issue_create": 201,
+   "connection_id": "61fa74aa-894e-4d7e-9a81-b8feefe7f80e",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "20afde19-78f6-4311-b1c8-938c94f30d9d",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "69b4677e-c2d7-4870-b24d-e48fedddf5a7",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "925b7a1a-eacd-4ce9-9844-503b974c677d",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "b36b8f70-a371-4966-a3d4-0db1cc14ab59",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "a2133f4d-07a6-4b9d-aab1-d30a428d8672",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "1507a707-64f7-45ed-b899-ad21376603f4",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "sibling": {
+   "company_id": "2f10b326-a066-4285-8a73-b8f7d838e8c8",
+   "agent_id": "c625ff4e-bfeb-488a-b5c0-cabe1ca849b4",
+   "agent_status": "paused",
+   "issue_id": "40dc89d8-9f34-4d6d-8c66-4d449e9e85d2",
+   "issue_create": 201,
+   "connection_id": "b04c43e7-0ce6-4689-b755-26edbc31e0ba",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "9b2bfa13-da97-4d72-8eec-06f7e1d743da",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "098554d2-d006-46ab-8f8d-842436319279",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "d594af1d-ae54-484d-8a93-7a0818aa775e",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "c44462c5-5c53-4440-82bd-aa6d20ae2bb6",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "63a30261-d310-45e3-a732-507fe485f92e",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "68dd7ab8-addf-48ef-a94f-b897ea41df22",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "personal": {
+   "company_id": "09e0eb13-d6ba-4b10-b429-7ab1bd72ecaa",
+   "agent_id": "47104844-0527-4d06-afe9-a92d04e15f21",
+   "agent_status": "paused",
+   "issue_id": "0a1913ad-dc46-40f4-8287-df6f1c447296",
+   "issue_create": 201,
+   "connection_id": "110b37ce-ab5f-4c49-8e2c-8434504e2821",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "b1ad17ff-cf25-43b0-9918-48042c5b4d0f",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "2c0949ea-a5f0-4e64-bd14-c28e85ec3a7b",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "c81963fb-0dd7-4bda-950c-c48b79a26c64",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "a87c39c9-0a9c-4f46-b536-ba3d39621be9",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "2af815e8-47da-48ec-9bf6-39c96177b896",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "e4a018e0-7b55-4500-b651-6881fd4335d0",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write",
+    "publish_briefing"
+   ]
+  },
+  "gov-old": {
+   "company_id": "0dcb9d6c-90ab-45eb-a01b-138bb4d0f5fa",
+   "agent_id": "eee383bd-d9c8-4199-8cbf-ce383d43dc40",
+   "agent_status": "paused",
+   "issue_id": "aee78b45-82ae-4672-8d3e-361743b80059",
+   "issue_create": 201,
+   "connection_id": "5971f878-cdf9-468e-92f5-3278e092fb60",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "93975821-267a-4134-9bcc-dce561053c45",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "844b7be1-20cc-4a9f-8d51-d4dd316bfb02",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "7166f476-f621-4c20-8bf3-d02d6a577dfb",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "1877f5d3-9116-4519-a4cf-876cb34c92f1",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "77d93f45-1b9e-4917-879a-7af01bb4bb75",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "dc84f22a-5188-40b0-a466-812dee673146",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "gov-new": {
+   "company_id": "47f129d3-b3a1-4368-bdc2-82296d26cb6f",
+   "agent_id": "3abced31-1f55-4127-8c87-667de0281e83",
+   "agent_status": "paused",
+   "issue_id": "1508a34a-6a95-4364-8cb4-e8fdddf4771a",
+   "issue_create": 201,
+   "connection_id": "a7aed759-3057-4f10-84e9-85972058378a",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "1345247c-3a67-4faf-9133-e878ef42b3a4",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "d41b1792-a578-497f-aba9-f3dfa61cfad5",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "03b459a3-72f8-44c4-8f3e-6111a739b085",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "9260872d-3816-4380-be42-bc50a2c3b651",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "e8a47e65-8617-41d4-932d-afcb2990dc61",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "9604732c-fe9e-4f12-b356-fffa2177d76e",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  }
+ },
+ "paperclip_health": {
+  "status": "ok",
+  "version": "2026.1023.0",
+  "serverVersion": "2026.1023.0",
+  "commit": "1b4c803816e82b0265c8422e1a804327a7ed8c54",
+  "deploymentMode": "local_trusted",
+  "deploymentExposure": "private",
+  "localAiLoginSupported": true,
+  "authReady": true,
+  "bootstrapStatus": "ready",
+  "bootstrapInviteActive": false,
+  "features": {
+   "companyDeletionEnabled": true
+  },
+  "serverInfo": {
+   "processStartedAt": "2026-11-16T03:17:37.385Z",
+   "git": {
+    "available": true,
+    "fullSha": "1b4c803816e82b0265c8422e1a804327a7ed8c54",
+    "shortSha": "1b4c803",
+    "branchName": null,
+    "subject": "Source build",
+    "committedAt": null,
+    "localChanges": {
+     "available": false,
+     "unavailableReason": "git_status_unavailable"
+    }
+   }
+  },
+  "startupRecovery": {
+   "phase": "ready",
+   "updatedAt": "2026-11-16T03:17:45.458Z"
+  },
+  "nativeRecovery": {},
+  "databaseBackup": {
+   "enabled": true,
+   "status": "warning",
+   "backupDir": "/home/pclip/data/instances/default/data/backups",
+   "maxAgeHours": 26,
+   "latestBackup": null,
+   "lastFailure": null,
+   "warnings": [
+    {
+     "code": "database_backup_missing",
+     "message": "No .sql.gz database backups found in /home/pclip/data/instances/default/data/backups."
+    }
+   ]
+  },
+  "warnings": [
+   {
+    "code": "database_backup_missing",
+    "message": "No .sql.gz database backups found in /home/pclip/data/instances/default/data/backups."
+   }
+  ]
+ }
+}

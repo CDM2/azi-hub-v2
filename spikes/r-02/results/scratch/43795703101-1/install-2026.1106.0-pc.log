@@ -1,0 +1,16 @@
+npm error code 1
+npm error path /home/pclip/pc/node_modules/@paperclipai/server
+npm error command failed
+npm error command sh -c node scripts/install-copilot-assets.mjs
+npm error file:///home/pclip/pc/node_modules/@paperclipai/server/dist/materialize-copilot-binary.mjs:118
+npm error     if (executable && ((before.mode & 0o111n) === 0n || (before.mode & 0o022n) !== 0n)) throw new Error("Copilot executable has unsafe permissions");
+npm error                                                                                               ^
+npm error
+npm error Error: Copilot executable has unsafe permissions
+npm error     at readPinnedFile (file:///home/pclip/pc/node_modules/@paperclipai/server/dist/materialize-copilot-binary.mjs:118:95)
+npm error     at materializePinnedCopilotBinary (file:///home/pclip/pc/node_modules/@paperclipai/server/dist/materialize-copilot-binary.mjs:37:17)
+npm error     at installCopilotAssets (file:///home/pclip/pc/node_modules/@paperclipai/server/dist/install-copilot-assets.mjs:65:28)
+npm error     at async file:///home/pclip/pc/node_modules/@paperclipai/server/scripts/install-copilot-assets.mjs:17:16
+npm error
+npm error Node.js v24.22.3
+npm error A complete log of this run can be found in: /home/pclip/.npm/_logs/2026-11-16T03_08_22_977Z-debug-0.log

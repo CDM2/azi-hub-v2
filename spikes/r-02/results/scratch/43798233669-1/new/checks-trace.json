@@ -1,0 +1,4908 @@
+[
+{
+"m": "POST",
+"url": "BRAIN/admin/reset",
+"status": 200,
+"req": {
+"_note": "Made-up data for the R-02 spike. Tokens are test values for a throwaway database, not secrets.",
+"settings": {
+"personal_enabled": true,
+"briefing_enabled": true,
+"holding_reads": "all"
+},
+"orgs": [
+{
+"id": "personal",
+"kind": "personal",
+"parent": null
+},
+{
+"id": "mgmt",
+"kind": "holding",
+"parent": null
+},
+{
+"id": "toveli",
+"kind": "sub",
+"parent": "mgmt"
+},
+{
+"id": "sibling",
+"kind": "sub",
+"parent": "mgmt"
+}
+],
+"principals": [
+{
+"org": "personal",
+"actor": "agent",
+"token": "<redacted>"
+},
+{
+"org": "mgmt",
+"actor": "agent",
+"token": "<redacted>"
+},
+{
+"org": "toveli",
+"actor": "agent",
+"token": "<redacted>"
+},
+{
+"org": "toveli",
+"actor": "human",
+"token": "<redacted>"
+}
+],
+"pages": [
+{
+"org": "mgmt",
+"title": "Shared style guide",
+"body": "CANARY-GLOBAL-1 everyone may read this page.",
+"kind": "note",
+"visibility": "global",
+"source_type": "human"
+},
+{
+"org": "mgmt",
+"title": "Holding plan",
+"body": "CANARY-MGMT-1 allocation across ventures.",
+"kind": "note",
+"source_type": "human"
+},
+{
+"org": "mgmt",
+"title": "Holding weekly summary",
+"body": "CANARY-MGMT-2 weekly roll-up.",
+"kind": "summary",
+"source_type": "agent"
+},
+{
+"org": "toveli",
+"title": "Toveli launch notes",
+"body": "CANARY-TOVELI-1 launch checklist for the marketplace.",
+"kind": "note",
+"source_type": "human"
+}
+]
+},
+"res": {
+"orgs": 4,
+"pages": 12
+}
+},
+{
+"m": "GET",
+"url": "BRAIN/admin/audit?since_id=0",
+"status": 200,
+"req": null,
+"res": {
+"rows": [
+{
+"id": 1,
+"ts": "2026-11-16T03:27:09.008Z",
+"org": "toveli",
+"actor": "agent",
+"tool": "brain_write",
+"request_id": "5ecb1086-2cdd-465c-af40-f77f68848ca8",
+"decision": "deny",
+"reason": "forbidden"
+},
+{
+"id": 2,
+"ts": "2026-11-16T03:27:09.012Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_search",
+"request_id": "721a653b-9259-4132-b8c8-b6a66796c522",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 3,
+"ts": "2026-11-16T03:27:09.028Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_search",
+"request_id": "73e59000-74b7-4a93-bb75-7ea8efafc445",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 4,
+"ts": "2026-11-16T03:27:09.034Z",
+"org": "toveli",
+"actor": "agent",
+"tool": "brain_get",
+"request_id": "21adfc4a-11bb-43ff-9c59-9d7b2c511908",
+"decision": "deny",
+"reason": "not_found"
+}
+]
+}
+},
+{
+"m": "POST",
+"url": "PC/api/agents/0e78a524-7b4f-46a0-8b78-99560729499f/heartbeat/invoke",
+"status": 202,
+"req": {},
+"res": {
+"id": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "queued",
+"responsibleUserId": "local-board",
+"activeIdentityContextId": null,
+"startedAt": null,
+"finishedAt": null,
+"executionControlDeadlineAt": null,
+"executionStatusDeliveryId": null,
+"error": null,
+"wakeupRequestId": "d99e4499-ff45-4bc7-abb4-acd8693af3a6",
+"exitCode": null,
+"signal": null,
+"costAccountingPending": false,
+"costAccountedAt": null,
+"accountingProjectionVersion": null,
+"accountingLastAttemptAt": null,
+"accountingLastError": null,
+"accountingAttemptCount": 0,
+"usageJson": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/companies/dfeef09b-5b1b-42d6-99ab-d7c76b2f808d/heartbeat-runs?agentId=0e78a524-7b4f-46a0-8b78-99560729499f&limit=5",
+"status": 200,
+"req": null,
+"res": [
+{
+"id": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"responsibleUserId": "local-board",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:39.926Z",
+"finishedAt": "2026-11-16T03:32:40.900Z",
+"error": null,
+"wakeupRequestId": "d99e4499-ff45-4bc7-abb4-acd8693af3a6",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:40.353Z",
+"handedOffAt": "2026-11-16T03:32:40.360Z",
+"reservationId": "5e6e8bd1-1683-40d4-90d5-755a434f8a7a",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "aac1b001-e75b-442c-befb-db6182257717",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:6a240a502b111b51e2acb0dd55508347bcb06db0b154f333aac09af585c5278d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "b6463e92-1e89-4e7c-acc7-df737981ea6c"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d/0e78a524-7b4f-46a0-8b78-99560729499f/e907eef7-3cbd-4b13-a658-8a089c8b6828.ndjson"
+},
+{
+"id": "92adec48-761a-4c67-8d53-f63fd99e0c9f",
+"responsibleUserId": "local-board",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:36.954Z",
+"finishedAt": "2026-11-16T03:29:37.504Z",
+"error": null,
+"wakeupRequestId": "970c388a-f258-4dc4-a4f8-8e3656150935",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:ce98a40e3de7c17e900df8da2e9b080d03f0cf813a15cc605400872886bbcab5",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "31c55342-c205-4be2-b977-2333616807a9",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d/0e78a524-7b4f-46a0-8b78-99560729499f/92adec48-761a-4c67-8d53-f63fd99e0c9f.ndjson"
+}
+]
+},
+{
+"m": "POST",
+"url": "PC/api/agents/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/heartbeat/invoke",
+"status": 202,
+"req": {},
+"res": {
+"id": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "queued",
+"responsibleUserId": "local-board",
+"activeIdentityContextId": null,
+"startedAt": null,
+"finishedAt": null,
+"executionControlDeadlineAt": null,
+"executionStatusDeliveryId": null,
+"error": null,
+"wakeupRequestId": "2235a786-3236-4624-9e13-64056c7111b6",
+"exitCode": null,
+"signal": null,
+"costAccountingPending": false,
+"costAccountedAt": null,
+"accountingProjectionVersion": null,
+"accountingLastAttemptAt": null,
+"accountingLastError": null,
+"accountingAttemptCount": 0,
+"usageJson": null
+}
+},
+{
+"m": "POST",
+"url": "PC/api/tool-gateway/action-requests/3622e42e-02ef-493d-8439-6cac0ad32011/approve",
+"status": 200,
+"req": {
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea"
+},
+"res": {
+"id": "3622e42e-02ef-493d-8439-6cac0ad32011",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"invocationId": "c398369d-d4b4-476a-b3e5-3acc4dd32c77",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"interactionId": "1727beff-d39f-4f97-a1d6-d0658e23fbb0",
+"approvalId": null,
+"status": "failed",
+"canonicalArgumentsHash": "bb63a81d294c3180d59a256e7585490a6c1bb08a800e46c60e40557087ef0ca5",
+"canonicalArgumentsSummary": {
+"sha256": "bb63a81d294c3180d59a256e7585490a6c1bb08a800e46c60e40557087ef0ca5",
+"summary": "{\"body\":\"CANARY-SENSITIVE-GW\",\"request_id\":\"f16a260e-893c-4db5-9147-311e0589516e\",\"sensitivity\":\"health\",\"title\":\"s\"}",
+"sizeBytes": 117,
+"redactedFields": []
+},
+"signedArguments": "<removed: signed or encoded value>...",
+"previewMarkdown": "brain_write \u00b7 **Body:** CANARY-SENSITIVE-GW \u00b7 **Sensitivity:** health \u00b7 **Title:** s",
+"requestedByAgentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"requestedByUserId": null,
+"resolvedByAgentId": null,
+"resolvedByUserId": "local-board",
+"decidedByAgentId": null,
+"decidedByUserId": "local-board",
+"decidedAt": "2026-11-16T03:32:43.094Z",
+"expiresAt": "2026-11-16T04:32:42.438Z",
+"resolvedAt": "2026-11-16T03:32:43.147Z",
+"createdAt": "2026-11-16T03:32:42.429Z",
+"updatedAt": "2026-11-16T03:32:43.147Z",
+"resultSummary": null,
+"error": "{\"error\":\"forbidden\"}"
+}
+},
+{
+"m": "POST",
+"url": "PC/api/tool-gateway/action-requests/31063a63-8535-4001-b826-7b124174a43b/approve",
+"status": 200,
+"req": {
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea"
+},
+"res": {
+"id": "31063a63-8535-4001-b826-7b124174a43b",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"invocationId": "16027240-3dc0-4878-b931-6145f89d8a10",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"interactionId": "d77b19fc-d422-4ba4-9335-37d72d39275a",
+"approvalId": null,
+"status": "executed",
+"canonicalArgumentsHash": "66c708652a62b513c9cbd984f5be2ddec2daa4dfe1bef4d0f24d1e7260fda127",
+"canonicalArgumentsSummary": {
+"sha256": "66c708652a62b513c9cbd984f5be2ddec2daa4dfe1bef4d0f24d1e7260fda127",
+"summary": "{\"body\":\"CANARY-TOVELI-GW written through the gateway\",\"request_id\":\"9ee6a355-cd4b-43ee-b823-0a988c729c79\",\"title\":\"gw note\"}",
+"sizeBytes": 125,
+"redactedFields": []
+},
+"signedArguments": "<removed: signed or encoded value>...",
+"previewMarkdown": "brain_write \u00b7 **Body:** CANARY-TOVELI-GW written through the gateway \u00b7 **Title:** gw note",
+"requestedByAgentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"requestedByUserId": null,
+"resolvedByAgentId": null,
+"resolvedByUserId": "local-board",
+"decidedByAgentId": null,
+"decidedByUserId": "local-board",
+"decidedAt": "2026-11-16T03:32:44.187Z",
+"expiresAt": "2026-11-16T04:32:43.529Z",
+"resolvedAt": "2026-11-16T03:32:44.254Z",
+"createdAt": "2026-11-16T03:32:43.506Z",
+"updatedAt": "2026-11-16T03:32:44.254Z",
+"resultSummary": "{\"content\":\"{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"...",
+"error": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/companies/ced35e22-0f16-4308-ae5b-655b94de7fea/heartbeat-runs?agentId=92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc&limit=5",
+"status": 200,
+"req": null,
+"res": [
+{
+"id": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:41.041Z",
+"finishedAt": "2026-11-16T03:32:44.644Z",
+"error": null,
+"wakeupRequestId": "2235a786-3236-4624-9e13-64056c7111b6",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:41.382Z",
+"handedOffAt": "2026-11-16T03:32:41.403Z",
+"reservationId": "fc717b25-4eaf-4642-a0f2-b1ab2e8f00b1",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "63df559f-e3a3-4225-b1b0-949e3f221aed",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:7456e618842f8a63aae425653eefe9538ef44d40b3324e092e87e55e5176e62d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "6ebe50c1-100e-4ed1-aba2-e3f1560618da"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/99d152ef-3ea1-43d9-b09d-a2d6729fdc46.ndjson"
+},
+{
+"id": "381fd39e-bb50-4263-a23f-e5f3693aeeb5",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:45.404Z",
+"finishedAt": "2026-11-16T03:29:45.742Z",
+"error": null,
+"wakeupRequestId": "1902845e-5fdf-4d09-b432-3d2e6edf79c6",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:c90cb724805aaf84304c38cc4b56ee8c48def4b5254475f906d0ddb78cc74584",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "78bae915-bf20-4c85-99dd-16c48a699ad3",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/381fd39e-bb50-4263-a23f-e5f3693aeeb5.ndjson"
+},
+{
+"id": "ca5f6a6f-1218-4967-b4de-55587c118003",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:38.003Z",
+"finishedAt": "2026-11-16T03:29:40.459Z",
+"error": null,
+"wakeupRequestId": "4998b974-22bd-4808-b596-98beb3cbe586",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:c90cb724805aaf84304c38cc4b56ee8c48def4b5254475f906d0ddb78cc74584",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "309c9e92-a9ce-4def-aa10-60fa51ed050f",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/ca5f6a6f-1218-4967-b4de-55587c118003.ndjson"
+}
+]
+},
+{
+"m": "POST",
+"url": "PC/api/agents/3225ae4d-46b3-4ecb-81c8-b6d2bbb39136/heartbeat/invoke",
+"status": 202,
+"req": {},
+"res": {
+"id": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "queued",
+"responsibleUserId": "local-board",
+"activeIdentityContextId": null,
+"startedAt": null,
+"finishedAt": null,
+"executionControlDeadlineAt": null,
+"executionStatusDeliveryId": null,
+"error": null,
+"wakeupRequestId": "3039d777-b85f-457d-abb8-ebbbc54c43cc",
+"exitCode": null,
+"signal": null,
+"costAccountingPending": false,
+"costAccountedAt": null,
+"accountingProjectionVersion": null,
+"accountingLastAttemptAt": null,
+"accountingLastError": null,
+"accountingAttemptCount": 0,
+"usageJson": null
+}
+},
+{
+"m": "POST",
+"url": "PC/api/tool-gateway/action-requests/2c68b6a4-40a3-4cfa-a109-fa8333eefa7d/approve",
+"status": 200,
+"req": {
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9"
+},
+"res": {
+"id": "2c68b6a4-40a3-4cfa-a109-fa8333eefa7d",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"invocationId": "fe09c3c6-374b-47ea-a378-0bbaed465608",
+"issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+"interactionId": "30d740a8-121e-493c-a72e-db544fa65cd0",
+"approvalId": null,
+"status": "executed",
+"canonicalArgumentsHash": "ade5cbfc0a44b8fec5b9a12605b8f96f77f704a868b9e711a2649093f7bea2fb",
+"canonicalArgumentsSummary": {
+"sha256": "ade5cbfc0a44b8fec5b9a12605b8f96f77f704a868b9e711a2649093f7bea2fb",
+"summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"3fb2d472-37f2-4851-a9af-a97af3e7a897\"}",
+"sizeBytes": 127,
+"redactedFields": []
+},
+"signedArguments": "<removed: signed or encoded value>...",
+"previewMarkdown": "publish_briefing \u00b7 **Content:** CANARY-BRIEFING-GW priorities, published through the gateway.",
+"requestedByAgentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"requestedByUserId": null,
+"resolvedByAgentId": null,
+"resolvedByUserId": "local-board",
+"decidedByAgentId": null,
+"decidedByUserId": "local-board",
+"decidedAt": "2026-11-16T03:32:46.317Z",
+"expiresAt": "2026-11-16T04:32:45.737Z",
+"resolvedAt": "2026-11-16T03:32:46.364Z",
+"createdAt": "2026-11-16T03:32:45.729Z",
+"updatedAt": "2026-11-16T03:32:46.364Z",
+"resultSummary": "{\"content\":\"{\\\"briefing_id\\\":\\\"d4bbf7ef-caf1-4b38-8a8c-852e8df79d91\\\",\\\"status\\\":\\\"pending\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"briefing_id\\\":\\\"d4bbf7ef-caf1-4b38-8a8c-852e8df79d91\\\",\\\"status\\\":\\\"pending\\\"}\",\"type\":\"text\"}],\"isError\":false,\"s...",
+"error": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/companies/b880cb3d-4dd5-47ea-acaa-a9a3e44761c9/heartbeat-runs?agentId=3225ae4d-46b3-4ecb-81c8-b6d2bbb39136&limit=5",
+"status": 200,
+"req": null,
+"res": [
+{
+"id": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"responsibleUserId": "local-board",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:45.286Z",
+"finishedAt": "2026-11-16T03:32:46.793Z",
+"error": null,
+"wakeupRequestId": "3039d777-b85f-457d-abb8-ebbbc54c43cc",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:45.486Z",
+"handedOffAt": "2026-11-16T03:32:45.490Z",
+"reservationId": "9f55f961-acac-4e47-90b8-bb1dbf33821e",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "054d4825-0b9d-4548-a7bf-3d69b91f1fc8",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:de6f9c9f2bb1951a3da2e5b7a1e6d123c1a13d6a6e6e6c64e6d9918522217dac",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "45875213-351c-4c8d-a750-595c233000dd"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9/3225ae4d-46b3-4ecb-81c8-b6d2bbb39136/aaf2c1e4-5404-45a0-ae1e-9988704990ec.ndjson"
+},
+{
+"id": "92008739-d15d-4d56-a6f0-b74efcfc1927",
+"responsibleUserId": "local-board",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:41.205Z",
+"finishedAt": "2026-11-16T03:29:42.640Z",
+"error": null,
+"wakeupRequestId": "cec855bc-5014-4c37-a8b7-9af591f6529a",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:4a0a721afe8fb55e1e95d5847edb4ce7d1d3f5da979864112277dcf48c5265ef",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "4e5b2205-416a-496f-bffd-8a00d260a026",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9/3225ae4d-46b3-4ecb-81c8-b6d2bbb39136/92008739-d15d-4d56-a6f0-b74efcfc1927.ndjson"
+}
+]
+},
+{
+"m": "POST",
+"url": "PC/api/agents/24268cf2-eabb-47b4-9f3e-7069a39408b9/heartbeat/invoke",
+"status": 202,
+"req": {},
+"res": {
+"id": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "queued",
+"responsibleUserId": "local-board",
+"activeIdentityContextId": null,
+"startedAt": null,
+"finishedAt": null,
+"executionControlDeadlineAt": null,
+"executionStatusDeliveryId": null,
+"error": null,
+"wakeupRequestId": "5ce98f6a-e1d1-406d-b560-808009e3baa5",
+"exitCode": null,
+"signal": null,
+"costAccountingPending": false,
+"costAccountedAt": null,
+"accountingProjectionVersion": null,
+"accountingLastAttemptAt": null,
+"accountingLastError": null,
+"accountingAttemptCount": 0,
+"usageJson": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/companies/e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/heartbeat-runs?agentId=24268cf2-eabb-47b4-9f3e-7069a39408b9&limit=5",
+"status": 200,
+"req": null,
+"res": [
+{
+"id": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:47.396Z",
+"finishedAt": "2026-11-16T03:32:47.858Z",
+"error": null,
+"wakeupRequestId": "5ce98f6a-e1d1-406d-b560-808009e3baa5",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:47.600Z",
+"handedOffAt": "2026-11-16T03:32:47.604Z",
+"reservationId": "6ad188e8-d768-4da2-a93c-ec38b600aff4",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "0d6be180-b3d5-4c94-ada8-c095a758cc81",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:cd18d44b6f7cde20fe72c728acb1de9c8f0998f851a144392a2fadd1f6432131",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "03495c4a-5abf-48ee-b535-70c17d22f7f7"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/ac5a5fad-0d26-49c4-b524-c245af70f020.ndjson"
+},
+{
+"id": "3676fb63-b359-4b27-8dc1-068702186dd9",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:44.367Z",
+"finishedAt": "2026-11-16T03:29:44.671Z",
+"error": null,
+"wakeupRequestId": "14627ee9-44f3-405d-aef4-4f174f454f2d",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:37216d931d7ebcbc7a3211f0248f1a7f797cf0dedd2369b1b1c49743e849867d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "61ceedc2-1ad3-4b4e-acc3-374e19d3e698",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/3676fb63-b359-4b27-8dc1-068702186dd9.ndjson"
+},
+{
+"id": "6dba485d-6acc-496c-b90e-0eee4486fd0a",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:43.325Z",
+"finishedAt": "2026-11-16T03:29:43.732Z",
+"error": null,
+"wakeupRequestId": "660cfb43-ffc3-445a-945f-5b423dcbfa6f",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:37216d931d7ebcbc7a3211f0248f1a7f797cf0dedd2369b1b1c49743e849867d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "a20170c3-e9f8-4b51-871d-0d4dc8954a27",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/6dba485d-6acc-496c-b90e-0eee4486fd0a.ndjson"
+}
+]
+},
+{
+"m": "POST",
+"url": "BRAIN/admin/approve_briefing",
+"status": 200,
+"req": {
+"briefing_id": "d4bbf7ef-caf1-4b38-8a8c-852e8df79d91",
+"approver": "founder (spike harness)"
+},
+"res": {
+"page_id": "ebdbb22e-9bc3-4674-8422-1706d69dc9e9"
+}
+},
+{
+"m": "POST",
+"url": "PC/api/agents/24268cf2-eabb-47b4-9f3e-7069a39408b9/heartbeat/invoke",
+"status": 202,
+"req": {},
+"res": {
+"id": "2751ef4d-c882-4206-a0ad-b62813f45e45",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "queued",
+"responsibleUserId": "local-board",
+"activeIdentityContextId": null,
+"startedAt": null,
+"finishedAt": null,
+"executionControlDeadlineAt": null,
+"executionStatusDeliveryId": null,
+"error": null,
+"wakeupRequestId": "27ef7c1f-0700-402d-a765-4d5e571746b9",
+"exitCode": null,
+"signal": null,
+"costAccountingPending": false,
+"costAccountedAt": null,
+"accountingProjectionVersion": null,
+"accountingLastAttemptAt": null,
+"accountingLastError": null,
+"accountingAttemptCount": 0,
+"usageJson": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/companies/e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/heartbeat-runs?agentId=24268cf2-eabb-47b4-9f3e-7069a39408b9&limit=5",
+"status": 200,
+"req": null,
+"res": [
+{
+"id": "2751ef4d-c882-4206-a0ad-b62813f45e45",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:48.428Z",
+"finishedAt": "2026-11-16T03:32:48.787Z",
+"error": null,
+"wakeupRequestId": "27ef7c1f-0700-402d-a765-4d5e571746b9",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:48.606Z",
+"handedOffAt": "2026-11-16T03:32:48.610Z",
+"reservationId": "e578a684-78f5-49c4-9058-3357af0e8e50",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "1bafcc30-a152-4153-9e3b-5d9c9b537bc5",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:cd18d44b6f7cde20fe72c728acb1de9c8f0998f851a144392a2fadd1f6432131",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "82dc8c2d-6d18-49cd-8943-5bff8991b5f3"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/2751ef4d-c882-4206-a0ad-b62813f45e45.ndjson"
+},
+{
+"id": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:47.396Z",
+"finishedAt": "2026-11-16T03:32:47.858Z",
+"error": null,
+"wakeupRequestId": "5ce98f6a-e1d1-406d-b560-808009e3baa5",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:47.600Z",
+"handedOffAt": "2026-11-16T03:32:47.604Z",
+"reservationId": "6ad188e8-d768-4da2-a93c-ec38b600aff4",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "0d6be180-b3d5-4c94-ada8-c095a758cc81",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:cd18d44b6f7cde20fe72c728acb1de9c8f0998f851a144392a2fadd1f6432131",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "03495c4a-5abf-48ee-b535-70c17d22f7f7"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/ac5a5fad-0d26-49c4-b524-c245af70f020.ndjson"
+},
+{
+"id": "3676fb63-b359-4b27-8dc1-068702186dd9",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:44.367Z",
+"finishedAt": "2026-11-16T03:29:44.671Z",
+"error": null,
+"wakeupRequestId": "14627ee9-44f3-405d-aef4-4f174f454f2d",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:37216d931d7ebcbc7a3211f0248f1a7f797cf0dedd2369b1b1c49743e849867d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "61ceedc2-1ad3-4b4e-acc3-374e19d3e698",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/3676fb63-b359-4b27-8dc1-068702186dd9.ndjson"
+},
+{
+"id": "6dba485d-6acc-496c-b90e-0eee4486fd0a",
+"responsibleUserId": "local-board",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:43.325Z",
+"finishedAt": "2026-11-16T03:29:43.732Z",
+"error": null,
+"wakeupRequestId": "660cfb43-ffc3-445a-945f-5b423dcbfa6f",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:37216d931d7ebcbc7a3211f0248f1a7f797cf0dedd2369b1b1c49743e849867d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "a20170c3-e9f8-4b51-871d-0d4dc8954a27",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a/24268cf2-eabb-47b4-9f3e-7069a39408b9/6dba485d-6acc-496c-b90e-0eee4486fd0a.ndjson"
+}
+]
+},
+{
+"m": "POST",
+"url": "PC/api/agents/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/heartbeat/invoke",
+"status": 202,
+"req": {},
+"res": {
+"id": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "queued",
+"responsibleUserId": "local-board",
+"activeIdentityContextId": null,
+"startedAt": null,
+"finishedAt": null,
+"executionControlDeadlineAt": null,
+"executionStatusDeliveryId": null,
+"error": null,
+"wakeupRequestId": "8772749a-75d4-4b00-888d-1b41c514cf7e",
+"exitCode": null,
+"signal": null,
+"costAccountingPending": false,
+"costAccountedAt": null,
+"accountingProjectionVersion": null,
+"accountingLastAttemptAt": null,
+"accountingLastError": null,
+"accountingAttemptCount": 0,
+"usageJson": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/companies/ced35e22-0f16-4308-ae5b-655b94de7fea/heartbeat-runs?agentId=92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc&limit=5",
+"status": 200,
+"req": null,
+"res": [
+{
+"id": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:49.459Z",
+"finishedAt": "2026-11-16T03:32:49.891Z",
+"error": null,
+"wakeupRequestId": "8772749a-75d4-4b00-888d-1b41c514cf7e",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:49.653Z",
+"handedOffAt": "2026-11-16T03:32:49.659Z",
+"reservationId": "5a9fceb8-33f2-4d0c-9a43-33fce0b85081",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "ab613ce8-71bd-4eb6-932b-bf53ebcbe07e",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:7456e618842f8a63aae425653eefe9538ef44d40b3324e092e87e55e5176e62d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "3aa5ee5f-28f0-47ea-b248-5c3402a1c9ed"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/66f5cb12-5f25-45cc-9d33-be21e6566552.ndjson"
+},
+{
+"id": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:32:41.041Z",
+"finishedAt": "2026-11-16T03:32:44.644Z",
+"error": null,
+"wakeupRequestId": "2235a786-3236-4624-9e13-64056c7111b6",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"budgetDispatch": {
+"admittedAt": "2026-11-16T03:32:41.382Z",
+"handedOffAt": "2026-11-16T03:32:41.403Z",
+"reservationId": "fc717b25-4eaf-4642-a0f2-b1ab2e8f00b1",
+"recoveryLeaseOwner": null
+},
+"budgetExposure": {
+"sequence": 1,
+"sourceId": "63df559f-e3a3-4225-b1b0-949e3f221aed",
+"costCents": null
+},
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:7456e618842f8a63aae425653eefe9538ef44d40b3324e092e87e55e5176e62d",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "6ebe50c1-100e-4ed1-aba2-e3f1560618da"
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/99d152ef-3ea1-43d9-b09d-a2d6729fdc46.ndjson"
+},
+{
+"id": "381fd39e-bb50-4263-a23f-e5f3693aeeb5",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:45.404Z",
+"finishedAt": "2026-11-16T03:29:45.742Z",
+"error": null,
+"wakeupRequestId": "1902845e-5fdf-4d09-b432-3d2e6edf79c6",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:c90cb724805aaf84304c38cc4b56ee8c48def4b5254475f906d0ddb78cc74584",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "78bae915-bf20-4c85-99dd-16c48a699ad3",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/381fd39e-bb50-4263-a23f-e5f3693aeeb5.ndjson"
+},
+{
+"id": "ca5f6a6f-1218-4967-b4de-55587c118003",
+"responsibleUserId": "local-board",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"scopeKind": "company",
+"issueId": null,
+"invocationSource": "on_demand",
+"triggerDetail": "manual",
+"status": "succeeded",
+"inputTokens": "<redacted>",
+"cachedInputTokens": "<redacted>",
+"outputTokens": "<redacted>",
+"totalTokens": null,
+"costUsd": null,
+"startedAt": "2026-11-16T03:29:38.003Z",
+"finishedAt": "2026-11-16T03:29:40.459Z",
+"error": null,
+"wakeupRequestId": "4998b974-22bd-4808-b596-98beb3cbe586",
+"exitCode": 0,
+"signal": null,
+"usageJson": {
+"model": "unknown",
+"biller": "unknown",
+"costUsd": null,
+"provider": "unknown",
+"costStatus": "unpriced",
+"billingType": "unknown",
+"inputTokens": 0,
+"ledgerScope": {
+"issueId": null,
+"projectId": null,
+"billingCode": null
+},
+"usageSource": "per_run",
+"costUsdExact": null,
+"freshSession": true,
+"outputTokens": 0,
+"usageByModel": null,
+"sessionReused": false,
+"rawInputTokens": 0,
+"sessionRotated": false,
+"configFreshness": {
+"session": {
+"reset": false,
+"categories": [
+"adapter",
+"adapterConfig",
+"agentRuntimeConfig",
+"instructions"
+],
+"resetReasons": [],
+"nextFingerprint": "v1:sha256:c90cb724805aaf84304c38cc4b56ee8c48def4b5254475f906d0ddb78cc74584",
+"changedCategories": [],
+"taskSessionReused": false,
+"fingerprintVersion": 1,
+"taskSessionAvailable": false,
+"storedFingerprintPresent": false
+},
+"version": 1,
+"workspace": {
+"action": "create",
+"reasons": [],
+"categories": [
+"mode",
+"projectWorkspace",
+"strategy",
+"repo"
+],
+"reuseRequested": false,
+"nextFingerprint": "v1:sha256:6074acc7eed18f47a2d87cb40e780cadd5f6b5aa15ef1a640bc9ddc5bafb3ca0",
+"workspaceReused": false,
+"activeWorkspaceId": null,
+"changedCategories": [],
+"storedFingerprint": null,
+"fingerprintVersion": 1,
+"inferredFingerprint": null,
+"previousWorkspaceId": null,
+"configSnapshotRefreshed": false,
+"storedFingerprintPresent": false
+}
+},
+"rawOutputTokens": 0,
+"cachedInputTokens": 0,
+"pricingProvenance": {
+"source": "unknown",
+"version": "accounting-receipt/v1"
+},
+"providerRequestId": null,
+"taskSessionReused": false,
+"accountingReceiptId": "309c9e92-a9ce-4def-aa10-60fa51ed050f",
+"cacheAdjustedCostUsd": null,
+"rawCachedInputTokens": 0
+},
+"sessionIdBefore": null,
+"sessionIdAfter": null,
+"logStore": "local_file",
+"logRef": "ced35e22-0f16-4308-ae5b-655b94de7fea/92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc/ca5f6a6f-1218-4967-b4de-55587c118003.ndjson"
+}
+]
+},
+{
+"m": "GET",
+"url": "BRAIN/admin/audit?since_id=181",
+"status": 200,
+"req": null,
+"res": {
+"rows": [
+{
+"id": 182,
+"ts": "2026-11-16T03:32:40.595Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_whoami",
+"request_id": "32fd8ccd-cc52-4b58-8c8a-9c6649c62bee",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 183,
+"ts": "2026-11-16T03:32:40.695Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_search",
+"request_id": "15c57dbf-9cc7-47e4-b743-c0978d7ce4fe",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 184,
+"ts": "2026-11-16T03:32:40.788Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_list",
+"request_id": "d41c96b5-f906-4b22-b1ab-390adac6a2d3",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 185,
+"ts": "2026-11-16T03:32:40.856Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_get",
+"request_id": "4bc92ab5-28e9-47fc-93ad-da6be5a71e55",
+"decision": "deny",
+"reason": "not_found"
+}
+]
+}
+},
+{
+"m": "GET",
+"url": "BRAIN/admin/audit?since_id=181",
+"status": 200,
+"req": null,
+"res": {
+"rows": [
+{
+"id": 182,
+"ts": "2026-11-16T03:32:40.595Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_whoami",
+"request_id": "32fd8ccd-cc52-4b58-8c8a-9c6649c62bee",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 183,
+"ts": "2026-11-16T03:32:40.695Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_search",
+"request_id": "15c57dbf-9cc7-47e4-b743-c0978d7ce4fe",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 184,
+"ts": "2026-11-16T03:32:40.788Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_list",
+"request_id": "d41c96b5-f906-4b22-b1ab-390adac6a2d3",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 185,
+"ts": "2026-11-16T03:32:40.856Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_get",
+"request_id": "4bc92ab5-28e9-47fc-93ad-da6be5a71e55",
+"decision": "deny",
+"reason": "not_found"
+}
+]
+}
+},
+{
+"m": "GET",
+"url": "PC/api/tool-gateway/audit?companyId=e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a&limit=100",
+"status": 200,
+"req": null,
+"res": {
+"events": [
+{
+"id": "1c4cacb5-82e7-43c8-b2ce-c2d3e62378bf",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"entityType": "tool_connection",
+"entityId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-f815f436-2b74-4024-a1a8-d5efc2ac21e8",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 432,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"providerType": "mcp_remote_http",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:7369df88-4c92-4d4c-97fb-a27380db9a6a",
+"catalogEntryId": "a9991ad3-28dd-4db9-8c11-fef491cd1f9e",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "bbd87ebe-c8ac-4da1-81ad-209972b19d8e",
+"invocationId": "037c04bd-a7a5-4483-8e8a-bb7aa235ca36",
+"actionRequestId": null,
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"issueId": "56f131a8-dba9-42b9-a39b-e4b713b5c8d1",
+"runId": "2751ef4d-c882-4206-a0ad-b62813f45e45",
+"tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:48.764Z",
+"runId": "2751ef4d-c882-4206-a0ad-b62813f45e45",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"agentDisplayName": "mgmt-probe",
+"actorDisplayName": "mgmt-probe",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "037c04bd-a7a5-4483-8e8a-bb7aa235ca36",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "8f421f39e08e64b1258a40808b0db53d022745b717516dca4659ccebe7d781ea",
+"summary": "{\"query\":\"CANARY-BRIEFING-GW\",\"request_id\":\"c8ff98bf-0c3c-4996-859a-4d42ea44662e\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "e5a108b8c4fdd2f8ec82539d93a0291ef3d0c4ec0b3dd95ffbfbab7130357279",
+"summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"ebdbb22e-9bc3-4674-8422-1706d69dc9e9\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Briefing from the personal space, 2026-11-16\\\",\\\"kind\\\":\\\"briefing\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CAN...",
+"sizeBytes": 735,
+"redactedFields": []
+},
+"resultSizeBytes": 735,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:48.747Z",
+"completedAt": "2026-11-16T03:32:48.763Z"
+}
+},
+{
+"id": "6f1da790-c45d-4071-8022-d7a36777e453",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"entityType": "tool_connection",
+"entityId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-98d00c2e-bb6c-4c75-9149-97dc798476dd",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 167,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"providerType": "mcp_remote_http",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:7369df88-4c92-4d4c-97fb-a27380db9a6a",
+"catalogEntryId": "a9991ad3-28dd-4db9-8c11-fef491cd1f9e",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "6a272d9c-c57b-47ce-9ca1-5afac3bcd9b4",
+"invocationId": "36028fb2-6a13-4ccc-bf59-24864b784a57",
+"actionRequestId": null,
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"issueId": "56f131a8-dba9-42b9-a39b-e4b713b5c8d1",
+"runId": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:47.836Z",
+"runId": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"agentDisplayName": "mgmt-probe",
+"actorDisplayName": "mgmt-probe",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "36028fb2-6a13-4ccc-bf59-24864b784a57",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "8c0cf868c5733a2992b5001e90d796bd00811ff42f6e78c71c3e508341ed3db6",
+"summary": "{\"query\":\"CANARY-BRIEFING-GW\",\"request_id\":\"a292e2e7-b613-4ef5-bd04-9391f7de4df5\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "fdb052799dc2e64e96c3efb482743878ff99709ed0cf02d9076d1e3fe1e05cac",
+"summary": "{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"mcp_http\"}}",
+"sizeBytes": 205,
+"redactedFields": []
+},
+"resultSizeBytes": 205,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:47.821Z",
+"completedAt": "2026-11-16T03:32:47.835Z"
+}
+},
+{
+"id": "2349284d-6959-49fd-b4a0-2407d1931a39",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"entityType": "tool_connection",
+"entityId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-984aeefa-9d77-486a-84f7-b1658c9e2948",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 2495,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"providerType": "mcp_remote_http",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:7369df88-4c92-4d4c-97fb-a27380db9a6a",
+"catalogEntryId": "a9991ad3-28dd-4db9-8c11-fef491cd1f9e",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "6a272d9c-c57b-47ce-9ca1-5afac3bcd9b4",
+"invocationId": "6957fd59-a002-47d3-9830-d1f41a16722c",
+"actionRequestId": null,
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"issueId": "56f131a8-dba9-42b9-a39b-e4b713b5c8d1",
+"runId": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:47.789Z",
+"runId": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"agentDisplayName": "mgmt-probe",
+"actorDisplayName": "mgmt-probe",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "6957fd59-a002-47d3-9830-d1f41a16722c",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "3743e6727fe4e6f5e142c10ff563b6ee3adcf1ec0cf0e8a1c95236d55738e733",
+"summary": "{\"limit\":100,\"query\":\"CANARY\",\"request_id\":\"c2ffb751-fe80-484b-a033-4c02abbcf7da\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "76e3ec6b7a28027579478cc65f901c18deb02d142bdd718866c13b2a2b49ef32",
+"summary": "{\"content\":\"{\\\"count\\\":10,\\\"pages\\\":[{\\\"id\\\":\\\"b9407c4b-e90a-4c31-98ba-825368bcb6cc\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Holding plan\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-MGMT-1 allocation across ventur...",
+"sizeBytes": 4861,
+"redactedFields": []
+},
+"resultSizeBytes": 4861,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:47.772Z",
+"completedAt": "2026-11-16T03:32:47.788Z"
+}
+},
+{
+"id": "6813d16b-b395-4d6d-9e91-aed0c79b41a1",
+"companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"entityType": "tool_connection",
+"entityId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-c33ea9ea-c5fd-42bf-9ce1-0273a3b1580e",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_whoami"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 200,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"providerType": "mcp_remote_http",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:7369df88-4c92-4d4c-97fb-a27380db9a6a",
+"catalogEntryId": "493eb71d-8c4c-4a17-b90e-ae63bd4e6c30",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_whoami",
+"identityContextId": "6a272d9c-c57b-47ce-9ca1-5afac3bcd9b4",
+"invocationId": "5b5749b7-e6b3-4c81-bde2-980e236b1cf0",
+"actionRequestId": null,
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"issueId": "56f131a8-dba9-42b9-a39b-e4b713b5c8d1",
+"runId": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:47.742Z",
+"runId": "ac5a5fad-0d26-49c4-b524-c245af70f020",
+"agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+"agentDisplayName": "mgmt-probe",
+"actorDisplayName": "mgmt-probe",
+"applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+"connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Whoami",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "5b5749b7-e6b3-4c81-bde2-980e236b1cf0",
+"toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "ff131972d6390678cb4a4f9cebad41c859b48db926816c1ef7c809e3805beab7",
+"summary": "{\"request_id\":\"922b6409-d7e4-4664-96ad-7ad3c12334c5\"}",
+"sizeBytes": 53,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "5be1d92ce022a6799705f2dff04050e3d7fa6f053d3be8726c68d6382a29df9d",
+"summary": "{\"content\":\"{\\\"org\\\":\\\"mgmt\\\",\\\"kind\\\":\\\"holding\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"org\\\":\\\"mgmt\\\",\\\"kind\\\":\\\"holding\\\",\\\"actor\\\":\\\"agent\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent...",
+"sizeBytes": 271,
+"redactedFields": []
+},
+"resultSizeBytes": 271,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:47.729Z",
+"completedAt": "2026-11-16T03:32:47.741Z"
+}
+}
+],
+"nextCursor": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/tool-gateway/audit?companyId=ced35e22-0f16-4308-ae5b-655b94de7fea&limit=100",
+"status": 200,
+"req": null,
+"res": {
+"events": [
+{
+"id": "7c51d80d-4448-400d-a393-2cc3600f062f",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-ed0a8a57-e666-4602-95b1-7f790c5db56e",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 376,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "22dbabec-c762-4b8c-a8a6-ad93700b35c7",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "9d14c23b-feb6-4712-ab45-c1240546ca4c",
+"invocationId": "3e9b4d3c-8a17-46cf-b82c-67f906de2400",
+"actionRequestId": null,
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:49.870Z",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "3e9b4d3c-8a17-46cf-b82c-67f906de2400",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "1c50569932308e7b614d52b965e82468b1a6aa3805653f19e9e181c37f545a09",
+"summary": "{\"query\":\"CANARY-TOVELI-GW\",\"request_id\":\"58a51a54-f096-4902-92c4-4a57b19aeb6a\"}",
+"sizeBytes": 80,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "bcb69400c0001d4bd08504a3b5120d86565e59372b64f5cb5b4a35ec1d3b0eee",
+"summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"gw note\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-TOVELI-GW written through the gatew...",
+"sizeBytes": 623,
+"redactedFields": []
+},
+"resultSizeBytes": 623,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:49.853Z",
+"completedAt": "2026-11-16T03:32:49.869Z"
+}
+},
+{
+"id": "5b68c0f3-408a-4fea-a36b-42ebd7c1c42b",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-a5a79fd0-0966-4293-91a0-8da12531fb12",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 167,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "22dbabec-c762-4b8c-a8a6-ad93700b35c7",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "9d14c23b-feb6-4712-ab45-c1240546ca4c",
+"invocationId": "d6d8c96d-a26c-4d40-8f24-998ba5a56749",
+"actionRequestId": null,
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:49.810Z",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "d6d8c96d-a26c-4d40-8f24-998ba5a56749",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "e8c706a689742e90ff9d17b0983e12ff361b9ed0726aa69f6eefbf80d896086e",
+"summary": "{\"query\":\"CANARY-BRIEFING-GW\",\"request_id\":\"5c647def-0dca-4b4c-b18d-9265a07d59f4\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "fdb052799dc2e64e96c3efb482743878ff99709ed0cf02d9076d1e3fe1e05cac",
+"summary": "{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"mcp_http\"}}",
+"sizeBytes": 205,
+"redactedFields": []
+},
+"resultSizeBytes": 205,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:49.791Z",
+"completedAt": "2026-11-16T03:32:49.809Z"
+}
+},
+{
+"id": "2791a680-27c8-46b6-b1fd-c01cf37a6b10",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_failed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "write",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-fc3d6ba1-4887-4cf4-81f8-305079d0de16",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "publish_briefing"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 165,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "write",
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "b1b7662c-ae8a-44ee-8e90-0e2d303fa420",
+"upstreamToolName": "publish_briefing",
+"identityContextId": "31f65c50-dbe3-4d96-8d5f-6d538f9580c4",
+"invocationId": "40965f00-a399-4d0a-b4a8-e66c2eae336c",
+"actionRequestId": null,
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+"decision": "deny",
+"matchedPolicyIds": [],
+"reasonCode": "tool_error",
+"argumentsSummary": {
+"sha256": "eeb55c8fed6558fef7edadc9e91e082ab4199f75966153a6431a7978583307f3",
+"summary": "{\"content\":\"CANARY-BRIEFING-FORGED\",\"request_id\":\"4f07e1da-4c27-498c-ab85-dc089e3f19bc\"}",
+"sizeBytes": 88,
+"redactedFields": []
+},
+"resultSummary": null
+},
+"createdAt": "2026-11-16T03:32:44.607Z",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Publish Briefing",
+"lifecycleType": null,
+"normalizedOutcome": "blocked",
+"invocation": {
+"id": "40965f00-a399-4d0a-b4a8-e66c2eae336c",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+"status": "failed",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "eeb55c8fed6558fef7edadc9e91e082ab4199f75966153a6431a7978583307f3",
+"summary": "{\"content\":\"CANARY-BRIEFING-FORGED\",\"request_id\":\"4f07e1da-4c27-498c-ab85-dc089e3f19bc\"}",
+"sizeBytes": 88,
+"redactedFields": []
+},
+"resultSummary": null,
+"resultSizeBytes": null,
+"errorCode": "tool_error",
+"errorMessage": "{\"error\":\"forbidden\"}",
+"startedAt": "2026-11-16T03:32:44.594Z",
+"completedAt": "2026-11-16T03:32:44.606Z"
+}
+},
+{
+"id": "16ad2af5-61aa-43af-83d5-a81e508b8460",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "write",
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "write",
+"timeoutMs": 60000,
+"durationMs": 20,
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "d7014ac4-94a4-468b-93b9-173126f89c2d",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_write",
+"identityContextId": "31f65c50-dbe3-4d96-8d5f-6d538f9580c4",
+"invocationId": "16027240-3dc0-4878-b931-6145f89d8a10",
+"actionRequestId": "31063a63-8535-4001-b826-7b124174a43b",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "approved_action_executed"
+},
+"createdAt": "2026-11-16T03:32:44.260Z",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Write",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "16027240-3dc0-4878-b931-6145f89d8a10",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+"status": "succeeded",
+"policyDecision": "require_approval",
+"approvalState": "approved",
+"argumentsSummary": {
+"sha256": "66c708652a62b513c9cbd984f5be2ddec2daa4dfe1bef4d0f24d1e7260fda127",
+"summary": "{\"body\":\"CANARY-TOVELI-GW written through the gateway\",\"request_id\":\"9ee6a355-cd4b-43ee-b823-0a988c729c79\",\"title\":\"gw note\"}",
+"sizeBytes": 125,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "0ead763a0966944da59dcf1aa9c8f8c14d469e77d2bf9db054c27a075505ce21",
+"summary": "{\"content\":\"{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"...",
+"sizeBytes": 251,
+"redactedFields": []
+},
+"resultSizeBytes": 251,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:44.240Z",
+"completedAt": "2026-11-16T03:32:44.254Z"
+}
+}
+],
+"nextCursor": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/tool-gateway/audit?companyId=dfeef09b-5b1b-42d6-99ab-d7c76b2f808d&limit=100",
+"status": 200,
+"req": null,
+"res": {
+"events": [
+{
+"id": "ad8ce38c-c00f-483c-9fc1-eefe3c0b72d4",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"action": "tool_gateway.call_failed",
+"actorType": "agent",
+"actorId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"entityType": "tool_connection",
+"entityId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-a736d824-8958-4c36-83a9-8ffc66a86d1c",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_get"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 165,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"providerType": "mcp_remote_http",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"applicationKey": "app-gallery:link:055e2df1-1016-4109-992d-6223e89e24ec",
+"catalogEntryId": "457d54cd-a628-4ca3-bfb0-bf2880206ab1",
+"upstreamToolName": "brain_get",
+"identityContextId": "1817c309-d50a-41b4-973c-f47ef61c2c67",
+"invocationId": "849c0eeb-bb0a-484a-9f1c-721512efb306",
+"actionRequestId": null,
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"issueId": "20146b7d-32c3-48e4-8d9c-bd069570c5e9",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+"decision": "deny",
+"matchedPolicyIds": [],
+"reasonCode": "tool_error",
+"argumentsSummary": {
+"sha256": "7ba07ac4b098a6329d2c474909cb0a89b12617417689fe28c3262536c7bd01f7",
+"summary": "{\"path\":\"apps/example/main.ts\",\"request_id\":\"4bc92ab5-28e9-47fc-93ad-da6be5a71e55\"}",
+"sizeBytes": 83,
+"redactedFields": []
+},
+"resultSummary": null
+},
+"createdAt": "2026-11-16T03:32:40.861Z",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"agentDisplayName": "sibling-probe",
+"actorDisplayName": "sibling-probe",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Get",
+"lifecycleType": null,
+"normalizedOutcome": "blocked",
+"invocation": {
+"id": "849c0eeb-bb0a-484a-9f1c-721512efb306",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+"status": "failed",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "7ba07ac4b098a6329d2c474909cb0a89b12617417689fe28c3262536c7bd01f7",
+"summary": "{\"path\":\"apps/example/main.ts\",\"request_id\":\"4bc92ab5-28e9-47fc-93ad-da6be5a71e55\"}",
+"sizeBytes": 83,
+"redactedFields": []
+},
+"resultSummary": null,
+"resultSizeBytes": null,
+"errorCode": "tool_error",
+"errorMessage": "{\"error\":\"not_found\"}",
+"startedAt": "2026-11-16T03:32:40.842Z",
+"completedAt": "2026-11-16T03:32:40.860Z"
+}
+},
+{
+"id": "872938e9-8b27-41e8-b97e-6a4adbd1a769",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"entityType": "tool_connection",
+"entityId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-14870925-45e9-46cc-b47d-8e01763e1a83",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_list"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 365,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"providerType": "mcp_remote_http",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:055e2df1-1016-4109-992d-6223e89e24ec",
+"catalogEntryId": "cd53da33-a438-40d8-8270-7bc9a2fe0181",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_list",
+"identityContextId": "1817c309-d50a-41b4-973c-f47ef61c2c67",
+"invocationId": "e6872217-df13-4dcf-9f82-666ad9720e43",
+"actionRequestId": null,
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"issueId": "20146b7d-32c3-48e4-8d9c-bd069570c5e9",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-list",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-list",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:40.794Z",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"agentDisplayName": "sibling-probe",
+"actorDisplayName": "sibling-probe",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain List",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "e6872217-df13-4dcf-9f82-666ad9720e43",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-list",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "5cb0d3115c6339bcf683ca26c37185b453111dcda920bea6cfe3e8a9b7c4c004",
+"summary": "{\"request_id\":\"d41c96b5-f906-4b22-b1ab-390adac6a2d3\",\"source_type\":\"codebase\"}",
+"sizeBytes": 78,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "8a30a95face93518809579f07eb154aaf1bc660b0400eaa908494d78e3ea354c",
+"summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"d059649c-a8c2-47d7-bcfc-d27a01219ca2\\\",\\\"org\\\":\\\"sibling\\\",\\\"title\\\":\\\"Code: services/quant/run.py\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"services/quant/run.py\\\"}]}\",\"d...",
+"sizeBytes": 601,
+"redactedFields": []
+},
+"resultSizeBytes": 601,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:40.774Z",
+"completedAt": "2026-11-16T03:32:40.793Z"
+}
+},
+{
+"id": "12df845a-4020-42cf-9389-5a0464d9f2bd",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"entityType": "tool_connection",
+"entityId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-09eecd96-e4a6-4d57-872d-bbd4c4239acf",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 1129,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"providerType": "mcp_remote_http",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:055e2df1-1016-4109-992d-6223e89e24ec",
+"catalogEntryId": "0a35a3a9-4ae6-4773-9ca8-b64ac70334f4",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "1817c309-d50a-41b4-973c-f47ef61c2c67",
+"invocationId": "ca7b0786-0c20-4c07-84b3-431273fe64ce",
+"actionRequestId": null,
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"issueId": "20146b7d-32c3-48e4-8d9c-bd069570c5e9",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-search",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:40.708Z",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"agentDisplayName": "sibling-probe",
+"actorDisplayName": "sibling-probe",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "ca7b0786-0c20-4c07-84b3-431273fe64ce",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "5e472dc82304043e6c6bb8d146e9c05aa0a4d218af9e35f76323ffcee886c2f6",
+"summary": "{\"limit\":100,\"query\":\"CANARY\",\"request_id\":\"15c57dbf-9cc7-47e4-b743-c0978d7ce4fe\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "7e5d510c1f18020b377a99bc5ed8113d26118f3421751c1113e3ba679348b979",
+"summary": "{\"content\":\"{\\\"count\\\":4,\\\"pages\\\":[{\\\"id\\\":\\\"d3010ecc-eb62-46d1-a00a-8dc864e4a1ff\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Shared style guide\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-GLOBAL-1 everyone may read...",
+"sizeBytes": 2129,
+"redactedFields": []
+},
+"resultSizeBytes": 2129,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:40.664Z",
+"completedAt": "2026-11-16T03:32:40.706Z"
+}
+},
+{
+"id": "f88498f5-0632-4cc5-88c5-46f152c84c93",
+"companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"entityType": "tool_connection",
+"entityId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-92008810-9e7f-48e2-978b-9863707c2c1d",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_whoami"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 199,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"providerType": "mcp_remote_http",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:055e2df1-1016-4109-992d-6223e89e24ec",
+"catalogEntryId": "febcec3f-a56a-4434-af35-d2214c7dafa0",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_whoami",
+"identityContextId": "1817c309-d50a-41b4-973c-f47ef61c2c67",
+"invocationId": "0dc434e4-5de7-4b8a-9ef9-74c531aac105",
+"actionRequestId": null,
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"issueId": "20146b7d-32c3-48e4-8d9c-bd069570c5e9",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-whoami",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-whoami",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:40.612Z",
+"runId": "e907eef7-3cbd-4b13-a658-8a089c8b6828",
+"agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+"agentDisplayName": "sibling-probe",
+"actorDisplayName": "sibling-probe",
+"applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+"connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Whoami",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "0dc434e4-5de7-4b8a-9ef9-74c531aac105",
+"toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-whoami",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "84db85f059f1822ae5a53a68c02607045ba247574e379304318ea4e06d7a9a74",
+"summary": "{\"request_id\":\"32fd8ccd-cc52-4b58-8c8a-9c6649c62bee\"}",
+"sizeBytes": 53,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "2d94cec7ede518cb6751c544e668cb338976a0e46898a508a4d24b086ce0ae4e",
+"summary": "{\"content\":\"{\\\"org\\\":\\\"sibling\\\",\\\"kind\\\":\\\"sub\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"org\\\":\\\"sibling\\\",\\\"kind\\\":\\\"sub\\\",\\\"actor\\\":\\\"agent\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":...",
+"sizeBytes": 269,
+"redactedFields": []
+},
+"resultSizeBytes": 269,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:40.563Z",
+"completedAt": "2026-11-16T03:32:40.610Z"
+}
+}
+],
+"nextCursor": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/tool-gateway/audit?companyId=b880cb3d-4dd5-47ea-acaa-a9a3e44761c9&limit=100",
+"status": 200,
+"req": null,
+"res": {
+"events": [
+{
+"id": "6e12266b-cc24-491b-9f47-c0c85207f3c2",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"entityType": "tool_connection",
+"entityId": "1a786a57-a90c-4158-8222-854290b4965c",
+"details": {
+"risk": "write",
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "write",
+"timeoutMs": 60000,
+"durationMs": 22,
+"gatewayName": null,
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"providerType": "mcp_remote_http",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"applicationKey": "app-gallery:link:20a455f5-ca0a-42e3-831f-679e8bb80f9d",
+"catalogEntryId": "9f9bb3af-12e7-452a-8c6f-3da0b9528c0f",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "publish_briefing",
+"identityContextId": "07795835-ece5-4880-86f7-fef00f3b639a",
+"invocationId": "fe09c3c6-374b-47ea-a378-0bbaed465608",
+"actionRequestId": "2c68b6a4-40a3-4cfa-a109-fa8333eefa7d",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "approved_action_executed"
+},
+"createdAt": "2026-11-16T03:32:46.371Z",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"agentDisplayName": "personal-probe",
+"actorDisplayName": "personal-probe",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Publish Briefing",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "fe09c3c6-374b-47ea-a378-0bbaed465608",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+"status": "succeeded",
+"policyDecision": "require_approval",
+"approvalState": "approved",
+"argumentsSummary": {
+"sha256": "ade5cbfc0a44b8fec5b9a12605b8f96f77f704a868b9e711a2649093f7bea2fb",
+"summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"3fb2d472-37f2-4851-a9af-a97af3e7a897\"}",
+"sizeBytes": 127,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "c71f4512e2f012d4e3d0ce4e6bbb0ac2a06d2cda97fef469367f3d342e09ad78",
+"summary": "{\"content\":\"{\\\"briefing_id\\\":\\\"d4bbf7ef-caf1-4b38-8a8c-852e8df79d91\\\",\\\"status\\\":\\\"pending\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"briefing_id\\\":\\\"d4bbf7ef-caf1-4b38-8a8c-852e8df79d91\\\",\\\"status\\\":\\\"pending\\\"}\",\"type\":\"text\"}],\"isError\":false,\"s...",
+"sizeBytes": 315,
+"redactedFields": []
+},
+"resultSizeBytes": 315,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:46.349Z",
+"completedAt": "2026-11-16T03:32:46.364Z"
+}
+},
+{
+"id": "b8726cfa-22a2-4d78-a4c9-4e9b4b80673a",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"action": "tool_gateway.approval_requested",
+"actorType": "agent",
+"actorId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"entityType": "tool_connection",
+"entityId": "1a786a57-a90c-4158-8222-854290b4965c",
+"details": {
+"risk": "write",
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "write",
+"approvalId": null,
+"gatewayName": null,
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"providerType": "mcp_remote_http",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"interactionId": "30d740a8-121e-493c-a72e-db544fa65cd0",
+"applicationKey": "app-gallery:link:20a455f5-ca0a-42e3-831f-679e8bb80f9d",
+"catalogEntryId": "9f9bb3af-12e7-452a-8c6f-3da0b9528c0f",
+"actionRequestId": "2c68b6a4-40a3-4cfa-a109-fa8333eefa7d",
+"upstreamToolName": "publish_briefing",
+"identityContextId": "07795835-ece5-4880-86f7-fef00f3b639a",
+"invocationId": "fe09c3c6-374b-47ea-a378-0bbaed465608",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+"decision": "require_approval",
+"matchedPolicyIds": [],
+"reasonCode": "requires_approval_policy",
+"argumentsSummary": {
+"sha256": "ade5cbfc0a44b8fec5b9a12605b8f96f77f704a868b9e711a2649093f7bea2fb",
+"summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"3fb2d472-37f2-4851-a9af-a97af3e7a897\"}",
+"sizeBytes": 127,
+"redactedFields": []
+}
+},
+"createdAt": "2026-11-16T03:32:45.747Z",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"agentDisplayName": "personal-probe",
+"actorDisplayName": "personal-probe",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Publish Briefing",
+"lifecycleType": null,
+"normalizedOutcome": "asked_first",
+"invocation": {
+"id": "fe09c3c6-374b-47ea-a378-0bbaed465608",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+"status": "succeeded",
+"policyDecision": "require_approval",
+"approvalState": "approved",
+"argumentsSummary": {
+"sha256": "ade5cbfc0a44b8fec5b9a12605b8f96f77f704a868b9e711a2649093f7bea2fb",
+"summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"3fb2d472-37f2-4851-a9af-a97af3e7a897\"}",
+"sizeBytes": 127,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "c71f4512e2f012d4e3d0ce4e6bbb0ac2a06d2cda97fef469367f3d342e09ad78",
+"summary": "{\"content\":\"{\\\"briefing_id\\\":\\\"d4bbf7ef-caf1-4b38-8a8c-852e8df79d91\\\",\\\"status\\\":\\\"pending\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"briefing_id\\\":\\\"d4bbf7ef-caf1-4b38-8a8c-852e8df79d91\\\",\\\"status\\\":\\\"pending\\\"}\",\"type\":\"text\"}],\"isError\":false,\"s...",
+"sizeBytes": 315,
+"redactedFields": []
+},
+"resultSizeBytes": 315,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:46.349Z",
+"completedAt": "2026-11-16T03:32:46.364Z"
+}
+},
+{
+"id": "ff313f80-ffab-4b30-a317-5393eb3d057c",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"entityType": "tool_connection",
+"entityId": "1a786a57-a90c-4158-8222-854290b4965c",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-afa8f9bb-36b5-4f4b-9534-f308b01bd66e",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 3148,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"providerType": "mcp_remote_http",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:20a455f5-ca0a-42e3-831f-679e8bb80f9d",
+"catalogEntryId": "11c57390-5d96-4536-becf-f234c511a25e",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "07795835-ece5-4880-86f7-fef00f3b639a",
+"invocationId": "3c564012-c82b-4b8f-b804-df94f42f4691",
+"actionRequestId": null,
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-search",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:45.694Z",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"agentDisplayName": "personal-probe",
+"actorDisplayName": "personal-probe",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "3c564012-c82b-4b8f-b804-df94f42f4691",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "3b66254f854cdd2ad9a75315816e86f8774dbd7b218c3a559905be04230afad3",
+"summary": "{\"limit\":100,\"query\":\"CANARY\",\"request_id\":\"18edb56b-da68-4326-8ec3-3ccff215c042\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "1b5d93b3a45715031a362f4fb5acf447bc0222ef5393eab24aa84b8ebdd68ffc",
+"summary": "{\"content\":\"{\\\"count\\\":13,\\\"pages\\\":[{\\\"id\\\":\\\"b9407c4b-e90a-4c31-98ba-825368bcb6cc\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Holding plan\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-MGMT-1 allocation across ventur...",
+"sizeBytes": 6167,
+"redactedFields": []
+},
+"resultSizeBytes": 6167,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:45.675Z",
+"completedAt": "2026-11-16T03:32:45.693Z"
+}
+},
+{
+"id": "e130393a-9cd4-4b9a-a01f-863ec670e844",
+"companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"entityType": "tool_connection",
+"entityId": "1a786a57-a90c-4158-8222-854290b4965c",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-822a0bc8-eecb-4ca6-b3ae-1541b69f6050",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_whoami"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 205,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"providerType": "mcp_remote_http",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:20a455f5-ca0a-42e3-831f-679e8bb80f9d",
+"catalogEntryId": "6fd932b6-15d5-4ad3-99ca-b586294318cf",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_whoami",
+"identityContextId": "07795835-ece5-4880-86f7-fef00f3b639a",
+"invocationId": "e5ff2610-63cc-4737-ba29-d61bb1891f59",
+"actionRequestId": null,
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-whoami",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-whoami",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:45.646Z",
+"runId": "aaf2c1e4-5404-45a0-ae1e-9988704990ec",
+"agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+"agentDisplayName": "personal-probe",
+"actorDisplayName": "personal-probe",
+"applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+"connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Whoami",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "e5ff2610-63cc-4737-ba29-d61bb1891f59",
+"toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-whoami",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "53647f89a0eba270c0b4779c41b78bc8634b7fc371d50cc62ffb9d29b456d835",
+"summary": "{\"request_id\":\"cf09a56f-e87e-4187-95f0-1846a98fd5ef\"}",
+"sizeBytes": 53,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "4b50ff5ca10eea96a65bfc038882f69360202d69db601256cde64a8bc7397421",
+"summary": "{\"content\":\"{\\\"org\\\":\\\"personal\\\",\\\"kind\\\":\\\"personal\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"org\\\":\\\"personal\\\",\\\"kind\\\":\\\"personal\\\",\\\"actor\\\":\\\"agent\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structu...",
+"sizeBytes": 281,
+"redactedFields": []
+},
+"resultSizeBytes": 281,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:45.632Z",
+"completedAt": "2026-11-16T03:32:45.645Z"
+}
+}
+],
+"nextCursor": null
+}
+},
+{
+"m": "POST",
+"url": "BRAIN/mcp",
+"status": 200,
+"req": {
+"jsonrpc": "2.0",
+"id": 1,
+"method": "tools/call",
+"params": {
+"name": "brain_list",
+"arguments": {
+"request_id": "4b6d5f3e-5ba9-44a6-ba9c-ba3d96b14f59"
+}
+}
+},
+"res": {
+"jsonrpc": "2.0",
+"id": 1,
+"result": {
+"content": [
+{
+"type": "text",
+"text": "{\"count\":5,\"pages\":[{\"id\":\"d3010ecc-eb62-46d1-a00a-8dc864e4a1ff\",\"org\":\"mgmt\",\"title\":\"Shared style guide\",\"kind\":\"note\",\"source_type\":\"human\",\"path\":null},{\"id\":\"87d5ea4b-5952-4156-8cee-46c57e24593b\",\"org\":\"toveli\",\"title\":\"Code: apps/exam..."
+}
+],
+"isError": false
+}
+}
+},
+{
+"m": "GET",
+"url": "BRAIN/admin/audit?since_id=181",
+"status": 200,
+"req": null,
+"res": {
+"rows": [
+{
+"id": 182,
+"ts": "2026-11-16T03:32:40.595Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_whoami",
+"request_id": "32fd8ccd-cc52-4b58-8c8a-9c6649c62bee",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 183,
+"ts": "2026-11-16T03:32:40.695Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_search",
+"request_id": "15c57dbf-9cc7-47e4-b743-c0978d7ce4fe",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 184,
+"ts": "2026-11-16T03:32:40.788Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_list",
+"request_id": "d41c96b5-f906-4b22-b1ab-390adac6a2d3",
+"decision": "allow",
+"reason": null
+},
+{
+"id": 185,
+"ts": "2026-11-16T03:32:40.856Z",
+"org": "sibling",
+"actor": "agent",
+"tool": "brain_get",
+"request_id": "4bc92ab5-28e9-47fc-93ad-da6be5a71e55",
+"decision": "deny",
+"reason": "not_found"
+}
+]
+}
+},
+{
+"m": "GET",
+"url": "PC/api/tool-gateway/audit?companyId=ced35e22-0f16-4308-ae5b-655b94de7fea&limit=100",
+"status": 200,
+"req": null,
+"res": {
+"events": [
+{
+"id": "7c51d80d-4448-400d-a393-2cc3600f062f",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-ed0a8a57-e666-4602-95b1-7f790c5db56e",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 376,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "22dbabec-c762-4b8c-a8a6-ad93700b35c7",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "9d14c23b-feb6-4712-ab45-c1240546ca4c",
+"invocationId": "3e9b4d3c-8a17-46cf-b82c-67f906de2400",
+"actionRequestId": null,
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:49.870Z",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "3e9b4d3c-8a17-46cf-b82c-67f906de2400",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "1c50569932308e7b614d52b965e82468b1a6aa3805653f19e9e181c37f545a09",
+"summary": "{\"query\":\"CANARY-TOVELI-GW\",\"request_id\":\"58a51a54-f096-4902-92c4-4a57b19aeb6a\"}",
+"sizeBytes": 80,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "bcb69400c0001d4bd08504a3b5120d86565e59372b64f5cb5b4a35ec1d3b0eee",
+"summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"gw note\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-TOVELI-GW written through the gatew...",
+"sizeBytes": 623,
+"redactedFields": []
+},
+"resultSizeBytes": 623,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:49.853Z",
+"completedAt": "2026-11-16T03:32:49.869Z"
+}
+},
+{
+"id": "5b68c0f3-408a-4fea-a36b-42ebd7c1c42b",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "read",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-a5a79fd0-0966-4293-91a0-8da12531fb12",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "brain_search"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 167,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "read",
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"headerSummary": {
+"collisionRules": [
+{
+"action": "dropped_reserved_header",
+"header": "content-length",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "host",
+"source": "caller"
+},
+{
+"action": "dropped_reserved_header",
+"header": "content-type",
+"source": "caller"
+},
+{
+"action": "dropped_sensitive_header",
+"header": "x-paperclip-tool-gateway-token",
+"source": "caller"
+}
+],
+"staticHeaderNames": [],
+"metadataHeaderNames": [],
+"credentialHeaderNames": [
+"authorization"
+],
+"passthroughHeaderNames": [],
+"droppedPassthroughHeaderNames": [
+"accept-encoding",
+"connection",
+"content-length",
+"content-type"
+]
+},
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "22dbabec-c762-4b8c-a8a6-ad93700b35c7",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_search",
+"identityContextId": "9d14c23b-feb6-4712-ab45-c1240546ca4c",
+"invocationId": "d6d8c96d-a26c-4d40-8f24-998ba5a56749",
+"actionRequestId": null,
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "tool_completed"
+},
+"createdAt": "2026-11-16T03:32:49.810Z",
+"runId": "66f5cb12-5f25-45cc-9d33-be21e6566552",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Search",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "d6d8c96d-a26c-4d40-8f24-998ba5a56749",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+"status": "succeeded",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "e8c706a689742e90ff9d17b0983e12ff361b9ed0726aa69f6eefbf80d896086e",
+"summary": "{\"query\":\"CANARY-BRIEFING-GW\",\"request_id\":\"5c647def-0dca-4b4c-b18d-9265a07d59f4\"}",
+"sizeBytes": 82,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "fdb052799dc2e64e96c3efb482743878ff99709ed0cf02d9076d1e3fe1e05cac",
+"summary": "{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"mcp_http\"}}",
+"sizeBytes": 205,
+"redactedFields": []
+},
+"resultSizeBytes": 205,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:49.791Z",
+"completedAt": "2026-11-16T03:32:49.809Z"
+}
+},
+{
+"id": "2791a680-27c8-46b6-b1fd-c01cf37a6b10",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_failed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "write",
+"execution": {
+"request": {
+"endpoint": "http://127.0.0.1:8900/mcp",
+"protocol": "MCP JSON-RPC 2.0",
+"mcpMethod": "tools/call",
+"requestId": "paperclip-tool-fc3d6ba1-4887-4cf4-81f8-305079d0de16",
+"dispatched": true,
+"httpMethod": "POST",
+"upstreamToolName": "publish_briefing"
+},
+"response": {
+"httpStatus": 200,
+"contentType": "application/json",
+"bodySizeBytes": 165,
+"upstreamRequestId": null
+},
+"transport": "mcp_remote"
+},
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "write",
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "b1b7662c-ae8a-44ee-8e90-0e2d303fa420",
+"upstreamToolName": "publish_briefing",
+"identityContextId": "31f65c50-dbe3-4d96-8d5f-6d538f9580c4",
+"invocationId": "40965f00-a399-4d0a-b4a8-e66c2eae336c",
+"actionRequestId": null,
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+"decision": "deny",
+"matchedPolicyIds": [],
+"reasonCode": "tool_error",
+"argumentsSummary": {
+"sha256": "eeb55c8fed6558fef7edadc9e91e082ab4199f75966153a6431a7978583307f3",
+"summary": "{\"content\":\"CANARY-BRIEFING-FORGED\",\"request_id\":\"4f07e1da-4c27-498c-ab85-dc089e3f19bc\"}",
+"sizeBytes": 88,
+"redactedFields": []
+},
+"resultSummary": null
+},
+"createdAt": "2026-11-16T03:32:44.607Z",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Publish Briefing",
+"lifecycleType": null,
+"normalizedOutcome": "blocked",
+"invocation": {
+"id": "40965f00-a399-4d0a-b4a8-e66c2eae336c",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+"status": "failed",
+"policyDecision": "allow",
+"approvalState": "not_required",
+"argumentsSummary": {
+"sha256": "eeb55c8fed6558fef7edadc9e91e082ab4199f75966153a6431a7978583307f3",
+"summary": "{\"content\":\"CANARY-BRIEFING-FORGED\",\"request_id\":\"4f07e1da-4c27-498c-ab85-dc089e3f19bc\"}",
+"sizeBytes": 88,
+"redactedFields": []
+},
+"resultSummary": null,
+"resultSizeBytes": null,
+"errorCode": "tool_error",
+"errorMessage": "{\"error\":\"forbidden\"}",
+"startedAt": "2026-11-16T03:32:44.594Z",
+"completedAt": "2026-11-16T03:32:44.606Z"
+}
+},
+{
+"id": "16ad2af5-61aa-43af-83d5-a81e508b8460",
+"companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+"action": "tool_gateway.call_completed",
+"actorType": "agent",
+"actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"entityType": "tool_connection",
+"entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"details": {
+"risk": "write",
+"gatewayId": null,
+"projectId": null,
+"riskLevel": "write",
+"timeoutMs": 60000,
+"durationMs": 20,
+"gatewayName": null,
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"providerType": "mcp_remote_http",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+"catalogEntryId": "d7014ac4-94a4-468b-93b9-173126f89c2d",
+"promptInjection": {
+"detector": "regex",
+"fallbackReason": "not_configured"
+},
+"upstreamToolName": "brain_write",
+"identityContextId": "31f65c50-dbe3-4d96-8d5f-6d538f9580c4",
+"invocationId": "16027240-3dc0-4878-b931-6145f89d8a10",
+"actionRequestId": "31063a63-8535-4001-b826-7b124174a43b",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+"decision": "allow",
+"matchedPolicyIds": [],
+"reasonCode": "approved_action_executed"
+},
+"createdAt": "2026-11-16T03:32:44.260Z",
+"runId": "99d152ef-3ea1-43d9-b09d-a2d6729fdc46",
+"agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+"agentDisplayName": "toveli-probe",
+"actorDisplayName": "toveli-probe",
+"applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+"connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+"appDisplayName": "Permission service",
+"applicationDisplayName": "Permission service",
+"connectionDisplayName": "Permission service",
+"toolDisplayName": "Brain Write",
+"lifecycleType": null,
+"normalizedOutcome": "allowed",
+"invocation": {
+"id": "16027240-3dc0-4878-b931-6145f89d8a10",
+"toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+"status": "succeeded",
+"policyDecision": "require_approval",
+"approvalState": "approved",
+"argumentsSummary": {
+"sha256": "66c708652a62b513c9cbd984f5be2ddec2daa4dfe1bef4d0f24d1e7260fda127",
+"summary": "{\"body\":\"CANARY-TOVELI-GW written through the gateway\",\"request_id\":\"9ee6a355-cd4b-43ee-b823-0a988c729c79\",\"title\":\"gw note\"}",
+"sizeBytes": 125,
+"redactedFields": []
+},
+"resultSummary": {
+"sha256": "0ead763a0966944da59dcf1aa9c8f8c14d469e77d2bf9db054c27a075505ce21",
+"summary": "{\"content\":\"{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"id\\\":\\\"a3978325-e9a9-40ba-8867-058ee9bda78c\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"...",
+"sizeBytes": 251,
+"redactedFields": []
+},
+"resultSizeBytes": 251,
+"errorCode": null,
+"errorMessage": null,
+"startedAt": "2026-11-16T03:32:44.240Z",
+"completedAt": "2026-11-16T03:32:44.254Z"
+}
+}
+],
+"nextCursor": null
+}
+},
+{
+"m": "GET",
+"url": "PC/api/health",
+"status": 200,
+"req": null,
+"res": {
+"status": "ok",
+"version": "2026.1106.0",
+"serverVersion": "2026.1106.0",
+"commit": "d69631b01b9c658f80bf8bed389863dce82643e1",
+"deploymentMode": "local_trusted",
+"deploymentExposure": "private",
+"localAiLoginSupported": true,
+"authReady": true,
+"bootstrapStatus": "ready",
+"bootstrapInviteActive": false,
+"features": {
+"companyDeletionEnabled": true
+},
+"serverInfo": {
+"processStartedAt": "2026-11-16T03:32:37.689Z",
+"git": {
+"available": true,
+"fullSha": "d69631b01b9c658f80bf8bed389863dce82643e1",
+"shortSha": "d69631b",
+"branchName": null,
+"subject": "Source build",
+"committedAt": null,
+"localChanges": {
+"available": false,
+"unavailableReason": "git_status_unavailable"
+}
+}
+},
+"startupRecovery": {
+"phase": "ready",
+"updatedAt": "2026-11-16T03:32:39.645Z"
+},
+"nativeRecovery": {},
+"databaseBackup": {
+"enabled": true,
+"status": "warning",
+"backupDir": "/home/pclip/data/instances/default/data/backups",
+"maxAgeHours": 26,
+"latestBackup": null,
+"lastFailure": null,
+"warnings": [
+{
+"code": "database_backup_missing",
+"message": "No .sql.gz database backups found in /home/pclip/data/instances/default/data/backups."
+}
+]
+},
+"warnings": [
+{
+"code": "database_backup_missing",
+"message": "No .sql.gz database backups found in /home/pclip/data/instances/default/data/backups."
+}
+]
+}
+}
+]

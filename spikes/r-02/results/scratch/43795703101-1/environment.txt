@@ -1,0 +1,4 @@
+run: 43795703101-1  commit: 474d0c97889b8617d79c362918981136bab0a73e  date: 2026-11-16T03:02:22Z
+runner: Linux 7.0.0-1017-azure x86_64  cpus: 2  mem: 7G
+model key present: yes
+stages exit: 30

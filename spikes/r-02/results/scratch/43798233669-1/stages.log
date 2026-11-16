@@ -1,0 +1,192 @@
+[03:26:53] stage 0: Node v24.22.3
+node-v24.22.3-linux-x64.tar.xz: OK
+v24.22.3
+[03:26:55] stage 1: permission service
+Unable to find image 'postgres:17' locally
+17: Pulling from library/postgres
+37fb86c2a767: Pulling fs layer
+e3f1858cb92e: Pulling fs layer
+8fb810914793: Pulling fs layer
+0364acb7b7f6: Pulling fs layer
+aa59ca706586: Pulling fs layer
+c18f3c4e97d4: Pulling fs layer
+27d6f21260a0: Pulling fs layer
+4abaab6950ec: Pulling fs layer
+3391d2c467d6: Pulling fs layer
+ed4bbee64e27: Pulling fs layer
+d1f2edaee96e: Pulling fs layer
+cdfe3ddb3b6b: Pulling fs layer
+09a57405bcb1: Pulling fs layer
+d678e0101545: Pulling fs layer
+0364acb7b7f6: Waiting
+aa59ca706586: Waiting
+c18f3c4e97d4: Waiting
+27d6f21260a0: Waiting
+4abaab6950ec: Waiting
+3391d2c467d6: Waiting
+ed4bbee64e27: Waiting
+d1f2edaee96e: Waiting
+cdfe3ddb3b6b: Waiting
+09a57405bcb1: Waiting
+d678e0101545: Waiting
+e3f1858cb92e: Verifying Checksum
+e3f1858cb92e: Download complete
+8fb810914793: Verifying Checksum
+8fb810914793: Download complete
+0364acb7b7f6: Verifying Checksum
+0364acb7b7f6: Download complete
+c18f3c4e97d4: Verifying Checksum
+c18f3c4e97d4: Download complete
+27d6f21260a0: Verifying Checksum
+27d6f21260a0: Download complete
+aa59ca706586: Verifying Checksum
+aa59ca706586: Download complete
+4abaab6950ec: Verifying Checksum
+4abaab6950ec: Download complete
+ed4bbee64e27: Verifying Checksum
+ed4bbee64e27: Download complete
+37fb86c2a767: Verifying Checksum
+37fb86c2a767: Download complete
+d1f2edaee96e: Verifying Checksum
+d1f2edaee96e: Download complete
+cdfe3ddb3b6b: Verifying Checksum
+cdfe3ddb3b6b: Download complete
+09a57405bcb1: Verifying Checksum
+09a57405bcb1: Download complete
+d678e0101545: Verifying Checksum
+d678e0101545: Download complete
+37fb86c2a767: Pull complete
+e3f1858cb92e: Pull complete
+8fb810914793: Pull complete
+0364acb7b7f6: Pull complete
+aa59ca706586: Pull complete
+c18f3c4e97d4: Pull complete
+27d6f21260a0: Pull complete
+4abaab6950ec: Pull complete
+3391d2c467d6: Download complete
+3391d2c467d6: Pull complete
+ed4bbee64e27: Pull complete
+d1f2edaee96e: Pull complete
+cdfe3ddb3b6b: Pull complete
+09a57405bcb1: Pull complete
+d678e0101545: Pull complete
+Digest: sha256:0d938e975177bef9f1f61f3f9dbcf2e0aa0a139568f66d3415ed8892eb97f6ac
+Status: Downloaded newer image for postgres:17
+psql:service/schema.sql:20: NOTICE:  schema "brain" does not exist, skipping
+[03:27:09] direct tests: OK (1 lines; Ran 35 tests in 1.521s)
+[03:27:10] stage 2: Paperclip 2026.1023.0 as user pclip
+[03:29:23] installed: requested: paperclipai@2026.1023.0 in /home/pclip/pc  npm exit: 0 installed paperclipai 2026.1023.0 dist.integrity = 'sha512-PA2gLYoJKcmen1YaNr7jtyyZK2xNyW92XEedgZ82S1MMeMEB2kdmk1okRMD4aFUV4OZPFBwk76pV0jCM2Fuy0g==' dist.shasum = '4970b7bba38b57c32b71da5c6caeb85ecb8e6b30' 
+[03:29:32] Paperclip up: {"status":"ok","version":"2026.1023.0","serverVersion":"2026.1023.0","commit":"1b4c803816e82b0265c8422e1a804327a7ed8c54","deploymentMode":"local_trusted","deploymentExposure":"private","localAiLoginSupported":true,"authReady":true,"bootstrapStatus":"ready","bootstrapInviteActive":false,"features":{"
+[03:29:33] stage 3: criteria 1 to 4 through Paperclip 2026.1023.0
+[03:29:35] setup exit: 0
+{"passed": 37, "failed": 0, "findings_not_as_hoped": ["C7 a tool left out of the connection's enabled list is not shown to the agent and cannot be called through Paperclip", "C4 a request for a tool name that does not exist is in Paperclip's audit log"], "calls_made_through_gateway": 28, "in_paperclip_audit": 27, "paperclip_audit_matched_by": {"invocation id": 22, "action request id": 0, "request id in the logged arguments": 5, "run, tool and order": 0}, "in_service_audit": 27, "stopped_by_paperclip_first": 1, "service_audit_by_org": {"sibling": {"allow": 3, "deny": 1}, "toveli": {"allow": 11, "deny": 5}, "personal": {"allow": 3}, "mgmt": {"allow": 4}}, "paperclip_version": "2026.1023.0"}
+PASS run completed: sibling
+PASS agent process got no runner credential in its environment: sibling
+PASS run completed: toveli
+PASS agent process got no runner credential in its environment: toveli
+PASS run completed: personal
+PASS agent process got no runner credential in its environment: personal
+PASS run completed: mgmt-before
+PASS agent process got no runner credential in its environment: mgmt-before
+PASS run completed: mgmt-after
+PASS agent process got no runner credential in its environment: mgmt-after
+PASS run completed: toveli-after
+PASS agent process got no runner credential in its environment: toveli-after
+PASS C1 toveli agent identified as toveli by the service
+PASS C1 toveli agent sees its own and global pages
+PASS C1 no SIBLING page ever reached the toveli agent (any step, any run)
+PASS C1 no PERSONAL page ever reached the toveli agent (any step, any run)
+PASS C1 no MGMT page ever reached the toveli agent (any step, any run)
+PASS C1 a sibling's page looks exactly like a missing page (status, error and reason relayed by Paperclip)
+PASS C1 sibling agent sees its own pages
+PASS C1 no toveli page (codebase pages included) reached the sibling agent
+PASS C1 no personal or holding-only page reached the sibling agent
+PASS C2 holding agent reads both sub-organizations
+PASS C2 no personal page reached the holding agent
+PASS C3 personal agent reads its organizations
+PASS C3 an organization's agent cannot publish a briefing
+PASS C7 ask-first: each call stopped with HTTP 409 and an approval request until a human decided
+PASS C7 ask-first: on approval Paperclip ran the approved call itself, once; the agent's own retry was refused
+PASS C3 a health page is refused outside personal by the service, even after a human approved the call in Paperclip
+PASS C3 briefing accepted from the personal agent as pending
+PASS C3 briefing invisible to the holding agent before the human approves it
+PASS C3 briefing visible to the holding agent after approval
+PASS C3 briefing never reaches a sub-organization
+PASS C7 ask-first: the approved write is in the organization's brain afterwards
+NOTE C7 a tool left out of the connection's enabled list is not shown to the agent and cannot be called through Paperclip  <- listed to the agent: True; call status 502; {"error":"{\"error\":\"forbidden\"}","reasonCode":"tool_error","execution":{"transport":"mcp_remote","request":{"protocol":"MCP JSON-RPC 2.0","httpMethod":"POST","endpoint":"http://127.0.0.1:8900/mcp"
+PASS C4 every call to a tool that exists is in Paperclip's audit log (allowed, refused, or waiting for approval)
+NOTE C4 a request for a tool name that does not exist is in Paperclip's audit log  <- Paperclip answered 404 tool_not_found and wrote no audit event for it
+PASS C4 every call that reached the service is in the service's audit log with the same request ID
+PASS C4 the service logged its own denials
+PASS C4 limit recorded: a call that goes around Paperclip is in the service's log only
+[03:29:46] checks (2026.1023.0) exit: 0
+WORKS                        baseline: scripted agent runs one heartbeat and calls two tools through the gateway
+WORKS IN THE FREE EDITION    tool and MCP policy: a block rule on one tool, for one company; then the rule is deleted
+WORKS IN THE FREE EDITION    pause: pause the agent, trigger a heartbeat, resume, trigger again
+WORKS IN THE FREE EDITION    kill: cancel a heartbeat run while the agent's process is still working
+PARTLY WORKS                 secrets: store a secret, bind it to the agent's environment by reference, run the agent, have the agent print it, read the run log
+WORKS IN THE FREE EDITION    company boundary: an agent uses its own run token to read its own company, another company's agents and another company's gateway audit
+WORKS IN THE FREE EDITION    spend caps: a second agent runs once; set a $1.00 monthly budget on it, report $1.50 of cost, trigger a heartbeat, raise the budget, trigger again
+WORKS IN THE FREE EDITION    approvals: hiring an agent: require approval for new agents, try to create one directly, request a hire, approve it
+WORKS IN THE FREE EDITION    audit log: read the company activity log and the tool gateway audit after the probes above
+WORKS IN THE FREE EDITION    terminate: terminate the agent, then trigger a heartbeat
+[03:31:52] governance (2026.1023.0) exit: 0
+[03:31:53] stage 4: upgrade Paperclip 2026.1023.0 -> 2026.1106.0; the permission service is not touched
+[03:32:32] in-place upgrade (npm install paperclipai@2026.1106.0 over the old install): npm exit 0
+[03:32:39] Paperclip up after upgrade: {"status":"ok","version":"2026.1106.0","serverVersion":"2026.1106.0","commit":"d69631b01b9c658f80bf8bed389863dce82643e1","deploymentMode":"local_trusted","deploymentExposure":"private","localAiLoginSupported":true,"authReady":true,"bootstrapStatus":"ready","bootstrapInviteActive":false,"features":{"
+{"passed": 37, "failed": 0, "findings_not_as_hoped": ["C7 a tool left out of the connection's enabled list is not shown to the agent and cannot be called through Paperclip", "C4 a request for a tool name that does not exist is in Paperclip's audit log"], "calls_made_through_gateway": 28, "in_paperclip_audit": 27, "paperclip_audit_matched_by": {"invocation id": 22, "action request id": 0, "request id in the logged arguments": 5, "run, tool and order": 0}, "in_service_audit": 27, "stopped_by_paperclip_first": 1, "service_audit_by_org": {"sibling": {"allow": 3, "deny": 1}, "toveli": {"allow": 11, "deny": 5}, "personal": {"allow": 3}, "mgmt": {"allow": 4}}, "paperclip_version": "2026.1106.0"}
+PASS run completed: sibling
+PASS agent process got no runner credential in its environment: sibling
+PASS run completed: toveli
+PASS agent process got no runner credential in its environment: toveli
+PASS run completed: personal
+PASS agent process got no runner credential in its environment: personal
+PASS run completed: mgmt-before
+PASS agent process got no runner credential in its environment: mgmt-before
+PASS run completed: mgmt-after
+PASS agent process got no runner credential in its environment: mgmt-after
+PASS run completed: toveli-after
+PASS agent process got no runner credential in its environment: toveli-after
+PASS C1 toveli agent identified as toveli by the service
+PASS C1 toveli agent sees its own and global pages
+PASS C1 no SIBLING page ever reached the toveli agent (any step, any run)
+PASS C1 no PERSONAL page ever reached the toveli agent (any step, any run)
+PASS C1 no MGMT page ever reached the toveli agent (any step, any run)
+PASS C1 a sibling's page looks exactly like a missing page (status, error and reason relayed by Paperclip)
+PASS C1 sibling agent sees its own pages
+PASS C1 no toveli page (codebase pages included) reached the sibling agent
+PASS C1 no personal or holding-only page reached the sibling agent
+PASS C2 holding agent reads both sub-organizations
+PASS C2 no personal page reached the holding agent
+PASS C3 personal agent reads its organizations
+PASS C3 an organization's agent cannot publish a briefing
+PASS C7 ask-first: each call stopped with HTTP 409 and an approval request until a human decided
+PASS C7 ask-first: on approval Paperclip ran the approved call itself, once; the agent's own retry was refused
+PASS C3 a health page is refused outside personal by the service, even after a human approved the call in Paperclip
+PASS C3 briefing accepted from the personal agent as pending
+PASS C3 briefing invisible to the holding agent before the human approves it
+PASS C3 briefing visible to the holding agent after approval
+PASS C3 briefing never reaches a sub-organization
+PASS C7 ask-first: the approved write is in the organization's brain afterwards
+NOTE C7 a tool left out of the connection's enabled list is not shown to the agent and cannot be called through Paperclip  <- listed to the agent: True; call status 502; {"error":"{\"error\":\"forbidden\"}","reasonCode":"tool_error","execution":{"transport":"mcp_remote","request":{"protocol":"MCP JSON-RPC 2.0","httpMethod":"POST","endpoint":"http://127.0.0.1:8900/mcp"
+PASS C4 every call to a tool that exists is in Paperclip's audit log (allowed, refused, or waiting for approval)
+NOTE C4 a request for a tool name that does not exist is in Paperclip's audit log  <- Paperclip answered 404 tool_not_found and wrote no audit event for it
+PASS C4 every call that reached the service is in the service's audit log with the same request ID
+PASS C4 the service logged its own denials
+PASS C4 limit recorded: a call that goes around Paperclip is in the service's log only
+[03:32:50] checks (2026.1106.0) exit: 0
+WORKS                        baseline: scripted agent runs one heartbeat and calls two tools through the gateway
+WORKS IN THE FREE EDITION    tool and MCP policy: a block rule on one tool, for one company; then the rule is deleted
+WORKS IN THE FREE EDITION    pause: pause the agent, trigger a heartbeat, resume, trigger again
+WORKS IN THE FREE EDITION    kill: cancel a heartbeat run while the agent's process is still working
+PARTLY WORKS                 secrets: store a secret, bind it to the agent's environment by reference, run the agent, have the agent print it, read the run log
+WORKS IN THE FREE EDITION    company boundary: an agent uses its own run token to read its own company, another company's agents and another company's gateway audit
+WORKS IN THE FREE EDITION    spend caps: a second agent runs once; set a $1.00 monthly budget on it, report $1.50 of cost, trigger a heartbeat, raise the budget, trigger again
+WORKS IN THE FREE EDITION    approvals: hiring an agent: require approval for new agents, try to create one directly, request a hire, approve it
+WORKS IN THE FREE EDITION    audit log: read the company activity log and the tool gateway audit after the probes above
+WORKS IN THE FREE EDITION    terminate: terminate the agent, then trigger a heartbeat
+[03:34:56] governance (2026.1106.0) exit: 0
+[03:34:57] stage 5: criterion 5 (one model-driven task through the stack, and the same task on one plain agent)
+{"stack": {"runs": 3, "passed_all": 3, "mean_cost_usd": 0.0381, "mean_seconds": 19.6, "mean_turns": 5.0, "mean_input_tokens": 11926.6667, "mean_wall_seconds": 21.7}, "plain": {"runs": 3, "passed_all": 3, "mean_cost_usd": 0.0346, "mean_seconds": 20.9333, "mean_turns": 4.0, "mean_input_tokens": 7933.6667, "mean_wall_seconds": 21.0}}
+[03:37:06] criterion 5 exit: 0
+[03:37:06] done: old=0 new=0

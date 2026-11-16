@@ -9,7 +9,10 @@ import hashlib, json, os, sys, time, urllib.error, urllib.request
 
 API = os.environ.get("PAPERCLIP_API_URL", "").rstrip("/")
 KEY = os.environ.get("PAPERCLIP_API_KEY", "")
-PLAN = json.load(open(os.environ["PROBE_PLAN"]))
+_plan = json.load(open(os.environ["PROBE_PLAN"]))
+PLAN = _plan["steps"] if isinstance(_plan, dict) else _plan
+ISSUE_ID = _plan.get("issue_id") if isinstance(_plan, dict) else None
+RUNNER_CREDENTIALS = {"GH_TOKEN", "GITHUB_TOKEN", "SPIKE_MODEL_KEY", "ANTHROPIC_API_KEY", "ACTIONS_RUNTIME_TOKEN", "ACTIONS_ID_TOKEN_REQUEST_TOKEN"}
 OUT = os.environ["PROBE_OUT"]
 
 
@@ -30,7 +33,10 @@ def http(method, url, headers=None, body=None):
 def main():
     out = {"started": time.time(), "steps": [],
            "env": sorted(k for k in os.environ if k.startswith("PAPERCLIP_")),
-           "leaked_env": sorted(k for k in os.environ if any(s in k for s in ("GH_", "GITHUB_", "SPIKE_MODEL", "ANTHROPIC")))}
+           "env_names_other": sorted(k for k in os.environ if not k.startswith("PAPERCLIP_")),
+           # the scratch machine's own credentials, by name, plus anything the CI runner sets for its jobs
+           "leaked_env": sorted(k for k in os.environ if k in RUNNER_CREDENTIALS or k.startswith(("ACTIONS_", "RUNNER_")) or k in ("GITHUB_REPOSITORY", "GITHUB_RUN_ID", "GITHUB_WORKSPACE")),
+           "user": os.environ.get("USER"), "uid": os.getuid()}
     out["run_id"] = os.environ.get("PAPERCLIP_RUN_ID")
     out["has_run_token"] = bool(KEY)
     if os.environ.get("PROBE_SECRET"):
@@ -50,6 +56,8 @@ def main():
                            "other_company_agents": http("GET", f"{API}/api/companies/{os.environ['PROBE_FOREIGN_COMPANY']}/agents", auth)[0],
                            "other_company_gateway_audit": http("GET", f"{API}/api/tool-gateway/audit?companyId={os.environ['PROBE_FOREIGN_COMPANY']}", auth)[0]}
     ids = {} if KEY else {"companyId": os.environ.get("PAPERCLIP_COMPANY_ID"), "agentId": os.environ.get("PAPERCLIP_AGENT_ID"), "runId": os.environ.get("PAPERCLIP_RUN_ID")}
+    if ISSUE_ID:
+        ids["issueId"] = ISSUE_ID          # approvals are posted on a task, so an ask-first call needs a task-scoped session
     status, raw = http("POST", API + "/api/tool-gateway/sessions", auth, ids)
     out["session"] = {"status": status, "body": raw[:200] if status != 200 and status != 201 else "ok"}
     token, names = "", {}
@@ -77,16 +85,25 @@ def main():
         rec = {"label": step.get("label"), "tool": step["tool"], "gateway_tool": body["tool"], "parameters": step.get("parameters", {}), "status": status,
                "ms": round((time.time() - t0) * 1000), "raw": raw[:20000]}
         if status == 409 and step.get("wait_for_approval"):
-            # An ask-first tool: wait for the human to approve, then retry the identical call.
+            # An ask-first tool. Paperclip has posted an approval card on the task; wait for the human's decision.
             try:
                 ar = json.loads(raw).get("actionRequestId")
             except ValueError:
                 ar = None
             rec["action_request_id"] = ar
-            open(OUT + ".waiting", "w").write(json.dumps({"action_request_id": ar, "label": step.get("label")}))
+            with open(OUT + ".waiting.tmp", "w") as f:
+                f.write(json.dumps({"action_request_id": ar, "label": step.get("label")}))
+            os.replace(OUT + ".waiting.tmp", OUT + ".waiting")
             deadline = time.time() + 120
             while time.time() < deadline and not os.path.exists(OUT + ".approved"):
-                time.sleep(1)
+                time.sleep(0.5)
+            if os.path.exists(OUT + ".approved"):
+                try:
+                    rec["decision_seen"] = json.load(open(OUT + ".approved"))
+                except ValueError:
+                    rec["decision_seen"] = None
+                os.remove(OUT + ".approved")
+            # What does a retry of the identical call do after the decision? Recorded as evidence only.
             s3, r3 = http("POST", API + "/api/tool-gateway/tools/call", gw, dict(body, approvedActionRequestId=ar))
             rec["retry"] = {"status": s3, "raw": r3[:4000]}
         out["steps"].append(rec)

@@ -1,0 +1,2 @@
+in-place npm upgrade exit: 0; final install directory: /home/pclip/pc
+service files digest before/after: 6d2c1fbde970f270 / 6d2c1fbde970f270; service process before/after: 2212 / 2212 (same process means it was never restarted)

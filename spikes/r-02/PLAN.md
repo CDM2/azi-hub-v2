@@ -1,5 +1,7 @@
 # R-02 spike plan
 
+Update, 2026-11-16: Cole approved this plan and the spike has run. Results are in `docs/research/R-02_RUNTIME_AND_HARNESS.md` and `results/`. The text below is the plan as approved, kept as written, with three later inputs from Cole: the curated personal briefing stays and gets an off switch; the personal space can ship on or off; one company means a holding organization alone (V-000 F-25 to F-27). The tests cover all three. Paperclip ran through GitHub Actions on `CDM2/Spike-test`, and criterion 5 ran there with the throwaway key as a repository secret.
+
 Status: revision 2, 2026-11-15, after Cole's reply to revision 1. Waiting for his final OK. Nothing below has run except the jail canary and a check that the API key authenticates (a model list, which costs nothing).
 
 The spike tests R-01 option D: unmodified Paperclip for each organization, our own permission service reached over MCP, and a chief-of-staff agent. Criteria 1 to 6 are in R-01 section 7. Cole added 7 (governance coverage) and 8 (codebase map).

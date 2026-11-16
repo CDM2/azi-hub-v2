@@ -1,0 +1,246 @@
+c625ff4e-bfeb-488a-b5c0-cabe1ca849b4/heartbeat/invoke 202
+[03:21:18] INFO: GET /agents/me 200
+[03:21:18] INFO: POST /tool-gateway/sessions 201
+[03:21:18] INFO: GET /tool-gateway/tools 200
+[03:21:18] INFO: POST /tool-gateway/tools/call 200
+[03:21:19] INFO: POST /tool-gateway/tools/call 200
+[03:21:19] INFO: POST /tool-gateway/tools/call 200
+[03:21:19] ERROR: POST /tool-gateway/tools/call 502 — failed with status code 502 {"reqBody":{"tool":"mcp.app-gallery-link-9892c14b-e3dc-4376-a122-7c9662461fb7-b04c43e7:brain-get","parameters":{"path":"apps/example/main.ts","request_id":"b9e7a83e-56da-4b66-959c-e866ec16c868"}},"routePath":"/tool-gateway/tools/call"}
+    err: {
+      "type": "Error",
+      "message": "failed with status code 502",
+      "stack":
+          Error: failed with status code 502
+              at onResFinished (/home/pclip/pc/node_modules/pino-http/logger.js:115:39)
+              at ServerResponse.onResponseComplete (/home/pclip/pc/node_modules/pino-http/logger.js:178:14)
+              at ServerResponse.emit (node:events:526:24)
+              at onFinish (node:_http_outgoing:1170:10)
+              at callback (node:internal/streams/writable:768:21)
+              at afterWrite (node:internal/streams/writable:712:5)
+              at afterWriteTick (node:internal/streams/writable:698:10)
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    }
+[03:21:20] INFO: GET /companies/2f10b326-a066-4285-8a73-b8f7d838e8c8/heartbeat-runs 200
+[03:21:20] INFO: POST /agents/696f7f6b-7c31-44dc-9eea-dddeb4e05bbc/heartbeat/invoke 202
+[03:21:20] INFO: GET /agents/me 200
+[03:21:20] INFO: POST /tool-gateway/sessions 201
+[03:21:20] INFO: GET /tool-gateway/tools 200
+[03:21:20] INFO: POST /tool-gateway/tools/call 200
+[03:21:20] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] ERROR: POST /tool-gateway/tools/call 502 — failed with status code 502 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-get","parameters":{"id":"36024043-bec9-425a-b022-194675e3e5f1","request_id":"08619e70-9d46-49fa-9474-0d7e9d126435"}},"routePath":"/tool-gateway/tools/call"}
+    err: {
+      "type": "Error",
+      "message": "failed with status code 502",
+      "stack":
+          Error: failed with status code 502
+              at onResFinished (/home/pclip/pc/node_modules/pino-http/logger.js:115:39)
+              at ServerResponse.onResponseComplete (/home/pclip/pc/node_modules/pino-http/logger.js:178:14)
+              at ServerResponse.emit (node:events:526:24)
+              at onFinish (node:_http_outgoing:1170:10)
+              at callback (node:internal/streams/writable:768:21)
+              at afterWrite (node:internal/streams/writable:712:5)
+              at afterWriteTick (node:internal/streams/writable:698:10)
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    }
+[03:21:21] ERROR: POST /tool-gateway/tools/call 502 — failed with status code 502 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-get","parameters":{"id":"d9c1c3dc-2e94-49cd-82ac-f036c192fc9c","request_id":"658cf974-d15c-4599-bc83-94ef86527644"}},"routePath":"/tool-gateway/tools/call"}
+    err: {
+      "type": "Error",
+      "message": "failed with status code 502",
+      "stack":
+          Error: failed with status code 502
+              at onResFinished (/home/pclip/pc/node_modules/pino-http/logger.js:115:39)
+              at ServerResponse.onResponseComplete (/home/pclip/pc/node_modules/pino-http/logger.js:178:14)
+              at ServerResponse.emit (node:events:526:24)
+              at onFinish (node:_http_outgoing:1170:10)
+              at callback (node:internal/streams/writable:768:21)
+              at afterWrite (node:internal/streams/writable:712:5)
+              at afterWriteTick (node:internal/streams/writable:698:10)
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    }
+[03:21:21] ERROR: POST /tool-gateway/tools/call 502 — failed with status code 502 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-get","parameters":{"path":"services/quant/run.py","request_id":"471dbe8b-2e3a-4f4f-a54a-10b3c80c67ed"}},"routePath":"/tool-gateway/tools/call"}
+    err: {
+      "type": "Error",
+      "message": "failed with status code 502",
+      "stack":
+          Error: failed with status code 502
+              at onResFinished (/home/pclip/pc/node_modules/pino-http/logger.js:115:39)
+              at ServerResponse.onResponseComplete (/home/pclip/pc/node_modules/pino-http/logger.js:178:14)
+              at ServerResponse.emit (node:events:526:24)
+              at onFinish (node:_http_outgoing:1170:10)
+              at callback (node:internal/streams/writable:768:21)
+              at afterWrite (node:internal/streams/writable:712:5)
+              at afterWriteTick (node:internal/streams/writable:698:10)
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    }
+[03:21:21] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] INFO: POST /tool-gateway/tools/call 200
+[03:21:21] WARN: POST /tool-gateway/tools/call 409 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-write","parameters":{"title":"s","body":"CANARY-SENSITIVE-GW","sensitivity":"health","request_id":"2f9a9e06-3297-42fd-a463-070358d0e4f8"}},"routePath":"/tool-gateway/tools/call"}
+[03:21:22] INFO: POST /tool-gateway/action-requests/4a60b67f-5937-4961-a1b6-97f9a2f5a59f/approve 200
+[03:21:22] WARN: POST /tool-gateway/tools/call 409 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-write","parameters":{"title":"s","body":"CANARY-SENSITIVE-GW","sensitivity":"health","request_id":"2f9a9e06-3297-42fd-a463-070358d0e4f8"},"approvedActionRequestId":"4a60b67f-5937-4961-a1b6-97f9a2f5a59f"},"routePath":"/tool-gateway/tools/call"}
+[03:21:23] WARN: POST /tool-gateway/tools/call 409 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-write","parameters":{"title":"gw note","body":"CANARY-TOVELI-GW written through the gateway","request_id":"82f2866f-4ecc-4a33-a3e8-c8706693f807"}},"routePath":"/tool-gateway/tools/call"}
+[03:21:23] INFO: POST /tool-gateway/action-requests/76ca8af8-e9a7-4cd3-87ba-17472d048fb0/approve 200
+[03:21:24] WARN: POST /tool-gateway/tools/call 409 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:brain-write","parameters":{"title":"gw note","body":"CANARY-TOVELI-GW written through the gateway","request_id":"82f2866f-4ecc-4a33-a3e8-c8706693f807"},"approvedActionRequestId":"76ca8af8-e9a7-4cd3-87ba-17472d048fb0"},"routePath":"/tool-gateway/tools/call"}
+[03:21:24] ERROR: POST /tool-gateway/tools/call 502 — failed with status code 502 {"reqBody":{"tool":"mcp.app-gallery-link-cbc10e28-f67b-4e8e-a784-4d729e4f27be-61fa74aa:publish-briefing","parameters":{"content":"CANARY-BRIEFING-FORGED","request_id":"78d360c5-4623-42b8-a0fe-0f4a54c5f700"}},"routePath":"/tool-gateway/tools/call"}
+    err: {
+      "type": "Error",
+      "message": "failed with status code 502",
+      "stack":
+          Error: failed with status code 502
+              at onResFinished (/home/pclip/pc/node_modules/pino-http/logger.js:115:39)
+              at ServerResponse.onResponseComplete (/home/pclip/pc/node_modules/pino-http/logger.js:178:14)
+              at ServerResponse.emit (node:events:526:24)
+              at onFinish (node:_http_outgoing:1170:10)
+              at callback (node:internal/streams/writable:768:21)
+              at afterWrite (node:internal/streams/writable:712:5)
+              at afterWriteTick (node:internal/streams/writable:698:10)
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    }
+[03:21:24] WARN: POST /tool-gateway/tools/call 404 {"reqBody":{"tool":"brain_admin_dump","parameters":{"request_id":"76e10306-4bd3-4955-a3a1-aed8da693b5a"}},"routePath":"/tool-gateway/tools/call"}
+[03:21:24] INFO: GET /companies/93538400-e145-4ed3-ae7d-14e445530bde/heartbeat-runs 200
+[03:21:24] INFO: POST /agents/47104844-0527-4d06-afe9-a92d04e15f21/heartbeat/invoke 202
+[03:21:25] INFO: GET /agents/me 200
+[03:21:25] INFO: POST /tool-gateway/sessions 201
+[03:21:25] INFO: GET /tool-gateway/tools 200
+[03:21:25] INFO: POST /tool-gateway/tools/call 200
+[03:21:25] INFO: POST /tool-gateway/tools/call 200
+[03:21:25] WARN: POST /tool-gateway/tools/call 409 {"reqBody":{"tool":"mcp.app-gallery-link-8e0a9509-2115-466b-88bd-52da14adf264-110b37ce:publish-briefing","parameters":{"content":"CANARY-BRIEFING-GW priorities, published through the gateway.","request_id":"d15f9b73-9bdd-4f5f-9ec3-7be013eb8d18"}},"routePath":"/tool-gateway/tools/call"}
+[03:21:25] INFO: POST /tool-gateway/action-requests/30712af8-3dca-4487-ac42-ecfbf93a8a58/approve 200
+[03:21:26] WARN: POST /tool-gateway/tools/call 409 {"reqBody":{"tool":"mcp.app-gallery-link-8e0a9509-2115-466b-88bd-52da14adf264-110b37ce:publish-briefing","parameters":{"content":"CANARY-BRIEFING-GW priorities, published through the gateway.","request_id":"d15f9b73-9bdd-4f5f-9ec3-7be013eb8d18"},"approvedActionRequestId":"30712af8-3dca-4487-ac42-ecfbf93a8a58"},"routePath":"/tool-gateway/tools/call"}
+[03:21:26] INFO: GET /companies/09e0eb13-d6ba-4b10-b429-7ab1bd72ecaa/heartbeat-runs 200
+[03:21:26] INFO: POST /agents/f2144a71-4510-41b8-a51d-1ef1edd8ad05/heartbeat/invoke 202
+[03:21:27] INFO: GET /agents/me 200
+[03:21:27] INFO: POST /tool-gateway/sessions 201
+[03:21:27] INFO: GET /tool-gateway/tools 200
+[03:21:27] INFO: POST /tool-gateway/tools/call 200
+[03:21:27] INFO: POST /tool-gateway/tools/call 200
+[03:21:27] INFO: POST /tool-gateway/tools/call 200
+[03:21:28] INFO: GET /companies/65656e35-a63c-465d-a7df-c1c434acebfc/heartbeat-runs 200
+[03:21:28] INFO: POST /agents/f2144a71-4510-41b8-a51d-1ef1edd8ad05/heartbeat/invoke 202
+[03:21:28] INFO: GET /agents/me 200
+[03:21:28] INFO: POST /tool-gateway/sessions 201
+[03:21:28] INFO: GET /tool-gateway/tools 200
+[03:21:28] INFO: POST /tool-gateway/tools/call 200
+[03:21:29] INFO: GET /companies/65656e35-a63c-465d-a7df-c1c434acebfc/heartbeat-runs 200
+[03:21:29] INFO: POST /agents/696f7f6b-7c31-44dc-9eea-dddeb4e05bbc/heartbeat/invoke 202
+[03:21:29] INFO: GET /agents/me 200
+[03:21:29] INFO: POST /tool-gateway/sessions 201
+[03:21:29] INFO: GET /tool-gateway/tools 200
+[03:21:29] INFO: POST /tool-gateway/tools/call 200
+[03:21:29] INFO: POST /tool-gateway/tools/call 200
+[03:21:30] INFO: GET /companies/93538400-e145-4ed3-ae7d-14e445530bde/heartbeat-runs 200
+[03:21:30] INFO: GET /tool-gateway/audit 200
+[03:21:30] INFO: GET /tool-gateway/audit 200
+[03:21:30] INFO: GET /tool-gateway/audit 200
+[03:21:30] INFO: GET /tool-gateway/audit 200
+[03:21:30] INFO: GET /tool-gateway/audit 200
+[03:21:31] INFO: POST / 201
+[03:21:31] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/agents 201
+[03:21:31] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/issues 201
+[03:21:31] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/tools/apps/connect 201
+[03:21:31] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/tools/apps/a7aed759-3057-4f10-84e9-85972058378a/finish 200
+[03:21:31] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/tools/profiles/effective/agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:21:31] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:21:32] INFO: GET /agents/me 200
+[03:21:32] INFO: POST /tool-gateway/sessions 201
+[03:21:32] INFO: GET /tool-gateway/tools 200
+[03:21:32] INFO: POST /tool-gateway/tools/call 200
+[03:21:32] INFO: POST /tool-gateway/tools/call 200
+[03:21:32] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:21:32] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/tools/policies 201
+[03:21:32] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:21:33] INFO: GET /agents/me 200
+[03:21:33] INFO: POST /tool-gateway/sessions 201
+[03:21:33] INFO: GET /tool-gateway/tools 200
+[03:21:33] WARN: POST /tool-gateway/tools/call 404 {"reqBody":{"tool":"brain_list","parameters":{"request_id":"393f7460-5cb5-41c0-b17f-81f8a5e8dc1b"}},"routePath":"/tool-gateway/tools/call"}
+[03:21:33] WARN: POST /tool-gateway/tools/call 403 {"reqBody":{"tool":"mcp.app-gallery-link-d5eb262e-8894-400a-9c94-ebf20ca85ac3-a7aed759:brain-list","parameters":{"request_id":"3f03eaf2-5a26-45ef-90e9-2a3747c0973a"}},"routePath":"/tool-gateway/tools/call"}
+[03:21:35] INFO: POST /tool-gateway/tools/call 200
+[03:21:35] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:21:35] INFO: DELETE /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/tools/policies/5f9f62e6-e779-4eca-8631-ed3a91fa00cc 200
+[03:21:35] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:21:36] INFO: GET /agents/me 200
+[03:21:36] INFO: POST /tool-gateway/sessions 201
+[03:21:36] INFO: GET /tool-gateway/tools 200
+[03:21:36] INFO: POST /tool-gateway/tools/call 200
+[03:21:36] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:21:36] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/pause 200
+[03:21:36] WARN: POST /api/agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 409 {"routePath":"/agents/:id/heartbeat/invoke"}
+[03:22:01] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:01] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/resume 200
+[03:22:02] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:22:02] INFO: GET /agents/me 200
+[03:22:02] INFO: POST /tool-gateway/sessions 201
+[03:22:02] INFO: GET /tool-gateway/tools 200
+[03:22:02] INFO: POST /tool-gateway/tools/call 200
+[03:22:03] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:03] INFO: PATCH /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:03] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:22:04] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:04] INFO: POST /heartbeat-runs/90d05094-4cd9-48c4-ae84-ed8bf1845d8d/cancel 200
+[03:22:04] INFO: skipping late run finalization because the run already left running state {"runId":"90d05094-4cd9-48c4-ae84-ed8bf1845d8d","attemptedStatus":"cancelled","currentStatus":"cancelled"}
+[03:22:05] INFO: GET /heartbeat-runs/90d05094-4cd9-48c4-ae84-ed8bf1845d8d 200
+[03:22:05] INFO: PATCH /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:05] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/secrets 201
+[03:22:05] INFO: PATCH /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:05] INFO: GET /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:05] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:22:05] INFO: GET /agents/me 200
+[03:22:05] INFO: POST /tool-gateway/sessions 201
+[03:22:05] INFO: GET /tool-gateway/tools 200
+[03:22:05] INFO: POST /tool-gateway/tools/call 200
+[03:22:06] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:09] INFO: GET /heartbeat-runs/a13fe80d-5390-48ba-99e2-859891471c2e/log 200
+[03:22:09] INFO: GET /heartbeat-runs/a13fe80d-5390-48ba-99e2-859891471c2e/events 200
+[03:22:09] INFO: GET /heartbeat-runs/a13fe80d-5390-48ba-99e2-859891471c2e 200
+[03:22:09] INFO: PATCH /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:09] INFO: PATCH /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:09] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 202
+[03:22:09] INFO: GET /agents/me 200
+[03:22:09] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/agents 200
+[03:22:09] WARN: GET /api/companies/93538400-e145-4ed3-ae7d-14e445530bde/agents 403 {"routePath":"/companies/:companyId/agents"}
+[03:22:09] WARN: GET /tool-gateway/audit 403 {"routePath":"/tool-gateway/audit"}
+[03:22:09] INFO: POST /tool-gateway/sessions 201
+[03:22:09] INFO: GET /tool-gateway/tools 200
+[03:22:10] INFO: POST /tool-gateway/tools/call 200
+[03:22:10] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:10] INFO: PATCH /agents/3abced31-1f55-4127-8c87-667de0281e83 200
+[03:22:10] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/agents 201
+[03:22:10] INFO: POST /agents/a8090735-023c-44d4-b127-ea68402182e2/heartbeat/invoke 202
+[03:22:11] INFO: GET /agents/me 200
+[03:22:11] INFO: POST /tool-gateway/sessions 201
+[03:22:11] INFO: GET /tool-gateway/tools 200
+[03:22:11] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:11] INFO: PATCH /agents/a8090735-023c-44d4-b127-ea68402182e2/budgets 200
+[03:22:11] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/cost-events 201
+[03:22:13] INFO: GET /agents/a8090735-023c-44d4-b127-ea68402182e2 200
+[03:22:13] WARN: POST /api/agents/a8090735-023c-44d4-b127-ea68402182e2/heartbeat/invoke 409 {"routePath":"/agents/:id/heartbeat/invoke"}
+[03:22:16] INFO: skill version snapshot retention {"checked":30,"candidates":0,"candidateBytes":0,"reclaimedBytes":0,"removed":0,"removedOrphans":0,"removedStaging":0,"kept":15,"skippedRecent":0,"failed":0,"truncated":false,"skipped":{"protected_version":15},"cursor":null,"companies":6,"dryRun":false}
+[03:22:38] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:22:38] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/budgets/overview 200
+[03:22:38] INFO: PATCH /agents/a8090735-023c-44d4-b127-ea68402182e2/budgets 200
+[03:22:38] INFO: POST /agents/a8090735-023c-44d4-b127-ea68402182e2/resume 200
+[03:22:38] WARN: POST /api/agents/a8090735-023c-44d4-b127-ea68402182e2/heartbeat/invoke 409 {"routePath":"/agents/:id/heartbeat/invoke"}
+[03:23:18] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:23:18] INFO: PATCH /47f129d3-b3a1-4368-bdc2-82296d26cb6f 200
+[03:23:18] WARN: POST /api/companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/agents 409 {"reqBody":{"name":"gov-new-second","role":"general","adapterType":"process","adapterConfig":{"command":"python3","args":["/srv/pcwork/agent_probe.py"],"cwd":"/srv/pcwork","timeoutSec":300,"graceSec":5,"env":{"PROBE_PLAN":"/srv/pcwork/plan-gov-new-hire.json","PROBE_OUT":"/srv/pcwork/out-gov-new-hire.json"}},"runtimeConfig":{},"budgetMonthlyCents":0},"routePath":"/companies/:companyId/agents"}
+[03:23:18] INFO: POST /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/agent-hires 201
+[03:23:18] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/approvals 200
+[03:23:19] INFO: POST /approvals/1599968d-34b9-4f3d-8b86-98e12b4c2daa/approve 200
+[03:23:19] INFO: GET /agents/4fcec141-24df-4d68-b2a9-b8b62d447080 200
+[03:23:19] INFO: PATCH /47f129d3-b3a1-4368-bdc2-82296d26cb6f 200
+[03:23:19] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/activity 200
+[03:23:19] INFO: GET /tool-gateway/audit 200
+[03:23:19] INFO: POST /agents/3abced31-1f55-4127-8c87-667de0281e83/terminate 200
+[03:23:19] WARN: POST /api/agents/3abced31-1f55-4127-8c87-667de0281e83/heartbeat/invoke 409 {"routePath":"/agents/:id/heartbeat/invoke"}
+[03:23:39] INFO: GET /companies/47f129d3-b3a1-4368-bdc2-82296d26cb6f/heartbeat-runs 200
+[03:23:40] INFO: POST /companies/93538400-e145-4ed3-ae7d-14e445530bde/agents 201
+[03:23:40] INFO: POST /agents/1eac0eb3-bbea-4583-9e31-d469d54735ff/heartbeat/invoke 202
+[03:23:41] INFO: POST /tool-gateway/sessions 201
+[03:23:41] INFO: GET /tool-gateway/tools 200
+[03:23:43] INFO: POST /tool-gateway/tools/call 200
+[03:23:45] INFO: POST /tool-gateway/tools/call 200
+[03:23:45] INFO: POST /tool-gateway/tools/call 200
+[03:24:02] INFO: GET /tool-gateway/audit 200

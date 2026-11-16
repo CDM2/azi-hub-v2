@@ -1,0 +1,4 @@
+requested: paperclipai@2026.1106.0 in /home/pclip/pc  npm exit: 0
+installed paperclipai 2026.1106.0
+dist.integrity = 'sha512-jcZrSB5DItxeDJGO7TccI0WcYca2IbBJxpbaKZN6kZp+isNIbVF2AgmfFQq394mjXD+TTHwS5P3AT6jjpqXbng=='
+dist.shasum = '6f575d1b9afc82e6e79cb5df49197fdeda746a03'
