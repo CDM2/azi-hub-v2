@@ -1,68 +1,88 @@
 # R-02 spike plan
 
-Status: proposed, 2026-11-15. Waiting for Cole's OK. Nothing below has run except the jail canary.
+Status: revision 2, 2026-11-15, after Cole's reply to revision 1. Waiting for his final OK. Nothing below has run except the jail canary and a check that the API key authenticates (a model list, which costs nothing).
 
 The spike tests R-01 option D: unmodified Paperclip for each organization, our own permission service reached over MCP, and a chief-of-staff agent. Criteria 1 to 6 are in R-01 section 7. Cole added 7 (governance coverage) and 8 (codebase map).
 
-## 1. Where Paperclip runs
+Changed since revision 1:
 
-In this session's sandbox, inside a jail. The alternative is a script for a throwaway Codespace on a scratch repository, with Cole pasting the output back.
+- Paperclip runs on a throwaway scratch repository, not in this session's sandbox.
+- Toveli is read-only throughout. No Toveli ticket is worked on. Criterion 5 uses a made-up repository.
+- Criterion 3 tests that nothing goes from personal to an organization, pending Cole's answer on the one exception that exists today.
+- Criterion 2 follows the current AZI Hub rule.
 
-The jail (`jail/jail.sh`):
+## Words used
 
-- Its own network namespace with loopback only. The session's credential proxy and the internet are unreachable.
-- Its own process and mount namespaces. Empty filesystems are mounted over the session's home, root's home and `/tmp`, so the three private clones and the signing key are not there to read.
-- An empty environment and an unprivileged user that cannot regain privileges.
+- **Page.** One entry in a second brain: a note, a summary, a description of a code file.
+- **Holding organization.** The organization at the top that owns the others. AZI Hub in the old system; "the management company" in the mission.
+- **Sub-organization.** A venture under it: Toveli, AltZ Capital.
+- **Sibling.** Another sub-organization under the same holding organization. AltZ Capital is Toveli's sibling.
+- **Personal.** Cole's own space, beside the holding organization.
 
-`jail/canary.sh` tries 15 ways out: read each clone, read the environment, reach the proxy, reach GitHub and Anthropic, resolve a name, see other processes, write outside its home. All 15 failed on 2026-11-15 (`results/jail-canary.txt`). The same resources are reachable outside the jail, so the probes are meaningful. The canary runs again before each stage and its output is kept.
+## 1. Where things run
 
-What the jail is not: a separate virtual machine. It shares a kernel with the session. Getting out would take a kernel or container escape. A Codespace on a scratch repository is a separate machine and is the stronger boundary.
+| What | Where | Why |
+| --- | --- | --- |
+| Paperclip, the permission service, criteria 1 to 7 | A throwaway private repository that Cole creates. A GitHub Actions run on it, or one command in a Codespace on it. Results are committed back to that repository, so nothing is pasted. | A separate machine with a token that reaches only the scratch repository. No Toveli, no real data, no real secret. |
+| The Toveli codebase map and its three question-answering agents (criterion 8) | This session's sandbox, inside the jail | It needs the Toveli source, which stays here. No Paperclip runs here. |
 
-Installing: packages are downloaded outside the jail with install scripts switched off, so nothing third-party executes there. Install scripts and Paperclip itself run only inside the jail.
+The jail (`jail/jail.sh`) has no network, an empty environment, an unprivileged user, and empty filesystems mounted over the session's home. `jail/canary.sh` tries 15 ways out; all 15 failed on 2026-11-15 (`results/jail-canary.txt`). It shares a kernel with the session, so it is not a guarantee, which is why Paperclip does not run in it.
 
-Pinned versions: Paperclip `v2026.1023.0` (`1b4c803816e82b0265c8422e1a804327a7ed8c54`) to start, upgraded to `v2026.1106.0` (`d69631b01b9c658f80bf8bed389863dce82643e1`) for criterion 6. Both are published release tags. Paperclip's source is not edited; a criterion that needs a patch is a fail for option D. Telemetry is switched off by its documented environment variable.
+Pinned versions of Paperclip: `v2026.1023.0` (`1b4c803816e82b0265c8422e1a804327a7ed8c54`) to start, upgraded to `v2026.1106.0` (`d69631b01b9c658f80bf8bed389863dce82643e1`) for criterion 6. Its source is not edited; a criterion that needs a patch is a fail for option D. Its telemetry is switched off by its documented setting.
 
-## 2. Model calls and spend
+## 2. Toveli is read-only
+
+- Nothing in `CDM2/toveli` has been edited, committed or pushed by this session. The local clone is at `0abafdc` with no changes.
+- The session's GitHub credential could write to that repository; the GitHub API reports full permissions. Read-only is therefore a rule this plan follows, not something GitHub enforces for it. Two seatbelts are in place: pushing from the local clone is disabled, and the copy the agents read sits in the jail, which has no network and no credentials.
+- Cole can make it enforced: remove the Claude GitHub app's access to `CDM2/toveli`. The clone already here is all the spike needs.
+- The agents only read. They answer questions about the code. They do not draft ticket deliverables, and no ticket in A-002 is touched.
+- The copy in the jail is deleted when the spike ends. The map and any Toveli source stay out of every repository.
+
+## 3. Model calls and spend
 
 | Criteria | Model calls | How |
 | --- | --- | --- |
 | 1, 2, 3, 4, 6 | None | A scripted agent runs in Paperclip through its built-in `process` adapter and calls the permission service through Paperclip's MCP gateway. |
-| 7 | None expected | Controls are exercised through Paperclip's interface and API. If the spend-cap test needs a real model call to record spend, it moves to the stage below and is said so. |
-| 5 | Yes | A Claude agent inside Paperclip, and one single agent outside it as the N-04 baseline. |
-| 8 | Yes | Three question-answering agents over 20 questions. The mapping pass itself is deterministic and calls no model. |
+| 7 | None expected | Controls are exercised through Paperclip's API. If the spend-cap test needs a real model call to record spend, it joins the criterion 5 run and the report says so. |
+| 5 | Yes, small | One Claude agent inside Paperclip does a small job on a made-up repository, using the brain through the gateway. One plain agent does the same job outside Paperclip. |
+| 8 | Yes | Three question-answering agents over 20 questions, two runs each, on Sonnet 5.5. The mapping pass is deterministic and calls no model. |
 
-Expected spend: $35 to $65, on Sonnet 5.5 for every agent so the comparison is like for like. Cap: $100.
+Expected spend: $30 to $60. Cap: $100; every model call goes through a bridge that prices each response at list rates and refuses further requests at $95.
 
-The API key never enters the jail. A small bridge outside the jail injects it into requests that the jail sends over a local socket, the pattern Anthropic documents for hosted agents (ledger E-79). The bridge prices every response at list rates and refuses further requests at $95.
+The key is held in a root-only file outside the jail and is in no repository. For criterion 8 it never enters the jail. For the one Paperclip run in criterion 5 it has to be on the scratch machine, as a repository secret; that is the only place it sits near Paperclip, and the exposure is the remaining balance. If Cole prefers, that run is skipped and recorded as not run.
 
-Without a key: criteria 1 to 4, 6 and 7 still run. Criterion 8 can run on this session's own subagents with no API spend, with token counts as the harness reports them. Criterion 5 would be recorded as not run.
+## 4. Needed from Cole
 
-## 3. Needed from Cole
+1. Create an empty private repository for the spike and say its name. Delete it when the spike is done.
+2. Personal to organization: nothing ever, or keep the one curated briefing that exists today (test 3).
+3. Whether the throwaway key may be set as a secret on the scratch repository for the criterion 5 run.
 
-1. Jail here, or a Codespace script.
-2. A throwaway Anthropic API key with a $100 workspace spend limit, revoked after the spike. Or "no key".
-3. The Toveli task for criterion 5. Proposed: the data inventory from TOV-022 (its acceptance case 3). It is a ready ticket, documentation only, and a script can check it against A-001. The draft is handed over as a file and is not pushed to Toveli.
-4. Sonnet 5.5 for all agents, two runs per arm in criterion 8: yes or change.
-
-## 4. Test sets
+## 5. Test sets
 
 Tests for criteria 1 to 3 and the 20 questions are committed before the code they test. The commit order is the proof.
 
-Synthetic organizations: a personal space, a holding organization, and two sub-organizations (`toveli` and a synthetic sibling). All page content is synthetic except the Toveli codebase map.
+Made-up organizations: a personal space, a holding organization, and two sub-organizations. All page content is made up. No real personal, health or financial data is used anywhere in the spike.
 
 | # | Criterion | Passes when |
 | --- | --- | --- |
-| 1 | A sub-organization's agent gets its own and global pages only | Through Paperclip's gateway the agent lists, searches and fetches. It never receives a sibling page: not by ID, not by search text, not by passing another organization's name as an argument, not with another organization's token, not through a count or an error message. The same holds when the database is queried directly as the service's own role. |
-| 2 | The holding organization reads sub-organization summaries | The holding agent reads pages marked as summaries from both sub-organizations. It does not read their other pages or anything personal. |
-| 3 | Personal reaches an organization only by explicit push | No organization token reads a personal page by any tool. The only write path is a push tool called by the personal principal, which copies one page, records who approved it, and is refused for the health and finance class (N-08). |
-| 4 | Every call is in both audit logs | Each allowed and each denied call appears in Paperclip's call event log and in the service's own log, matched one to one by an ID. A call that goes around Paperclip appears only in ours; the plan records that as a known limit (E-89), not a pass. |
-| 5 | A real Toveli task runs through the stack and on one agent | Both runs produce the deliverable. A script checks each against the ticket's acceptance case. Tokens, time and the number of human interventions are recorded. |
-| 6 | Paperclip is upgraded one release | After the upgrade, tests 1 to 4 pass again with no change to the permission service or its configuration. |
-| 7 | Governance coverage | Not pass or fail. A table of every control N-01 to N-08 and R-01 require: approvals, spend caps, audit log, secrets, tool and MCP policy, pause or kill, approval on sharing, the gate on the improvement loop. Each is marked verified in the free edition, present but paid edition only, or ours to build with a rough size, with the evidence. It ends by saying whether R-01's trigger 3 is met. |
-| 8 | Codebase map | First a survey of existing tools. Then the smallest mapper on `CDM2/toveli`: a deterministic manifest written to Toveli's brain as pages tagged as codebase. Scored on 20 questions whose answers were checked against the code: (a) map only, (b) map first, then raw code, (c) one coding agent with plain repository access. Accuracy, tokens and time for each. Also: the sibling organization cannot read a Toveli code page, and a new commit updates only the pages for changed files and matches a full rebuild. If (c) matches the map, the report says so. |
+| 1 | A sub-organization's agent gets its own and global pages only | Through Paperclip's gateway the agent lists, searches and fetches. It never receives a sibling's page: not by ID, not by search text, not by passing the sibling's name as an argument, not with the sibling's token, not through a count or an error message. The same holds when the database is queried directly as the service's own role. |
+| 2 | The holding organization reads its sub-organizations | As in AZI Hub today: the holding organization's agent reads global pages, its own and every sub-organization's. It reads nothing personal. A stricter mode, summaries only, is also run and reported, because AZI Hub's configuration file says "summaries" where its code allows everything. |
+| 3 | Nothing goes from personal to an organization | No organization's token reads a personal page by any tool. The personal space can read organization pages. No tool copies a personal page into an organization's brain. Health and finance pages can exist only in personal; the database refuses to store one anywhere else. If Cole keeps the curated briefing, the test instead allows that one path and requires his approval on each briefing. |
+| 4 | Every call is in both audit logs | Each allowed and each denied call appears in Paperclip's call event log and in the service's own log, matched one to one by an ID. A call that goes around Paperclip appears only in ours; the report records that as a known limit (ledger E-89), not a pass. |
+| 5 | A model-driven agent works through the stack | The Paperclip agent completes the job using brain pages it fetched through the gateway, and the calls are in both logs. A plain agent does the same job; tokens and time are recorded for both. The report states that no real Toveli task was run through Paperclip. |
+| 6 | Paperclip is upgraded one release | After the upgrade from `v2026.1023.0` to `v2026.1106.0`, tests 1 to 4 pass again with no change to the permission service or its configuration. |
+| 7 | Governance coverage | Not pass or fail, and nothing is bought. A table of every control N-01 to N-08 and R-01 require: approvals, spend caps, audit log, secrets, tool and MCP policy, pause or kill, approval on sharing, the gate on the improvement loop. Each is marked as working in free Paperclip, present only in Paperclip's paid edition, or ours to build with a rough size, with the evidence. It ends by saying whether R-01's trigger 3 is met. |
+| 8 | Codebase map | First a survey of existing tools. Then the smallest mapper on a read-only copy of `CDM2/toveli`: a deterministic manifest written to Toveli's brain as pages tagged as codebase. Scored on 20 questions whose answers were checked against the code: (a) map only, (b) map first, then raw code, (c) one coding agent with plain read access and no map. Accuracy, tokens and time for each. Also: the sibling organization cannot read a Toveli code page, and a new commit updates only the pages for changed files and matches a full rebuild. If (c) matches the map, the report says so. |
 
 Any criterion that cannot be run is recorded as not run.
 
-## 5. What goes in the repository
+## 6. Founder input recorded here, 2026-11-15
 
-Spike code, tests, the 20 questions with their answer keys, scores and raw logs go under `spikes/r-02/`. Toveli source, the map itself and the criterion 5 deliverable stay out.
+- No edits to the Toveli codebase from this project. Cole works through Toveli's tickets in order in another session.
+- Personal information is never sent to an organization. Health and finance pages exist only in personal. Whether the existing curated briefing stays is open (item 2 above).
+- Governance pricing: a feature that needs Paperclip's paid edition is charged to the customer; features this project builds can be free for now. This is a pricing position for R-08 and Gate G1, not a spike input.
+- Cole has a Claude Max plan and has not claimed its monthly API credits (ledger E-76).
+
+## 7. What goes in the repositories
+
+`CDM2/azi-hub-v2`: spike code, tests, the 20 questions with their answer keys, scores and raw logs, under `spikes/r-02/`. The scratch repository: a copy of the spike code and the raw results of each run. Toveli source, the map itself and the API key go in neither.
