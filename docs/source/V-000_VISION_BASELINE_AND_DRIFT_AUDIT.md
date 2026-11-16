@@ -56,6 +56,17 @@ Rows F-01 to F-18 above stand as accepted in v0.2. Two are amended and six are a
 | F-23 | Governance: this version builds in as much governance as is practical. Replacing Paperclip with a layer of our own, with our own governance and cloud, is a later option if the product takes off. | New. Changes where R-01 section 7 placed broader governance; see D-13. |
 | F-24 | Codebases go in each company's second brain. Agents get a map: what each file and script does, its dependencies, and how it builds and deploys. Pages are tagged so that codebase, agent-written and human-written context can be told apart. Goal: upload the existing Toveli codebase, run a mapping pass, and have little onboarding work left. | New. Capability C-23 (section 2b). |
 
+**Added later on 2026-11-15, still v0.3: Cole's answers to the R-02 spike plan** (manifest S-016). Four more decisions. They refine N-02 and N-08 below and change no accepted row.
+
+| ID | Decision | Relation to v0.2 |
+| --- | --- | --- |
+| F-25 | Personal information is never sent to an organization, with one exception: a curated briefing that a human approves before it goes out. The briefing goes to the holding organization only. It has an off switch, because some users will not want it, most of all where several people work in the same organizations. Information flows back from the organizations to the personal space under the current permission rules. Health and finance pages exist only in the personal space. | New. Narrows "explicit push" in N-02 to this one path. Agrees with N-08. |
+| F-26 | The product can ship with the personal space switched on or off. Some businesses will not want a personal space, and offering it to them would confuse what the product is. | New. F-01 stands; the personal space becomes optional per deployment. |
+| F-27 | The holding organization can read the organizations below it. A page lives once, in the organization that owns it; the holding organization reads it there and no copy is made. A user who runs one company has only the holding organization, with no management layer above it. | New. Detail for F-02. How much the holding organization reads (everything or summaries) stays with R-04. |
+| F-28 | Pricing of governance: a control that needs Paperclip's paid edition is passed on as a paid feature and is not subsidized. Governance this project builds itself is free for now. | New. An input to R-08. |
+
+R-02 tests F-25 to F-27 in its spike (criteria 1 to 3) with the briefing switch on and off, the personal space on and off, and a single-company setup.
+
 ### 2b. Capability added after R-01 (2026-11-15)
 
 R-01 section 5 lists capabilities C-01 to C-22. This one continues that numbering. R-01 itself is not edited.
@@ -155,4 +166,5 @@ Added 2026-11-15 (v0.3):
 | R-01 v1.0 accepted | Cole | 2026-11-15 | Pull request #2, squash-merged at 546715c (2026-11-16 01:00 UTC). An input to v0.3; not an acceptance of V-000 |
 | Inputs and instruction to prepare v0.3 | Cole | 2026-11-15 (chat, R-02 brief) | Authorizes v0.3; not acceptance |
 | Draft v0.3 prepared | Claude session | 2026-11-15 | Not accepted |
+| Answers to the R-02 spike plan | Cole | 2026-11-15 (chat) | Adds F-25 to F-28 to the v0.3 draft; not acceptance |
 | Founder acceptance of v0.3 | pending | | Merge of the pull request carrying v0.3 |

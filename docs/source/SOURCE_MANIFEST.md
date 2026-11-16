@@ -2,7 +2,7 @@
 
 Manifest v1.1, 2026-11-15. This file says what each source is and how much authority it has. It is metadata, not evidence.
 
-v1.1 amends v1 of the same day, on the founder's instruction in the R-02 brief: the status cells of the canonical artifacts are brought up to date with the two merges, and S-015 is added.
+v1.1 amends v1 of the same day, on the founder's instruction in the R-02 brief: the status cells of the canonical artifacts are brought up to date with the two merges, and S-015 is added. S-016 was added later the same day.
 
 ## Source classes
 
@@ -32,6 +32,7 @@ v1.1 amends v1 of the same day, on the founder's instruction in the R-02 brief: 
 | S-013 | `paperclipai/paperclip` at da8cfda (2026-11-15), MIT | Research evidence | Read as source for R-01. Not installed, not run, not copied into this repository. |
 | S-014 | External web sources gathered 2026-11-15 for R-01 | Research evidence | Recorded claim by claim in `../research/EVIDENCE_LEDGER.md`, each row with how it was read and a confidence grade. Rows E-01 to E-08, E-47 to E-53 and E-73 are S-013; rows E-57 to E-60 and E-74 are S-004. |
 | S-015 | Founder inputs after the R-01 merge and the brief for R-02, 2026-11-15 (chat) | Founder input | Same authority as S-001. Governance in this version and the codebase map. Recorded in V-000 section 2a as F-23 and F-24. |
+| S-016 | Founder answers to the R-02 spike plan, 2026-11-15 (chat, two messages) | Founder input | Same authority as S-001. The personal-to-organization rule and its off switch, the optional personal space, what the holding organization reads, and how governance is priced. Recorded in V-000 section 2a as F-25 to F-28. Also: the Toveli repository is read-only for this project, and the spike's third-party code runs on a scratch repository. |
 
 ## Canonical artifacts
 
