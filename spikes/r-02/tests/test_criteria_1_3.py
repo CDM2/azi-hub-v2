@@ -71,7 +71,7 @@ def reset(**settings):
 
 
 def psql(sql, dsn=None):
-    out = subprocess.run(["psql", dsn or APP_DSN, "-X", "-A", "-t", "-v", "ON_ERROR_STOP=1", "-c", sql],
+    out = subprocess.run(["psql", dsn or APP_DSN, "-X", "-q", "-A", "-t", "-v", "ON_ERROR_STOP=1", "-c", sql],
                          capture_output=True, text=True, timeout=60)
     return out.returncode, (out.stdout + out.stderr).strip()
 

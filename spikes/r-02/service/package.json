@@ -1,0 +1,9 @@
+{
+  "name": "azi-permission-service-spike",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "R-02 spike: permission service (tier map, tier-filtered second brain, curated briefing). Not production code.",
+  "scripts": { "start": "node server.mjs" },
+  "dependencies": { "pg": "8.23.1" }
+}
