@@ -1,0 +1,231 @@
+test_a_wrong_admin_token_is_always_answered_401 (test_rev01_attacks.AdminAndTokenHandling.test_a_wrong_admin_token_is_always_answered_401)
+RV-16. A wrong token whose length in characters equals the real one, but which holds a byte above 0x7f, must get 401 like any other. ... FAIL
+test_only_the_documented_header_form_carries_a_token (test_rev01_attacks.AdminAndTokenHandling.test_only_the_documented_header_form_carries_a_token)
+RV-17. The contract documents one form: Authorization: Bearer <token>. ... FAIL
+test_a_nul_byte_in_request_id_does_not_remove_the_call_from_the_audit_log (test_rev01_attacks.AuditCompleteness.test_a_nul_byte_in_request_id_does_not_remove_the_call_from_the_audit_log)
+RV-07. Six calls with request_id "rev01\u0000nul": a denied get by a sibling's path, a denied briefing, an unknown tool, and three others. ... FAIL
+test_a_tool_name_from_the_object_prototype_is_an_unknown_tool (test_rev01_attacks.AuditCompleteness.test_a_tool_name_from_the_object_prototype_is_an_unknown_tool)
+RV-07. "constructor", "__proto__" and "toString" must be answered and logged like any tool that does not exist. ... FAIL
+test_the_audit_row_names_the_tool_that_ran (test_rev01_attacks.AuditCompleteness.test_the_audit_row_names_the_tool_that_ran)
+RV-07. tools/call with name ["brain_list"] (a JSON array) runs brain_list. ... FAIL
+test_the_database_role_cannot_write_an_audit_row_without_a_bound_session (test_rev01_attacks.AuditCompleteness.test_the_database_role_cannot_write_an_audit_row_without_a_bound_session)
+RV-19. schema.sql says the audit row "is stamped from the bound session". With no session the role can still write any row it likes. ... FAIL
+test_an_approval_names_its_approver (test_rev01_attacks.BriefingApproval.test_an_approval_names_its_approver)
+RV-15. Contract rule 6: approved by the human. The approver is free text and may be empty. ... FAIL
+test_nothing_new_leaves_the_personal_space_while_it_is_switched_off (test_rev01_attacks.BriefingApproval.test_nothing_new_leaves_the_personal_space_while_it_is_switched_off)
+RV-15. Contract rule 7: with the personal space off the product runs as organizations only. ... FAIL
+test_a_briefing_cannot_be_approved_twice_or_by_a_human_token (test_rev01_attacks.Held.test_a_briefing_cannot_be_approved_twice_or_by_a_human_token) ... ok
+test_agent_cannot_forge_page_kind_path_meta_or_owner (test_rev01_attacks.Held.test_agent_cannot_forge_page_kind_path_meta_or_owner)
+brain_write accepts only notes and summaries in the caller's own organization (contract rules 1, 9). ... ok
+test_batch_requests_and_odd_json_do_not_leak (test_rev01_attacks.Held.test_batch_requests_and_odd_json_do_not_leak) ... ok
+test_concurrent_callers_never_see_each_others_pages (test_rev01_attacks.Held.test_concurrent_callers_never_see_each_others_pages)
+The session is bound per transaction on pooled connections. 400 interleaved calls from three organizations. ... ok
+test_every_admin_route_refuses_agent_and_human_tokens (test_rev01_attacks.Held.test_every_admin_route_refuses_agent_and_human_tokens) ... ok
+test_holding_in_summaries_mode_cannot_reach_a_note_by_id_or_path (test_rev01_attacks.Held.test_holding_in_summaries_mode_cannot_reach_a_note_by_id_or_path) ... ok
+test_a_savepoint_rollback_unbinds_the_session (test_rev01_attacks.HeldInTheDatabase.test_a_savepoint_rollback_unbinds_the_session) ... ok
+test_copy_returning_and_other_statement_forms_respect_the_policy (test_rev01_attacks.HeldInTheDatabase.test_copy_returning_and_other_statement_forms_respect_the_policy) ... ok
+test_temp_objects_and_search_path_do_not_change_the_bound_organization (test_rev01_attacks.HeldInTheDatabase.test_temp_objects_and_search_path_do_not_change_the_bound_organization) ... ok
+test_a_reader_of_several_organizations_can_fetch_each_ones_page_at_the_same_path (test_rev01_attacks.PathLookupAcrossOrganizations.test_a_reader_of_several_organizations_can_fetch_each_ones_page_at_the_same_path) ... FAIL
+test_a_personal_briefing_stays_in_the_holding_organization (test_rev01_attacks.RelayThroughTheHoldingAgent.test_a_personal_briefing_stays_in_the_holding_organization)
+F-25 and contract rule 6: the briefing goes to the holding organization only, and the switch hides earlier briefings. ... FAIL
+test_a_siblings_page_cannot_reach_another_venture_without_a_human_decision (test_rev01_attacks.RelayThroughTheHoldingAgent.test_a_siblings_page_cannot_reach_another_venture_without_a_human_decision)
+N-02: organization to organization is zero by default. N-03: code decides, not a prompt. ... FAIL
+test_switching_briefings_off_removes_personal_text_from_every_organization (test_rev01_attacks.RelayThroughTheHoldingAgent.test_switching_briefings_off_removes_personal_text_from_every_organization) ... FAIL
+test_a_callers_latency_does_not_depend_on_other_organizations_pages (test_rev01_attacks.TimingAndScale.test_a_callers_latency_does_not_depend_on_other_organizations_pages)
+RV-05. 1,500 made-up pages are added to the SIBLING. The toveli agent's own list (4 pages) must not get slower. ... 
+    RV-05 scale: toveli brain_list 4.6 ms before, 494.3 ms after 1,500 pages were added to the sibling
+FAIL
+test_a_forbidden_page_takes_as_long_as_a_missing_page (test_rev01_attacks.TimingAndScale.test_a_forbidden_page_takes_as_long_as_a_missing_page)
+RV-06. brain_get for a path that exists in another organization, against a path that exists nowhere. ... 
+    RV-06 timing: forbidden 2443 us, missing 2040 us, difference 403 us (95% interval 338 to 480)
+FAIL
+test_explain_analyze_does_not_reveal_another_organizations_paths (test_rev01_attacks.WhatTheDatabaseRoleLearnsWithoutASession.test_explain_analyze_does_not_reveal_another_organizations_paths) ... FAIL
+
+======================================================================
+FAIL: test_a_wrong_admin_token_is_always_answered_401 (test_rev01_attacks.AdminAndTokenHandling.test_a_wrong_admin_token_is_always_answered_401)
+RV-16. A wrong token whose length in characters equals the real one, but which holds a byte above 0x7f, must get 401 like any other.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 296, in test_a_wrong_admin_token_is_always_answered_401
+    self.assertEqual(set(seen.values()), {401}, f"status by token length: {seen}. The length that answers 500 is the admin token's length.")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the first set but not the second:
+500 : status by token length: {8: 401, 16: 401, 24: 401, 32: 401, 33: 401, 34: 500, 35: 401, 40: 401, 48: 401, 64: 401}. The length that answers 500 is the admin token's length.
+
+======================================================================
+FAIL: test_only_the_documented_header_form_carries_a_token (test_rev01_attacks.AdminAndTokenHandling.test_only_the_documented_header_form_carries_a_token)
+RV-17. The contract documents one form: Authorization: Bearer <token>.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 305, in test_only_the_documented_header_form_carries_a_token
+    self.assertEqual(accepted, [], f"undocumented forms were accepted: {accepted}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['X-Brain-Token: test-token-...', 'X-Brain[52 chars]...'] != []
+
+First list contains 3 additional elements.
+First extra element 0:
+'X-Brain-Token: test-token-...'
+
++ []
+- ['X-Brain-Token: test-token-...',
+-  'X-Brain-Token: Bearer test...',
+-  'Authorization: test-token-...'] : undocumented forms were accepted: ['X-Brain-Token: test-token-...', 'X-Brain-Token: Bearer test...', 'Authorization: test-token-...']
+
+======================================================================
+FAIL: test_a_nul_byte_in_request_id_does_not_remove_the_call_from_the_audit_log (test_rev01_attacks.AuditCompleteness.test_a_nul_byte_in_request_id_does_not_remove_the_call_from_the_audit_log)
+RV-07. Six calls with request_id "rev01\u0000nul": a denied get by a sibling's path, a denied briefing, an unknown tool, and three others.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 254, in test_a_nul_byte_in_request_id_does_not_remove_the_call_from_the_audit_log
+    self.assertEqual(len(rows), len(calls), f"{len(calls)} calls were made and {len(rows)} audit rows exist: {[(r['tool'], r['decision']) for r in rows]}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 6 : 6 calls were made and 0 audit rows exist: []
+
+======================================================================
+FAIL: test_a_tool_name_from_the_object_prototype_is_an_unknown_tool (test_rev01_attacks.AuditCompleteness.test_a_tool_name_from_the_object_prototype_is_an_unknown_tool)
+RV-07. "constructor", "__proto__" and "toString" must be answered and logged like any tool that does not exist.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 274, in test_a_tool_name_from_the_object_prototype_is_an_unknown_tool
+    self.assertEqual(json.loads(raw)["result"], json.loads(expected)["result"], f"{name}: {raw[:160]}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'con[21 chars]t', 'text': '{"error":"internal_error"}'}], 'isError': True} != {'con[21 chars]t', 'text': '{"error":"invalid_arguments"}'}], 'isError': True}
+- {'content': [{'text': '{"error":"internal_error"}', 'type': 'text'}],
+?                                    ^^^^    ^^^^
+
++ {'content': [{'text': '{"error":"invalid_arguments"}', 'type': 'text'}],
+?                                    ^  ++ +++++ ^^^
+
+   'isError': True} : constructor: {"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"{\"error\":\"internal_error\"}"}],"isError":true}}
+
+======================================================================
+FAIL: test_the_audit_row_names_the_tool_that_ran (test_rev01_attacks.AuditCompleteness.test_the_audit_row_names_the_tool_that_ran)
+RV-07. tools/call with name ["brain_list"] (a JSON array) runs brain_list.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 264, in test_the_audit_row_names_the_tool_that_ran
+    self.assertEqual(rows[0]["tool"], "brain_list", f"brain_list ran and the audit log calls it {rows[0]['tool']!r}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '{"brain_list"}' != 'brain_list'
+- {"brain_list"}
+? --          --
++ brain_list
+ : brain_list ran and the audit log calls it '{"brain_list"}'
+
+======================================================================
+FAIL: test_the_database_role_cannot_write_an_audit_row_without_a_bound_session (test_rev01_attacks.AuditCompleteness.test_the_database_role_cannot_write_an_audit_row_without_a_bound_session)
+RV-19. schema.sql says the audit row "is stamped from the bound session". With no session the role can still write any row it likes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 284, in test_the_database_role_cannot_write_an_audit_row_without_a_bound_session
+    self.assertFalse(forged, f"a row with no organization and an invented tool name was accepted: {forged}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [{'id': 153, 'ts': '2026-11-17T13:28:13.215Z', 'org': None, 'actor': None, 'tool': 'admin_reset', 'request_id': 'rev01-forged', 'decision': 'allow', 'reason': None}] is not false : a row with no organization and an invented tool name was accepted: [{'id': 153, 'ts': '2026-11-17T13:28:13.215Z', 'org': None, 'actor': None, 'tool': 'admin_reset', 'request_id': 'rev01-forged', 'decision': 'allow', 'reason': None}]
+
+======================================================================
+FAIL: test_an_approval_names_its_approver (test_rev01_attacks.BriefingApproval.test_an_approval_names_its_approver)
+RV-15. Contract rule 6: approved by the human. The approver is free text and may be empty.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 315, in test_an_approval_names_its_approver
+    self.assertNotEqual(status, 200, "a briefing was approved with an empty approver")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 == 200 : a briefing was approved with an empty approver
+
+======================================================================
+FAIL: test_nothing_new_leaves_the_personal_space_while_it_is_switched_off (test_rev01_attacks.BriefingApproval.test_nothing_new_leaves_the_personal_space_while_it_is_switched_off)
+RV-15. Contract rule 7: with the personal space off the product runs as organizations only.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 323, in test_nothing_new_leaves_the_personal_space_while_it_is_switched_off
+    self.assertNotIn("CANARY-BRIEFING-R4", found, "a briefing was approved into the holding organization while the personal space was off")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CANARY-BRIEFING-R4' unexpectedly found in '{"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"{\\"count\\":1,\\"pages\\":[{\\"id\\":\\"50b613b8-992f-4c9f-a0a7-db213b51a08a\\",\\"org\\":\\"mgmt\\",\\"title\\":\\"Briefing from the personal space, 2026-11-17\\",\\"kind\\":\\"briefing\\",\\"source_type\\":\\"human\\",\\"path\\":null,\\"snippet\\":\\"CANARY-BRIEFING-R4 pending when the space was switched off\\"}]}"}],"isError":false}}' : a briefing was approved into the holding organization while the personal space was off
+
+======================================================================
+FAIL: test_a_reader_of_several_organizations_can_fetch_each_ones_page_at_the_same_path (test_rev01_attacks.PathLookupAcrossOrganizations.test_a_reader_of_several_organizations_can_fetch_each_ones_page_at_the_same_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 341, in test_a_reader_of_several_organizations_can_fetch_each_ones_page_at_the_same_path
+    self.assertEqual(got, {"alpha", "toveli"}, f"by path the holding agent can only ever get the page of {sorted(got)}; "
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                               "whichever organization sorts first answers for every other one")
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'toveli' : by path the holding agent can only ever get the page of ['alpha']; whichever organization sorts first answers for every other one
+
+======================================================================
+FAIL: test_a_personal_briefing_stays_in_the_holding_organization (test_rev01_attacks.RelayThroughTheHoldingAgent.test_a_personal_briefing_stays_in_the_holding_organization)
+F-25 and contract rule 6: the briefing goes to the holding organization only, and the switch hides earlier briefings.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 179, in test_a_personal_briefing_stays_in_the_holding_organization
+    self.assertNotIn("CANARY-BRIEFING-R1", raw, "the approved briefing's text reached a sub-organization through an agent-written global page")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CANARY-BRIEFING-R1' unexpectedly found in '{"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"{\\"count\\":1,\\"pages\\":[{\\"id\\":\\"b67be53f-a2d1-4be8-a4ca-e2628538e49d\\",\\"org\\":\\"mgmt\\",\\"title\\":\\"relay\\",\\"kind\\":\\"note\\",\\"source_type\\":\\"agent\\",\\"path\\":null,\\"snippet\\":\\"relay: CANARY-BRIEFING-R1 personal priorities\\"}]}"}],"isError":false}}' : the approved briefing's text reached a sub-organization through an agent-written global page
+
+======================================================================
+FAIL: test_a_siblings_page_cannot_reach_another_venture_without_a_human_decision (test_rev01_attacks.RelayThroughTheHoldingAgent.test_a_siblings_page_cannot_reach_another_venture_without_a_human_decision)
+N-02: organization to organization is zero by default. N-03: code decides, not a prompt.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 169, in test_a_siblings_page_cannot_reach_another_venture_without_a_human_decision
+    self.assertNotIn("CANARY-SIBLING-1", raw_toveli,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     "the sibling's text reached the toveli agent through a global page that the holding AGENT wrote; no human approved it")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CANARY-SIBLING-1' unexpectedly found in '{"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"{\\"count\\":1,\\"pages\\":[{\\"id\\":\\"a5f5da81-ba24-475e-b996-f23a41b815d4\\",\\"org\\":\\"mgmt\\",\\"title\\":\\"relay\\",\\"kind\\":\\"note\\",\\"source_type\\":\\"agent\\",\\"path\\":null,\\"snippet\\":\\"relayed: CANARY-SIBLING-1 confidential roadmap of the other venture.\\"}]}"}],"isError":false}}' : the sibling's text reached the toveli agent through a global page that the holding AGENT wrote; no human approved it
+
+======================================================================
+FAIL: test_switching_briefings_off_removes_personal_text_from_every_organization (test_rev01_attacks.RelayThroughTheHoldingAgent.test_switching_briefings_off_removes_personal_text_from_every_organization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 188, in test_switching_briefings_off_removes_personal_text_from_every_organization
+    self.assertNotIn("CANARY-BRIEFING-R2", raw, "after the switch is off the holding organization still reads the briefing's text, in a copy an agent made")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CANARY-BRIEFING-R2' unexpectedly found in '{"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"{\\"count\\":1,\\"pages\\":[{\\"id\\":\\"c6ff97b6-9bbd-451f-91e7-80d945090e27\\",\\"org\\":\\"mgmt\\",\\"title\\":\\"copy\\",\\"kind\\":\\"note\\",\\"source_type\\":\\"agent\\",\\"path\\":null,\\"snippet\\":\\"copy: CANARY-BRIEFING-R2 personal priorities\\"}]}"}],"isError":false}}' : after the switch is off the holding organization still reads the briefing's text, in a copy an agent made
+
+======================================================================
+FAIL: test_a_callers_latency_does_not_depend_on_other_organizations_pages (test_rev01_attacks.TimingAndScale.test_a_callers_latency_does_not_depend_on_other_organizations_pages)
+RV-05. 1,500 made-up pages are added to the SIBLING. The toveli agent's own list (4 pages) must not get slower.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 238, in test_a_callers_latency_does_not_depend_on_other_organizations_pages
+    self.assertLess(after, before * 3 + 5, f"toveli's list went from {before:.1f} ms to {after:.1f} ms when the sibling gained 1,500 pages: "
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                           "the caller can measure how much other organizations hold, and reads slow down for everyone")
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 494.2626420001943 not less than 18.77831299942045 : toveli's list went from 4.6 ms to 494.3 ms when the sibling gained 1,500 pages: the caller can measure how much other organizations hold, and reads slow down for everyone
+
+======================================================================
+FAIL: test_a_forbidden_page_takes_as_long_as_a_missing_page (test_rev01_attacks.TimingAndScale.test_a_forbidden_page_takes_as_long_as_a_missing_page)
+RV-06. brain_get for a path that exists in another organization, against a path that exists nowhere.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 219, in test_a_forbidden_page_takes_as_long_as_a_missing_page
+    self.assertLess(abs(diff), 100, f"a page that exists in another organization answers {diff:.0f} microseconds slower than a missing page "
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                    f"(95% interval {low:.0f} to {high:.0f}); the same error text hides nothing")
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 403.4485000000002 not less than 100 : a page that exists in another organization answers 403 microseconds slower than a missing page (95% interval 338 to 480); the same error text hides nothing
+
+======================================================================
+FAIL: test_explain_analyze_does_not_reveal_another_organizations_paths (test_rev01_attacks.WhatTheDatabaseRoleLearnsWithoutASession.test_explain_analyze_does_not_reveal_another_organizations_paths)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/azi-hub-v2/spikes/r-02/review/test_rev01_attacks.py", line 354, in test_explain_analyze_does_not_reveal_another_organizations_paths
+    self.assertEqual(removed(exists), removed(missing),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     f"with no token at all the role can tell a sibling path that exists (rows removed {removed(exists)}) from one that does not "
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     f"({removed(missing)}), and can walk every path by range")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '1' != '0'
+- 1
++ 0
+ : with no token at all the role can tell a sibling path that exists (rows removed 1) from one that does not (0), and can walk every path by range
+
+----------------------------------------------------------------------
+Ran 24 tests in 9.713s
+
+FAILED (failures=15)

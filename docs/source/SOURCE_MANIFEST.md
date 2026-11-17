@@ -1,12 +1,14 @@
 # Source manifest — azi-hub-v2
 
-Manifest v1.3, 2026-11-17. This file says what each source is and how much authority it has. It is metadata, not evidence.
+Manifest v1.4, 2026-11-17. This file says what each source is and how much authority it has. It is metadata, not evidence.
 
 v1.1 amends v1 of the same day, on the founder's instruction in the R-02 brief: the status cells of the canonical artifacts are brought up to date with the two merges, and S-015 is added. S-016 was added later the same day.
 
 v1.2 (2026-11-16) is proposed in the pull request that carries R-02: sources S-017 to S-020, an R-02 row, and the ledger's new version and row count.
 
 v1.3 (2026-11-17) is proposed in the pull request that records Gate G1a: source S-021, the status cells for V-000, P-000 and INV-000 brought up to date with the merge of pull request #3, and a row for the review brief.
+
+v1.4 (2026-11-17) is proposed in the pull request that carries the review REV-01: source S-022, a row for the review, and the ledger's new version and row count. No other cell is changed. The cells for R-01 and R-02 still say neither has been attacked in a separate review session; the REV-01 row below supersedes that wording, and the cells are left for Cole to update when he rules on the review.
 
 ## Source classes
 
@@ -42,6 +44,7 @@ v1.3 (2026-11-17) is proposed in the pull request that records Gate G1a: source 
 | S-019 | `CDM2/Spike-test`, a private scratch repository, and its GitHub-hosted runner, 2026-11-16 | Process template | The throwaway machine for third-party code. Holds a copy of the spike's own code and the raw results on a `results` branch. To be deleted after the pull request carrying R-02 is merged; the results that matter are copied to `spikes/r-02/results/`. |
 | S-020 | External web sources gathered 2026-11-15 for R-02 | Research evidence | Ledger rows E-75 to E-86 and E-94 to E-99, each with how it was read and a confidence grade. Row E-85 is S-004. |
 | S-021 | Founder replies to R-02, 2026-11-16 and 2026-11-17 (chat) | Founder input | Same authority as S-001. Gate G1a (Route B with three rules), Route A later, the second-person rule, acceptance of P-000, the ruling on R-02 criterion 4, the wider R-04, and agreement to the shared-venture spike. Recorded in V-000 section 2a as F-29 to F-31 and in P-000's notes of 2026-11-17. |
+| S-022 | Sources gathered on 2026-11-17 for the review REV-01: `paperclipai/paperclip` read at tag `v2026.1106.0` and at `da8cfda`, not installed or run; external web sources; the R-02 spike's saved results, read again; and the review's own tests against the unmodified permission service | Research evidence | Ledger rows E-114 to E-127, each with how it was read and a confidence grade. The tests and their raw output are under `spikes/r-02/review/`. Made-up data only. |
 
 ## Canonical artifacts
 
@@ -53,7 +56,8 @@ v1.3 (2026-11-17) is proposed in the pull request that records Gate G1a: source 
 | R-01 | `../research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` | 1.0, 2026-11-15 | Accepted: pull request #2 squash-merged on 2026-11-15 (546715c). Not attacked in a separate review session. v0.2 added a second research pass and a reading of S-004; v1.0 folds in the founder's answers of 2026-11-15. |
 | R-02 | `../research/R-02_RUNTIME_AND_HARNESS.md` | 1.0, 2026-11-16 | Proposed; accepted when its pull request is merged. Not attacked in a separate review session. Carries the spike under `spikes/r-02/` and feeds Gate G1a with R-01. |
 | REV-01 brief | `../reviews/REV-01_BRIEF.md` | 2026-11-17 | Instructions for a separate session to attack R-01 and R-02. A brief, not a finding; the review itself will be `../reviews/REV-01_R-01_AND_R-02.md`. |
-| LEDGER | `../research/EVIDENCE_LEDGER.md` | v1.4, 2026-11-16 | Open, 113 rows (E-01 to E-113). Rows E-75 to E-113 are proposed with R-02 (E-100 to E-112 are runs of the spike). Rows are added by each research report. |
+| REV-01 | `../reviews/REV-01_R-01_AND_R-02.md` | 1.0, 2026-11-17 | Proposed; accepted when its pull request is merged. The separate review of R-01 and R-02 that P-000 requires, by a session that wrote neither. A review states findings and proposes fixes; it changes no report, decision or service file. Its tests are under `spikes/r-02/review/`. Each finding takes effect only when Cole rules on it. |
+| LEDGER | `../research/EVIDENCE_LEDGER.md` | v1.5, 2026-11-17 | Open, 127 rows (E-01 to E-127). Rows E-75 to E-113 are proposed with R-02 (E-100 to E-112 are runs of the spike). Rows E-114 to E-127 are proposed with REV-01. Rows are added by each research report and review. |
 
 Gate G0 note: pull request #1, which carried V-000 v0.2, was merged on 2026-11-15 (commit 2baba1b). The status cells above for P-000 and V-000, and V-000's own acceptance record, were written before that merge and are left for the founder to update.
 

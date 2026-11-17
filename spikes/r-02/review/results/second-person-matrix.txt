@@ -1,0 +1,12 @@
+token of (organization/actor) SHARED     GLOBAL     TOVELI     SIBLING    MGMT       PERSONAL   FRIENDP    ACME       ACMESUB    ACMEGLOBAL
+shared/human                  reads      reads      -          -          -          -          -          -          -          reads     
+shared/agent                  reads      reads      -          -          -          -          -          -          -          reads     
+friend-personal/agent         reads      reads      reads      reads      reads      -          reads      reads      reads      reads     
+personal/agent                reads      reads      reads      reads      reads      reads      -          reads      reads      reads     
+mgmt/agent                    reads      reads      reads      reads      reads      -          -          -          -          reads     
+toveli/agent                  -          reads      reads      -          -          -          -          -          -          reads     
+acme/agent                    -          reads      -          -          -          -          -          reads      reads      reads     
+acme-sub/agent                -          reads      -          -          -          -          -          -          reads      reads     
+
+Columns are whose made-up pages: SHARED the shared venture; GLOBAL and MGMT Cole's holding organization (global page, own page); TOVELI and SIBLING Cole's other ventures;
+PERSONAL Cole's personal space; FRIENDP the friend's personal space; ACME, ACMESUB, ACMEGLOBAL the friend's own company.

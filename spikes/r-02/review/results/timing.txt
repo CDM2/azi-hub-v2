@@ -1,0 +1,10 @@
+caller: the toveli agent, tool brain_get, 1000 interleaved samples each; every answer is the same text, {"error":"not_found"}
+  id, sibling's page (exists, forbidden)     median    2879 us   quartiles    2476 to    3393
+  id, random (missing)                       median    2367 us   quartiles    2053 to    2841
+  path, sibling's path (exists, forbidden)   median    2904 us   quartiles    2509 to    3425
+  path, missing, same length                 median    2383 us   quartiles    2044 to    2816
+  difference of medians, id: 513 us (95% interval 434 to 576)
+  difference of medians, path: 521 us (95% interval 442 to 594)
+  a guess from  1 sample(s) of each path names the existing one correctly 74% of the time
+  a guess from  5 sample(s) of each path names the existing one correctly 87% of the time
+  a guess from 15 sample(s) of each path names the existing one correctly 97% of the time
