@@ -4,6 +4,8 @@ Status: proposed, not accepted. As of 2026-11-15. Markdown copy of the Claude do
 
 Amended 2026-11-15, after R-01 was accepted. Two additions are appended below and dated: rows for the landscape table and notes on the research program. No earlier text is changed. This file was merged with pull request #1 (commit 2baba1b). Gate G0 accepted V-000; P-000 has no acceptance record of its own and is the plan in use.
 
+Amended 2026-11-17. Cole accepted this plan in chat on 2026-11-16, pending any edits from that conversation; the edits are the notes dated 2026-11-17 below. Gate G1a was decided the same day: Route B, with three rules that keep Route A open (V-000 F-29 and F-30). No earlier text is changed. The acceptance is on record when the pull request that carries this amendment is merged.
+
 ## Bottom line
 
 Start a new repository, keep AZI Hub running as prior art and as the first migration test, and build the first slice for yourself rather than for an unvalidated buyer.
@@ -144,6 +146,13 @@ Route B removes the customer and pricing report, licensing and blank-tenant pack
 7. **Phase 5, Autonomous build-out.** Personal layer, organization and sub-organizations, governed self-improvement, AZI Hub data migration. Route A adds multi-user collaboration. *Gate at each milestone: you run the demo.*
 8. **Phase 6, Operations.** Runbooks, restore drill, release records. Route A adds packaging and licensing. *Gate G6.*
 
+Note added 2026-11-17, after Gate G1a (Route B).
+
+- Phase 1b runs the reports Route B needs. R-08 is Route A only and waits. Which of the others Route B needs, and how light each can be, is settled when each is scoped.
+- The five conversations with outside business owners in V-000 F-29 happen before Gate G1 on either route.
+- Multi-user collaboration is listed above under Route A. One part of it is pulled forward by V-000 F-31: a second person in one sub-organization. It is gated by the shared-venture spike noted under R-03 below.
+- A separate review session attacks R-01 and R-02 next. Its brief is `docs/reviews/REV-01_BRIEF.md`. The session recommends that Cole confirm option D after it.
+
 ## Research program
 
 | Report | What it decides |
@@ -166,6 +175,22 @@ Notes added 2026-11-15. R-01 section 10 proposed scope notes for four reports. R
 - **R-04.** Generalize AZI Hub's visibility model from a hard-coded list to the tier map. Decide wiki, retrieval or both by collection size. Include Paperclip's LLM Wiki plugin in the comparison. Decide what the holding tier reads of a sub-organization's codebase map.
 - **R-06.** Keep the evaluation outside what the improvement loop can edit.
 - **R-08.** After the pilots on Cole's own ventures, two or three paid local pilots, plus interviews where a pilot is declined.
+
+Notes added 2026-11-17, from Cole's replies to R-02 in chat on 2026-11-16 and 2026-11-17 (manifest S-021).
+
+- **R-02, rulings.** Criterion 4: Cole accepted the session's reading, a pass with two limits (R-02 section 7), while saying he was not sure he understood the criterion; the session then explained it, and the review re-examines it. The build list gains one item: only Paperclip may reach the permission service. Criterion 5 has not run on a real Toveli task and stays open.
+- **R-03 gains the shared-venture spike.** Agreed by Cole on 2026-11-17. Not run. It also carries R-05's question of a person with memberships. Scenario: Cole runs one sub-organization with another person, who must never reach his personal space, his other sub-organizations or the holding organization's pages (V-000 F-31). Where things stand: the R-02 permission service binds a token to one organization and has no person with memberships (`spikes/r-02/service/schema.sql` lines 40 to 44); any personal space reads every organization (line 154); Paperclip ran with no logins; all agents shared one operating-system user (ledger E-111). Pass criteria:
+  1. A second person, signed in to Paperclip as a member of one company, cannot see or change any other company through the web interface or the API.
+  2. That person's token returns the shared venture's pages and global pages only. A sibling's, the holding organization's or a personal page is never returned.
+  3. Two people each have a personal space. Neither reads the other's, and each reads only the organizations they belong to.
+  4. An agent in the shared venture, told to try, cannot read another organization's files, Paperclip's data or its stored tokens on the host. Run once with all companies in one Paperclip instance and once with the venture in its own.
+  5. A venture on its own Paperclip instance connects to the same permission service and passes R-02 criteria 1 to 4 unchanged.
+  6. One item crosses between the shared venture and the holding organization only as an approved push, logged on both sides. The holding organization's standing read can be switched off for that venture alone.
+  7. Access to the venture's code repository exposes no brain page, no other organization and no secret.
+
+  If criterion 1 or 4 fails in one instance, shared ventures get their own instance. If criterion 2 or 3 fails, no second person is added until the service is fixed.
+- **R-04 is widened.** Agreed by Cole. Survey the leading designs for agent memory and say what to borrow for the second brain, with the aim of a memory that improves itself under the gate R-06 defines. Add a setting for each venture on what the holding organization reads of its code map; the session's proposed default is in V-000 section 6.
+- **Alternatives to Paperclip.** R-01 did not compare Paperclip head to head with the code-first orchestration frameworks or with products sold as an agentic mesh or agent fabric. The review of R-01 and R-02 makes a light desk comparison. A deeper one is a research task to run inside the tool once Route B is running. This is the session's recommendation of 2026-11-16; Cole raised the idea of using the tool for it and did not object.
 
 ## Build, review, integrate loop
 

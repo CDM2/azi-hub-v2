@@ -1,12 +1,16 @@
 # V-000 — Vision baseline and drift audit
 
-Status: v0.3, proposed, 2026-11-15. v0.2 was accepted at Gate G0 when the founder merged pull request #1 on 2026-11-15 (commit 2baba1b). v0.3 appends the changes R-01 section 10 proposed and the founder's inputs of 2026-11-15. Every addition carries its date. No v0.2 text is rewritten or removed; where a v0.2 statement is amended, the amendment sits beside it and governs. Acceptance of v0.3 is the founder's merge of the pull request that carries it.
+Status: v0.4, proposed, 2026-11-17. v0.3 was accepted when the founder merged pull request #3 (commit 4a31bf2, 2026-11-17 04:59 UTC). v0.4 records Gate G1a (Route B) and two decisions made around it, in section 2a, with new open items and acceptance rows. Every addition carries its date. No accepted text is rewritten or removed. Acceptance of v0.4 is the founder's merge of the pull request that carries it.
+
+Status line as written for v0.3, kept for the record: "v0.3, proposed, 2026-11-15. v0.2 was accepted at Gate G0 when the founder merged pull request #1 on 2026-11-15 (commit 2baba1b). v0.3 appends the changes R-01 section 10 proposed and the founder's inputs of 2026-11-15. Every addition carries its date. No v0.2 text is rewritten or removed; where a v0.2 statement is amended, the amendment sits beside it and governs. Acceptance of v0.3 is the founder's merge of the pull request that carries it."
 
 Status line as written for v0.2, kept for the record: "v0.2, proposed. The founder's answers of 2026-11-15 are folded in. Acceptance is the founder's merge of the pull request that carries this file (Gate G0)."
 
 Inputs: founder note and chat replies of 2026-11-15; `AZI-HUB-PROJECT-BRIEF.md`; `CAT_Research_to_Product_Plan` (2026-08-18); the Gemini artifacts; the code of `azi-hub` and `autonomous-startup-engine`.
 
 Inputs added for v0.3: `docs/research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` v1.0, accepted with pull request #2 (commit 546715c), sections 7 to 11; the founder's inputs after that merge (manifest S-015).
+
+Inputs added for v0.4: `docs/research/R-02_RUNTIME_AND_HARNESS.md` v1.0 (proposed in pull request #4) and the founder's replies to it in chat on 2026-11-16 and 2026-11-17 (manifest S-021).
 
 ## 1. Founder intent, restated
 
@@ -66,6 +70,16 @@ Rows F-01 to F-18 above stand as accepted in v0.2. Two are amended and six are a
 | F-28 | Pricing of governance: a control that needs Paperclip's paid edition is passed on as a paid feature and is not subsidized. Governance this project builds itself is free for now. | New. An input to R-08. |
 
 R-02 tests F-25 to F-27 in its spike (criteria 1 to 3) with the briefing switch on and off, the personal space on and off, and a single-company setup.
+
+**Added 2026-11-17, v0.4: Gate G1a and two decisions made around it** (manifest S-021). Cole gave these in chat on 2026-11-16 and 2026-11-17 after reading the results of R-02. They change no accepted row.
+
+| ID | Decision | Relation to earlier decisions |
+| --- | --- | --- |
+| F-29 | Gate G1a: Route B. The system is built first for Cole's own use: his personal space, the holding organization and his ventures. Three rules keep Route A open. One: tiers and organizations stay data and are never hard-coded. Two: a test that sets up a brand-new, empty organization from nothing runs on every change. Three: before Gate G1 there are five conversations with outside business owners, and if one of them wants a pilot, Route A is taken up. | Answers the question P-000 put to Gate G1a. F-15a and F-21 stand. Rule two keeps a small part of the blank-tenant work that Route B otherwise drops. |
+| F-30 | Route A is not dropped. It comes later as a side track once Route B is running, possibly as a sub-organization of its own under the holding organization. The Route B build must be able to reach it without a large rebuild. Cole's reasons: he wants to use the tool as soon as possible, and if it works for him, customers will follow and will not wait months. | New. The Route A hypotheses in section 5 stay open. R-08 is Route A only and waits. |
+| F-31 | A second person. Cole may run a sub-organization with another person. That person may reach that sub-organization's code and agents. They must never reach his personal space, his other sub-organizations or the holding organization's pages. On 2026-11-17 Cole agreed to the shared-venture spike that tests this (P-000, note of 2026-11-17 on R-03). The session recommends that no second person is added to any organization before it passes. | New. Extends N-02 from organizations to people. R-02 was built and tested for one person (ledger E-100, E-111). |
+
+Where option D stands after R-02. The spike supports F-20: criteria 1 to 4 and 6 passed on an unmodified Paperclip (R-02 section 7). On 2026-11-16 Cole said he thinks he agrees with option D and raised the second-person question. He has not confirmed option D. The session recommends confirming it after the separate review of R-01 and R-02. For a second person, option D is unproven (F-31).
 
 ### 2b. Capability added after R-01 (2026-11-15)
 
@@ -156,6 +170,14 @@ Added 2026-11-15 (v0.3):
 - What the holding tier may read of a sub-organization's codebase map: R-04.
 - Whether a separate review session attacks R-01 and R-02 before Gate G1a: Cole.
 
+Added 2026-11-17 (v0.4):
+
+- Gate G1a is decided: Route B (F-29). On the review item above: Cole decided the route first and asked for the review's prompt on 2026-11-17, so the review runs next. Its brief is `docs/reviews/REV-01_BRIEF.md`.
+- Confirmation of option D (F-20): Cole. The session recommends waiting for the review.
+- Whether a venture shared with a second person runs on its own Paperclip instance. The session recommends it; Cole has not decided. The shared-venture spike tests both ways.
+- What the holding organization reads of a venture's code map. Cole left this to the session to investigate and decide. The session's proposed default: structure pages only (the overview and the package pages), file pages opt-in for each venture, and nothing from a venture shared with a second person except by an approved push. R-04 confirms or changes it.
+- R-02 criterion 5 has not run on a real Toveli task. It stays open until Toveli may be touched by this project.
+
 ## 7. Acceptance record
 
 | Record | Person | Date | Scope |
@@ -167,4 +189,7 @@ Added 2026-11-15 (v0.3):
 | Inputs and instruction to prepare v0.3 | Cole | 2026-11-15 (chat, R-02 brief) | Authorizes v0.3; not acceptance |
 | Draft v0.3 prepared | Claude session | 2026-11-15 | Not accepted |
 | Answers to the R-02 spike plan | Cole | 2026-11-15 (chat) | Adds F-25 to F-28 to the v0.3 draft; not acceptance |
-| Founder acceptance of v0.3 | pending | | Merge of the pull request carrying v0.3 |
+| Founder acceptance of v0.3 | Cole | 2026-11-17 UTC | Merge of the pull request carrying v0.3: pull request #3, squash-merged at 4a31bf2 (2026-11-17 04:59 UTC) |
+| Gate G1a and the decisions around it | Cole | 2026-11-16 and 2026-11-17 (chat) | Route B with three rules, Route A later, the second-person rule. Authorizes v0.4 (F-29 to F-31); not acceptance |
+| Draft v0.4 prepared | Claude session | 2026-11-17 | Not accepted |
+| Founder acceptance of v0.4 (Gate G1a on record) | pending | | Merge of the pull request carrying v0.4 |
