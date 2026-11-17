@@ -1,6 +1,8 @@
 # INV-000 — Capability inventory of prior code
 
-Status: draft v0.2 (adds conversation modes and the organization graph as their own rows). As of 2026-11-15. Sources: `CDM2/azi-hub` main at 95d4feb, `CDM2/autonomous-startup-engine` at 159c1b1.
+Status: draft v0.3, 2026-11-15. v0.3 appends the section "Amendments, 2026-11-15 (v0.3)" at the end: two amendments R-01 section 10 proposed, and three rows for the codebase map (capability C-23). The v0.2 rows are unchanged.
+
+Status line as written for v0.2: draft v0.2 (adds conversation modes and the organization graph as their own rows). As of 2026-11-15. Sources: `CDM2/azi-hub` main at 95d4feb, `CDM2/autonomous-startup-engine` at 159c1b1.
 
 Dispositions: **Pattern** = carry the idea, rebuild the code. **Port** = move the code with changes. **Decide** = a research report settles it. **Drop** = do not carry.
 
@@ -59,3 +61,24 @@ Dispositions: **Pattern** = carry the idea, rebuild the code. **Port** = move th
 | Capability | Where | Disposition | Settled in |
 | --- | --- | --- | --- |
 | Organization graph ("enterprise brain"): people, agents, procedures and tools as nodes, with ownership and access as edges, and named human roles per agent | Conducting AI concept, `prior-art/gemini/CAT_HANDOFF_DOSSIER.md` part II. Never built. AZI Hub's nearest piece is the wiki knowledge graph and agent cards. | Decide | R-04 for the graph, R-05 for roles and access |
+
+## Amendments, 2026-11-15 (v0.3)
+
+The rows above are kept as written in v0.2. Where a row is amended here, this section governs.
+
+### Rows amended (R-01 section 10)
+
+| Row | Change | Source |
+| --- | --- | --- |
+| Reservation booking (Resy, OpenTable) | Disposition becomes **outside the build**. The agent stays on the old VPS and runs only on sites that allow agents. "Port to the personal layer first" and "Phase 5, milestone 1" no longer apply. | V-000 F-08a and F-15a; R-01 section 11 |
+| Three-layer memory: raw, compiled wiki, indexes | Disposition stays Decide. The comparison R-04 makes now includes Paperclip's alpha LLM Wiki plugin, which keeps one company's wiki with sources, backlinks, revisions and a maintainer agent, beside platform memory. | R-01 section 2; ledger E-47 |
+
+### Rows added: the codebase in the second brain (capability C-23, V-000 F-24)
+
+Read in `CDM2/azi-hub` at 95d4feb on 2026-11-15.
+
+| Capability | Where | Disposition | Settled in |
+| --- | --- | --- | --- |
+| Codebase index in the second brain: one wiki page per directory of the server and client source, holding the file list and the exported names found by a regular expression. No model calls. Written once, at first boot, behind a seed flag. | `core/src/server/memory/BrainSeedWriter.ts` (`seedCodebaseIndex`) | Pattern. It covers AZI Hub's own code only, stops at directory level, and is not refreshed after the first seed. | R-02 (spike criterion 8), R-04 |
+| Provenance tags on brain pages: `source_type` has `codebase` and `agent_output` as explicit values. Human-written context is spread over `document`, `daily_note` and `voice_memo`, not one tag. Codebase pages also carry `readers` and `writers` lists of agent ids. | `orgs/azi-hub/vault/SECOND_BRAIN_TAXONOMY.md`; `BrainSeedWriter.ts` | Pattern. Supplies most of the codebase, agent-written and human-written distinction F-24 asks for; a single human-written marker is missing. | R-04 |
+| "Cartographer": deterministic extraction into a manifest, then a question-answering agent that reads the manifest first and raw code second | Not in the repository at 95d4feb; a search for the term found nothing. Recorded from Cole's earlier project notes: founder input, not code. | Decide, against a plain coding agent (N-04) | R-02 (spike criterion 8) |

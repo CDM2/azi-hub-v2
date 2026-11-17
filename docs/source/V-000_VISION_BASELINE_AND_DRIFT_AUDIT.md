@@ -1,8 +1,12 @@
 # V-000 — Vision baseline and drift audit
 
-Status: v0.2, proposed. The founder's answers of 2026-11-15 are folded in. Acceptance is the founder's merge of the pull request that carries this file (Gate G0).
+Status: v0.3, proposed, 2026-11-15. v0.2 was accepted at Gate G0 when the founder merged pull request #1 on 2026-11-15 (commit 2baba1b). v0.3 appends the changes R-01 section 10 proposed and the founder's inputs of 2026-11-15. Every addition carries its date. No v0.2 text is rewritten or removed; where a v0.2 statement is amended, the amendment sits beside it and governs. Acceptance of v0.3 is the founder's merge of the pull request that carries it.
+
+Status line as written for v0.2, kept for the record: "v0.2, proposed. The founder's answers of 2026-11-15 are folded in. Acceptance is the founder's merge of the pull request that carries this file (Gate G0)."
 
 Inputs: founder note and chat replies of 2026-11-15; `AZI-HUB-PROJECT-BRIEF.md`; `CAT_Research_to_Product_Plan` (2026-08-18); the Gemini artifacts; the code of `azi-hub` and `autonomous-startup-engine`.
+
+Inputs added for v0.3: `docs/research/R-01_CATEGORY_AND_EXISTING_TOOLS.md` v1.0, accepted with pull request #2 (commit 546715c), sections 7 to 11; the founder's inputs after that merge (manifest S-015).
 
 ## 1. Founder intent, restated
 
@@ -11,6 +15,8 @@ One person directs their personal life and a set of organizations through a sing
 A chief-of-staff agent knows the person's own life well enough to work with the administrators of their organizations. The personal second brain is kept apart from each organization's second brain and shared only on purpose.
 
 It works for a new organization and for an existing one. Cole uses it first. If a product has room, other people get it, with onboarding help for those who already have operations.
+
+**Added 2026-11-15 (v0.3). The mission, as Cole stated it** (R-01 section 11). Build toward idea to IPO on a constantly self-optimizing framework. The next Alphabet should be creatable with this tool: a management company that creates and scales Toveli and Cole's other ventures, and that also manages his personal life. This is the direction to build toward, recorded as F-19. It is not a claim about what any system does today; R-01 found no evidence of one (T-4).
 
 ## 2. Fixed decisions (Cole, 2026-11-15)
 
@@ -35,6 +41,40 @@ It works for a new organization and for an existing one. Cole uses it first. If 
 | F-17 | Self-hosted on Cole's VPS for his own use. A hosted offering is decided at Gate G1a. |
 | F-18 | Build budget: up to $1,000 a month for agent and API runs, on top of existing Claude Max, ChatGPT and GitHub Pro subscriptions. Cole can raise it. |
 
+### 2a. Amendments and additions (v0.3, 2026-11-15)
+
+Rows F-01 to F-18 above stand as accepted in v0.2. Two are amended and six are added. Sources: Cole's answers recorded in R-01 section 11, and his inputs after the R-01 merge (manifest S-015).
+
+| ID | Decision | Relation to v0.2 |
+| --- | --- | --- |
+| F-08a | The reservation-booking agent stays on the old VPS and is outside this build. It runs only on sites that allow agents. It does not move to the personal layer as part of the first slice. | Amends F-08. The new repository stands. "About one more week" and the move to the personal layer no longer apply. |
+| F-15a | First slice: the personal layer, then Cole's own ventures as sub-organizations under a management company, then the research-to-decision workflow. | Amends F-15. The reservation-agent migration is removed and the ventures step is added. |
+| F-19 | Mission: build toward idea to IPO on a constantly self-optimizing framework. A management company creates and scales Toveli and Cole's other ventures and also manages his personal life. | New. Direction, not a claim (section 1). |
+| F-20 | Orchestration is adopted for now: unmodified Paperclip for each organization, behind a replaceable interface, with this project's own permission layer beside it (R-01 option D). This holds subject to the R-02 spike. A lean orchestrator of our own (option E) stays open. | New. |
+| F-21 | Cole's own ventures are the first pilots: Toveli and a few others. Paid pilots with outside businesses follow. | New. Own ventures come before any F-13 customer group. |
+| F-22 | Cole has 40 to 60 hours a week for this work. | New. |
+| F-23 | Governance: this version builds in as much governance as is practical. Replacing Paperclip with a layer of our own, with our own governance and cloud, is a later option if the product takes off. | New. Changes where R-01 section 7 placed broader governance; see D-13. |
+| F-24 | Codebases go in each company's second brain. Agents get a map: what each file and script does, its dependencies, and how it builds and deploys. Pages are tagged so that codebase, agent-written and human-written context can be told apart. Goal: upload the existing Toveli codebase, run a mapping pass, and have little onboarding work left. | New. Capability C-23 (section 2b). |
+
+**Added later on 2026-11-15, still v0.3: Cole's answers to the R-02 spike plan** (manifest S-016). Four more decisions. They refine N-02 and N-08 below and change no accepted row.
+
+| ID | Decision | Relation to v0.2 |
+| --- | --- | --- |
+| F-25 | Personal information is never sent to an organization, with one exception: a curated briefing that a human approves before it goes out. The briefing goes to the holding organization only. It has an off switch, because some users will not want it, most of all where several people work in the same organizations. Information flows back from the organizations to the personal space under the current permission rules. Health and finance pages exist only in the personal space. | New. Narrows "explicit push" in N-02 to this one path. Agrees with N-08. |
+| F-26 | The product can ship with the personal space switched on or off. Some businesses will not want a personal space, and offering it to them would confuse what the product is. | New. F-01 stands; the personal space becomes optional per deployment. |
+| F-27 | The holding organization can read the organizations below it. A page lives once, in the organization that owns it; the holding organization reads it there and no copy is made. A user who runs one company has only the holding organization, with no management layer above it. | New. Detail for F-02. How much the holding organization reads (everything or summaries) stays with R-04. |
+| F-28 | Pricing of governance: a control that needs Paperclip's paid edition is passed on as a paid feature and is not subsidized. Governance this project builds itself is free for now. | New. An input to R-08. |
+
+R-02 tests F-25 to F-27 in its spike (criteria 1 to 3) with the briefing switch on and off, the personal space on and off, and a single-company setup.
+
+### 2b. Capability added after R-01 (2026-11-15)
+
+R-01 section 5 lists capabilities C-01 to C-22. This one continues that numbering. R-01 itself is not edited.
+
+| ID | Capability (V-000 reference) | Best existing tool | Coverage | Missing glue | Evidence | Settled in |
+| --- | --- | --- | --- | --- | --- | --- |
+| C-23 | A codebase map in each organization's second brain: for each file its purpose, imports and entry points, plus the build and deploy steps; tagged as codebase; readable only inside that organization's tier (F-24, N-02) | Not assessed yet. R-02 criterion 8 surveys existing tools (repository maps, code graphs, generated repository wikis) before anything is built. | Not assessed | Not assessed. Prior art: AZI Hub's `seedCodebaseIndex` writes one page per directory with a file list and export names, tagged `source_type: codebase` (INV-000). | None yet. R-02 adds the ledger rows. | R-02 (spike criterion 8), R-04 |
+
 ## 3. Non-negotiables proposed to carry over
 
 | ID | Rule | Origin |
@@ -49,6 +89,8 @@ It works for a new organization and for an existing one. Cole uses it first. If 
 | N-08 | Health and financial data are the highest sensitivity class: they stay in the personal tenant, are never pushed to an organization by default, and stay out of logs and evaluation sets. | Follows from F-10 and N-02 |
 
 How N-01 applies to F-10: a finance section may read, analyze and propose. A trade, payment or transfer needs the user's approval each time, unless a later decision record sets a pre-approved limit.
+
+Added 2026-11-15 (v0.3). How N-02, N-03 and N-06 apply to F-24: a codebase map is that organization's data. A sibling organization never reads it. The database or the service applies that filter, never a prompt. What the holding tier may read of a sub-organization's map is settled in R-04. Source code that belongs to an employer or a third party does not go in.
 
 ## 4. Drift audit
 
@@ -66,6 +108,15 @@ How N-01 applies to F-10: a finance section may read, analyze and propose. A tra
 | D-10 | Plan requires one first wedge. | F-13 names three customer groups with different buyers, sales cycles and competitors. | All three stay candidates. R-01 and R-08 rank them and name one first wedge. Cole as first user is closest to the solopreneur group; the onboarding thesis (F-12) is closest to existing organizations. |
 | D-11 | CAT charter non-goals: production self-modification; high-impact autonomous financial actions. | F-10 and F-11: agents build personal sections, including financial ones. | Allowed inside the instance boundary (N-07) with N-01. R-05, R-06 and R-07 define the controls. |
 
+Rows added 2026-11-15 (v0.3). D-10 above is kept as written; D-10a records what R-01 settled.
+
+| # | Earlier position | Current intent | Disposition |
+| --- | --- | --- | --- |
+| D-10a | D-10 left the three F-13 customer groups as candidates for R-01 and R-08 to rank. | R-01 section 8, accepted with pull request #2, ranks them: 1, non-technical owners of existing small businesses; 2, new, well-funded organizations; 3, existing large organizations, as a long-term destination. Cole's own ventures come before all three (F-21). | Ranking recorded. First outside wedge: small local businesses with existing operations, onboarded in person and sold as setup plus a monthly plan. This is a desk judgment until an outside business pays; R-08 tests it. |
+| D-12 | F-08 and F-15: the reservation agent moves to the personal layer as part of the first slice. | The agent runs only on sites that allow agents and is outside the build. | Resolved by F-08a and F-15a. |
+| D-13 | R-01 section 7: this project builds governance only for what it owns (approvals on sharing, the improvement gate). Broader governance and hosting wait for Gate G1. | F-23: as much governance in this version as is practical. | Resolved by F-23 for governance. R-02 criterion 7 sorts every required control into free in Paperclip, paid edition only, or ours to build, and says whether R-01's trigger 3 for option E is met. A hosted offering still waits for Gate G1 (F-17). |
+| D-14 | AZI Hub: a codebase index of one page per directory, covering its own code only. A fuller "cartographer" pass was planned and not built. | F-24: a file-level map of each company's codebase in that company's brain. | Carried as C-23. R-02 criterion 8 checks existing tools first, then tests the smallest version on Toveli against a plain coding agent (N-04). |
+
 ## 5. Route A hypothesis, to be tested in R-01
 
 | ID | Claim | What would falsify it |
@@ -77,6 +128,19 @@ How N-01 applies to F-10: a finance section may read, analyze and propose. A tra
 
 Early counter-signals, from search results only: NanoCorp and Polsia already sell no-code creation of AI-run companies, and OpenAI pairs forward-deployed engineers with enterprise customers for onboarding. Neither covers the personal layer as far as the first pass shows.
 
+### 5a. The hypotheses after R-01 (added 2026-11-15, v0.3)
+
+R-01 section 3 tested the four claims. The table above is kept as accepted in v0.2. H-A3 and H-A4 are restated as R-01 section 10 proposed. The IDs do not change, so ledger rows that cite them still apply. Evidence IDs point to `../research/EVIDENCE_LEDGER.md`.
+
+| ID | Claim, as it stands now | What would falsify it | R-01 verdict on the v0.2 wording |
+| --- | --- | --- | --- |
+| H-A1 | Unchanged. | Unchanged. | Holds in part. True of self-hosted frameworks and of enterprises; false for the hosted personal agents a small-business owner is likely to try first. |
+| H-A2 | Unchanged. | Unchanged. | The price is supported by quotes. Retention is untested, and no outside business has paid. |
+| H-A3 | Restated: the combination is not sold turnkey. That is a holding structure with deliberate sharing, a personal space with a one-way boundary, a second brain that respects both, and improvement gated by evidence. | A vendor sells that combination to the same buyer. | Partly falsified as first written: each main job is already sold turnkey to each buyer group. |
+| H-A4 | Restated: owner-operators want a chief of staff that works with the agents of their own organizations, across a holding organization and its sub-organizations, over a second brain filtered by tier, and no vendor offers that. | A vendor offers it, or owner-operators do not want personal and company context in one system. | Falsified as first written on the vendor half: personal layers are now sold. The buyer half is untested. |
+
+**Counter-signals as of 2026-11-15.** This replaces the paragraph above, which is kept as written. Hosted personal agents now exist and need no setup: Claude Duet, ChatGPT dots, Meta's Muse and Muse for Small Business, and Ariso's Ari, which is sold as one chief of staff across work and life (E-27, E-29, E-30, E-31). None was found to cover several organizations under one owner or a second brain filtered by tier (E-28, E-29, E-31, E-65). NanoCorp and Polsia still sell no-code creation of AI-run companies (E-12, E-14). OpenAI still sells enterprise onboarding through its own engineers and four consultancies (E-20, E-21).
+
 ## 6. Open items
 
 Nothing blocks Phase 1a. Left for later gates:
@@ -85,10 +149,22 @@ Nothing blocks Phase 1a. Left for later gates:
 - Pre-approved limits for money movement, if any: R-05.
 - How far agents may change shared core code: R-06 and R-07.
 
+Added 2026-11-15 (v0.3):
+
+- Gate G1a waits on R-02, which runs the option D spike. F-20 holds only if the spike supports it.
+- The first wedge now has a desk answer (D-10a). It stays open until an outside business pays.
+- What the holding tier may read of a sub-organization's codebase map: R-04.
+- Whether a separate review session attacks R-01 and R-02 before Gate G1a: Cole.
+
 ## 7. Acceptance record
 
 | Record | Person | Date | Scope |
 | --- | --- | --- | --- |
 | Draft v0.1 prepared | Claude session | 2026-11-15 | Not accepted |
 | Answers and direction to revise and push | Cole | 2026-11-15 (chat) | Authorizes v0.2 and the Phase 0 seed push; not acceptance |
-| Founder acceptance (Gate G0) | pending | | Merge of the pull request carrying v0.2 |
+| Founder acceptance (Gate G0) | Cole | 2026-11-15 | Merge of the pull request carrying v0.2: pull request #1, squash-merged at 2baba1b |
+| R-01 v1.0 accepted | Cole | 2026-11-15 | Pull request #2, squash-merged at 546715c (2026-11-16 01:00 UTC). An input to v0.3; not an acceptance of V-000 |
+| Inputs and instruction to prepare v0.3 | Cole | 2026-11-15 (chat, R-02 brief) | Authorizes v0.3; not acceptance |
+| Draft v0.3 prepared | Claude session | 2026-11-15 | Not accepted |
+| Answers to the R-02 spike plan | Cole | 2026-11-15 (chat) | Adds F-25 to F-28 to the v0.3 draft; not acceptance |
+| Founder acceptance of v0.3 | pending | | Merge of the pull request carrying v0.3 |
