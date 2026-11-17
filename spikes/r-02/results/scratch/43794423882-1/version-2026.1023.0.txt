@@ -1,0 +1,6 @@
+requested: paperclipai@2026.1023.0  npm exit: 0
+└── paperclipai@2026.1023.0
+
+installed paperclipai 2026.1023.0
+dist.integrity = 'sha512-PA2gLYoJKcmen1YaNr7jtyyZK2xNyW92XEedgZ82S1MMeMEB2kdmk1okRMD4aFUV4OZPFBwk76pV0jCM2Fuy0g=='
+dist.shasum = '4970b7bba38b57c32b71da5c6caeb85ecb8e6b30'

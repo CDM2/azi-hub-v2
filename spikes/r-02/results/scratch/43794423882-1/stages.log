@@ -1,0 +1,132 @@
+[02:49:29] stage 0: Node v24.22.3
+node-v24.22.3-linux-x64.tar.xz: OK
+v24.22.3
+[02:49:31] stage 1: permission service
+Unable to find image 'postgres:17' locally
+17: Pulling from library/postgres
+37fb86c2a767: Pulling fs layer
+e3f1858cb92e: Pulling fs layer
+8fb810914793: Pulling fs layer
+0364acb7b7f6: Pulling fs layer
+aa59ca706586: Pulling fs layer
+c18f3c4e97d4: Pulling fs layer
+27d6f21260a0: Pulling fs layer
+4abaab6950ec: Pulling fs layer
+3391d2c467d6: Pulling fs layer
+ed4bbee64e27: Pulling fs layer
+d1f2edaee96e: Pulling fs layer
+cdfe3ddb3b6b: Pulling fs layer
+09a57405bcb1: Pulling fs layer
+d678e0101545: Pulling fs layer
+c18f3c4e97d4: Waiting
+27d6f21260a0: Waiting
+4abaab6950ec: Waiting
+3391d2c467d6: Waiting
+ed4bbee64e27: Waiting
+d1f2edaee96e: Waiting
+cdfe3ddb3b6b: Waiting
+09a57405bcb1: Waiting
+d678e0101545: Waiting
+0364acb7b7f6: Waiting
+aa59ca706586: Waiting
+e3f1858cb92e: Verifying Checksum
+e3f1858cb92e: Download complete
+8fb810914793: Verifying Checksum
+8fb810914793: Download complete
+0364acb7b7f6: Verifying Checksum
+0364acb7b7f6: Download complete
+aa59ca706586: Verifying Checksum
+aa59ca706586: Download complete
+37fb86c2a767: Verifying Checksum
+37fb86c2a767: Download complete
+c18f3c4e97d4: Verifying Checksum
+c18f3c4e97d4: Download complete
+27d6f21260a0: Verifying Checksum
+27d6f21260a0: Download complete
+4abaab6950ec: Verifying Checksum
+4abaab6950ec: Download complete
+ed4bbee64e27: Verifying Checksum
+ed4bbee64e27: Download complete
+d1f2edaee96e: Verifying Checksum
+d1f2edaee96e: Download complete
+cdfe3ddb3b6b: Verifying Checksum
+cdfe3ddb3b6b: Download complete
+09a57405bcb1: Verifying Checksum
+09a57405bcb1: Download complete
+37fb86c2a767: Pull complete
+e3f1858cb92e: Pull complete
+d678e0101545: Verifying Checksum
+d678e0101545: Download complete
+8fb810914793: Pull complete
+0364acb7b7f6: Pull complete
+aa59ca706586: Pull complete
+c18f3c4e97d4: Pull complete
+27d6f21260a0: Pull complete
+4abaab6950ec: Pull complete
+3391d2c467d6: Verifying Checksum
+3391d2c467d6: Download complete
+3391d2c467d6: Pull complete
+ed4bbee64e27: Pull complete
+d1f2edaee96e: Pull complete
+cdfe3ddb3b6b: Pull complete
+09a57405bcb1: Pull complete
+d678e0101545: Pull complete
+Digest: sha256:0d938e975177bef9f1f61f3f9dbcf2e0aa0a139568f66d3415ed8892eb97f6ac
+Status: Downloaded newer image for postgres:17
+psql:service/schema.sql:20: NOTICE:  schema "brain" does not exist, skipping
+[02:49:48] direct tests: OK
+[02:49:49] stage 2: Paperclip 2026.1023.0 as user pclip
+[02:51:46] installed: installed paperclipai 2026.1023.0 dist.integrity = 'sha512-PA2gLYoJKcmen1YaNr7jtyyZK2xNyW92XEedgZ82S1MMeMEB2kdmk1okRMD4aFUV4OZPFBwk76pV0jCM2Fuy0g==' dist.shasum = '4970b7bba38b57c32b71da5c6caeb85ecb8e6b30' 
+[02:51:55] Paperclip up: {"status":"ok","version":"2026.1023.0","serverVersion":"2026.1023.0","commit":"1b4c803816e82b0265c8422e1a804327a7ed8c54","deploymentMode":"local_trusted","deploymentExposure":"private","localAiLoginSupported":true,"authReady":true,"bootstrapStatus":"ready","bootstrapInviteActive":false,"features":{"
+[02:51:56] stage 3: criteria 1 to 4 through Paperclip 2026.1023.0
+[02:51:57] setup exit: 0
+{"passed": 24, "failed": 11, "calls_made_through_gateway": 28, "in_paperclip_audit": 27, "paperclip_audit_matched_by": {"invocation id": 22, "action request id": 0, "request id in the logged arguments": 5, "run, tool and order": 0}, "in_service_audit": 24, "stopped_by_paperclip_first": 4, "service_audit_by_org": {"sibling": {"allow": 3, "deny": 1}, "toveli": {"allow": 10, "deny": 4}, "personal": {"allow": 2}, "mgmt": {"allow": 4}}, "paperclip_version": "2026.1023.0"}
+PASS run completed: sibling
+FAIL agent process got no runner credential in its environment: sibling  <- ['GH_CONFIG_DIR', 'PAPERCLIP_GITHUB_AUTH_MODE', 'PAPERCLIP_GITHUB_HOST_HOME']
+PASS run completed: toveli
+FAIL agent process got no runner credential in its environment: toveli  <- ['GH_CONFIG_DIR', 'PAPERCLIP_GITHUB_AUTH_MODE', 'PAPERCLIP_GITHUB_HOST_HOME']
+PASS run completed: personal
+FAIL agent process got no runner credential in its environment: personal  <- ['GH_CONFIG_DIR', 'PAPERCLIP_GITHUB_AUTH_MODE', 'PAPERCLIP_GITHUB_HOST_HOME']
+PASS run completed: mgmt-before
+FAIL agent process got no runner credential in its environment: mgmt-before  <- ['GH_CONFIG_DIR', 'PAPERCLIP_GITHUB_AUTH_MODE', 'PAPERCLIP_GITHUB_HOST_HOME']
+PASS run completed: mgmt-after
+FAIL agent process got no runner credential in its environment: mgmt-after  <- ['GH_CONFIG_DIR', 'PAPERCLIP_GITHUB_AUTH_MODE', 'PAPERCLIP_GITHUB_HOST_HOME']
+PASS run completed: toveli-after
+FAIL agent process got no runner credential in its environment: toveli-after  <- ['GH_CONFIG_DIR', 'PAPERCLIP_GITHUB_AUTH_MODE', 'PAPERCLIP_GITHUB_HOST_HOME']
+PASS C1 toveli agent identified as toveli by the service
+PASS C1 toveli agent sees its own and global pages
+PASS C1 no SIBLING page ever reached the toveli agent (any step, any run)
+PASS C1 no PERSONAL page ever reached the toveli agent (any step, any run)
+PASS C1 no MGMT page ever reached the toveli agent (any step, any run)
+FAIL C1 a sibling's page looks exactly like a missing page  <- {"error":"{\"error\":\"not_found\"}","reasonCode":"tool_error","execution":{"transport":"mcp_remote","request":{"protocol":"MCP JSON-RPC 2.0","httpMet | {"error":"{\"error\":\"not_found\"}","reasonCode":"tool_error","execution":{"transport":"mcp_remote","request":{"protocol":"MCP JSON-RPC 2.0","httpMet
+PASS C1 sibling agent sees its own pages
+PASS C1 no toveli page (codebase pages included) reached the sibling agent
+PASS C1 no personal or holding-only page reached the sibling agent
+PASS C2 holding agent reads both sub-organizations
+PASS C2 no personal page reached the holding agent
+PASS C3 personal agent reads its organizations
+PASS C3 an organization's agent cannot publish a briefing
+PASS C3 a health page is refused outside personal, even after Paperclip's approval
+FAIL C3 briefing accepted from the personal agent as pending  <- {"error":"Tool action requires approval, but this gateway session is not attached to an issue","reasonCode":"approval_path_missing","invocationId":"ed2ac340-711b-4b0f-879f-255fe5502ccd","tool":"mcp.app-gallery-link-76f550e7-0673-4e73-8522-c0d3fb0d7c2a-a28c5a67:publish-briefing","instructions":"This 
+PASS C3 briefing invisible to the holding agent before the human approves it
+FAIL C3 briefing visible to the holding agent after approval  <- 
+PASS C3 briefing never reaches a sub-organization
+FAIL ask-first tool: the write waited for Paperclip approval and then landed  <- [{"status": 500, "body": {"error": "Failed query: select \"id\", \"company_id\", \"invocation_id\", \"issue_id\", \"interaction_id\", \"approval_id\", \"status\", \"canonical_arguments_hash\", \"canonical_arguments_summary\", \"signed_arguments\", \"preview_markdown\", \"requested_by_agent_id\", \"r
+FAIL C4 every gateway call is in Paperclip's audit log  <- calls 28; matched by {'invocation id': 22, 'action request id': 0, 'request id in the logged arguments': 5, 'run, tool and order': 0}; unmatched [{'run': 'toveli', 'label': 'unknown-tool', 'status': 404, 'invocation': None, 'raw': '{"error":"Tool \\"brain_admin_dump\\" not found","reasonCode":"tool_not_found","tool":"brain_admin_dump"}'}]
+PASS C4 every call that reached the service is in the service's audit log with the same request ID
+PASS C4 the service logged its own denials
+PASS C4 limit recorded: a call that goes around Paperclip is in the service's log only
+[02:52:07] checks (2026.1023.0) exit: 1
+WORKS                        baseline: scripted agent runs one heartbeat and calls two tools through the gateway
+WORKS IN THE FREE EDITION    tool and MCP policy: a block rule on one tool, for one company; then the rule is deleted
+WORKS IN THE FREE EDITION    pause: pause the agent, trigger a heartbeat, resume, trigger again
+WORKS IN THE FREE EDITION    kill: cancel a heartbeat run while the agent's process is still working
+PARTLY WORKS                 secrets: store a secret, bind it to the agent's environment by reference, run the agent, have the agent print it, read the run log
+WORKS IN THE FREE EDITION    company boundary: an agent uses its own run token to read its own company, another company's agents and another company's gateway audit
+WORKS IN THE FREE EDITION    spend caps: set a $1.00 monthly budget on the agent, report $1.50 of cost, trigger a heartbeat, raise the budget, trigger again
+WORKS IN THE FREE EDITION    approvals: hiring an agent: require approval for new agents, try to create one directly, request a hire, approve it
+WORKS IN THE FREE EDITION    audit log: read the company activity log and the tool gateway audit after the probes above
+WORKS IN THE FREE EDITION    terminate: terminate the agent, then trigger a heartbeat
+[02:55:33] governance exit: 0
+[02:55:34] stage 4: upgrade Paperclip 2026.1023.0 -> 2026.1106.0; the permission service is not touched
+[02:56:26] upgrade install failed

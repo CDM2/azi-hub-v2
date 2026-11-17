@@ -1,0 +1,2 @@
+umask used for the Paperclip user: 0022
+755 pclip 169544512 /home/pclip/pc/node_modules/@github/copilot-linux-x64/copilot

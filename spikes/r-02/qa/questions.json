@@ -1,0 +1,310 @@
+{
+ "_note": "Twenty questions about CDM2/toveli at commit 0abafdc. Every answer key was checked against the code on 2026-11-15, before the mapper was written. An agent must end with one line 'ANSWER: ...'. For type 'set' the line is a comma-separated list and must equal the key as a set. For type 'facts' every group must match the ANSWER line (case-insensitive regular expressions; any alternative in a group counts). The ANSWER line is cut at 400 characters before grading, so dumping text does not help.",
+ "repo": "CDM2/toveli",
+ "commit": "0abafdcdbb5bf6fdf19cd3d54b406ef2759caed9",
+ "questions": [
+  {
+   "id": "Q01",
+   "category": "build",
+   "question": "Which package manager and exact version does this repository pin, and in which file is the pin?",
+   "type": "facts",
+   "key": [
+    [
+     "pnpm"
+    ],
+    [
+     "11\\.28\\.2"
+    ],
+    [
+     "package\\.json"
+    ]
+   ]
+  },
+  {
+   "id": "Q02",
+   "category": "build",
+   "question": "What Node.js version does the committed .nvmrc pin, and what range does the root package.json engines field allow?",
+   "type": "facts",
+   "key": [
+    [
+     "24\\.22\\.2"
+    ],
+    [
+     ">=\\s*24\\.21\\.0"
+    ],
+    [
+     "<\\s*25"
+    ]
+   ]
+  },
+  {
+   "id": "Q03",
+   "category": "build",
+   "question": "Which root script runs the full local check, and which three scripts does it chain?",
+   "type": "facts",
+   "key": [
+    [
+     "\\bcheck\\b"
+    ],
+    [
+     "typecheck"
+    ],
+    [
+     "\\blint\\b"
+    ],
+    [
+     "\\btest\\b"
+    ]
+   ]
+  },
+  {
+   "id": "Q04",
+   "category": "build",
+   "question": "Name the two GitHub Actions workflow files and the job name each one defines.",
+   "type": "facts",
+   "key": [
+    [
+     "ci\\.yml"
+    ],
+    [
+     "mobile\\.yml"
+    ],
+    [
+     "api-checks"
+    ],
+    [
+     "mobile-checks"
+    ]
+   ]
+  },
+  {
+   "id": "Q05",
+   "category": "build",
+   "question": "How does the root command `pnpm db:migrate` reach the code that applies migrations? Name the workspace package, the tool that runs the script, and the source file.",
+   "type": "facts",
+   "key": [
+    [
+     "@toveli/db"
+    ],
+    [
+     "\\btsx\\b"
+    ],
+    [
+     "packages/db/src/migrate\\.ts"
+    ]
+   ]
+  },
+  {
+   "id": "Q06",
+   "category": "build",
+   "question": "Does the repository contain a production deployment workflow, or a Dockerfile that builds the API image? Start the answer with yes or no and name the only Dockerfile that exists.",
+   "type": "facts",
+   "key": [
+    [
+     "^\\s*no\\b"
+    ],
+    [
+     "\\.devcontainer"
+    ]
+   ]
+  },
+  {
+   "id": "Q07",
+   "category": "dependencies",
+   "question": "Which workspace packages does apps/api depend on? Answer with the short package names.",
+   "type": "set",
+   "key": [
+    "adapters",
+    "contracts",
+    "db",
+    "domain"
+   ]
+  },
+  {
+   "id": "Q08",
+   "category": "dependencies",
+   "question": "Which workspace packages does packages/db depend on? Answer with the short package names.",
+   "type": "set",
+   "key": [
+    "adapters",
+    "contracts",
+    "domain"
+   ]
+  },
+  {
+   "id": "Q09",
+   "category": "dependencies",
+   "question": "Which workspaces (apps and packages) depend on no other workspace package? Answer with the short names.",
+   "type": "set",
+   "key": [
+    "contracts",
+    "domain",
+    "mobile"
+   ]
+  },
+  {
+   "id": "Q10",
+   "category": "dependencies",
+   "question": "If @toveli/domain changes, which workspaces depend on it directly or through another workspace package? Answer with the short names.",
+   "type": "set",
+   "key": [
+    "adapters",
+    "api",
+    "db",
+    "worker"
+   ]
+  },
+  {
+   "id": "Q11",
+   "category": "dependencies",
+   "question": "Which ORM does packages/db use, at which exact version, and which file configures its migration generator?",
+   "type": "facts",
+   "key": [
+    [
+     "drizzle"
+    ],
+    [
+     "0\\.45\\.4"
+    ],
+    [
+     "drizzle\\.config\\.ts"
+    ]
+   ]
+  },
+  {
+   "id": "Q12",
+   "category": "entry points",
+   "question": "What is the API server's entry file, and which exported function, in which file, builds the Fastify app?",
+   "type": "facts",
+   "key": [
+    [
+     "main\\.ts"
+    ],
+    [
+     "buildApp"
+    ],
+    [
+     "app\\.ts"
+    ]
+   ]
+  },
+  {
+   "id": "Q13",
+   "category": "entry points",
+   "question": "Which file does the mobile app's package.json name as its entry, and which function call in it registers the root component?",
+   "type": "facts",
+   "key": [
+    [
+     "index\\.ts"
+    ],
+    [
+     "registerRootComponent"
+    ]
+   ]
+  },
+  {
+   "id": "Q14",
+   "category": "what a file does",
+   "question": "What is packages/db/src/test-db-guard.ts for?",
+   "type": "facts",
+   "key": [
+    [
+     "destruct|drop|wipe|delet"
+    ],
+    [
+     "local|\\bci\\b|test (database|instance|db)|non-production|not a (local|test)"
+    ]
+   ]
+  },
+  {
+   "id": "Q15",
+   "category": "where things live",
+   "question": "Which file defines the OTP rate limits for the auth routes, and what is the limit on OTP requests per email address, over what window?",
+   "type": "facts",
+   "key": [
+    [
+     "rate-limits\\.ts"
+    ],
+    [
+     "\\b5\\b|five"
+    ],
+    [
+     "15[ -]?min|fifteen min|900"
+    ]
+   ]
+  },
+  {
+   "id": "Q16",
+   "category": "where things live",
+   "question": "Which migration file creates the core record tables, and how many CREATE TABLE statements does it contain?",
+   "type": "facts",
+   "key": [
+    [
+     "0005_core_records"
+    ],
+    [
+     "\\b15\\b|fifteen"
+    ]
+   ]
+  },
+  {
+   "id": "Q17",
+   "category": "what a file does",
+   "question": "In the worker's job runner, what happens to a job's handler when the capability gate denies the job?",
+   "type": "facts",
+   "key": [
+    [
+     "GateDeniedError"
+    ],
+    [
+     "never|not (called|run|executed|invoked)|does ?n.t (run|execute)|skipp"
+    ]
+   ]
+  },
+  {
+   "id": "Q18",
+   "category": "code detail",
+   "question": "What HTTP status does the API's gate plugin send when the gate decision is client_blocked?",
+   "type": "facts",
+   "key": [
+    [
+     "\\b426\\b"
+    ]
+   ]
+  },
+  {
+   "id": "Q19",
+   "category": "code detail",
+   "question": "In the API configuration, what are the default PORT and HOST when the environment sets neither?",
+   "type": "facts",
+   "key": [
+    [
+     "\\b3000\\b"
+    ],
+    [
+     "127\\.0\\.0\\.1"
+    ]
+   ]
+  },
+  {
+   "id": "Q20",
+   "category": "code detail",
+   "question": "Which two values may AUTH_PROVIDER take, and which two environment variables become required when it is set to supabase?",
+   "type": "facts",
+   "key": [
+    [
+     "fake"
+    ],
+    [
+     "supabase"
+    ],
+    [
+     "SUPABASE_URL"
+    ],
+    [
+     "SUPABASE_PUBLISHABLE_KEY"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2477 @@
+{
+ "summary": {
+  "passed": 37,
+  "failed": 0,
+  "findings_not_as_hoped": [
+   "C7 a tool left out of the connection's enabled list is not shown to the agent and cannot be called through Paperclip",
+   "C4 a request for a tool name that does not exist is in Paperclip's audit log"
+  ],
+  "calls_made_through_gateway": 28,
+  "in_paperclip_audit": 27,
+  "paperclip_audit_matched_by": {
+   "invocation id": 22,
+   "action request id": 0,
+   "request id in the logged arguments": 5,
+   "run, tool and order": 0
+  },
+  "in_service_audit": 27,
+  "stopped_by_paperclip_first": 1,
+  "service_audit_by_org": {
+   "sibling": {
+    "allow": 3,
+    "deny": 1
+   },
+   "toveli": {
+    "allow": 11,
+    "deny": 5
+   },
+   "personal": {
+    "allow": 3
+   },
+   "mgmt": {
+    "allow": 4
+   }
+  },
+  "paperclip_version": "2026.1023.0"
+ },
+ "checks": [
+  {
+   "check": "run completed: sibling",
+   "pass": true,
+   "detail": "{'status': 202, 'body': {'id': '92adec48-761a-4c67-8d53-f63fd99e0c9f', 'companyId': 'dfeef09b-5b1b-42d6-99ab-d7c76b2f808d', 'agentId': '0e78a524-7b4f-46a0-8b78-99560729499f', 'scopeKind': 'company', 'issueId': None, 'invocationSource': 'on_demand', 'triggerDetail': 'manual', 'status': 'queued', 'responsibleUserId': 'local-board', 'activeIdentityContextId': None, 'startedAt': None, 'finishedAt': None, 'executionControlDeadlineAt': None, 'executionStatusDeliveryId': None, 'error': None, 'wakeupRequestId': '970c388a-f258-4dc4-a4f8-8e3656150935', 'exitCode': None, 'signal': None, 'costAccountingPending': False, 'costAccountedAt': None, 'accountingProjectionVersion': None, 'accountingLastAttemptAt': None, 'accountingLastError': None, 'accountingAttemptCount': 0, 'usageJson': None, 'resultJson': None, 'runtimeMode': 'legacy', 'runtimeModeResolverVersion': None, 'runtimeModeReason': None, 'runt",
+   "finding": false
+  },
+  {
+   "check": "agent process got no runner credential in its environment: sibling",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "run completed: toveli",
+   "pass": true,
+   "detail": "{'status': 202, 'body': {'id': 'ca5f6a6f-1218-4967-b4de-55587c118003', 'companyId': 'ced35e22-0f16-4308-ae5b-655b94de7fea', 'agentId': '92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc', 'scopeKind': 'company', 'issueId': None, 'invocationSource': 'on_demand', 'triggerDetail': 'manual', 'status': 'queued', 'responsibleUserId': 'local-board', 'activeIdentityContextId': None, 'startedAt': None, 'finishedAt': None, 'executionControlDeadlineAt': None, 'executionStatusDeliveryId': None, 'error': None, 'wakeupRequestId': '4998b974-22bd-4808-b596-98beb3cbe586', 'exitCode': None, 'signal': None, 'costAccountingPending': False, 'costAccountedAt': None, 'accountingProjectionVersion': None, 'accountingLastAttemptAt': None, 'accountingLastError': None, 'accountingAttemptCount': 0, 'usageJson': None, 'resultJson': None, 'runtimeMode': 'legacy', 'runtimeModeResolverVersion': None, 'runtimeModeReason': None, 'runt",
+   "finding": false
+  },
+  {
+   "check": "agent process got no runner credential in its environment: toveli",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "run completed: personal",
+   "pass": true,
+   "detail": "{'status': 202, 'body': {'id': '92008739-d15d-4d56-a6f0-b74efcfc1927', 'companyId': 'b880cb3d-4dd5-47ea-acaa-a9a3e44761c9', 'agentId': '3225ae4d-46b3-4ecb-81c8-b6d2bbb39136', 'scopeKind': 'company', 'issueId': None, 'invocationSource': 'on_demand', 'triggerDetail': 'manual', 'status': 'queued', 'responsibleUserId': 'local-board', 'activeIdentityContextId': None, 'startedAt': None, 'finishedAt': None, 'executionControlDeadlineAt': None, 'executionStatusDeliveryId': None, 'error': None, 'wakeupRequestId': 'cec855bc-5014-4c37-a8b7-9af591f6529a', 'exitCode': None, 'signal': None, 'costAccountingPending': False, 'costAccountedAt': None, 'accountingProjectionVersion': None, 'accountingLastAttemptAt': None, 'accountingLastError': None, 'accountingAttemptCount': 0, 'usageJson': None, 'resultJson': None, 'runtimeMode': 'legacy', 'runtimeModeResolverVersion': None, 'runtimeModeReason': None, 'runt",
+   "finding": false
+  },
+  {
+   "check": "agent process got no runner credential in its environment: personal",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "run completed: mgmt-before",
+   "pass": true,
+   "detail": "{'status': 202, 'body': {'id': '6dba485d-6acc-496c-b90e-0eee4486fd0a', 'companyId': 'e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a', 'agentId': '24268cf2-eabb-47b4-9f3e-7069a39408b9', 'scopeKind': 'company', 'issueId': None, 'invocationSource': 'on_demand', 'triggerDetail': 'manual', 'status': 'queued', 'responsibleUserId': 'local-board', 'activeIdentityContextId': None, 'startedAt': None, 'finishedAt': None, 'executionControlDeadlineAt': None, 'executionStatusDeliveryId': None, 'error': None, 'wakeupRequestId': '660cfb43-ffc3-445a-945f-5b423dcbfa6f', 'exitCode': None, 'signal': None, 'costAccountingPending': False, 'costAccountedAt': None, 'accountingProjectionVersion': None, 'accountingLastAttemptAt': None, 'accountingLastError': None, 'accountingAttemptCount': 0, 'usageJson': None, 'resultJson': None, 'runtimeMode': 'legacy', 'runtimeModeResolverVersion': None, 'runtimeModeReason': None, 'runt",
+   "finding": false
+  },
+  {
+   "check": "agent process got no runner credential in its environment: mgmt-before",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "run completed: mgmt-after",
+   "pass": true,
+   "detail": "{'status': 202, 'body': {'id': '3676fb63-b359-4b27-8dc1-068702186dd9', 'companyId': 'e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a', 'agentId': '24268cf2-eabb-47b4-9f3e-7069a39408b9', 'scopeKind': 'company', 'issueId': None, 'invocationSource': 'on_demand', 'triggerDetail': 'manual', 'status': 'queued', 'responsibleUserId': 'local-board', 'activeIdentityContextId': None, 'startedAt': None, 'finishedAt': None, 'executionControlDeadlineAt': None, 'executionStatusDeliveryId': None, 'error': None, 'wakeupRequestId': '14627ee9-44f3-405d-aef4-4f174f454f2d', 'exitCode': None, 'signal': None, 'costAccountingPending': False, 'costAccountedAt': None, 'accountingProjectionVersion': None, 'accountingLastAttemptAt': None, 'accountingLastError': None, 'accountingAttemptCount': 0, 'usageJson': None, 'resultJson': None, 'runtimeMode': 'legacy', 'runtimeModeResolverVersion': None, 'runtimeModeReason': None, 'runt",
+   "finding": false
+  },
+  {
+   "check": "agent process got no runner credential in its environment: mgmt-after",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "run completed: toveli-after",
+   "pass": true,
+   "detail": "{'status': 202, 'body': {'id': '381fd39e-bb50-4263-a23f-e5f3693aeeb5', 'companyId': 'ced35e22-0f16-4308-ae5b-655b94de7fea', 'agentId': '92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc', 'scopeKind': 'company', 'issueId': None, 'invocationSource': 'on_demand', 'triggerDetail': 'manual', 'status': 'queued', 'responsibleUserId': 'local-board', 'activeIdentityContextId': None, 'startedAt': None, 'finishedAt': None, 'executionControlDeadlineAt': None, 'executionStatusDeliveryId': None, 'error': None, 'wakeupRequestId': '1902845e-5fdf-4d09-b432-3d2e6edf79c6', 'exitCode': None, 'signal': None, 'costAccountingPending': False, 'costAccountedAt': None, 'accountingProjectionVersion': None, 'accountingLastAttemptAt': None, 'accountingLastError': None, 'accountingAttemptCount': 0, 'usageJson': None, 'resultJson': None, 'runtimeMode': 'legacy', 'runtimeModeResolverVersion': None, 'runtimeModeReason': None, 'runt",
+   "finding": false
+  },
+  {
+   "check": "agent process got no runner credential in its environment: toveli-after",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "C1 toveli agent identified as toveli by the service",
+   "pass": true,
+   "detail": "{\"invocationId\":\"612bfa4f-4089-4e2e-87e7-f6ac6947f746\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-whoami\",\"result\":{\"content\":\"{\\\"org\\\":\\\"tov",
+   "finding": false
+  },
+  {
+   "check": "C1 toveli agent sees its own and global pages",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C1 no SIBLING page ever reached the toveli agent (any step, any run)",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "C1 no PERSONAL page ever reached the toveli agent (any step, any run)",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "C1 no MGMT page ever reached the toveli agent (any step, any run)",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "C1 a sibling's page looks exactly like a missing page (status, error and reason relayed by Paperclip)",
+   "pass": true,
+   "detail": "(502, '{\"error\":\"not_found\"}', 'tool_error') | (502, '{\"error\":\"not_found\"}', 'tool_error') | (502, '{\"error\":\"not_found\"}', 'tool_error')",
+   "finding": false
+  },
+  {
+   "check": "C1 sibling agent sees its own pages",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C1 no toveli page (codebase pages included) reached the sibling agent",
+   "pass": true,
+   "detail": "[]",
+   "finding": false
+  },
+  {
+   "check": "C1 no personal or holding-only page reached the sibling agent",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C2 holding agent reads both sub-organizations",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C2 no personal page reached the holding agent",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C3 personal agent reads its organizations",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C3 an organization's agent cannot publish a briefing",
+   "pass": true,
+   "detail": "{\"error\":\"{\\\"error\\\":\\\"forbidden\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\"",
+   "finding": false
+  },
+  {
+   "check": "C7 ask-first: each call stopped with HTTP 409 and an approval request until a human decided",
+   "pass": true,
+   "detail": "{\"health\": {\"first_status\": 409, \"first_reason\": \"approval_required\", \"action_request\": true, \"approve_http\": 200, \"action_status_after_approval\": \"failed\", \"decided_by\": \"local-board\", \"error_after_approval\": \"{\\\"error\\\":\\\"forbidden\\\"}\", \"retry_status\": 409, \"retry_reason\": \"action_not_approved\", \"service_audit\": [[\"deny\", \"forbidden\"]]}, \"note\": {\"first_status\": 409, \"first_reason\": \"approval_required\", \"action_request\": true, \"approve_http\": 200, \"action_status_after_approval\": \"executed\", \"decided_by\": \"local-board\", \"error_after_approval\": \"None\", \"retry_status\": 409, \"retry_reason\": \"action_not_approved\", \"service_audit\": [[\"allow\", null]]}, \"briefing\": {\"first_status\": 409, \"first_reason\": \"approval_required\", \"action_request\": true, \"approve_http\": 200, \"action_status_after_approval\": \"executed\", \"decided_by\": \"local-board\", \"error_after_approval\": \"None\", \"retry_status\": 409, \"r",
+   "finding": false
+  },
+  {
+   "check": "C7 ask-first: on approval Paperclip ran the approved call itself, once; the agent's own retry was refused",
+   "pass": true,
+   "detail": "{\"first_status\": 409, \"first_reason\": \"approval_required\", \"action_request\": true, \"approve_http\": 200, \"action_status_after_approval\": \"executed\", \"decided_by\": \"local-board\", \"error_after_approval\": \"None\", \"retry_status\": 409, \"retry_reason\": \"action_not_approved\", \"service_audit\": [[\"allow\", null]]}",
+   "finding": false
+  },
+  {
+   "check": "C3 a health page is refused outside personal by the service, even after a human approved the call in Paperclip",
+   "pass": true,
+   "detail": "{\"first_status\": 409, \"first_reason\": \"approval_required\", \"action_request\": true, \"approve_http\": 200, \"action_status_after_approval\": \"failed\", \"decided_by\": \"local-board\", \"error_after_approval\": \"{\\\"error\\\":\\\"forbidden\\\"}\", \"retry_status\": 409, \"retry_reason\": \"action_not_approved\", \"service_audit\": [[\"deny\", \"forbidden\"]]}",
+   "finding": false
+  },
+  {
+   "check": "C3 briefing accepted from the personal agent as pending",
+   "pass": true,
+   "detail": "{\"first_status\": 409, \"first_reason\": \"approval_required\", \"action_request\": true, \"approve_http\": 200, \"action_status_after_approval\": \"executed\", \"decided_by\": \"local-board\", \"error_after_approval\": \"None\", \"retry_status\": 409, \"retry_reason\": \"action_not_approved\", \"service_audit\": [[\"allow\", null]]}",
+   "finding": false
+  },
+  {
+   "check": "C3 briefing invisible to the holding agent before the human approves it",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C3 briefing visible to the holding agent after approval",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C3 briefing never reaches a sub-organization",
+   "pass": true,
+   "detail": "",
+   "finding": false
+  },
+  {
+   "check": "C7 ask-first: the approved write is in the organization's brain afterwards",
+   "pass": true,
+   "detail": "[{\"status\": 200, \"body\": {\"id\": \"4f033d39-0388-4501-b8d5-988ba55b0c9c\", \"status\": \"failed\", \"invocationId\": \"0d123978-f179-4c1a-9095-87c182fe6f4d\", \"issueId\": \"a76c46ea-bc48-4aa4-96e0-e144ee2955e5\", \"interactionId\": \"cd2cd383-e052-4477-b733-b927b56adfc7\", \"decidedByUserId\": \"local-board\", \"resolvedB",
+   "finding": false
+  },
+  {
+   "check": "C7 a tool left out of the connection's enabled list is not shown to the agent and cannot be called through Paperclip",
+   "pass": false,
+   "detail": "listed to the agent: True; call status 502; {\"error\":\"{\\\"error\\\":\\\"forbidden\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\"",
+   "finding": true
+  },
+  {
+   "check": "C4 every call to a tool that exists is in Paperclip's audit log (allowed, refused, or waiting for approval)",
+   "pass": true,
+   "detail": "calls 28; matched by {'invocation id': 22, 'action request id': 0, 'request id in the logged arguments': 5, 'run, tool and order': 0}; unmatched []",
+   "finding": false
+  },
+  {
+   "check": "C4 a request for a tool name that does not exist is in Paperclip's audit log",
+   "pass": false,
+   "detail": "Paperclip answered 404 tool_not_found and wrote no audit event for it",
+   "finding": true
+  },
+  {
+   "check": "C4 every call that reached the service is in the service's audit log with the same request ID",
+   "pass": true,
+   "detail": "calls 28, in service audit 27, never reached the service (stopped by Paperclip) 1",
+   "finding": false
+  },
+  {
+   "check": "C4 the service logged its own denials",
+   "pass": true,
+   "detail": "6 denied rows",
+   "finding": false
+  },
+  {
+   "check": "C4 limit recorded: a call that goes around Paperclip is in the service's log only",
+   "pass": true,
+   "detail": "this is a known limit (ledger E-89), not a pass of criterion 4",
+   "finding": false
+  }
+ ],
+ "paperclip_audit": {
+  "mgmt": {
+   "status": 200,
+   "count": 5,
+   "error": "",
+   "sample": [
+    {
+     "id": "a742e68f-4f36-4424-8ba6-9f775e72706b",
+     "companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+     "action": "tool_gateway.call_completed",
+     "actorType": "agent",
+     "actorId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+     "entityType": "tool_connection",
+     "entityId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+     "details": {
+      "risk": "read",
+      "execution": {
+       "request": {
+        "endpoint": "http://127.0.0.1:8900/mcp",
+        "protocol": "MCP JSON-RPC 2.0",
+        "mcpMethod": "tools/call",
+        "requestId": "paperclip-tool-624892ba-fc57-43bb-8223-98f82a1fe364",
+        "dispatched": true,
+        "httpMethod": "POST",
+        "upstreamToolName": "brain_search"
+       },
+       "response": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "bodySizeBytes": 432,
+        "upstreamRequestId": null
+       },
+       "transport": "mcp_remote"
+      },
+      "gatewayId": null,
+      "projectId": null,
+      "riskLevel": "read",
+      "gatewayName": null,
+      "connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+      "providerType": "mcp_remote_http",
+      "applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+      "headerSummary": {
+       "collisionRules": [
+        {
+         "action": "dropped_reserved_header",
+         "header": "content-length",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_reserved_header",
+         "header": "host",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_reserved_header",
+         "header": "content-type",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_sensitive_header",
+         "header": "x-paperclip-tool-gateway-token",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_reserved_header",
+         "header": "connection",
+         "source": "caller"
+        }
+       ],
+       "staticHeaderNames": [],
+       "metadataHeaderNames": [],
+       "credentialHeaderNames": [
+        "authorization"
+       ],
+       "passthroughHeaderNames": [],
+       "droppedPassthroughHeaderNames": [
+        "accept-encoding",
+        "connection",
+        "content-length",
+        "content-type",
+        "host",
+        "user-agent",
+        "... 1 more"
+       ]
+      },
+      "applicationKey": "app-gallery:link:7369df88-4c92-4d4c-97fb-a27380db9a6a",
+      "catalogEntryId": "a9991ad3-28dd-4db9-8c11-fef491cd1f9e",
+      "upstreamToolName": "brain_search",
+      "identityContextId": "8dce2d4c-6cbc-45be-b798-b735b18deb73",
+      "invocationId": "00344260-55d9-4838-a835-0c69b20a93ca",
+      "actionRequestId": null,
+      "agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+      "issueId": "56f131a8-dba9-42b9-a39b-e4b713b5c8d1",
+      "runId": "3676fb63-b359-4b27-8dc1-068702186dd9",
+      "tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+      "toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+      "decision": "allow",
+      "matchedPolicyIds": [],
+      "reasonCode": "tool_completed",
+      "argumentsSummary": {
+       "sha256": "879912ba546d8044eb3db66ab09d1dff2f73f40747ca8e5479fe1d747b9cb097",
+       "summary": "{\"query\":\"CANARY-BRIEFING-GW\",\"request_id\":\"bfe25690-e479-4dba-aa0e-e9dce9eeea2c\"}",
+       "sizeBytes": 82,
+       "redactedFields": []
+      },
+      "resultSummary": {
+       "sha256": "90fe49070ad6e57393873dd4d8d1da11636714ca5edf7137678aadfd052d9b3a",
+       "summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"3be37782-35ad-4ebb-b2f0-f3717929a6b7\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Briefing from the personal space, 2026-11-16\\\",\\\"kind\\\":\\\"briefing\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-BRIEFING-GW priorities, published through the gateway.\\\"...",
+       "sizeBytes": 735,
+       "redactedFields": []
+      },
+      "latencyMs": null,
+      "errorCode": null,
+      "errorMessage": null
+     },
+     "createdAt": "2026-11-16T03:29:44.649Z",
+     "runId": "3676fb63-b359-4b27-8dc1-068702186dd9",
+     "agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+     "agentDisplayName": "mgmt-probe",
+     "actorDisplayName": "mgmt-probe",
+     "applicationId": "86455ccd-a241-415f-9600-a8f4256fbcab",
+     "connectionId": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+     "appDisplayName": "Permission service",
+     "applicationDisplayName": "Permission service",
+     "connectionDisplayName": "Permission service",
+     "toolDisplayName": "Brain Search",
+     "lifecycleType": null,
+     "normalizedOutcome": "allowed",
+     "invocation": {
+      "id": "00344260-55d9-4838-a835-0c69b20a93ca",
+      "toolName": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+      "status": "succeeded",
+      "policyDecision": "allow",
+      "approvalState": "not_required",
+      "argumentsSummary": {
+       "sha256": "879912ba546d8044eb3db66ab09d1dff2f73f40747ca8e5479fe1d747b9cb097",
+       "summary": "{\"query\":\"CANARY-BRIEFING-GW\",\"request_id\":\"bfe25690-e479-4dba-aa0e-e9dce9eeea2c\"}",
+       "sizeBytes": 82,
+       "redactedFields": []
+      },
+      "resultSummary": {
+       "sha256": "90fe49070ad6e57393873dd4d8d1da11636714ca5edf7137678aadfd052d9b3a",
+       "summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"3be37782-35ad-4ebb-b2f0-f3717929a6b7\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Briefing from the personal space, 2026-11-16\\\",\\\"kind\\\":\\\"briefing\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-BRIEFING-GW priorities, published through the gateway.\\\"...",
+       "sizeBytes": 735,
+       "redactedFields": []
+      },
+      "resultSizeBytes": 735,
+      "errorCode": null,
+      "errorMessage": null,
+      "startedAt": "2026-11-16T03:29:44.633Z",
+      "completedAt": "2026-11-16T03:29:44.648Z"
+     }
+    }
+   ],
+   "compact": [
+    [
+     "03:29:44.649",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-1f7d7326:brain-search",
+     "3676fb63",
+     "00344260",
+     0
+    ],
+    [
+     "03:29:43.708",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-1f7d7326:brain-search",
+     "6dba485d",
+     "fc85bf95",
+     0
+    ],
+    [
+     "03:29:43.653",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-1f7d7326:brain-search",
+     "6dba485d",
+     "bc3a7a75",
+     0
+    ],
+    [
+     "03:29:43.610",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-1f7d7326:brain-whoami",
+     "6dba485d",
+     "224e2c85",
+     0
+    ],
+    [
+     "03:29:34.333",
+     "tool_connection.app_connected",
+     "unknown",
+     null,
+     null,
+     "None",
+     "None",
+     "None",
+     0
+    ]
+   ],
+   "actions": [
+    "tool_connection.app_connected",
+    "tool_gateway.call_completed"
+   ],
+   "outcomes": [
+    "allowed",
+    "unknown"
+   ]
+  },
+  "toveli": {
+   "status": 200,
+   "count": 19,
+   "error": "",
+   "sample": [
+    {
+     "id": "68548c35-a622-4c3e-a17b-70a35562731c",
+     "companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+     "action": "tool_gateway.call_completed",
+     "actorType": "agent",
+     "actorId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+     "entityType": "tool_connection",
+     "entityId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+     "details": {
+      "risk": "read",
+      "execution": {
+       "request": {
+        "endpoint": "http://127.0.0.1:8900/mcp",
+        "protocol": "MCP JSON-RPC 2.0",
+        "mcpMethod": "tools/call",
+        "requestId": "paperclip-tool-2ea1dfe1-8a9a-4764-b3b2-446bec5b33f3",
+        "dispatched": true,
+        "httpMethod": "POST",
+        "upstreamToolName": "brain_search"
+       },
+       "response": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "bodySizeBytes": 376,
+        "upstreamRequestId": null
+       },
+       "transport": "mcp_remote"
+      },
+      "gatewayId": null,
+      "projectId": null,
+      "riskLevel": "read",
+      "gatewayName": null,
+      "connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+      "providerType": "mcp_remote_http",
+      "applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+      "headerSummary": {
+       "collisionRules": [
+        {
+         "action": "dropped_reserved_header",
+         "header": "content-length",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_reserved_header",
+         "header": "host",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_reserved_header",
+         "header": "content-type",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_sensitive_header",
+         "header": "x-paperclip-tool-gateway-token",
+         "source": "caller"
+        },
+        {
+         "action": "dropped_reserved_header",
+         "header": "connection",
+         "source": "caller"
+        }
+       ],
+       "staticHeaderNames": [],
+       "metadataHeaderNames": [],
+       "credentialHeaderNames": [
+        "authorization"
+       ],
+       "passthroughHeaderNames": [],
+       "droppedPassthroughHeaderNames": [
+        "accept-encoding",
+        "connection",
+        "content-length",
+        "content-type",
+        "host",
+        "user-agent",
+        "... 1 more"
+       ]
+      },
+      "applicationKey": "app-gallery:link:0b8e10d7-1092-426b-9823-508b077d128b",
+      "catalogEntryId": "22dbabec-c762-4b8c-a8a6-ad93700b35c7",
+      "upstreamToolName": "brain_search",
+      "identityContextId": "d5979cf6-dc2a-4a2e-8f46-6c77e39ea53e",
+      "invocationId": "7f1c7965-f7a7-4b70-bb64-dcd92b1ec08a",
+      "actionRequestId": null,
+      "agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+      "issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+      "runId": "381fd39e-bb50-4263-a23f-e5f3693aeeb5",
+      "tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+      "toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+      "decision": "allow",
+      "matchedPolicyIds": [],
+      "reasonCode": "tool_completed",
+      "argumentsSummary": {
+       "sha256": "e8da4548c4595af0fa9ae9ed73ba916122131cdbbc404645232375fa741d2d2c",
+       "summary": "{\"query\":\"CANARY-TOVELI-GW\",\"request_id\":\"1938f831-221f-4d77-a90a-71f4ae66a3d6\"}",
+       "sizeBytes": 80,
+       "redactedFields": []
+      },
+      "resultSummary": {
+       "sha256": "218b76356f78474701deea40c075f92dfe4bbd4077cc8365e37b85ff858f5e24",
+       "summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"4f2ec552-e917-4199-8577-dc838ef50943\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"gw note\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-TOVELI-GW written through the gateway\\\"}]}\",\"data\":{\"content\":[{\"text\":\"{\\\"count\\\":1,\\\"pages\\\":...",
+       "sizeBytes": 623,
+       "redactedFields": []
+      },
+      "latencyMs": null,
+      "errorCode": null,
+      "errorMessage": null
+     },
+     "createdAt": "2026-11-16T03:29:45.719Z",
+     "runId": "381fd39e-bb50-4263-a23f-e5f3693aeeb5",
+     "agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+     "agentDisplayName": "toveli-probe",
+     "actorDisplayName": "toveli-probe",
+     "applicationId": "2cd5158d-8df3-49ea-9850-59ef7d68c01b",
+     "connectionId": "0789cc29-28d8-452a-b322-4b2221b002ff",
+     "appDisplayName": "Permission service",
+     "applicationDisplayName": "Permission service",
+     "connectionDisplayName": "Permission service",
+     "toolDisplayName": "Brain Search",
+     "lifecycleType": null,
+     "normalizedOutcome": "allowed",
+     "invocation": {
+      "id": "7f1c7965-f7a7-4b70-bb64-dcd92b1ec08a",
+      "toolName": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+      "status": "succeeded",
+      "policyDecision": "allow",
+      "approvalState": "not_required",
+      "argumentsSummary": {
+       "sha256": "e8da4548c4595af0fa9ae9ed73ba916122131cdbbc404645232375fa741d2d2c",
+       "summary": "{\"query\":\"CANARY-TOVELI-GW\",\"request_id\":\"1938f831-221f-4d77-a90a-71f4ae66a3d6\"}",
+       "sizeBytes": 80,
+       "redactedFields": []
+      },
+      "resultSummary": {
+       "sha256": "218b76356f78474701deea40c075f92dfe4bbd4077cc8365e37b85ff858f5e24",
+       "summary": "{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"4f2ec552-e917-4199-8577-dc838ef50943\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"gw note\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-TOVELI-GW written through the gateway\\\"}]}\",\"data\":{\"content\":[{\"text\":\"{\\\"count\\\":1,\\\"pages\\\":...",
+       "sizeBytes": 623,
+       "redactedFields": []
+      },
+      "resultSizeBytes": 623,
+      "errorCode": null,
+      "errorMessage": null,
+      "startedAt": "2026-11-16T03:29:45.705Z",
+      "completedAt": "2026-11-16T03:29:45.718Z"
+     }
+    }
+   ],
+   "compact": [
+    [
+     "03:29:45.719",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "381fd39e",
+     "7f1c7965",
+     0
+    ],
+    [
+     "03:29:45.680",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "381fd39e",
+     "7f60a3d5",
+     0
+    ],
+    [
+     "03:29:40.425",
+     "tool_gateway.call_failed",
+     "blocked",
+     "deny",
+     "tool_error",
+     "9cc29:publish-briefing",
+     "ca5f6a6f",
+     "8eae7aae",
+     0
+    ],
+    [
+     "03:29:40.156",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "approved_action_executed",
+     "b-0789cc29:brain-write",
+     "ca5f6a6f",
+     "63a72976",
+     0
+    ],
+    [
+     "03:29:39.364",
+     "tool_gateway.approval_requested",
+     "asked_first",
+     "require_approval",
+     "requires_approval_policy",
+     "b-0789cc29:brain-write",
+     "ca5f6a6f",
+     "63a72976",
+     0
+    ],
+    [
+     "03:29:39.087",
+     "tool_gateway.call_failed",
+     "blocked",
+     "deny",
+     "tool_execution_failed",
+     "b-0789cc29:brain-write",
+     "ca5f6a6f",
+     "0d123978",
+     0
+    ],
+    [
+     "03:29:38.790",
+     "tool_gateway.approval_requested",
+     "asked_first",
+     "require_approval",
+     "requires_approval_policy",
+     "b-0789cc29:brain-write",
+     "ca5f6a6f",
+     "0d123978",
+     0
+    ],
+    [
+     "03:29:38.741",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "ca5f6a6f",
+     "2627c630",
+     0
+    ],
+    [
+     "03:29:38.702",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "ca5f6a6f",
+     "188290e5",
+     0
+    ],
+    [
+     "03:29:38.660",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "8b-0789cc29:brain-list",
+     "ca5f6a6f",
+     "7da19572",
+     0
+    ],
+    [
+     "03:29:38.605",
+     "tool_gateway.call_failed",
+     "blocked",
+     "deny",
+     "tool_error",
+     "28b-0789cc29:brain-get",
+     "ca5f6a6f",
+     "78be75ed",
+     0
+    ],
+    [
+     "03:29:38.566",
+     "tool_gateway.call_failed",
+     "blocked",
+     "deny",
+     "tool_error",
+     "28b-0789cc29:brain-get",
+     "ca5f6a6f",
+     "45a0b46d",
+     0
+    ],
+    [
+     "03:29:38.519",
+     "tool_gateway.call_failed",
+     "blocked",
+     "deny",
+     "tool_error",
+     "28b-0789cc29:brain-get",
+     "ca5f6a6f",
+     "4c52f66a",
+     0
+    ],
+    [
+     "03:29:38.472",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "ca5f6a6f",
+     "4bece319",
+     0
+    ],
+    [
+     "03:29:38.431",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "ca5f6a6f",
+     "ab410726",
+     0
+    ],
+    [
+     "03:29:38.389",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-search",
+     "ca5f6a6f",
+     "fc05a38f",
+     0
+    ],
+    [
+     "03:29:38.345",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "8b-0789cc29:brain-list",
+     "ca5f6a6f",
+     "f3e02c7e",
+     0
+    ],
+    [
+     "03:29:38.289",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-0789cc29:brain-whoami",
+     "ca5f6a6f",
+     "612bfa4f",
+     0
+    ],
+    [
+     "03:29:34.554",
+     "tool_connection.app_connected",
+     "unknown",
+     null,
+     null,
+     "None",
+     "None",
+     "None",
+     0
+    ]
+   ],
+   "actions": [
+    "tool_connection.app_connected",
+    "tool_gateway.approval_requested",
+    "tool_gateway.call_completed",
+    "tool_gateway.call_failed"
+   ],
+   "outcomes": [
+    "allowed",
+    "asked_first",
+    "blocked",
+    "unknown"
+   ]
+  },
+  "sibling": {
+   "status": 200,
+   "count": 5,
+   "error": "",
+   "sample": [
+    {
+     "id": "97c2a07a-2223-47ca-9bb4-f0c21264b0bf",
+     "companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+     "action": "tool_gateway.call_failed",
+     "actorType": "agent",
+     "actorId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+     "entityType": "tool_connection",
+     "entityId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+     "details": {
+      "risk": "read",
+      "execution": {
+       "request": {
+        "endpoint": "http://127.0.0.1:8900/mcp",
+        "protocol": "MCP JSON-RPC 2.0",
+        "mcpMethod": "tools/call",
+        "requestId": "paperclip-tool-687626e6-c6d7-49a5-bce4-de58a13cb24f",
+        "dispatched": true,
+        "httpMethod": "POST",
+        "upstreamToolName": "brain_get"
+       },
+       "response": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "bodySizeBytes": 165,
+        "upstreamRequestId": null
+       },
+       "transport": "mcp_remote"
+      },
+      "gatewayId": null,
+      "projectId": null,
+      "riskLevel": "read",
+      "gatewayName": null,
+      "connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+      "providerType": "mcp_remote_http",
+      "applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+      "applicationKey": "app-gallery:link:055e2df1-1016-4109-992d-6223e89e24ec",
+      "catalogEntryId": "457d54cd-a628-4ca3-bfb0-bf2880206ab1",
+      "upstreamToolName": "brain_get",
+      "identityContextId": "28021bc8-6997-4bbe-af11-e89d576145d8",
+      "invocationId": "3abc1607-1924-4e5b-8610-43506e4d3bdc",
+      "actionRequestId": null,
+      "agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+      "issueId": "20146b7d-32c3-48e4-8d9c-bd069570c5e9",
+      "runId": "92adec48-761a-4c67-8d53-f63fd99e0c9f",
+      "tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+      "toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+      "decision": "deny",
+      "matchedPolicyIds": [],
+      "reasonCode": "tool_error",
+      "argumentsSummary": {
+       "sha256": "ecd283bb0ffce1c36b21e27c1a1ecd010cf340cfd9b2d9991e20958f2f3d2741",
+       "summary": "{\"path\":\"apps/example/main.ts\",\"request_id\":\"7bddd5c9-4af9-46eb-aeaf-69d1d3dfb1e3\"}",
+       "sizeBytes": 83,
+       "redactedFields": []
+      },
+      "resultSummary": null,
+      "latencyMs": null,
+      "errorCode": null,
+      "errorMessage": null
+     },
+     "createdAt": "2026-11-16T03:29:37.469Z",
+     "runId": "92adec48-761a-4c67-8d53-f63fd99e0c9f",
+     "agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+     "agentDisplayName": "sibling-probe",
+     "actorDisplayName": "sibling-probe",
+     "applicationId": "649f91e3-89af-44b9-ab2a-9366f20711f8",
+     "connectionId": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+     "appDisplayName": "Permission service",
+     "applicationDisplayName": "Permission service",
+     "connectionDisplayName": "Permission service",
+     "toolDisplayName": "Brain Get",
+     "lifecycleType": null,
+     "normalizedOutcome": "blocked",
+     "invocation": {
+      "id": "3abc1607-1924-4e5b-8610-43506e4d3bdc",
+      "toolName": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+      "status": "failed",
+      "policyDecision": "allow",
+      "approvalState": "not_required",
+      "argumentsSummary": {
+       "sha256": "ecd283bb0ffce1c36b21e27c1a1ecd010cf340cfd9b2d9991e20958f2f3d2741",
+       "summary": "{\"path\":\"apps/example/main.ts\",\"request_id\":\"7bddd5c9-4af9-46eb-aeaf-69d1d3dfb1e3\"}",
+       "sizeBytes": 83,
+       "redactedFields": []
+      },
+      "resultSummary": null,
+      "resultSizeBytes": null,
+      "errorCode": "tool_error",
+      "errorMessage": "{\"error\":\"not_found\"}",
+      "startedAt": "2026-11-16T03:29:37.455Z",
+      "completedAt": "2026-11-16T03:29:37.468Z"
+     }
+    }
+   ],
+   "compact": [
+    [
+     "03:29:37.469",
+     "tool_gateway.call_failed",
+     "blocked",
+     "deny",
+     "tool_error",
+     "4ec-49bf447e:brain-get",
+     "92adec48",
+     "3abc1607",
+     0
+    ],
+    [
+     "03:29:37.425",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "ec-49bf447e:brain-list",
+     "92adec48",
+     "5a3a4d38",
+     0
+    ],
+    [
+     "03:29:37.377",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-49bf447e:brain-search",
+     "92adec48",
+     "26b073e4",
+     0
+    ],
+    [
+     "03:29:37.327",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-49bf447e:brain-whoami",
+     "92adec48",
+     "ab1bb9d4",
+     0
+    ],
+    [
+     "03:29:34.747",
+     "tool_connection.app_connected",
+     "unknown",
+     null,
+     null,
+     "None",
+     "None",
+     "None",
+     0
+    ]
+   ],
+   "actions": [
+    "tool_connection.app_connected",
+    "tool_gateway.call_completed",
+    "tool_gateway.call_failed"
+   ],
+   "outcomes": [
+    "allowed",
+    "blocked",
+    "unknown"
+   ]
+  },
+  "personal": {
+   "status": 200,
+   "count": 5,
+   "error": "",
+   "sample": [
+    {
+     "id": "cb1d0ca6-63f0-4701-a56c-49a5ed5c96cd",
+     "companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+     "action": "tool_gateway.call_completed",
+     "actorType": "agent",
+     "actorId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+     "entityType": "tool_connection",
+     "entityId": "1a786a57-a90c-4158-8222-854290b4965c",
+     "details": {
+      "risk": "write",
+      "gatewayId": null,
+      "projectId": null,
+      "riskLevel": "write",
+      "timeoutMs": 60000,
+      "durationMs": 20,
+      "gatewayName": null,
+      "connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+      "providerType": "mcp_remote_http",
+      "applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+      "applicationKey": "app-gallery:link:20a455f5-ca0a-42e3-831f-679e8bb80f9d",
+      "catalogEntryId": "9f9bb3af-12e7-452a-8c6f-3da0b9528c0f",
+      "upstreamToolName": "publish_briefing",
+      "identityContextId": "34596762-8d0e-4170-bcca-4c4cf88d1e12",
+      "invocationId": "f34c25f2-ade7-4161-aa73-4d985b68fc6a",
+      "actionRequestId": "da24e5bd-c4cf-43d3-a16a-24010d7e05f0",
+      "agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+      "issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+      "runId": "92008739-d15d-4d56-a6f0-b74efcfc1927",
+      "tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+      "toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+      "decision": "allow",
+      "matchedPolicyIds": [],
+      "reasonCode": "approved_action_executed",
+      "argumentsSummary": {
+       "sha256": "a600df4dcc530b82c4182f3e5e749d854d196a90b5ceebd9fe47fb69fe991260",
+       "summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"cc387ede-b4a0-47f6-abc0-ea485edf3446\"}",
+       "sizeBytes": 127,
+       "redactedFields": []
+      },
+      "resultSummary": {
+       "sha256": "f45f85658cb77270222cf2835497f4fbb03ca2c071711c7b8d35a16f5b5ae563",
+       "summary": "{\"content\":\"{\\\"briefing_id\\\":\\\"8b360490-e8ef-4a05-9853-7cf615c04d84\\\",\\\"status\\\":\\\"pending\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"briefing_id\\\":\\\"8b360490-e8ef-4a05-9853-7cf615c04d84\\\",\\\"status\\\":\\\"pending\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transpor...",
+       "sizeBytes": 315,
+       "redactedFields": []
+      },
+      "latencyMs": null,
+      "errorCode": null,
+      "errorMessage": null
+     },
+     "createdAt": "2026-11-16T03:29:42.276Z",
+     "runId": "92008739-d15d-4d56-a6f0-b74efcfc1927",
+     "agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+     "agentDisplayName": "personal-probe",
+     "actorDisplayName": "personal-probe",
+     "applicationId": "14c6b6f4-f3d8-4bed-a11f-ab39bc56ceb5",
+     "connectionId": "1a786a57-a90c-4158-8222-854290b4965c",
+     "appDisplayName": "Permission service",
+     "applicationDisplayName": "Permission service",
+     "connectionDisplayName": "Permission service",
+     "toolDisplayName": "Publish Briefing",
+     "lifecycleType": null,
+     "normalizedOutcome": "allowed",
+     "invocation": {
+      "id": "f34c25f2-ade7-4161-aa73-4d985b68fc6a",
+      "toolName": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+      "status": "succeeded",
+      "policyDecision": "require_approval",
+      "approvalState": "approved",
+      "argumentsSummary": {
+       "sha256": "a600df4dcc530b82c4182f3e5e749d854d196a90b5ceebd9fe47fb69fe991260",
+       "summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"cc387ede-b4a0-47f6-abc0-ea485edf3446\"}",
+       "sizeBytes": 127,
+       "redactedFields": []
+      },
+      "resultSummary": {
+       "sha256": "f45f85658cb77270222cf2835497f4fbb03ca2c071711c7b8d35a16f5b5ae563",
+       "summary": "{\"content\":\"{\\\"briefing_id\\\":\\\"8b360490-e8ef-4a05-9853-7cf615c04d84\\\",\\\"status\\\":\\\"pending\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"briefing_id\\\":\\\"8b360490-e8ef-4a05-9853-7cf615c04d84\\\",\\\"status\\\":\\\"pending\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transpor...",
+       "sizeBytes": 315,
+       "redactedFields": []
+      },
+      "resultSizeBytes": 315,
+      "errorCode": null,
+      "errorMessage": null,
+      "startedAt": "2026-11-16T03:29:42.256Z",
+      "completedAt": "2026-11-16T03:29:42.270Z"
+     }
+    }
+   ],
+   "compact": [
+    [
+     "03:29:42.276",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "approved_action_executed",
+     "86a57:publish-briefing",
+     "92008739",
+     "f34c25f2",
+     0
+    ],
+    [
+     "03:29:41.595",
+     "tool_gateway.approval_requested",
+     "asked_first",
+     "require_approval",
+     "requires_approval_policy",
+     "86a57:publish-briefing",
+     "92008739",
+     "f34c25f2",
+     0
+    ],
+    [
+     "03:29:41.533",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-1a786a57:brain-search",
+     "92008739",
+     "3a040ef1",
+     0
+    ],
+    [
+     "03:29:41.489",
+     "tool_gateway.call_completed",
+     "allowed",
+     "allow",
+     "tool_completed",
+     "-1a786a57:brain-whoami",
+     "92008739",
+     "664cfd1f",
+     0
+    ],
+    [
+     "03:29:35.157",
+     "tool_connection.app_connected",
+     "unknown",
+     null,
+     null,
+     "None",
+     "None",
+     "None",
+     0
+    ]
+   ],
+   "actions": [
+    "tool_connection.app_connected",
+    "tool_gateway.approval_requested",
+    "tool_gateway.call_completed"
+   ],
+   "outcomes": [
+    "allowed",
+    "asked_first",
+    "unknown"
+   ]
+  }
+ },
+ "service_audit_rows": [
+  {
+   "id": 147,
+   "ts": "2026-11-16T03:29:37.320Z",
+   "org": "sibling",
+   "actor": "agent",
+   "tool": "brain_whoami",
+   "request_id": "26181c5f-9590-49a4-9d07-9d50f7693599",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 148,
+   "ts": "2026-11-16T03:29:37.369Z",
+   "org": "sibling",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "fc6e6ea1-08b8-45c3-a640-d45ef6682d30",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 149,
+   "ts": "2026-11-16T03:29:37.421Z",
+   "org": "sibling",
+   "actor": "agent",
+   "tool": "brain_list",
+   "request_id": "90116560-3dfd-4d92-af13-7cd875f4f2c2",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 150,
+   "ts": "2026-11-16T03:29:37.465Z",
+   "org": "sibling",
+   "actor": "agent",
+   "tool": "brain_get",
+   "request_id": "7bddd5c9-4af9-46eb-aeaf-69d1d3dfb1e3",
+   "decision": "deny",
+   "reason": "not_found"
+  },
+  {
+   "id": 151,
+   "ts": "2026-11-16T03:29:38.285Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_whoami",
+   "request_id": "06ccf52e-7bf2-44ff-b448-929a5f787886",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 152,
+   "ts": "2026-11-16T03:29:38.339Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_list",
+   "request_id": "ae9beb10-6007-401b-9930-6b7a98638263",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 153,
+   "ts": "2026-11-16T03:29:38.383Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "e6c04ac1-b7c8-43b5-9dec-4e9e6768578e",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 154,
+   "ts": "2026-11-16T03:29:38.425Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "2973585c-f051-4372-948d-a86f1e6ea4b1",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 155,
+   "ts": "2026-11-16T03:29:38.466Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "0fb5cf94-13c7-4ebd-b110-0f8b539dc332",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 156,
+   "ts": "2026-11-16T03:29:38.516Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_get",
+   "request_id": "2a65fd37-dac2-45f7-804f-acb2b2dd3848",
+   "decision": "deny",
+   "reason": "not_found"
+  },
+  {
+   "id": 157,
+   "ts": "2026-11-16T03:29:38.563Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_get",
+   "request_id": "c385d65a-1b8d-43db-8c3b-aa681fa013bd",
+   "decision": "deny",
+   "reason": "not_found"
+  },
+  {
+   "id": 158,
+   "ts": "2026-11-16T03:29:38.602Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_get",
+   "request_id": "c630e3b3-b4bb-4365-9d05-4ef49ddd307e",
+   "decision": "deny",
+   "reason": "not_found"
+  },
+  {
+   "id": 159,
+   "ts": "2026-11-16T03:29:38.654Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_list",
+   "request_id": "e5597452-b9a5-4237-b8af-0c964fbb14cf",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 160,
+   "ts": "2026-11-16T03:29:38.696Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "36c626ea-437f-4671-896b-4b7ff1fe3763",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 161,
+   "ts": "2026-11-16T03:29:38.736Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "083eb942-ce2e-4e6b-b7cf-16d50254e79d",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 162,
+   "ts": "2026-11-16T03:29:39.077Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_write",
+   "request_id": "0e57ac66-0256-480f-b407-77c9a425c842",
+   "decision": "deny",
+   "reason": "forbidden"
+  },
+  {
+   "id": 163,
+   "ts": "2026-11-16T03:29:40.147Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_write",
+   "request_id": "d8c26e08-4e41-421a-a142-723b18154bfa",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 164,
+   "ts": "2026-11-16T03:29:40.422Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "publish_briefing",
+   "request_id": "d62c090c-8b38-4ec6-83a1-4fefcc68cf36",
+   "decision": "deny",
+   "reason": "forbidden"
+  },
+  {
+   "id": 165,
+   "ts": "2026-11-16T03:29:41.486Z",
+   "org": "personal",
+   "actor": "agent",
+   "tool": "brain_whoami",
+   "request_id": "ca730e56-85b0-4bb4-9d61-a4cb4f3f4cb5",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 166,
+   "ts": "2026-11-16T03:29:41.525Z",
+   "org": "personal",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "f100f12a-8873-479d-b3d9-74c8d19e335d",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 167,
+   "ts": "2026-11-16T03:29:42.267Z",
+   "org": "personal",
+   "actor": "agent",
+   "tool": "publish_briefing",
+   "request_id": "cc387ede-b4a0-47f6-abc0-ea485edf3446",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 168,
+   "ts": "2026-11-16T03:29:43.607Z",
+   "org": "mgmt",
+   "actor": "agent",
+   "tool": "brain_whoami",
+   "request_id": "644341d6-3ba7-418d-97c2-743dbc2571b1",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 169,
+   "ts": "2026-11-16T03:29:43.645Z",
+   "org": "mgmt",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "9bb7cc1f-2857-4d21-b966-f0a6c75481bc",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 170,
+   "ts": "2026-11-16T03:29:43.702Z",
+   "org": "mgmt",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "1e9767b3-fc80-460b-b962-f491a9f9dbf5",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 171,
+   "ts": "2026-11-16T03:29:44.642Z",
+   "org": "mgmt",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "bfe25690-e479-4dba-aa0e-e9dce9eeea2c",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 172,
+   "ts": "2026-11-16T03:29:45.674Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "45249eb2-1d23-4088-bce7-d8b6bd41877b",
+   "decision": "allow",
+   "reason": null
+  },
+  {
+   "id": 173,
+   "ts": "2026-11-16T03:29:45.713Z",
+   "org": "toveli",
+   "actor": "agent",
+   "tool": "brain_search",
+   "request_id": "1938f831-221f-4d77-a90a-71f4ae66a3d6",
+   "decision": "allow",
+   "reason": null
+  }
+ ],
+ "runs": {
+  "sibling": {
+   "env": [
+    "PAPERCLIP_AGENT_ID",
+    "PAPERCLIP_AGENT_KEY_ID",
+    "PAPERCLIP_AGENT_PRIVATE_KEY",
+    "PAPERCLIP_AGENT_PUBLIC_KEY",
+    "PAPERCLIP_API_KEY",
+    "PAPERCLIP_API_URL",
+    "PAPERCLIP_COMPANY_ID",
+    "PAPERCLIP_CONNECTION_INSTRUCTIONS_FILE",
+    "PAPERCLIP_GITHUB_AUTH_MODE",
+    "PAPERCLIP_GITHUB_HOST_HOME",
+    "PAPERCLIP_GIT_METADATA_ROOTS",
+    "PAPERCLIP_LISTEN_HOST",
+    "PAPERCLIP_LISTEN_PORT",
+    "PAPERCLIP_RUNNER_NETWORK_ACCESS",
+    "PAPERCLIP_RUNNER_NETWORK_ROOTS",
+    "PAPERCLIP_RUNTIME_API_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_AVAILABLE",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTIONS_SEARCH_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTION_REQUEST_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_EXPIRES_AT",
+    "PAPERCLIP_RUNTIME_TOOLS_GUIDANCE",
+    "PAPERCLIP_RUNTIME_TOOLS_MCP_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_TOKEN",
+    "PAPERCLIP_RUN_ID",
+    "PAPERCLIP_RUN_SCRATCH_DIR",
+    "PAPERCLIP_SCRATCH_DIR",
+    "PAPERCLIP_TASK_SCRATCH_DIR",
+    "PAPERCLIP_TMPDIR"
+   ],
+   "leaked_env": [],
+   "run_id": "92adec48-761a-4c67-8d53-f63fd99e0c9f",
+   "has_run_token": true,
+   "me": {
+    "status": 200,
+    "body": "{\"id\":\"0e78a524-7b4f-46a0-8b78-99560729499f\",\"companyId\":\"dfeef09b-5b1b-42d6-99ab-d7c76b2f808d\",\"name\":\"sibling-probe\",\"role\":\"engineer\",\"title\":\"Scripted probe agent\",\"icon\":null,\"appearance\":{\"schemaVersion\":1,\"characterVersion\":\"cap-v1\",\"paletteId\":\"golden-hour\"},\"status\":\"running\",\"lifecycleState\":\"ready\",\"lifecycleHolds\":[],\"lifecycleVersion\":3,\"lifecycleError\":null,\"reportsTo\":null,\"capabilities\":\"Calls the permission service through the tool gateway\",\"adapterType\":\"process\",\"adapterConfig\":{\"cwd\":\"/srv/pcwork\",\"args\":[\"/srv/pcwork/agent_probe.py\"],\"command\":\"python3\",\"graceSec\":5,\"timeo"
+   },
+   "session": {
+    "status": 201,
+    "body": "ok",
+    "keys": [
+     "callUrl",
+     "expiresAt",
+     "sessionId",
+     "token",
+     "toolsUrl"
+    ]
+   },
+   "tool_names": {
+    "mcp-remote-fixture:echo": "mcp-remote-fixture:echo",
+    "mcp-remote-fixture:add": "mcp-remote-fixture:add",
+    "mcp-remote-fixture:update_note": "mcp-remote-fixture:update_note",
+    "paperclip-self:list_my_issues": "paperclip-self:list_my_issues",
+    "paperclip-self:get_issue_context": "paperclip-self:get_issue_context",
+    "mcp-stdio-fixture:increment_counter": "mcp-stdio-fixture:increment_counter",
+    "mcp-stdio-fixture:runtime_status": "mcp-stdio-fixture:runtime_status",
+    "brain_get": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+    "brain_list": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-list",
+    "brain_search": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-search",
+    "brain_whoami": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-whoami",
+    "brain_write": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-write",
+    "publish_briefing": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:publish-briefing"
+   },
+   "invoke": {
+    "status": 202,
+    "body": {
+     "id": "92adec48-761a-4c67-8d53-f63fd99e0c9f",
+     "companyId": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+     "agentId": "0e78a524-7b4f-46a0-8b78-99560729499f",
+     "scopeKind": "company",
+     "issueId": null,
+     "invocationSource": "on_demand",
+     "triggerDetail": "manual",
+     "status": "queued",
+     "responsibleUserId": "local-board",
+     "activeIdentityContextId": null,
+     "startedAt": null,
+     "finishedAt": null,
+     "executionControlDeadlineAt": null,
+     "executionStatusDeliveryId": null,
+     "error": null,
+     "wakeupRequestId": "970c388a-f258-4dc4-a4f8-8e3656150935",
+     "exitCode": null,
+     "signal": null,
+     "costAccountingPending": false,
+     "costAccountedAt": null,
+     "accountingProjectionVersion": null,
+     "accountingLastAttemptAt": null,
+     "accountingLastError": null,
+     "accountingAttemptCount": 0,
+     "usageJson": null,
+     "resultJson": null,
+     "runtimeMode": "legacy",
+     "runtimeModeResolverVersion": null,
+     "runtimeModeReason": null,
+     "runtimeModeResolvedAt": null,
+     "runnerProfileJson": null,
+     "runnerInstanceId": null,
+     "nativeSessionId": null,
+     "nativeIssueId": null,
+     "driverKind": null,
+     "driverVersion": null,
+     "completionContractId": null,
+     "completionContractSha256": null,
+     "nextEventSeq": 1,
+     "nativePhase": null
+    }
+   },
+   "approvals": [],
+   "tools": "[{\"name\":\"mcp-remote-fixture:echo\",\"displayName\":\"Remote fixture echo\",\"description\":\"Remote HTTP MCP fixture that echoes a message without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:add\",\"displayName\":\"Remote fixture add\",\"description\":\"Remote HTTP MCP fixture that adds two numbers without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:update_note\",\"displayName\":\"Remote fixture update note\",\"description\":\"Remote HTTP MCP fixture that simulates a side-effecting write.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"noteId\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"noteId\",\"body\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"write\"},{\"name\":\"paperclip-self:list_my_issues\",\"displayName\":\"List my Paperclip issues\",\"description\":\"Paperclip self-MCP read fixture that lists the authenticated agent's current issues.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\"}},\"additionalProperties\":false},\"pluginId\":\"paperclip-self\",\"prov",
+   "steps": [
+    {
+     "label": "whoami",
+     "tool": "brain_whoami",
+     "gateway_tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-whoami",
+     "status": 200,
+     "ms": 57,
+     "raw": "{\"invocationId\":\"ab1bb9d4-5ec1-493e-a588-1debd2f7a3dd\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-whoami\",\"result\":{\"content\":\"{\\\"org\\\":\\\"sibling\\\",\\\"kind\\\":\\\"sub\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"org\\\":\\\"sibling\\\",\\\"kind\\\":\\\"sub\\\",\\\"actor\\\":\\\"agent\\\"}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "search-all",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-search",
+     "status": 200,
+     "ms": 50,
+     "raw": "{\"invocationId\":\"26b073e4-4c8c-4c47-beb5-89f2e785e0bf\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":4,\\\"pages\\\":[{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Shared style guide\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-GLOBAL-1 everyone may read this page.\\\"},{\\\"id\\\":\\\"7fa9e317-d376-4fd4-95fa-fbea6535b205\\\",\\\"org\\\":\\\"sibling\\\",\\\"title\\\":\\\"Code: services/quant/run.py\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"services/quant/run.py\\\",\\\"snippet\\\":\\\"CANARY-SIBLING-3 purpose and imports of a made-up file.\\\"},",
+     "retry": null
+    },
+    {
+     "label": "list-code",
+     "tool": "brain_list",
+     "gateway_tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-list",
+     "status": 200,
+     "ms": 48,
+     "raw": "{\"invocationId\":\"5a3a4d38-6ae9-4340-8eaf-d56630ad4e0e\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-list\",\"result\":{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"7fa9e317-d376-4fd4-95fa-fbea6535b205\\\",\\\"org\\\":\\\"sibling\\\",\\\"title\\\":\\\"Code: services/quant/run.py\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"services/quant/run.py\\\"}]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"7fa9e317-d376-4fd4-95fa-fbea6535b205\\\",\\\"org\\\":\\\"sibling\\\",\\\"title\\\":\\\"Code: services/quant/run.py\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"services/quant/run.py\\\"}]}\"}],\"structuredContent\":",
+     "retry": null
+    },
+    {
+     "label": "get-toveli-code",
+     "tool": "brain_get",
+     "gateway_tool": "mcp.app-gallery-link-055e2df1-1016-4109-992d-6223e89e24ec-49bf447e:brain-get",
+     "status": 502,
+     "ms": 43,
+     "raw": "{\"error\":\"{\\\"error\\\":\\\"not_found\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\",\"mcpMethod\":\"tools/call\",\"requestId\":\"paperclip-tool-687626e6-c6d7-49a5-bce4-de58a13cb24f\",\"upstreamToolName\":\"brain_get\",\"dispatched\":true},\"response\":{\"httpStatus\":200,\"contentType\":\"application/json\",\"bodySizeBytes\":165,\"upstreamRequestId\":null}}}",
+     "retry": null
+    }
+   ]
+  },
+  "toveli": {
+   "env": [
+    "PAPERCLIP_AGENT_ID",
+    "PAPERCLIP_AGENT_KEY_ID",
+    "PAPERCLIP_AGENT_PRIVATE_KEY",
+    "PAPERCLIP_AGENT_PUBLIC_KEY",
+    "PAPERCLIP_API_KEY",
+    "PAPERCLIP_API_URL",
+    "PAPERCLIP_COMPANY_ID",
+    "PAPERCLIP_CONNECTION_INSTRUCTIONS_FILE",
+    "PAPERCLIP_GITHUB_AUTH_MODE",
+    "PAPERCLIP_GITHUB_HOST_HOME",
+    "PAPERCLIP_GIT_METADATA_ROOTS",
+    "PAPERCLIP_LISTEN_HOST",
+    "PAPERCLIP_LISTEN_PORT",
+    "PAPERCLIP_RUNNER_NETWORK_ACCESS",
+    "PAPERCLIP_RUNNER_NETWORK_ROOTS",
+    "PAPERCLIP_RUNTIME_API_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_AVAILABLE",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTIONS_SEARCH_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTION_REQUEST_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_EXPIRES_AT",
+    "PAPERCLIP_RUNTIME_TOOLS_GUIDANCE",
+    "PAPERCLIP_RUNTIME_TOOLS_MCP_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_TOKEN",
+    "PAPERCLIP_RUN_ID",
+    "PAPERCLIP_RUN_SCRATCH_DIR",
+    "PAPERCLIP_SCRATCH_DIR",
+    "PAPERCLIP_TASK_SCRATCH_DIR",
+    "PAPERCLIP_TMPDIR"
+   ],
+   "leaked_env": [],
+   "run_id": "ca5f6a6f-1218-4967-b4de-55587c118003",
+   "has_run_token": true,
+   "me": {
+    "status": 200,
+    "body": "{\"id\":\"92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc\",\"companyId\":\"ced35e22-0f16-4308-ae5b-655b94de7fea\",\"name\":\"toveli-probe\",\"role\":\"engineer\",\"title\":\"Scripted probe agent\",\"icon\":null,\"appearance\":{\"schemaVersion\":1,\"characterVersion\":\"cap-v1\",\"paletteId\":\"tangerine-cobalt\"},\"status\":\"running\",\"lifecycleState\":\"ready\",\"lifecycleHolds\":[],\"lifecycleVersion\":3,\"lifecycleError\":null,\"reportsTo\":null,\"capabilities\":\"Calls the permission service through the tool gateway\",\"adapterType\":\"process\",\"adapterConfig\":{\"cwd\":\"/srv/pcwork\",\"args\":[\"/srv/pcwork/agent_probe.py\"],\"command\":\"python3\",\"graceSec\":5,\"t"
+   },
+   "session": {
+    "status": 201,
+    "body": "ok",
+    "keys": [
+     "callUrl",
+     "expiresAt",
+     "sessionId",
+     "token",
+     "toolsUrl"
+    ]
+   },
+   "tool_names": {
+    "mcp-remote-fixture:echo": "mcp-remote-fixture:echo",
+    "mcp-remote-fixture:add": "mcp-remote-fixture:add",
+    "mcp-remote-fixture:update_note": "mcp-remote-fixture:update_note",
+    "paperclip-self:list_my_issues": "paperclip-self:list_my_issues",
+    "paperclip-self:get_issue_context": "paperclip-self:get_issue_context",
+    "mcp-stdio-fixture:increment_counter": "mcp-stdio-fixture:increment_counter",
+    "mcp-stdio-fixture:runtime_status": "mcp-stdio-fixture:runtime_status",
+    "brain_get": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-get",
+    "brain_list": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-list",
+    "brain_search": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+    "brain_whoami": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-whoami",
+    "brain_write": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+    "publish_briefing": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing"
+   },
+   "invoke": {
+    "status": 202,
+    "body": {
+     "id": "ca5f6a6f-1218-4967-b4de-55587c118003",
+     "companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+     "agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+     "scopeKind": "company",
+     "issueId": null,
+     "invocationSource": "on_demand",
+     "triggerDetail": "manual",
+     "status": "queued",
+     "responsibleUserId": "local-board",
+     "activeIdentityContextId": null,
+     "startedAt": null,
+     "finishedAt": null,
+     "executionControlDeadlineAt": null,
+     "executionStatusDeliveryId": null,
+     "error": null,
+     "wakeupRequestId": "4998b974-22bd-4808-b596-98beb3cbe586",
+     "exitCode": null,
+     "signal": null,
+     "costAccountingPending": false,
+     "costAccountedAt": null,
+     "accountingProjectionVersion": null,
+     "accountingLastAttemptAt": null,
+     "accountingLastError": null,
+     "accountingAttemptCount": 0,
+     "usageJson": null,
+     "resultJson": null,
+     "runtimeMode": "legacy",
+     "runtimeModeResolverVersion": null,
+     "runtimeModeReason": null,
+     "runtimeModeResolvedAt": null,
+     "runnerProfileJson": null,
+     "runnerInstanceId": null,
+     "nativeSessionId": null,
+     "nativeIssueId": null,
+     "driverKind": null,
+     "driverVersion": null,
+     "completionContractId": null,
+     "completionContractSha256": null,
+     "nextEventSeq": 1,
+     "nativePhase": null
+    }
+   },
+   "approvals": [
+    {
+     "status": 200,
+     "body": {
+      "id": "4f033d39-0388-4501-b8d5-988ba55b0c9c",
+      "status": "failed",
+      "invocationId": "0d123978-f179-4c1a-9095-87c182fe6f4d",
+      "issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+      "interactionId": "cd2cd383-e052-4477-b733-b927b56adfc7",
+      "decidedByUserId": "local-board",
+      "resolvedByUserId": "local-board",
+      "previewMarkdown": "brain_write \u00b7 **Body:** CANARY-SENSITIVE-GW \u00b7 **Sensitivity:** health \u00b7 **Title:** s",
+      "resultSummary": null,
+      "error": "{\"error\":\"forbidden\"}",
+      "canonicalArgumentsSummary": {
+       "sha256": "7f42b880acebb3d9df2f12251a5b0336671b504911b1cf6a9ca204c6a5087f25",
+       "summary": "{\"body\":\"CANARY-SENSITIVE-GW\",\"request_id\":\"0e57ac66-0256-480f-b407-77c9a425c842\",\"sensitivity\":\"health\",\"title\":\"s\"}",
+       "sizeBytes": 117,
+       "redactedFields": []
+      }
+     },
+     "label": "write-health"
+    },
+    {
+     "status": 200,
+     "body": {
+      "id": "b583e1aa-0a97-43dd-bae6-5d24c83c31a5",
+      "status": "executed",
+      "invocationId": "63a72976-e752-43e2-bfb5-abcf72114fff",
+      "issueId": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+      "interactionId": "ab668096-f1e5-41ac-a73a-125100c3e283",
+      "decidedByUserId": "local-board",
+      "resolvedByUserId": "local-board",
+      "previewMarkdown": "brain_write \u00b7 **Body:** CANARY-TOVELI-GW written through the gateway \u00b7 **Title:** gw note",
+      "resultSummary": "{\"content\":\"{\\\"id\\\":\\\"4f2ec552-e917-4199-8577-dc838ef50943\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"id\\\":\\\"4f2ec552-e917-4199-8577-dc838ef50943\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"mcp_http\"}}",
+      "error": null,
+      "canonicalArgumentsSummary": {
+       "sha256": "ef973b995b7e9cdd582274c480da64f45ed52d4faa0569f06f5c75546a9e502d",
+       "summary": "{\"body\":\"CANARY-TOVELI-GW written through the gateway\",\"request_id\":\"d8c26e08-4e41-421a-a142-723b18154bfa\",\"title\":\"gw note\"}",
+       "sizeBytes": 125,
+       "redactedFields": []
+      }
+     },
+     "label": "write-note"
+    }
+   ],
+   "tools": "[{\"name\":\"mcp-remote-fixture:echo\",\"displayName\":\"Remote fixture echo\",\"description\":\"Remote HTTP MCP fixture that echoes a message without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:add\",\"displayName\":\"Remote fixture add\",\"description\":\"Remote HTTP MCP fixture that adds two numbers without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:update_note\",\"displayName\":\"Remote fixture update note\",\"description\":\"Remote HTTP MCP fixture that simulates a side-effecting write.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"noteId\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"noteId\",\"body\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"write\"},{\"name\":\"paperclip-self:list_my_issues\",\"displayName\":\"List my Paperclip issues\",\"description\":\"Paperclip self-MCP read fixture that lists the authenticated agent's current issues.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\"}},\"additionalProperties\":false},\"pluginId\":\"paperclip-self\",\"prov",
+   "steps": [
+    {
+     "label": "whoami",
+     "tool": "brain_whoami",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-whoami",
+     "status": 200,
+     "ms": 45,
+     "raw": "{\"invocationId\":\"612bfa4f-4089-4e2e-87e7-f6ac6947f746\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-whoami\",\"result\":{\"content\":\"{\\\"org\\\":\\\"toveli\\\",\\\"kind\\\":\\\"sub\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"org\\\":\\\"toveli\\\",\\\"kind\\\":\\\"sub\\\",\\\"actor\\\":\\\"agent\\\"}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "list",
+     "tool": "brain_list",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-list",
+     "status": 200,
+     "ms": 56,
+     "raw": "{\"invocationId\":\"f3e02c7e-1b51-4660-96dd-b678dcf6408b\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-list\",\"result\":{\"content\":\"{\\\"count\\\":4,\\\"pages\\\":[{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Shared style guide\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null},{\\\"id\\\":\\\"45d95a4c-21a7-4b22-b9e3-eb719b53a8d3\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"Code: apps/example/main.ts\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"apps/example/main.ts\\\"},{\\\"id\\\":\\\"7335a9f7-6e2c-4d4d-bfd5-7954556bce90\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"Toveli launch notes\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"",
+     "retry": null
+    },
+    {
+     "label": "search-all",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 44,
+     "raw": "{\"invocationId\":\"fc05a38f-daba-4b84-8483-9f8683e0a3de\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":4,\\\"pages\\\":[{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Shared style guide\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-GLOBAL-1 everyone may read this page.\\\"},{\\\"id\\\":\\\"45d95a4c-21a7-4b22-b9e3-eb719b53a8d3\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"Code: apps/example/main.ts\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"apps/example/main.ts\\\",\\\"snippet\\\":\\\"CANARY-TOVELI-3 purpose and imports of a made-up file.\\\"},{\\\"i",
+     "retry": null
+    },
+    {
+     "label": "search-sibling-marker",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 42,
+     "raw": "{\"invocationId\":\"ab410726-43c1-4d02-987d-16e736940d26\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "search-sibling-words",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 42,
+     "raw": "{\"invocationId\":\"4bece319-d795-4cca-94bd-204007d9bf8c\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "get-sibling-id",
+     "tool": "brain_get",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-get",
+     "status": 502,
+     "ms": 48,
+     "raw": "{\"error\":\"{\\\"error\\\":\\\"not_found\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\",\"mcpMethod\":\"tools/call\",\"requestId\":\"paperclip-tool-e57919ad-54d0-41da-9420-9e637b5cabf6\",\"upstreamToolName\":\"brain_get\",\"dispatched\":true},\"response\":{\"httpStatus\":200,\"contentType\":\"application/json\",\"bodySizeBytes\":165,\"upstreamRequestId\":null}}}",
+     "retry": null
+    },
+    {
+     "label": "get-missing-id",
+     "tool": "brain_get",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-get",
+     "status": 502,
+     "ms": 45,
+     "raw": "{\"error\":\"{\\\"error\\\":\\\"not_found\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\",\"mcpMethod\":\"tools/call\",\"requestId\":\"paperclip-tool-e71e5b15-fa22-4c76-8ed2-2453a682a2e9\",\"upstreamToolName\":\"brain_get\",\"dispatched\":true},\"response\":{\"httpStatus\":200,\"contentType\":\"application/json\",\"bodySizeBytes\":165,\"upstreamRequestId\":null}}}",
+     "retry": null
+    },
+    {
+     "label": "get-sibling-path",
+     "tool": "brain_get",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-get",
+     "status": 502,
+     "ms": 39,
+     "raw": "{\"error\":\"{\\\"error\\\":\\\"not_found\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\",\"mcpMethod\":\"tools/call\",\"requestId\":\"paperclip-tool-0450ca74-0778-47c6-aee8-560ac2ae3c49\",\"upstreamToolName\":\"brain_get\",\"dispatched\":true},\"response\":{\"httpStatus\":200,\"contentType\":\"application/json\",\"bodySizeBytes\":165,\"upstreamRequestId\":null}}}",
+     "retry": null
+    },
+    {
+     "label": "list-as-sibling",
+     "tool": "brain_list",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-list",
+     "status": 200,
+     "ms": 57,
+     "raw": "{\"invocationId\":\"7da19572-7c47-405b-8ad0-d347c68afca3\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-list\",\"result\":{\"content\":\"{\\\"count\\\":4,\\\"pages\\\":[{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Shared style guide\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null},{\\\"id\\\":\\\"45d95a4c-21a7-4b22-b9e3-eb719b53a8d3\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"Code: apps/example/main.ts\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"apps/example/main.ts\\\"},{\\\"id\\\":\\\"7335a9f7-6e2c-4d4d-bfd5-7954556bce90\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"Toveli launch notes\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"",
+     "retry": null
+    },
+    {
+     "label": "search-as-personal",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 41,
+     "raw": "{\"invocationId\":\"188290e5-2d90-495d-900c-4354048918cc\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":4,\\\"pages\\\":[{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Shared style guide\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-GLOBAL-1 everyone may read this page.\\\"},{\\\"id\\\":\\\"45d95a4c-21a7-4b22-b9e3-eb719b53a8d3\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"Code: apps/example/main.ts\\\",\\\"kind\\\":\\\"code_file\\\",\\\"source_type\\\":\\\"codebase\\\",\\\"path\\\":\\\"apps/example/main.ts\\\",\\\"snippet\\\":\\\"CANARY-TOVELI-3 purpose and imports of a made-up file.\\\"},{\\\"i",
+     "retry": null
+    },
+    {
+     "label": "search-personal-words",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 39,
+     "raw": "{\"invocationId\":\"2627c630-a491-4938-8793-a75100e0774c\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "write-health",
+     "tool": "brain_write",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+     "status": 409,
+     "ms": 50,
+     "raw": "{\"error\":\"Tool action requires approval\",\"reasonCode\":\"approval_required\",\"invocationId\":\"0d123978-f179-4c1a-9095-87c182fe6f4d\",\"actionRequestId\":\"4f033d39-0388-4501-b8d5-988ba55b0c9c\",\"interactionId\":\"cd2cd383-e052-4477-b733-b927b56adfc7\",\"issueId\":\"a76c46ea-bc48-4aa4-96e0-e144ee2955e5\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write\",\"argumentsHash\":\"7f42b880acebb3d9df2f12251a5b0336671b504911b1cf6a9ca204c6a5087f25\",\"instructions\":\"A human approval card was posted on task SPIA-1. Do not retry this call now. Wrap up other work and end your run noting you are waiting on tool approval (status in_review). You will be woken when it is decided; if approved, ",
+     "retry": "{\"error\":\"Tool action request is not approved or was already consumed\",\"reasonCode\":\"action_not_approved\"}"
+    },
+    {
+     "label": "write-note",
+     "tool": "brain_write",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+     "status": 409,
+     "ms": 58,
+     "raw": "{\"error\":\"Tool action requires approval\",\"reasonCode\":\"approval_required\",\"invocationId\":\"63a72976-e752-43e2-bfb5-abcf72114fff\",\"actionRequestId\":\"b583e1aa-0a97-43dd-bae6-5d24c83c31a5\",\"interactionId\":\"ab668096-f1e5-41ac-a73a-125100c3e283\",\"issueId\":\"a76c46ea-bc48-4aa4-96e0-e144ee2955e5\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write\",\"argumentsHash\":\"ef973b995b7e9cdd582274c480da64f45ed52d4faa0569f06f5c75546a9e502d\",\"instructions\":\"A human approval card was posted on task SPIA-1. Do not retry this call now. Wrap up other work and end your run noting you are waiting on tool approval (status in_review). You will be woken when it is decided; if approved, ",
+     "retry": "{\"error\":\"Tool action request is not approved or was already consumed\",\"reasonCode\":\"action_not_approved\"}"
+    },
+    {
+     "label": "briefing-from-org",
+     "tool": "publish_briefing",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing",
+     "status": 502,
+     "ms": 42,
+     "raw": "{\"error\":\"{\\\"error\\\":\\\"forbidden\\\"}\",\"reasonCode\":\"tool_error\",\"execution\":{\"transport\":\"mcp_remote\",\"request\":{\"protocol\":\"MCP JSON-RPC 2.0\",\"httpMethod\":\"POST\",\"endpoint\":\"http://127.0.0.1:8900/mcp\",\"mcpMethod\":\"tools/call\",\"requestId\":\"paperclip-tool-60a23caa-f023-4c55-b4eb-1798ba90c7bb\",\"upstreamToolName\":\"publish_briefing\",\"dispatched\":true},\"response\":{\"httpStatus\":200,\"contentType\":\"application/json\",\"bodySizeBytes\":165,\"upstreamRequestId\":null}}}",
+     "retry": null
+    },
+    {
+     "label": "unknown-tool",
+     "tool": "brain_admin_dump",
+     "gateway_tool": "brain_admin_dump",
+     "status": 404,
+     "ms": 10,
+     "raw": "{\"error\":\"Tool \\\"brain_admin_dump\\\" not found\",\"reasonCode\":\"tool_not_found\",\"tool\":\"brain_admin_dump\"}",
+     "retry": null
+    }
+   ]
+  },
+  "personal": {
+   "env": [
+    "PAPERCLIP_AGENT_ID",
+    "PAPERCLIP_AGENT_KEY_ID",
+    "PAPERCLIP_AGENT_PRIVATE_KEY",
+    "PAPERCLIP_AGENT_PUBLIC_KEY",
+    "PAPERCLIP_API_KEY",
+    "PAPERCLIP_API_URL",
+    "PAPERCLIP_COMPANY_ID",
+    "PAPERCLIP_CONNECTION_INSTRUCTIONS_FILE",
+    "PAPERCLIP_GITHUB_AUTH_MODE",
+    "PAPERCLIP_GITHUB_HOST_HOME",
+    "PAPERCLIP_GIT_METADATA_ROOTS",
+    "PAPERCLIP_LISTEN_HOST",
+    "PAPERCLIP_LISTEN_PORT",
+    "PAPERCLIP_RUNNER_NETWORK_ACCESS",
+    "PAPERCLIP_RUNNER_NETWORK_ROOTS",
+    "PAPERCLIP_RUNTIME_API_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_AVAILABLE",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTIONS_SEARCH_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTION_REQUEST_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_EXPIRES_AT",
+    "PAPERCLIP_RUNTIME_TOOLS_GUIDANCE",
+    "PAPERCLIP_RUNTIME_TOOLS_MCP_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_TOKEN",
+    "PAPERCLIP_RUN_ID",
+    "PAPERCLIP_RUN_SCRATCH_DIR",
+    "PAPERCLIP_SCRATCH_DIR",
+    "PAPERCLIP_TASK_SCRATCH_DIR",
+    "PAPERCLIP_TMPDIR"
+   ],
+   "leaked_env": [],
+   "run_id": "92008739-d15d-4d56-a6f0-b74efcfc1927",
+   "has_run_token": true,
+   "me": {
+    "status": 200,
+    "body": "{\"id\":\"3225ae4d-46b3-4ecb-81c8-b6d2bbb39136\",\"companyId\":\"b880cb3d-4dd5-47ea-acaa-a9a3e44761c9\",\"name\":\"personal-probe\",\"role\":\"engineer\",\"title\":\"Scripted probe agent\",\"icon\":null,\"appearance\":{\"schemaVersion\":1,\"characterVersion\":\"cap-v1\",\"paletteId\":\"electric-grove\"},\"status\":\"running\",\"lifecycleState\":\"ready\",\"lifecycleHolds\":[],\"lifecycleVersion\":3,\"lifecycleError\":null,\"reportsTo\":null,\"capabilities\":\"Calls the permission service through the tool gateway\",\"adapterType\":\"process\",\"adapterConfig\":{\"cwd\":\"/srv/pcwork\",\"args\":[\"/srv/pcwork/agent_probe.py\"],\"command\":\"python3\",\"graceSec\":5,\"t"
+   },
+   "session": {
+    "status": 201,
+    "body": "ok",
+    "keys": [
+     "callUrl",
+     "expiresAt",
+     "sessionId",
+     "token",
+     "toolsUrl"
+    ]
+   },
+   "tool_names": {
+    "mcp-remote-fixture:echo": "mcp-remote-fixture:echo",
+    "mcp-remote-fixture:add": "mcp-remote-fixture:add",
+    "mcp-remote-fixture:update_note": "mcp-remote-fixture:update_note",
+    "paperclip-self:list_my_issues": "paperclip-self:list_my_issues",
+    "paperclip-self:get_issue_context": "paperclip-self:get_issue_context",
+    "mcp-stdio-fixture:increment_counter": "mcp-stdio-fixture:increment_counter",
+    "mcp-stdio-fixture:runtime_status": "mcp-stdio-fixture:runtime_status",
+    "brain_get": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-get",
+    "brain_list": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-list",
+    "brain_search": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-search",
+    "brain_whoami": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-whoami",
+    "brain_write": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-write",
+    "publish_briefing": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing"
+   },
+   "invoke": {
+    "status": 202,
+    "body": {
+     "id": "92008739-d15d-4d56-a6f0-b74efcfc1927",
+     "companyId": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+     "agentId": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+     "scopeKind": "company",
+     "issueId": null,
+     "invocationSource": "on_demand",
+     "triggerDetail": "manual",
+     "status": "queued",
+     "responsibleUserId": "local-board",
+     "activeIdentityContextId": null,
+     "startedAt": null,
+     "finishedAt": null,
+     "executionControlDeadlineAt": null,
+     "executionStatusDeliveryId": null,
+     "error": null,
+     "wakeupRequestId": "cec855bc-5014-4c37-a8b7-9af591f6529a",
+     "exitCode": null,
+     "signal": null,
+     "costAccountingPending": false,
+     "costAccountedAt": null,
+     "accountingProjectionVersion": null,
+     "accountingLastAttemptAt": null,
+     "accountingLastError": null,
+     "accountingAttemptCount": 0,
+     "usageJson": null,
+     "resultJson": null,
+     "runtimeMode": "legacy",
+     "runtimeModeResolverVersion": null,
+     "runtimeModeReason": null,
+     "runtimeModeResolvedAt": null,
+     "runnerProfileJson": null,
+     "runnerInstanceId": null,
+     "nativeSessionId": null,
+     "nativeIssueId": null,
+     "driverKind": null,
+     "driverVersion": null,
+     "completionContractId": null,
+     "completionContractSha256": null,
+     "nextEventSeq": 1,
+     "nativePhase": null
+    }
+   },
+   "approvals": [
+    {
+     "status": 200,
+     "body": {
+      "id": "da24e5bd-c4cf-43d3-a16a-24010d7e05f0",
+      "status": "executed",
+      "invocationId": "f34c25f2-ade7-4161-aa73-4d985b68fc6a",
+      "issueId": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+      "interactionId": "9861f1c0-6961-4ff4-a061-edaf789e2037",
+      "decidedByUserId": "local-board",
+      "resolvedByUserId": "local-board",
+      "previewMarkdown": "publish_briefing \u00b7 **Content:** CANARY-BRIEFING-GW priorities, published through the gateway.",
+      "resultSummary": "{\"content\":\"{\\\"briefing_id\\\":\\\"8b360490-e8ef-4a05-9853-7cf615c04d84\\\",\\\"status\\\":\\\"pending\\\"}\",\"data\":{\"content\":[{\"text\":\"{\\\"briefing_id\\\":\\\"8b360490-e8ef-4a05-9853-7cf615c04d84\\\",\\\"status\\\":\\\"pending\\\"}\",\"type\":\"text\"}],\"isError\":false,\"spawnedLocalProcess\":false,\"structuredContent\":null,\"transport\":\"mcp_http\"}}",
+      "error": null,
+      "canonicalArgumentsSummary": {
+       "sha256": "a600df4dcc530b82c4182f3e5e749d854d196a90b5ceebd9fe47fb69fe991260",
+       "summary": "{\"content\":\"CANARY-BRIEFING-GW priorities, published through the gateway.\",\"request_id\":\"cc387ede-b4a0-47f6-abc0-ea485edf3446\"}",
+       "sizeBytes": 127,
+       "redactedFields": []
+      }
+     },
+     "label": "briefing"
+    }
+   ],
+   "tools": "[{\"name\":\"mcp-remote-fixture:echo\",\"displayName\":\"Remote fixture echo\",\"description\":\"Remote HTTP MCP fixture that echoes a message without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:add\",\"displayName\":\"Remote fixture add\",\"description\":\"Remote HTTP MCP fixture that adds two numbers without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:update_note\",\"displayName\":\"Remote fixture update note\",\"description\":\"Remote HTTP MCP fixture that simulates a side-effecting write.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"noteId\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"noteId\",\"body\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"write\"},{\"name\":\"paperclip-self:list_my_issues\",\"displayName\":\"List my Paperclip issues\",\"description\":\"Paperclip self-MCP read fixture that lists the authenticated agent's current issues.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\"}},\"additionalProperties\":false},\"pluginId\":\"paperclip-self\",\"prov",
+   "steps": [
+    {
+     "label": "whoami",
+     "tool": "brain_whoami",
+     "gateway_tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-whoami",
+     "status": 200,
+     "ms": 43,
+     "raw": "{\"invocationId\":\"664cfd1f-b917-49a6-9f9c-d9eb5f39fbee\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-whoami\",\"result\":{\"content\":\"{\\\"org\\\":\\\"personal\\\",\\\"kind\\\":\\\"personal\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"org\\\":\\\"personal\\\",\\\"kind\\\":\\\"personal\\\",\\\"actor\\\":\\\"agent\\\"}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "search-all",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-search",
+     "status": 200,
+     "ms": 44,
+     "raw": "{\"invocationId\":\"3a040ef1-fcb6-472b-81c2-f3752e8b8513\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":13,\\\"pages\\\":[{\\\"id\\\":\\\"3cdc030f-f6bf-47b5-9e5b-332d314846ce\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Holding plan\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-MGMT-1 allocation across ventures.\\\"},{\\\"id\\\":\\\"38aea517-eb31-4cb9-8bf3-ae1e3f21f19e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Holding weekly summary\\\",\\\"kind\\\":\\\"summary\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-MGMT-2 weekly roll-up.\\\"},{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"",
+     "retry": null
+    },
+    {
+     "label": "briefing",
+     "tool": "publish_briefing",
+     "gateway_tool": "mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing",
+     "status": 409,
+     "ms": 63,
+     "raw": "{\"error\":\"Tool action requires approval\",\"reasonCode\":\"approval_required\",\"invocationId\":\"f34c25f2-ade7-4161-aa73-4d985b68fc6a\",\"actionRequestId\":\"da24e5bd-c4cf-43d3-a16a-24010d7e05f0\",\"interactionId\":\"9861f1c0-6961-4ff4-a061-edaf789e2037\",\"issueId\":\"9ccfc3e3-4cb5-4d47-a5de-8130068a512f\",\"tool\":\"mcp.app-gallery-link-20a455f5-ca0a-42e3-831f-679e8bb80f9d-1a786a57:publish-briefing\",\"argumentsHash\":\"a600df4dcc530b82c4182f3e5e749d854d196a90b5ceebd9fe47fb69fe991260\",\"instructions\":\"A human approval card was posted on task SPIAAA-1. Do not retry this call now. Wrap up other work and end your run noting you are waiting on tool approval (status in_review). You will be woken when it is decided; if app",
+     "retry": "{\"error\":\"Tool action request is not approved or was already consumed\",\"reasonCode\":\"action_not_approved\"}"
+    }
+   ]
+  },
+  "mgmt-before": {
+   "env": [
+    "PAPERCLIP_AGENT_ID",
+    "PAPERCLIP_AGENT_KEY_ID",
+    "PAPERCLIP_AGENT_PRIVATE_KEY",
+    "PAPERCLIP_AGENT_PUBLIC_KEY",
+    "PAPERCLIP_API_KEY",
+    "PAPERCLIP_API_URL",
+    "PAPERCLIP_COMPANY_ID",
+    "PAPERCLIP_CONNECTION_INSTRUCTIONS_FILE",
+    "PAPERCLIP_GITHUB_AUTH_MODE",
+    "PAPERCLIP_GITHUB_HOST_HOME",
+    "PAPERCLIP_GIT_METADATA_ROOTS",
+    "PAPERCLIP_LISTEN_HOST",
+    "PAPERCLIP_LISTEN_PORT",
+    "PAPERCLIP_RUNNER_NETWORK_ACCESS",
+    "PAPERCLIP_RUNNER_NETWORK_ROOTS",
+    "PAPERCLIP_RUNTIME_API_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_AVAILABLE",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTIONS_SEARCH_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTION_REQUEST_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_EXPIRES_AT",
+    "PAPERCLIP_RUNTIME_TOOLS_GUIDANCE",
+    "PAPERCLIP_RUNTIME_TOOLS_MCP_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_TOKEN",
+    "PAPERCLIP_RUN_ID",
+    "PAPERCLIP_RUN_SCRATCH_DIR",
+    "PAPERCLIP_SCRATCH_DIR",
+    "PAPERCLIP_TASK_SCRATCH_DIR",
+    "PAPERCLIP_TMPDIR"
+   ],
+   "leaked_env": [],
+   "run_id": "6dba485d-6acc-496c-b90e-0eee4486fd0a",
+   "has_run_token": true,
+   "me": {
+    "status": 200,
+    "body": "{\"id\":\"24268cf2-eabb-47b4-9f3e-7069a39408b9\",\"companyId\":\"e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a\",\"name\":\"mgmt-probe\",\"role\":\"engineer\",\"title\":\"Scripted probe agent\",\"icon\":null,\"appearance\":{\"schemaVersion\":1,\"characterVersion\":\"cap-v1\",\"paletteId\":\"tangerine-cobalt\"},\"status\":\"running\",\"lifecycleState\":\"ready\",\"lifecycleHolds\":[],\"lifecycleVersion\":3,\"lifecycleError\":null,\"reportsTo\":null,\"capabilities\":\"Calls the permission service through the tool gateway\",\"adapterType\":\"process\",\"adapterConfig\":{\"cwd\":\"/srv/pcwork\",\"args\":[\"/srv/pcwork/agent_probe.py\"],\"command\":\"python3\",\"graceSec\":5,\"tim"
+   },
+   "session": {
+    "status": 201,
+    "body": "ok",
+    "keys": [
+     "callUrl",
+     "expiresAt",
+     "sessionId",
+     "token",
+     "toolsUrl"
+    ]
+   },
+   "tool_names": {
+    "mcp-remote-fixture:echo": "mcp-remote-fixture:echo",
+    "mcp-remote-fixture:add": "mcp-remote-fixture:add",
+    "mcp-remote-fixture:update_note": "mcp-remote-fixture:update_note",
+    "paperclip-self:list_my_issues": "paperclip-self:list_my_issues",
+    "paperclip-self:get_issue_context": "paperclip-self:get_issue_context",
+    "mcp-stdio-fixture:increment_counter": "mcp-stdio-fixture:increment_counter",
+    "mcp-stdio-fixture:runtime_status": "mcp-stdio-fixture:runtime_status",
+    "brain_get": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-get",
+    "brain_list": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-list",
+    "brain_search": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+    "brain_whoami": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami",
+    "brain_write": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-write",
+    "publish_briefing": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:publish-briefing"
+   },
+   "invoke": {
+    "status": 202,
+    "body": {
+     "id": "6dba485d-6acc-496c-b90e-0eee4486fd0a",
+     "companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+     "agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+     "scopeKind": "company",
+     "issueId": null,
+     "invocationSource": "on_demand",
+     "triggerDetail": "manual",
+     "status": "queued",
+     "responsibleUserId": "local-board",
+     "activeIdentityContextId": null,
+     "startedAt": null,
+     "finishedAt": null,
+     "executionControlDeadlineAt": null,
+     "executionStatusDeliveryId": null,
+     "error": null,
+     "wakeupRequestId": "660cfb43-ffc3-445a-945f-5b423dcbfa6f",
+     "exitCode": null,
+     "signal": null,
+     "costAccountingPending": false,
+     "costAccountedAt": null,
+     "accountingProjectionVersion": null,
+     "accountingLastAttemptAt": null,
+     "accountingLastError": null,
+     "accountingAttemptCount": 0,
+     "usageJson": null,
+     "resultJson": null,
+     "runtimeMode": "legacy",
+     "runtimeModeResolverVersion": null,
+     "runtimeModeReason": null,
+     "runtimeModeResolvedAt": null,
+     "runnerProfileJson": null,
+     "runnerInstanceId": null,
+     "nativeSessionId": null,
+     "nativeIssueId": null,
+     "driverKind": null,
+     "driverVersion": null,
+     "completionContractId": null,
+     "completionContractSha256": null,
+     "nextEventSeq": 1,
+     "nativePhase": null
+    }
+   },
+   "approvals": [],
+   "tools": "[{\"name\":\"mcp-remote-fixture:echo\",\"displayName\":\"Remote fixture echo\",\"description\":\"Remote HTTP MCP fixture that echoes a message without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:add\",\"displayName\":\"Remote fixture add\",\"description\":\"Remote HTTP MCP fixture that adds two numbers without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:update_note\",\"displayName\":\"Remote fixture update note\",\"description\":\"Remote HTTP MCP fixture that simulates a side-effecting write.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"noteId\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"noteId\",\"body\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"write\"},{\"name\":\"paperclip-self:list_my_issues\",\"displayName\":\"List my Paperclip issues\",\"description\":\"Paperclip self-MCP read fixture that lists the authenticated agent's current issues.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\"}},\"additionalProperties\":false},\"pluginId\":\"paperclip-self\",\"prov",
+   "steps": [
+    {
+     "label": "whoami",
+     "tool": "brain_whoami",
+     "gateway_tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami",
+     "status": 200,
+     "ms": 46,
+     "raw": "{\"invocationId\":\"224e2c85-6fe7-4f76-bb83-daee356dcaae\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami\",\"result\":{\"content\":\"{\\\"org\\\":\\\"mgmt\\\",\\\"kind\\\":\\\"holding\\\",\\\"actor\\\":\\\"agent\\\"}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"org\\\":\\\"mgmt\\\",\\\"kind\\\":\\\"holding\\\",\\\"actor\\\":\\\"agent\\\"}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "search-all",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+     "status": 200,
+     "ms": 43,
+     "raw": "{\"invocationId\":\"bc3a7a75-f563-466e-bffe-f76ca9b3fd7b\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":10,\\\"pages\\\":[{\\\"id\\\":\\\"3cdc030f-f6bf-47b5-9e5b-332d314846ce\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Holding plan\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-MGMT-1 allocation across ventures.\\\"},{\\\"id\\\":\\\"38aea517-eb31-4cb9-8bf3-ae1e3f21f19e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Holding weekly summary\\\",\\\"kind\\\":\\\"summary\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-MGMT-2 weekly roll-up.\\\"},{\\\"id\\\":\\\"e699fae2-74ff-4118-8ecb-8417cd680e5e\\\",\\\"org\\\":\\\"mgmt\\\",\\\"",
+     "retry": null
+    },
+    {
+     "label": "search-briefing",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+     "status": 200,
+     "ms": 55,
+     "raw": "{\"invocationId\":\"fc85bf95-1bf7-42e3-bb0d-df41805f8c7a\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    }
+   ]
+  },
+  "mgmt-after": {
+   "env": [
+    "PAPERCLIP_AGENT_ID",
+    "PAPERCLIP_AGENT_KEY_ID",
+    "PAPERCLIP_AGENT_PRIVATE_KEY",
+    "PAPERCLIP_AGENT_PUBLIC_KEY",
+    "PAPERCLIP_API_KEY",
+    "PAPERCLIP_API_URL",
+    "PAPERCLIP_COMPANY_ID",
+    "PAPERCLIP_CONNECTION_INSTRUCTIONS_FILE",
+    "PAPERCLIP_GITHUB_AUTH_MODE",
+    "PAPERCLIP_GITHUB_HOST_HOME",
+    "PAPERCLIP_GIT_METADATA_ROOTS",
+    "PAPERCLIP_LISTEN_HOST",
+    "PAPERCLIP_LISTEN_PORT",
+    "PAPERCLIP_RUNNER_NETWORK_ACCESS",
+    "PAPERCLIP_RUNNER_NETWORK_ROOTS",
+    "PAPERCLIP_RUNTIME_API_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_AVAILABLE",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTIONS_SEARCH_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTION_REQUEST_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_EXPIRES_AT",
+    "PAPERCLIP_RUNTIME_TOOLS_GUIDANCE",
+    "PAPERCLIP_RUNTIME_TOOLS_MCP_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_TOKEN",
+    "PAPERCLIP_RUN_ID",
+    "PAPERCLIP_RUN_SCRATCH_DIR",
+    "PAPERCLIP_SCRATCH_DIR",
+    "PAPERCLIP_TASK_SCRATCH_DIR",
+    "PAPERCLIP_TMPDIR"
+   ],
+   "leaked_env": [],
+   "run_id": "3676fb63-b359-4b27-8dc1-068702186dd9",
+   "has_run_token": true,
+   "me": {
+    "status": 200,
+    "body": "{\"id\":\"24268cf2-eabb-47b4-9f3e-7069a39408b9\",\"companyId\":\"e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a\",\"name\":\"mgmt-probe\",\"role\":\"engineer\",\"title\":\"Scripted probe agent\",\"icon\":null,\"appearance\":{\"schemaVersion\":1,\"characterVersion\":\"cap-v1\",\"paletteId\":\"tangerine-cobalt\"},\"status\":\"running\",\"lifecycleState\":\"ready\",\"lifecycleHolds\":[],\"lifecycleVersion\":3,\"lifecycleError\":null,\"reportsTo\":null,\"capabilities\":\"Calls the permission service through the tool gateway\",\"adapterType\":\"process\",\"adapterConfig\":{\"cwd\":\"/srv/pcwork\",\"args\":[\"/srv/pcwork/agent_probe.py\"],\"command\":\"python3\",\"graceSec\":5,\"tim"
+   },
+   "session": {
+    "status": 201,
+    "body": "ok",
+    "keys": [
+     "callUrl",
+     "expiresAt",
+     "sessionId",
+     "token",
+     "toolsUrl"
+    ]
+   },
+   "tool_names": {
+    "mcp-remote-fixture:echo": "mcp-remote-fixture:echo",
+    "mcp-remote-fixture:add": "mcp-remote-fixture:add",
+    "mcp-remote-fixture:update_note": "mcp-remote-fixture:update_note",
+    "paperclip-self:list_my_issues": "paperclip-self:list_my_issues",
+    "paperclip-self:get_issue_context": "paperclip-self:get_issue_context",
+    "mcp-stdio-fixture:increment_counter": "mcp-stdio-fixture:increment_counter",
+    "mcp-stdio-fixture:runtime_status": "mcp-stdio-fixture:runtime_status",
+    "brain_get": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-get",
+    "brain_list": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-list",
+    "brain_search": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+    "brain_whoami": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-whoami",
+    "brain_write": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-write",
+    "publish_briefing": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:publish-briefing"
+   },
+   "invoke": {
+    "status": 202,
+    "body": {
+     "id": "3676fb63-b359-4b27-8dc1-068702186dd9",
+     "companyId": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+     "agentId": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+     "scopeKind": "company",
+     "issueId": null,
+     "invocationSource": "on_demand",
+     "triggerDetail": "manual",
+     "status": "queued",
+     "responsibleUserId": "local-board",
+     "activeIdentityContextId": null,
+     "startedAt": null,
+     "finishedAt": null,
+     "executionControlDeadlineAt": null,
+     "executionStatusDeliveryId": null,
+     "error": null,
+     "wakeupRequestId": "14627ee9-44f3-405d-aef4-4f174f454f2d",
+     "exitCode": null,
+     "signal": null,
+     "costAccountingPending": false,
+     "costAccountedAt": null,
+     "accountingProjectionVersion": null,
+     "accountingLastAttemptAt": null,
+     "accountingLastError": null,
+     "accountingAttemptCount": 0,
+     "usageJson": null,
+     "resultJson": null,
+     "runtimeMode": "legacy",
+     "runtimeModeResolverVersion": null,
+     "runtimeModeReason": null,
+     "runtimeModeResolvedAt": null,
+     "runnerProfileJson": null,
+     "runnerInstanceId": null,
+     "nativeSessionId": null,
+     "nativeIssueId": null,
+     "driverKind": null,
+     "driverVersion": null,
+     "completionContractId": null,
+     "completionContractSha256": null,
+     "nextEventSeq": 1,
+     "nativePhase": null
+    }
+   },
+   "approvals": [],
+   "tools": "[{\"name\":\"mcp-remote-fixture:echo\",\"displayName\":\"Remote fixture echo\",\"description\":\"Remote HTTP MCP fixture that echoes a message without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:add\",\"displayName\":\"Remote fixture add\",\"description\":\"Remote HTTP MCP fixture that adds two numbers without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:update_note\",\"displayName\":\"Remote fixture update note\",\"description\":\"Remote HTTP MCP fixture that simulates a side-effecting write.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"noteId\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"noteId\",\"body\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"write\"},{\"name\":\"paperclip-self:list_my_issues\",\"displayName\":\"List my Paperclip issues\",\"description\":\"Paperclip self-MCP read fixture that lists the authenticated agent's current issues.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\"}},\"additionalProperties\":false},\"pluginId\":\"paperclip-self\",\"prov",
+   "steps": [
+    {
+     "label": "search-briefing",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search",
+     "status": 200,
+     "ms": 42,
+     "raw": "{\"invocationId\":\"00344260-55d9-4838-a835-0c69b20a93ca\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-7369df88-4c92-4d4c-97fb-a27380db9a6a-1f7d7326:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"3be37782-35ad-4ebb-b2f0-f3717929a6b7\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Briefing from the personal space, 2026-11-16\\\",\\\"kind\\\":\\\"briefing\\\",\\\"source_type\\\":\\\"human\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-BRIEFING-GW priorities, published through the gateway.\\\"}]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"3be37782-35ad-4ebb-b2f0-f3717929a6b7\\\",\\\"org\\\":\\\"mgmt\\\",\\\"title\\\":\\\"Briefing from the personal space, 2026-11-16\\\",\\\"kind\\\":\\\"briefing\\\",\\\"source",
+     "retry": null
+    }
+   ]
+  },
+  "toveli-after": {
+   "env": [
+    "PAPERCLIP_AGENT_ID",
+    "PAPERCLIP_AGENT_KEY_ID",
+    "PAPERCLIP_AGENT_PRIVATE_KEY",
+    "PAPERCLIP_AGENT_PUBLIC_KEY",
+    "PAPERCLIP_API_KEY",
+    "PAPERCLIP_API_URL",
+    "PAPERCLIP_COMPANY_ID",
+    "PAPERCLIP_CONNECTION_INSTRUCTIONS_FILE",
+    "PAPERCLIP_GITHUB_AUTH_MODE",
+    "PAPERCLIP_GITHUB_HOST_HOME",
+    "PAPERCLIP_GIT_METADATA_ROOTS",
+    "PAPERCLIP_LISTEN_HOST",
+    "PAPERCLIP_LISTEN_PORT",
+    "PAPERCLIP_RUNNER_NETWORK_ACCESS",
+    "PAPERCLIP_RUNNER_NETWORK_ROOTS",
+    "PAPERCLIP_RUNTIME_API_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_AVAILABLE",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTIONS_SEARCH_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_CONNECTION_REQUEST_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_EXPIRES_AT",
+    "PAPERCLIP_RUNTIME_TOOLS_GUIDANCE",
+    "PAPERCLIP_RUNTIME_TOOLS_MCP_URL",
+    "PAPERCLIP_RUNTIME_TOOLS_TOKEN",
+    "PAPERCLIP_RUN_ID",
+    "PAPERCLIP_RUN_SCRATCH_DIR",
+    "PAPERCLIP_SCRATCH_DIR",
+    "PAPERCLIP_TASK_SCRATCH_DIR",
+    "PAPERCLIP_TMPDIR"
+   ],
+   "leaked_env": [],
+   "run_id": "381fd39e-bb50-4263-a23f-e5f3693aeeb5",
+   "has_run_token": true,
+   "me": {
+    "status": 200,
+    "body": "{\"id\":\"92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc\",\"companyId\":\"ced35e22-0f16-4308-ae5b-655b94de7fea\",\"name\":\"toveli-probe\",\"role\":\"engineer\",\"title\":\"Scripted probe agent\",\"icon\":null,\"appearance\":{\"schemaVersion\":1,\"characterVersion\":\"cap-v1\",\"paletteId\":\"tangerine-cobalt\"},\"status\":\"running\",\"lifecycleState\":\"ready\",\"lifecycleHolds\":[],\"lifecycleVersion\":3,\"lifecycleError\":null,\"reportsTo\":null,\"capabilities\":\"Calls the permission service through the tool gateway\",\"adapterType\":\"process\",\"adapterConfig\":{\"cwd\":\"/srv/pcwork\",\"args\":[\"/srv/pcwork/agent_probe.py\"],\"command\":\"python3\",\"graceSec\":5,\"t"
+   },
+   "session": {
+    "status": 201,
+    "body": "ok",
+    "keys": [
+     "callUrl",
+     "expiresAt",
+     "sessionId",
+     "token",
+     "toolsUrl"
+    ]
+   },
+   "tool_names": {
+    "mcp-remote-fixture:echo": "mcp-remote-fixture:echo",
+    "mcp-remote-fixture:add": "mcp-remote-fixture:add",
+    "mcp-remote-fixture:update_note": "mcp-remote-fixture:update_note",
+    "paperclip-self:list_my_issues": "paperclip-self:list_my_issues",
+    "paperclip-self:get_issue_context": "paperclip-self:get_issue_context",
+    "mcp-stdio-fixture:increment_counter": "mcp-stdio-fixture:increment_counter",
+    "mcp-stdio-fixture:runtime_status": "mcp-stdio-fixture:runtime_status",
+    "brain_get": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-get",
+    "brain_list": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-list",
+    "brain_search": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+    "brain_whoami": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-whoami",
+    "brain_write": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-write",
+    "publish_briefing": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:publish-briefing"
+   },
+   "invoke": {
+    "status": 202,
+    "body": {
+     "id": "381fd39e-bb50-4263-a23f-e5f3693aeeb5",
+     "companyId": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+     "agentId": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+     "scopeKind": "company",
+     "issueId": null,
+     "invocationSource": "on_demand",
+     "triggerDetail": "manual",
+     "status": "queued",
+     "responsibleUserId": "local-board",
+     "activeIdentityContextId": null,
+     "startedAt": null,
+     "finishedAt": null,
+     "executionControlDeadlineAt": null,
+     "executionStatusDeliveryId": null,
+     "error": null,
+     "wakeupRequestId": "1902845e-5fdf-4d09-b432-3d2e6edf79c6",
+     "exitCode": null,
+     "signal": null,
+     "costAccountingPending": false,
+     "costAccountedAt": null,
+     "accountingProjectionVersion": null,
+     "accountingLastAttemptAt": null,
+     "accountingLastError": null,
+     "accountingAttemptCount": 0,
+     "usageJson": null,
+     "resultJson": null,
+     "runtimeMode": "legacy",
+     "runtimeModeResolverVersion": null,
+     "runtimeModeReason": null,
+     "runtimeModeResolvedAt": null,
+     "runnerProfileJson": null,
+     "runnerInstanceId": null,
+     "nativeSessionId": null,
+     "nativeIssueId": null,
+     "driverKind": null,
+     "driverVersion": null,
+     "completionContractId": null,
+     "completionContractSha256": null,
+     "nextEventSeq": 1,
+     "nativePhase": null
+    }
+   },
+   "approvals": [],
+   "tools": "[{\"name\":\"mcp-remote-fixture:echo\",\"displayName\":\"Remote fixture echo\",\"description\":\"Remote HTTP MCP fixture that echoes a message without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:add\",\"displayName\":\"Remote fixture add\",\"description\":\"Remote HTTP MCP fixture that adds two numbers without spawning a local process.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"read\"},{\"name\":\"mcp-remote-fixture:update_note\",\"displayName\":\"Remote fixture update note\",\"description\":\"Remote HTTP MCP fixture that simulates a side-effecting write.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"noteId\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"noteId\",\"body\"],\"additionalProperties\":false},\"pluginId\":\"mcp-remote-fixture\",\"providerType\":\"mcp_http_fixture\",\"risk\":\"write\"},{\"name\":\"paperclip-self:list_my_issues\",\"displayName\":\"List my Paperclip issues\",\"description\":\"Paperclip self-MCP read fixture that lists the authenticated agent's current issues.\",\"parametersSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\"}},\"additionalProperties\":false},\"pluginId\":\"paperclip-self\",\"prov",
+   "steps": [
+    {
+     "label": "search-briefing",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 40,
+     "raw": "{\"invocationId\":\"7f60a3d5-a591-4641-a770-bb094807714a\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":0,\\\"pages\\\":[]}\"}],\"structuredContent\":null,\"isError\":false,\"transport\":\"mcp_http\",\"spawnedLocalProcess\":false}}}",
+     "retry": null
+    },
+    {
+     "label": "search-own-write",
+     "tool": "brain_search",
+     "gateway_tool": "mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search",
+     "status": 200,
+     "ms": 39,
+     "raw": "{\"invocationId\":\"7f1c7965-f7a7-4b70-bb64-dcd92b1ec08a\",\"status\":\"completed\",\"tool\":\"mcp.app-gallery-link-0b8e10d7-1092-426b-9823-508b077d128b-0789cc29:brain-search\",\"result\":{\"content\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"4f2ec552-e917-4199-8577-dc838ef50943\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"gw note\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-TOVELI-GW written through the gateway\\\"}]}\",\"data\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"count\\\":1,\\\"pages\\\":[{\\\"id\\\":\\\"4f2ec552-e917-4199-8577-dc838ef50943\\\",\\\"org\\\":\\\"toveli\\\",\\\"title\\\":\\\"gw note\\\",\\\"kind\\\":\\\"note\\\",\\\"source_type\\\":\\\"agent\\\",\\\"path\\\":null,\\\"snippet\\\":\\\"CANARY-TOVELI-GW written through the gateway\\\"}]}",
+     "retry": null
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "full_build_old": {
+  "files": 202,
+  "files_read": 202,
+  "files_reused": 0,
+  "deleted": 0,
+  "seconds": 0.45,
+  "commit": "525054d",
+  "sync": {
+   "written": 210,
+   "deleted": 1,
+   "pages_total": 210,
+   "pages_unchanged": 0
+  }
+ },
+ "incremental_to_new": {
+  "files": 233,
+  "files_read": 53,
+  "files_reused": 180,
+  "deleted": 0,
+  "seconds": 0.13,
+  "commit": "0abafdc",
+  "sync": {
+   "written": 61,
+   "deleted": 0,
+   "pages_total": 241,
+   "pages_unchanged": 180
+  }
+ },
+ "full_build_new": {
+  "files": 233,
+  "files_read": 233,
+  "files_reused": 0,
+  "deleted": 0,
+  "seconds": 0.51
+ },
+ "checks": {
+  "incremental result equals a full rebuild (every page, by content hash)": true,
+  "incremental read fewer files than a full build": true,
+  "pages rewritten equals pages whose content changed": true,
+  "pages that did not change were not rewritten": true,
+  "Toveli's own agent can list the code pages": true,
+  "sibling sees no Toveli code page in a list": true,
+  "sibling cannot fetch a Toveli code page by path": true,
+  "sibling search returns no Toveli code page": true,
+  "holding organization can read the code page (holding_reads = all, the current rule)": true
+ },
+ "pages_rewritten": 61,
+ "pages_total": 241,
+ "sibling": {
+  "toveli agent lists code pages": 241,
+  "sibling agent lists code pages": 1,
+  "sibling page orgs": [
+   "sibling"
+  ]
+ }
+}

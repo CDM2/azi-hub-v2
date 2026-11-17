@@ -1,0 +1,336 @@
+{
+ "orgs": {
+  "mgmt": {
+   "company_id": "e603a6a2-a2c2-4a4a-aa1c-e5f7dd75637a",
+   "agent_id": "24268cf2-eabb-47b4-9f3e-7069a39408b9",
+   "agent_status": "paused",
+   "issue_id": "56f131a8-dba9-42b9-a39b-e4b713b5c8d1",
+   "issue_create": 201,
+   "connection_id": "1f7d7326-46e2-4719-87d8-b345c28bb0f9",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "493eb71d-8c4c-4a17-b90e-ae63bd4e6c30",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "865ec434-7a18-4ed1-a6ae-f4a7dbe2d3e7",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "a9991ad3-28dd-4db9-8c11-fef491cd1f9e",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "5b774c67-f335-4ffc-9f27-388806c8e899",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "585a28c1-556c-48e3-be6c-d0f88f42c7c3",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "2493ebee-61e7-4a80-b800-befd0d9fcf81",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "toveli": {
+   "company_id": "ced35e22-0f16-4308-ae5b-655b94de7fea",
+   "agent_id": "92d7eeb8-caa5-482b-a6f4-61d41b8ce6bc",
+   "agent_status": "paused",
+   "issue_id": "a76c46ea-bc48-4aa4-96e0-e144ee2955e5",
+   "issue_create": 201,
+   "connection_id": "0789cc29-28d8-452a-b322-4b2221b002ff",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "ff1128e4-f87e-4455-a990-a7b59ebeda76",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "f26ec393-d120-4829-893f-59e04ae884c1",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "22dbabec-c762-4b8c-a8a6-ad93700b35c7",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "9374226a-9f67-42f4-8d26-8754f89a2b05",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "d7014ac4-94a4-468b-93b9-173126f89c2d",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "b1b7662c-ae8a-44ee-8e90-0e2d303fa420",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "sibling": {
+   "company_id": "dfeef09b-5b1b-42d6-99ab-d7c76b2f808d",
+   "agent_id": "0e78a524-7b4f-46a0-8b78-99560729499f",
+   "agent_status": "paused",
+   "issue_id": "20146b7d-32c3-48e4-8d9c-bd069570c5e9",
+   "issue_create": 201,
+   "connection_id": "49bf447e-c4c7-42fc-80fb-4263fafeab32",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "febcec3f-a56a-4434-af35-d2214c7dafa0",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "cd53da33-a438-40d8-8270-7bc9a2fe0181",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "0a35a3a9-4ae6-4773-9ca8-b64ac70334f4",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "457d54cd-a628-4ca3-bfb0-bf2880206ab1",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "125d3b33-ba93-4472-858f-36eca0040f2d",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "bad4d772-0834-41ea-8609-73fe5879714a",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write"
+   ]
+  },
+  "personal": {
+   "company_id": "b880cb3d-4dd5-47ea-acaa-a9a3e44761c9",
+   "agent_id": "3225ae4d-46b3-4ecb-81c8-b6d2bbb39136",
+   "agent_status": "paused",
+   "issue_id": "9ccfc3e3-4cb5-4d47-a5de-8130068a512f",
+   "issue_create": 201,
+   "connection_id": "1a786a57-a90c-4158-8222-854290b4965c",
+   "connect_keys": [
+    "actions",
+    "application",
+    "catalog",
+    "connection",
+    "connectionId",
+    "suggestedDefaults"
+   ],
+   "catalog": {
+    "brain_whoami": {
+     "id": "6fd932b6-15d5-4ad3-99ca-b586294318cf",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_list": {
+     "id": "83a5a792-9845-44b4-b189-bed9a9553dea",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_search": {
+     "id": "11c57390-5d96-4536-becf-f234c511a25e",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_get": {
+     "id": "b4b6d137-3990-48c5-9e9b-d822aa5ba05e",
+     "risk": "read",
+     "status": "active",
+     "readOnly": true
+    },
+    "brain_write": {
+     "id": "bef25654-1828-46bb-92d5-84c900b4ed39",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    },
+    "publish_briefing": {
+     "id": "9f9bb3af-12e7-452a-8c6f-3da0b9528c0f",
+     "risk": "write",
+     "status": "active",
+     "readOnly": false
+    }
+   },
+   "finished": true,
+   "finish_keys": [
+    "connection",
+    "policies",
+    "profile",
+    "profileBindings",
+    "profileEntries"
+   ],
+   "allowed_tools": [
+    "brain_get",
+    "brain_list",
+    "brain_search",
+    "brain_whoami",
+    "brain_write",
+    "publish_briefing"
+   ]
+  }
+ },
+ "paperclip_health": {
+  "status": "ok",
+  "version": "2026.1023.0",
+  "serverVersion": "2026.1023.0",
+  "commit": "1b4c803816e82b0265c8422e1a804327a7ed8c54",
+  "deploymentMode": "local_trusted",
+  "deploymentExposure": "private",
+  "localAiLoginSupported": true,
+  "authReady": true,
+  "bootstrapStatus": "ready",
+  "bootstrapInviteActive": false,
+  "features": {
+   "companyDeletionEnabled": true
+  },
+  "serverInfo": {
+   "processStartedAt": "2026-11-16T03:29:28.624Z",
+   "git": {
+    "available": true,
+    "fullSha": "1b4c803816e82b0265c8422e1a804327a7ed8c54",
+    "shortSha": "1b4c803",
+    "branchName": null,
+    "subject": "Source build",
+    "committedAt": null,
+    "localChanges": {
+     "available": false,
+     "unavailableReason": "git_status_unavailable"
+    }
+   }
+  },
+  "startupRecovery": {
+   "phase": "ready",
+   "updatedAt": "2026-11-16T03:29:32.122Z"
+  },
+  "nativeRecovery": {},
+  "databaseBackup": {
+   "enabled": true,
+   "status": "warning",
+   "backupDir": "/home/pclip/data/instances/default/data/backups",
+   "maxAgeHours": 26,
+   "latestBackup": null,
+   "lastFailure": null,
+   "warnings": [
+    {
+     "code": "database_backup_missing",
+     "message": "No .sql.gz database backups found in /home/pclip/data/instances/default/data/backups."
+    }
+   ]
+  },
+  "warnings": [
+   {
+    "code": "database_backup_missing",
+    "message": "No .sql.gz database backups found in /home/pclip/data/instances/default/data/backups."
+   }
+  ]
+ }
+}

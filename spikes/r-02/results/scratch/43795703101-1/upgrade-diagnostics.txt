@@ -1,0 +1,3 @@
+umask of the Paperclip user: 0002
+find: Failed to change directory: /home/runner/work/Spike-test/Spike-test/src: Permission denied
+find: Failed to restore initial working directory: /home/runner/work/Spike-test/Spike-test/src: Permission denied

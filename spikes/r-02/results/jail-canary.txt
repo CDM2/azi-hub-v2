@@ -1,0 +1,24 @@
+# Jail canary, run 2026-11-16T02:29Z inside the running jail session (Postgres and the service are up).
+# Every probe must print 'held'.
+whoami: spike uid=2000 cwd=/
+env names: BRAIN_ADMIN_TOKEN BRAIN_APP_DSN BRAIN_URL HOME LANG PATH PGHOST PGPORT PWD SHLVL USER _ 
+held  session credential in the environment (GH_TOKEN, GITHUB_*, AWS_*, ANTHROPIC_*, CLAUDE_*, CLOUDSDK_*)
+held  session home has content
+held  read Toveli clone
+held  read azi-hub clone
+held  read azi-hub-v2 clone
+held  read signing key dir
+held  root home has content
+held  host /tmp visible (marker file written outside the jail)
+held  see a root-owned process
+held  reach credential proxy on loopback:35165
+held  reach github.com by address
+held  reach api.anthropic.com by address
+held  resolve a hostname
+held  running as root
+held  write outside jail home (/srv, /etc, /usr/local)
+interfaces in this namespace: lo 
+processes visible: 13
+exit code: 0
+
+# Control, outside the jail: session home entries: 6; credential proxy on loopback: unreachable; session credential names present: 96

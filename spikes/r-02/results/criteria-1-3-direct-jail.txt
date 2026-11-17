@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+Ran 35 tests in 1.679s
+
+OK
+
+# Where: this session's jail (PostgreSQL 17.11, Node 22), 2026-11-16 UTC. Direct to the permission service, not through Paperclip.
+# 35 tests, including the six that query the database directly as the service's own role. None skipped.
+#
+# Do the tests bite? Two deliberate breaks, each then restored:
+#   mutation 1: brain.can_read() returns true for any bound session  -> FAILED (failures=18)
+#   mutation 2: role brain_app given BYPASSRLS                        -> FAILED (failures=23)
+#   restored                                                          -> OK

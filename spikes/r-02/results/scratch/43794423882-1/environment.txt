@@ -1,0 +1,4 @@
+run: 43794423882-1  commit: bd719c514b9422956b7475835fdc86fed9558387  date: 2026-11-16T02:49:28Z
+runner: Linux 7.0.0-1014-aws x86_64  cpus: 2  mem: 7G
+model key present: yes
+stages exit: 30
