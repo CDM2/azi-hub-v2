@@ -1,0 +1,22 @@
+baseline: ran 35, failed 0
+M01  SURVIVED  ran 35, failed  0  read rule: the line that keeps personal pages from other callers is removed
+M02  SURVIVED  ran 35, failed  0  read rule: a holding organization reads every sub-organization, not only its own children
+M03  killed    ran 35, failed  1  read rule: the briefing switch no longer hides earlier briefings  [first: test_switching_off_hides_earlier_briefings]
+M04  killed    ran 35, failed  1  read rule: in summaries mode the holding organization also reads notes  [first: test_holding_reads_only_summaries]
+M05  killed    ran 35, failed  5  read rule: a sub-organization reads its parent's pages (not only global ones)  [first: test_list_returns_own_and_global_only]
+M06  SURVIVED  ran 35, failed  0  write rule: an agent may add a page of any kind (for example a forged 'briefing' or code page)
+M07  SURVIVED  ran 35, failed  0  write rule: an agent may set a path (and so collide with or imitate codebase pages)
+M08  SURVIVED  ran 35, failed  0  write rule: provenance is no longer forced from the caller's kind
+M09  killed    ran 35, failed  1  constraint removed: any organization may publish a global page  [first: test_a_sub_organization_cannot_publish_a_global_page]
+M10  killed    ran 35, failed  2  constraint removed: health and finance pages may be stored outside personal  [first: test_health_and_finance_pages_only_exist_in_personal]
+M11  SURVIVED  ran 35, failed  0  briefing rule: any organization may publish a briefing (database side)
+M12  SURVIVED  ran 35, failed  0  briefing rule: an agent may insert a briefing that is already marked approved
+M13  SURVIVED  ran 35, failed  0  briefing rule: the briefing switch is not checked when publishing (database side)
+M14  killed    ran 35, failed  1  session: the personal-space switch is not checked when a token is presented  [first: test_personal_token_stops_working]
+M15  killed    ran 35, failed  2  session: a bound session outlives its transaction (current_org ignores the transaction id)  [first: test_session_does_not_outlive_its_transaction]
+M16  SURVIVED  ran 35, failed  0  audit: the append-only triggers are not created
+M17  killed    ran 35, failed  1  privileges: the application role may read the audit log and the token table  [first: test_role_cannot_pick_an_organization_or_switch_off_the_policy]
+M18  SURVIVED  ran 35, failed  0  privileges: the application role may update and delete pages (with a permissive policy for its own organization)
+M19  killed    ran 35, failed  1  read rule: the personal space reads only global pages and its own (it no longer reads its organizations)  [first: test_personal_reads_its_organizations]
+restored: ran 35, failed 0
+mutants: 19; killed 9; survived 10: M01, M02, M06, M07, M08, M11, M12, M13, M16, M18

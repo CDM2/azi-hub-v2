@@ -1,0 +1,69 @@
+# REV-01: fix-sketch-read-rule.sql loaded after the unmodified schema.sql. The service is unmodified. 2026-11-17T13:30:54Z, PostgreSQL 16.15
+
+## the 35 existing tests
+Ran 35 tests in 2.055s
+
+OK
+
+## the review's attack tests: the two that the sketch is about, then the totals
+    RV-05 scale: toveli brain_list 3.8 ms before, 4.4 ms after 1,500 pages were added to the sibling
+    RV-06 timing: forbidden 2682 us, missing 2313 us, difference 368 us (95% interval 255 to 443)
+Ran 24 tests in 5.655s
+FAILED (failures=14)
+
+## the second-person tests
+Ran 13 tests in 0.339s
+FAILED (failures=8)
+
+## scale (compare results/scale.txt)
+pages added to the sibling | toveli brain_list ms (its own count) | toveli brain_search ms | toveli brain_get own path ms | holding brain_list ms (count)
+                         0 |        3.4 (4) |        3.6 |      2.3 |        3.3 (9)
+                       250 |        3.3 (4) |        3.3 |      1.9 |        3.3 (259)
+                      1000 |        3.4 (4) |        3.5 |      1.9 |        4.0 (1009)
+                      5000 |        5.9 (4) |        7.5 |      2.8 |       11.1 (5009)
+                     10000 |        8.4 (4) |        7.9 |      2.4 |       12.3 (10009)
+
+## timing (compare results/timing.txt)
+caller: the toveli agent, tool brain_get, 1000 interleaved samples each; every answer is the same text, {"error":"not_found"}
+  id, sibling's page (exists, forbidden)     median    2359 us   quartiles    2180 to    2707
+  id, random (missing)                       median    2001 us   quartiles    1845 to    2315
+  path, sibling's path (exists, forbidden)   median    2394 us   quartiles    2198 to    2754
+  path, missing, same length                 median    2032 us   quartiles    1867 to    2348
+  difference of medians, id: 359 us (95% interval 319 to 397)
+  difference of medians, path: 362 us (95% interval 321 to 399)
+  a guess from  1 sample(s) of each path names the existing one correctly 77% of the time
+  a guess from  5 sample(s) of each path names the existing one correctly 91% of the time
+  a guess from 15 sample(s) of each path names the existing one correctly 98% of the time
+
+## where the remaining time goes: the same lookup by id inside a bound session, a forbidden row and then a missing row (explain analyze)
+Index Scan using pages_pkey on pages (actual time=0.668..0.669 rows=0 loops=1)
+  Rows Removed by Filter: 1
+  InitPlan 1 (returns $0)
+    ->  Result (never executed)
+  InitPlan 2 (returns $1)
+    ->  Result (actual time=0.154..0.154 rows=1 loops=1)
+  InitPlan 3 (returns $2)
+    ->  Result (never executed)
+  InitPlan 4 (returns $3)
+    ->  Result (actual time=0.231..0.232 rows=1 loops=1)
+  InitPlan 5 (returns $4)
+    ->  Result (actual time=0.269..0.269 rows=1 loops=1)
+  InitPlan 6 (returns $5)
+    ->  Result (never executed)
+Execution Time: 0.699 ms
+--
+Index Scan using pages_pkey on pages (actual time=0.005..0.006 rows=0 loops=1)
+  InitPlan 1 (returns $0)
+    ->  Result (never executed)
+  InitPlan 2 (returns $1)
+    ->  Result (never executed)
+  InitPlan 3 (returns $2)
+    ->  Result (never executed)
+  InitPlan 4 (returns $3)
+    ->  Result (never executed)
+  InitPlan 5 (returns $4)
+    ->  Result (never executed)
+  InitPlan 6 (returns $5)
+    ->  Result (never executed)
+Execution Time: 0.033 ms
+--

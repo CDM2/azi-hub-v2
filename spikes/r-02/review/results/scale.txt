@@ -1,0 +1,6 @@
+pages added to the sibling | toveli brain_list ms (its own count) | toveli brain_search ms | toveli brain_get own path ms | holding brain_list ms (count)
+                         0 |        4.9 (4) |        4.8 |      2.0 |        5.2 (9)
+                       250 |       76.6 (4) |       77.9 |      2.4 |       90.7 (259)
+                      1000 |      321.6 (4) |      312.5 |      2.2 |      397.0 (1009)
+                      5000 |     1418.4 (4) |     1477.3 |      3.0 |     1709.6 (5009)
+                     10000 |     2853.2 (4) |     3048.4 |      2.1 |     3280.9 (10009)
