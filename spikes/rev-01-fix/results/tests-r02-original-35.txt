@@ -1,0 +1,46 @@
+test_bound_session_sees_only_its_organization (test_criteria_1_3.Criterion1DatabaseItself.test_bound_session_sees_only_its_organization)
+CHANGED in the fix pass. Was: direct selects on brain.pages under a bound session. The same two questions are now put to ... ok
+test_no_session_means_no_rows (test_criteria_1_3.Criterion1DatabaseItself.test_no_session_means_no_rows)
+CHANGED in the fix pass. Was: `select count(*) from brain.pages` returns 0 rows. The role now has no access to any ... ok
+test_role_cannot_pick_an_organization_or_switch_off_the_policy (test_criteria_1_3.Criterion1DatabaseItself.test_role_cannot_pick_an_organization_or_switch_off_the_policy)
+CHANGED in the fix pass: the 14 original attempts are kept as they were and 22 are added. The assertions are the same. ... ok
+test_role_cannot_write_into_another_organization (test_criteria_1_3.Criterion1DatabaseItself.test_role_cannot_write_into_another_organization) ... ok
+test_session_does_not_outlive_its_transaction (test_criteria_1_3.Criterion1DatabaseItself.test_session_does_not_outlive_its_transaction)
+CHANGED in the fix pass. Was: after commit, `select count(*) from brain.pages` returns 0. Now: after commit the functions refuse. ... ok
+test_table_forces_row_security_and_role_is_plain (test_criteria_1_3.Criterion1DatabaseItself.test_table_forces_row_security_and_role_is_plain)
+CHANGED in the fix pass: one assertion added at the end. The two original assertions are kept. ... ok
+test_a_sub_organization_cannot_publish_a_global_page (test_criteria_1_3.Criterion1SubOrganization.test_a_sub_organization_cannot_publish_a_global_page) ... ok
+test_get_by_id_does_not_reveal_a_sibling_page (test_criteria_1_3.Criterion1SubOrganization.test_get_by_id_does_not_reveal_a_sibling_page) ... ok
+test_hostile_input_does_not_leak (test_criteria_1_3.Criterion1SubOrganization.test_hostile_input_does_not_leak) ... ok
+test_list_returns_own_and_global_only (test_criteria_1_3.Criterion1SubOrganization.test_list_returns_own_and_global_only) ... ok
+test_missing_or_wrong_token_gets_nothing (test_criteria_1_3.Criterion1SubOrganization.test_missing_or_wrong_token_gets_nothing) ... ok
+test_naming_another_organization_in_the_arguments_changes_nothing (test_criteria_1_3.Criterion1SubOrganization.test_naming_another_organization_in_the_arguments_changes_nothing) ... ok
+test_provenance_is_set_by_the_service (test_criteria_1_3.Criterion1SubOrganization.test_provenance_is_set_by_the_service) ... ok
+test_search_for_sibling_text_finds_nothing (test_criteria_1_3.Criterion1SubOrganization.test_search_for_sibling_text_finds_nothing) ... ok
+test_sibling_cannot_read_a_codebase_page (test_criteria_1_3.Criterion1SubOrganization.test_sibling_cannot_read_a_codebase_page) ... ok
+test_token_decides_the_organization (test_criteria_1_3.Criterion1SubOrganization.test_token_decides_the_organization) ... ok
+test_writes_stay_in_the_callers_organization (test_criteria_1_3.Criterion1SubOrganization.test_writes_stay_in_the_callers_organization) ... ok
+test_holding_cannot_write_into_a_sub_organization (test_criteria_1_3.Criterion2Holding.test_holding_cannot_write_into_a_sub_organization) ... ok
+test_holding_global_page_reaches_the_sub_organizations_only_after_a_person_approves (test_criteria_1_3.Criterion2Holding.test_holding_global_page_reaches_the_sub_organizations_only_after_a_person_approves)
+CHANGED in the fix pass (REV-01 finding RV-02). Was test_holding_can_publish_a_global_page: the holding AGENT wrote a global ... ok
+test_holding_reads_all_pages_of_its_sub_organizations (test_criteria_1_3.Criterion2Holding.test_holding_reads_all_pages_of_its_sub_organizations) ... ok
+test_holding_reads_only_summaries (test_criteria_1_3.Criterion2HoldingSummariesOnly.test_holding_reads_only_summaries) ... ok
+test_nothing_goes_from_personal_to_any_organization (test_criteria_1_3.Criterion3BriefingSwitchedOff.test_nothing_goes_from_personal_to_any_organization) ... ok
+test_switching_off_hides_earlier_briefings (test_criteria_1_3.Criterion3BriefingSwitchedOff.test_switching_off_hides_earlier_briefings) ... ok
+test_an_agent_cannot_approve_its_own_briefing (test_criteria_1_3.Criterion3Personal.test_an_agent_cannot_approve_its_own_briefing) ... ok
+test_briefing_is_short_and_curated (test_criteria_1_3.Criterion3Personal.test_briefing_is_short_and_curated) ... ok
+test_briefing_reaches_the_holding_organization_only_after_approval (test_criteria_1_3.Criterion3Personal.test_briefing_reaches_the_holding_organization_only_after_approval) ... ok
+test_health_and_finance_pages_only_exist_in_personal (test_criteria_1_3.Criterion3Personal.test_health_and_finance_pages_only_exist_in_personal) ... ok
+test_no_organization_reads_a_personal_page (test_criteria_1_3.Criterion3Personal.test_no_organization_reads_a_personal_page) ... ok
+test_only_personal_can_publish_a_briefing (test_criteria_1_3.Criterion3Personal.test_only_personal_can_publish_a_briefing) ... ok
+test_personal_cannot_write_into_an_organization (test_criteria_1_3.Criterion3Personal.test_personal_cannot_write_into_an_organization) ... ok
+test_personal_reads_its_organizations (test_criteria_1_3.Criterion3Personal.test_personal_reads_its_organizations) ... ok
+test_every_call_is_logged_with_its_decision (test_criteria_1_3.Criterion4OwnAuditLog.test_every_call_is_logged_with_its_decision) ... ok
+test_organizations_work_as_before (test_criteria_1_3.PersonalSpaceSwitchedOff.test_organizations_work_as_before) ... ok
+test_personal_token_stops_working (test_criteria_1_3.PersonalSpaceSwitchedOff.test_personal_token_stops_working) ... ok
+test_one_organization_alone (test_criteria_1_3.SingleCompany.test_one_organization_alone) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 3.779s
+
+OK

@@ -12,6 +12,7 @@ Start here:
 6. `docs/research/R-02_RUNTIME_AND_HARNESS.md` — runtime, durable execution, sandboxing, model choice and budget; the spike of R-01 option D with a pass, fail or not run table; and the Gate G1a memo (v1.0, proposed). Spike code and raw results are in `spikes/r-02/`.
 7. `docs/reviews/REV-01_BRIEF.md` — the brief for a separate session that attacks R-01 and R-02.
 8. `docs/reviews/REV-01_R-01_AND_R-02.md` — that review: a verdict on option D and on each spike criterion, 21 findings with reproductions, and what a second person would be able to read (v1.0, proposed). Its tests are in `spikes/r-02/review/`.
+9. `docs/reviews/REV-01_FIX_PASS.md` — what was done about the review's findings in the permission service: a fixed copy of the service in `spikes/rev-01-fix/`, the tests run against it, every assertion that changed, and what is still open (v1.0, proposed).
 
 Status, 2026-11-15: Phase 1a, the route check.
 
@@ -22,5 +23,6 @@ Status, 2026-11-15: Phase 1a, the route check.
 - Update, 2026-11-16: R-02 v1.0 is proposed in its pull request, stacked on the one that carries V-000 v0.3. Neither R-01 nor R-02 has been attacked in a separate review session. Gate G1a is open.
 - Update, 2026-11-17: V-000 v0.3 was accepted when pull request #3 was merged at 4a31bf2. Gate G1a is decided: Route B, with three rules that keep Route A open (V-000 F-29 and F-30, proposed as v0.4 in a pull request stacked on the one that carries R-02). Next: the review in `docs/reviews/REV-01_BRIEF.md`, then Phase 1b.
 - Update, 2026-11-17, later: the review of R-01 and R-02 is proposed in a pull request stacked on the one that records Gate G1a. Option D is not yet confirmed; the review gives two conditions for confirming it. Nothing in the review changes the Route B decision. Cole rules on its findings.
+- Update, 2026-11-18: Cole confirmed option D on the review's two conditions and gave nine more decisions (V-000 F-32 to F-40, proposed as v0.5). The fix pass on the permission service is proposed in a pull request stacked on the review's; it addresses the second condition. The first condition, an isolation test with one Paperclip per organization, is open and needs Paperclip on a scratch machine.
 
 Earlier status line, kept for the record: "Phase 0. Nothing here is accepted until the founder accepts V-000 (Gate G0)."

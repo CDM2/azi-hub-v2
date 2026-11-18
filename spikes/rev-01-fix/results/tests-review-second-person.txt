@@ -1,0 +1,31 @@
+test_a_holding_agent_cannot_hand_the_friend_another_ventures_page (test_rev01_second_person.StepA_FriendHoldsOneHumanToken.test_a_holding_agent_cannot_hand_the_friend_another_ventures_page)
+RV-02. F-31: the friend must never reach Cole's other sub-organizations or the holding organization's pages. ... ok
+test_the_friend_cannot_fetch_any_other_page_by_id_path_or_words (test_rev01_second_person.StepA_FriendHoldsOneHumanToken.test_the_friend_cannot_fetch_any_other_page_by_id_path_or_words)
+P-000 shared-venture criterion 2, by every read tool. Holds. ... ok
+test_the_friend_cannot_use_the_admin_routes_publish_a_briefing_or_write_a_global_page (test_rev01_second_person.StepA_FriendHoldsOneHumanToken.test_the_friend_cannot_use_the_admin_routes_publish_a_briefing_or_write_a_global_page)
+Holds. ... ok
+test_the_friend_reads_the_shared_venture_and_global_pages_only (test_rev01_second_person.StepA_FriendHoldsOneHumanToken.test_the_friend_reads_the_shared_venture_and_global_pages_only)
+P-000 shared-venture criterion 2. Holds. ... ok
+test_the_holding_organizations_standing_read_can_be_switched_off_for_the_shared_venture_alone (test_rev01_second_person.StepA_FriendHoldsOneHumanToken.test_the_holding_organizations_standing_read_can_be_switched_off_for_the_shared_venture_alone)
+RV-03. P-000 shared-venture criterion 6, and V-000 section 6 ("nothing from a venture shared with a second person except by an approved push"). ... ok
+test_what_the_friend_writes_does_not_reach_coles_agents_without_a_decision (test_rev01_second_person.StepA_FriendHoldsOneHumanToken.test_what_the_friend_writes_does_not_reach_coles_agents_without_a_decision)
+RV-03. The other direction of the same rule: text the friend writes is read by the holding agent and by Cole's personal agent at once. ... ok
+test_neither_personal_space_reads_the_other (test_rev01_second_person.StepB_TwoPersonalSpaces.test_neither_personal_space_reads_the_other)
+P-000 shared-venture criterion 3, first half. Holds. ... ok
+test_switching_one_personal_space_off_leaves_the_other_working (test_rev01_second_person.StepB_TwoPersonalSpaces.test_switching_one_personal_space_off_leaves_the_other_working)
+RV-03. F-26 makes the personal space optional per deployment; with two people it has to be per person. ... ok
+test_the_friends_personal_space_reads_only_the_organizations_the_friend_belongs_to (test_rev01_second_person.StepB_TwoPersonalSpaces.test_the_friends_personal_space_reads_only_the_organizations_the_friend_belongs_to)
+RV-03. P-000 shared-venture criterion 3, second half. schema.sql line 154: any personal-kind organization reads every organization. ... ok
+test_a_briefing_goes_to_its_own_persons_holding_organization (test_rev01_second_person.StepC_FriendAlsoRunsACompany.test_a_briefing_goes_to_its_own_persons_holding_organization)
+RV-03. schema.sql brain.holding_org(): "order by id limit 1". With two holding organizations, every briefing goes to the first by name. ... ok
+test_a_global_page_stays_inside_its_own_holding_organization (test_rev01_second_person.StepC_FriendAlsoRunsACompany.test_a_global_page_stays_inside_its_own_holding_organization)
+RV-03. Global means "every organization under this holding organization", not every organization in the service. ... ok
+test_a_holding_organization_reads_only_its_own_sub_organizations (test_rev01_second_person.StepC_FriendAlsoRunsACompany.test_a_holding_organization_reads_only_its_own_sub_organizations)
+Holds: the parent check in the read rule is by parent_id. ... ok
+test_coles_personal_space_does_not_read_the_friends_company (test_rev01_second_person.StepC_FriendAlsoRunsACompany.test_coles_personal_space_does_not_read_the_friends_company)
+RV-03, the same rule from the other side. ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.546s
+
+OK

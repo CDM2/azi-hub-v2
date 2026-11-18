@@ -1,0 +1,9 @@
+{
+  "name": "azi-permission-service-rev01-fix",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "REV-01 fix pass: the R-02 permission service with the review's findings fixed. Not production code.",
+  "scripts": { "start": "node server.mjs" },
+  "dependencies": { "pg": "8.23.1" }
+}

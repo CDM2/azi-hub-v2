@@ -1,6 +1,8 @@
 # V-000 — Vision baseline and drift audit
 
-Status: v0.4, proposed, 2026-11-17. v0.3 was accepted when the founder merged pull request #3 (commit 4a31bf2, 2026-11-17 04:59 UTC). v0.4 records Gate G1a (Route B) and two decisions made around it, in section 2a, with new open items and acceptance rows. Every addition carries its date. No accepted text is rewritten or removed. Acceptance of v0.4 is the founder's merge of the pull request that carries it.
+Status: v0.5, proposed, 2026-11-18. v0.3 was accepted when the founder merged pull request #3 (commit 4a31bf2, 2026-11-17 04:59 UTC). v0.4 is proposed in pull request #5, which was open when this was written. v0.5 records the decisions Cole gave on 2026-11-17 after reading the review REV-01, in section 2a (F-32 to F-40), with new open items and acceptance rows. Every addition carries its date. No accepted text is rewritten or removed. Acceptance of v0.5 is the founder's merge of the pull request that carries it.
+
+Status line as written for v0.4, kept for the record: "v0.4, proposed, 2026-11-17. v0.3 was accepted when the founder merged pull request #3 (commit 4a31bf2, 2026-11-17 04:59 UTC). v0.4 records Gate G1a (Route B) and two decisions made around it, in section 2a, with new open items and acceptance rows. Every addition carries its date. No accepted text is rewritten or removed. Acceptance of v0.4 is the founder's merge of the pull request that carries it."
 
 Status line as written for v0.3, kept for the record: "v0.3, proposed, 2026-11-15. v0.2 was accepted at Gate G0 when the founder merged pull request #1 on 2026-11-15 (commit 2baba1b). v0.3 appends the changes R-01 section 10 proposed and the founder's inputs of 2026-11-15. Every addition carries its date. No v0.2 text is rewritten or removed; where a v0.2 statement is amended, the amendment sits beside it and governs. Acceptance of v0.3 is the founder's merge of the pull request that carries it."
 
@@ -80,6 +82,24 @@ R-02 tests F-25 to F-27 in its spike (criteria 1 to 3) with the briefing switch 
 | F-31 | A second person. Cole may run a sub-organization with another person. That person may reach that sub-organization's code and agents. They must never reach his personal space, his other sub-organizations or the holding organization's pages. On 2026-11-17 Cole agreed to the shared-venture spike that tests this (P-000, note of 2026-11-17 on R-03). The session recommends that no second person is added to any organization before it passes. | New. Extends N-02 from organizations to people. R-02 was built and tested for one person (ledger E-100, E-111). |
 
 Where option D stands after R-02. The spike supports F-20: criteria 1 to 4 and 6 passed on an unmodified Paperclip (R-02 section 7). On 2026-11-16 Cole said he thinks he agrees with option D and raised the second-person question. He has not confirmed option D. The session recommends confirming it after the separate review of R-01 and R-02. For a second person, option D is unproven (F-31).
+
+**Added 2026-11-18, v0.5: Cole's decisions after the review REV-01** (manifest S-023). Cole gave these in chat in two messages on the evening of 2026-11-17, after reading the review's summary. They change no accepted row. F-34 amends F-25 in one respect and says so.
+
+| ID | Decision | Relation to earlier decisions |
+| --- | --- | --- |
+| F-32 | Option D is confirmed, on two conditions. Both must be met before real data goes in. One: an isolation test passes with one Paperclip per organization, the personal space included, in Paperclip's authenticated mode (REV-01 RV-01). Two: the permission service is fixed for REV-01 RV-02, RV-05, RV-06 and RV-07. One Paperclip per organization is the layout. Cole left that to the session ("If you think it makes the most sense to do one paperclip per organization let's do it"); the session does, because in Paperclip's local trusted mode every request is the board and all agents of one install run as one operating-system user (ledger E-114, E-111). | Confirms F-20 with conditions. Settles the v0.4 open item about a separate Paperclip for a shared venture: every organization gets its own. Condition two is reported in `docs/reviews/REV-01_FIX_PASS.md`. Condition one is open. |
+| F-33 | First slice: the personal space, the holding organization and one venture, built together, so that the way the tiers work with each other is right from the start. Not a venture on its own with no layer above it. | Refines F-15a, which listed them in sequence. Replaces the review's suggestion of ventures first (REV-01 section 9). |
+| F-34 | The personal rule, restated. Nothing reads a personal page unless Cole directly supplies the information. His example: "chief of staff, share my calendar for today with venture y so they can book a meeting". In his words, "the personal page should have access to everything". The chief of staff in the personal space is to know what is going on everywhere and, once the system is proven, relay to the holding organization and to the ventures what he needs done. | Amends F-25 in one respect: an approved push from the personal space may go to any organization its person belongs to, not to the holding organization only. This is the session's reading of his example; Cole to correct it if wrong. The rest of F-25 stands: the person approves before anything leaves, the off switch, health and finance pages only in the personal space. With a second person in the system, "everything" is everything he belongs to (F-31). |
+| F-35 | A fourth rule for Route B: people and memberships are data from the first ticket, and a test with two people and two holding organizations runs on every change. | Adds to the three rules of F-29. Proposed by REV-01 (RV-03, RV-14). Makes F-31 testable. |
+| F-36 | R-05 goes back on Route B's list. | Reverses its omission from the Gate G1a memo (REV-01 RV-14). |
+| F-37 | Route A stays an eventual venture. Cole adds that it is also the way off Paperclip onto an orchestrator of this project's own, and that he already senses Paperclip's agent graph and harness are not great. | F-30 stands. This is not a decision to leave Paperclip; option E stays open as in F-20. |
+| F-38 | Every action by an agent or by a person goes into one append-only log, so that what happened can be understood and steps can be rolled back. On R-02 criterion 4 Cole questioned keeping logs in two places and left the choice to the session. The session's choice: the permission service's log is the record. Paperclip keeps its own log whether or not this project wants it, and that log is used only as a cross-check. | New. Makes the audit part of C-07 a requirement on people's actions as well as agents'. Rollback is a requirement on record; it is not designed or built (section 6). |
+| F-39 | The order of customer groups for going to market stays as R-01 has it: small-business owners and individuals starting a business first, then well-capitalized startups, then larger existing businesses. | Keeps R-01 section 8. REV-01 RV-13 argued that the first group gains least from tiers; Cole read that and kept the order. |
+| F-40 | F-29 rule three stays as written. The review's proposal to sharpen "wants a pilot" to "pays for a pilot" is put off until there is something to pilot. Cole expects to bear the early costs himself to win first customers and a proof of concept. | REV-01 section 9, item 6: deferred, not rejected. |
+
+Cole also said the failing tests of the review must be resolved, and on reading the notes of an outside conversation told the session to start the fix pass. That is an instruction, not a vision decision; it is in the acceptance record below.
+
+Where option D stands after the review and the fix pass (2026-11-18). Confirmed on two conditions (F-32). Condition two: `docs/reviews/REV-01_FIX_PASS.md` reports that the 23 review tests that failed against the R-02 service are resolved in a fixed copy of the service under `spikes/rev-01-fix/`, and says exactly which assertions changed. Condition one is open: it needs Paperclip installed on a scratch machine, which the session's sandbox does not allow. For a second person, the permission service now passes the review's second-person tests; nothing about a second person has been tested with Paperclip running.
 
 ### 2b. Capability added after R-01 (2026-11-15)
 
@@ -178,6 +198,17 @@ Added 2026-11-17 (v0.4):
 - What the holding organization reads of a venture's code map. Cole left this to the session to investigate and decide. The session's proposed default: structure pages only (the overview and the package pages), file pages opt-in for each venture, and nothing from a venture shared with a second person except by an approved push. R-04 confirms or changes it.
 - R-02 criterion 5 has not run on a real Toveli task. It stays open until Toveli may be touched by this project.
 
+Added 2026-11-18 (v0.5):
+
+- Option D is confirmed on two conditions (F-32), which closes the v0.4 item on confirmation. A separate Paperclip for a shared venture is settled too: every organization gets its own.
+- Condition one of F-32, the isolation test, is open. It needs Paperclip on a scratch machine.
+- Health and finance pages stay out of the system until condition one passes and REV-01 RV-04 (Paperclip keeps the arguments of every call as text) is answered for the personal install.
+- Whether one owner's approval is enough for a report that leaves a venture two people own, or both must approve: Cole. The fix pass built "one owner".
+- The operator's approval routes in the permission service: keep as an override, restrict, or remove. Cole. The fix pass kept them, logs them, and makes them name a person who has the authority.
+- Rollback (F-38). The fix pass built the append-only log and nothing that blocks rollback. It built no rollback, and the code mapper still updates pages in place. The design belongs in a later report.
+- Who the five conversations of F-29 rule three are with. The outside conversation of 2026-11-17 (ledger E-128) was with a builder, not a buyer; the session does not count it unless Cole says so.
+- REV-01 findings that the fix pass did not touch because they are about Paperclip or about the reports: RV-01, RV-04, RV-08 (the cross-check half), RV-09 to RV-14, RV-20, RV-21. Each still waits for Cole's ruling.
+
 ## 7. Acceptance record
 
 | Record | Person | Date | Scope |
@@ -193,3 +224,7 @@ Added 2026-11-17 (v0.4):
 | Gate G1a and the decisions around it | Cole | 2026-11-16 and 2026-11-17 (chat) | Route B with three rules, Route A later, the second-person rule. Authorizes v0.4 (F-29 to F-31); not acceptance |
 | Draft v0.4 prepared | Claude session | 2026-11-17 | Not accepted |
 | Founder acceptance of v0.4 (Gate G1a on record) | pending | | Merge of the pull request carrying v0.4 |
+| Review REV-01 v1.0 prepared | Claude session | 2026-11-17 | Pull request #6. Not accepted |
+| Decisions after the review, and the instruction to run the fix pass | Cole | 2026-11-17 (chat, two messages) | Option D confirmed on two conditions; one Paperclip per organization; the first slice; the personal rule; the fourth rule; R-05; Route A; one append-only log; the customer order; rule three unchanged. Authorizes v0.5 (F-32 to F-40) and the fix pass; not acceptance |
+| Draft v0.5 prepared | Claude session | 2026-11-18 | Not accepted |
+| Founder acceptance of v0.5 | pending | | Merge of the pull request carrying v0.5 |
