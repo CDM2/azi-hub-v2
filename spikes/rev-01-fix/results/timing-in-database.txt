@@ -1,0 +1,19 @@
+R-02's schema (spikes/r-02/service/schema.sql), 12 made-up pages, same harness; 4,000 lookups of each kind in 40 batches
+lookup | forbidden us | missing us | median batch difference us
+select by path | 262.73 | 3.67 | 241.970
+select by id | 264.51 | 3.77 | 238.440
+
+inside one database session as the service's own login, bound to the toveli agent's token; 20,000 lookups of each kind, interleaved, in 200 batches
+lookup | forbidden us | missing us | median batch difference us
+brain.t_get by path | 35.81 | 36.14 | 0.125
+brain.t_get by path | 37.04 | 37.07 | 0.020
+brain.t_get by path | 38.38 | 38.33 | 0.110
+brain.t_get by id | 38.45 | 38.68 | 0.225
+brain.t_get by id | 35.47 | 35.27 | 0.030
+brain.t_get by id | 36.64 | 36.90 | -0.050
+holding organization in summaries mode, a note of its own venture, by id | 47.96 | 46.40 | 1.625
+holding organization in summaries mode, a note of its own venture, by id | 45.35 | 43.40 | 1.505
+holding organization in summaries mode, a note of its own venture, by id | 62.68 | 61.91 | 0.830
+
+The last three rows are a known difference, not a fixed one: the venture is one the caller reads, the row is fetched, and its kind then rules it out.
+It tells the layer above that some page of its own venture has that id. It tells nobody anything about an organization they do not read.

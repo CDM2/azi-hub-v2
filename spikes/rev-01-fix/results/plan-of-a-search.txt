@@ -1,0 +1,13 @@
+Aggregate
+  ->  Subquery Scan on p
+        Filter: ((p.title ~~* '%x%'::text) OR (p.body ~~* '%x%'::text) OR (p.path ~~* '%x%'::text))
+        ->  Bitmap Heap Scan on pages p_1
+              Recheck Cond: ((org_id = ANY ('{toveli}'::text[])) OR (org_id = ANY ('{}'::text[])) OR (org_id = ANY ('{mgmt}'::text[])))
+              Filter: (((org_kind <> 'personal'::text) OR (org_id = 'toveli'::text)) AND ((org_id = ANY ('{toveli}'::text[])) OR ((org_id = ANY ('{}'::text[])) AND (kind = 'summary'::text)) OR ((org_id = ANY ('{mgmt}'::text[])) AND (visibility = 'global'::text) AND (global_approved_at IS NOT NULL))))
+              ->  BitmapOr
+                    ->  Bitmap Index Scan on pages_pkey
+                          Index Cond: (org_id = ANY ('{toveli}'::text[]))
+                    ->  Bitmap Index Scan on pages_pending_global
+                          Index Cond: (org_id = ANY ('{}'::text[]))
+                    ->  Bitmap Index Scan on pages_pkey
+                          Index Cond: (org_id = ANY ('{mgmt}'::text[]))

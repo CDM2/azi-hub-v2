@@ -1,0 +1,50 @@
+test_a_rejected_global_page_stays_an_ordinary_page_of_its_organization (test_fix_new_rules.GlobalPagesNeedAPerson.test_a_rejected_global_page_stays_an_ordinary_page_of_its_organization) ... ok
+test_an_agents_global_page_waits_for_a_person_who_controls_the_organization (test_fix_new_rules.GlobalPagesNeedAPerson.test_an_agents_global_page_waits_for_a_person_who_controls_the_organization) ... ok
+test_only_a_person_who_controls_the_organization_publishes_at_once (test_fix_new_rules.GlobalPagesNeedAPerson.test_only_a_person_who_controls_the_organization_publishes_at_once)
+Cole, as a person in the holding organization, publishes directly. An employee who is a member but not an owner does not. ... ok
+test_a_read_that_the_database_login_rolls_back_still_leaves_a_row (test_fix_new_rules.KnownLimits.test_a_read_that_the_database_login_rolls_back_still_leaves_a_row)
+The row for an allowed read is written in the same transaction as the read. The service always commits before it answers, so a ... expected failure
+test_the_database_login_cannot_learn_how_much_the_whole_database_holds (test_fix_new_rules.KnownLimits.test_the_database_login_cannot_learn_how_much_the_whole_database_holds)
+PostgreSQL lets any login ask how large a table is. One database for every organization means the service's own login can ... expected failure
+test_list_and_search_time_do_not_grow_with_other_organizations_pages_even_before_statistics_catch_up (test_fix_new_rules.OtherOrganizationsPagesCostNothing.test_list_and_search_time_do_not_grow_with_other_organizations_pages_even_before_statistics_catch_up)
+REV-01 RV-05, harder than the review's own test: 20,000 pages instead of 1,500, measured at once, before PostgreSQL has had ... 
+    scale: toveli brain_list 3.3 -> 3.4 ms, brain_search 3.8 -> 3.9 ms, after the sibling gained 20,000 pages
+    scale with the unfavourable plan forced: brain_list 3.1 ms, brain_search 3.0 ms
+ok
+test_search_time_does_not_depend_on_what_other_organizations_pages_say (test_fix_new_rules.OtherOrganizationsPagesCostNothing.test_search_time_does_not_depend_on_what_other_organizations_pages_say)
+Measured twice. First as deployed. Then in the conditions under which a missing fence does its damage (needs SUPER_DSN): the ... 
+    content timing: toveli brain_search 4.1 ms before, 3.6 ms after the sibling gained 24 million characters
+    content timing with the fence standing alone: 3.0 ms
+ok
+test_org_narrows_and_never_widens (test_fix_new_rules.PathLookup.test_org_narrows_and_never_widens) ... ok
+test_a_push_can_go_straight_to_one_venture (test_fix_new_rules.Pushes.test_a_push_can_go_straight_to_one_venture)
+Cole, 2026-11-17: "chief of staff, share my calendar for today with venture y so they can book a meeting". ... ok
+test_a_push_cannot_go_where_its_person_does_not_belong (test_fix_new_rules.Pushes.test_a_push_cannot_go_where_its_person_does_not_belong) ... ok
+test_a_push_shows_its_text_to_the_person_who_decides_and_to_nobody_else (test_fix_new_rules.Pushes.test_a_push_shows_its_text_to_the_person_who_decides_and_to_nobody_else) ... ok
+test_a_rejected_push_is_never_delivered (test_fix_new_rules.Pushes.test_a_rejected_push_is_never_delivered) ... ok
+test_each_person_decides_their_own_pushes_and_they_go_to_their_own_company (test_fix_new_rules.Pushes.test_each_person_decides_their_own_pushes_and_they_go_to_their_own_company) ... ok
+test_the_database_login_cannot_decide_a_push_or_a_page_through_any_function (test_fix_new_rules.Pushes.test_the_database_login_cannot_decide_a_push_or_a_page_through_any_function)
+A real pending push and a real pending global page, and every function that could decide them, called as the service's own ... ok
+test_the_text_and_the_route_of_a_push_cannot_be_changed_once_written (test_fix_new_rules.Pushes.test_the_text_and_the_route_of_a_push_cannot_be_changed_once_written)
+Even the role that owns the tables cannot swap the text of a push between the moment a person reads it and the moment they approve. ... ok
+test_with_two_companies_of_their_own_a_person_must_say_where_a_push_goes (test_fix_new_rules.Pushes.test_with_two_companies_of_their_own_a_person_must_say_where_a_push_goes) ... ok
+test_a_shared_venture_reports_upward_only_by_a_push_one_of_its_owners_approves (test_fix_new_rules.ReportsUpward.test_a_shared_venture_reports_upward_only_by_a_push_one_of_its_owners_approves) ... ok
+test_only_a_sub_organization_reports_upward (test_fix_new_rules.ReportsUpward.test_only_a_sub_organization_reports_upward) ... ok
+test_a_personal_space_with_nobody_behind_it_is_refused_when_data_is_loaded (test_fix_new_rules.Switches.test_a_personal_space_with_nobody_behind_it_is_refused_when_data_is_loaded) ... ok
+test_a_setting_the_service_does_not_understand_is_refused_and_changes_nothing (test_fix_new_rules.Switches.test_a_setting_the_service_does_not_understand_is_refused_and_changes_nothing) ... ok
+test_a_token_that_stands_for_a_person_works_only_where_that_person_belongs (test_fix_new_rules.Switches.test_a_token_that_stands_for_a_person_works_only_where_that_person_belongs) ... ok
+test_a_venture_with_its_own_member_list_is_closed_to_the_owner_above_unless_they_are_on_it (test_fix_new_rules.Switches.test_a_venture_with_its_own_member_list_is_closed_to_the_owner_above_unless_they_are_on_it)
+A venture under Cole's holding organization that the friend runs alone. Owning the organization above does not open it. ... ok
+test_each_person_has_their_own_two_switches (test_fix_new_rules.Switches.test_each_person_has_their_own_two_switches) ... ok
+test_what_the_layer_above_reads_is_set_per_venture (test_fix_new_rules.Switches.test_what_the_layer_above_reads_is_set_per_venture) ... ok
+test_an_allowed_read_records_which_pages_it_returned_and_never_their_text (test_fix_new_rules.TheLog.test_an_allowed_read_records_which_pages_it_returned_and_never_their_text) ... ok
+test_every_message_leaves_exactly_one_row (test_fix_new_rules.TheLog.test_every_message_leaves_exactly_one_row) ... ok
+test_the_database_login_cannot_read_without_leaving_a_row (test_fix_new_rules.TheLog.test_the_database_login_cannot_read_without_leaving_a_row)
+The function that returns the pages writes the row, in the same transaction. There is no other way to the pages. ... ok
+test_the_log_refuses_change_and_a_change_forced_past_the_triggers_is_detected (test_fix_new_rules.TheLog.test_the_log_refuses_change_and_a_change_forced_past_the_triggers_is_detected) ... ok
+test_what_the_operator_does_is_in_the_same_log (test_fix_new_rules.TheLog.test_what_the_operator_does_is_in_the_same_log) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 10.503s
+
+OK (expected failures=2)

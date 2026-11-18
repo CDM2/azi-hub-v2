@@ -1,0 +1,38 @@
+{
+  "_note": "Made-up data for the REV-01 fix pass. The R-02 fixture plus the person behind the personal space, what he owns, and a token for him as a person. Tokens are test values for a throwaway database, not secrets.",
+  "settings": {"personal_enabled": true, "briefing_enabled": true, "holding_reads": "all"},
+  "orgs": [
+    {"id": "personal", "kind": "personal", "parent": null},
+    {"id": "mgmt", "kind": "holding", "parent": null},
+    {"id": "toveli", "kind": "sub", "parent": "mgmt"},
+    {"id": "sibling", "kind": "sub", "parent": "mgmt"}
+  ],
+  "people": [
+    {"id": "cole", "personal_org": "personal"}
+  ],
+  "memberships": [
+    {"person": "cole", "org": "mgmt", "role": "owner"}
+  ],
+  "principals": [
+    {"org": "personal", "actor": "agent", "token": "test-token-personal-chief-of-staff"},
+    {"org": "mgmt", "actor": "agent", "token": "test-token-mgmt-agent"},
+    {"org": "toveli", "actor": "agent", "token": "test-token-toveli-agent"},
+    {"org": "toveli", "actor": "human", "token": "test-token-toveli-human"},
+    {"org": "sibling", "actor": "agent", "token": "test-token-sibling-agent"},
+    {"org": "personal", "actor": "human", "token": "test-token-personal-human"}
+  ],
+  "pages": [
+    {"org": "mgmt", "title": "Shared style guide", "body": "CANARY-GLOBAL-1 everyone may read this page.", "kind": "note", "visibility": "global", "source_type": "human"},
+    {"org": "mgmt", "title": "Holding plan", "body": "CANARY-MGMT-1 allocation across ventures.", "kind": "note", "source_type": "human"},
+    {"org": "mgmt", "title": "Holding weekly summary", "body": "CANARY-MGMT-2 weekly roll-up.", "kind": "summary", "source_type": "agent"},
+    {"org": "toveli", "title": "Toveli launch notes", "body": "CANARY-TOVELI-1 launch checklist for the marketplace.", "kind": "note", "source_type": "human"},
+    {"org": "toveli", "title": "Toveli weekly summary", "body": "CANARY-TOVELI-2 summary for the holding organization.", "kind": "summary", "source_type": "agent"},
+    {"org": "toveli", "title": "Code: apps/example/main.ts", "body": "CANARY-TOVELI-3 purpose and imports of a made-up file.", "kind": "code_file", "source_type": "codebase", "path": "apps/example/main.ts"},
+    {"org": "sibling", "title": "Sibling roadmap", "body": "CANARY-SIBLING-1 confidential roadmap of the other venture.", "kind": "note", "source_type": "human"},
+    {"org": "sibling", "title": "Sibling weekly summary", "body": "CANARY-SIBLING-2 summary for the holding organization.", "kind": "summary", "source_type": "agent"},
+    {"org": "sibling", "title": "Code: services/quant/run.py", "body": "CANARY-SIBLING-3 purpose and imports of a made-up file.", "kind": "code_file", "source_type": "codebase", "path": "services/quant/run.py"},
+    {"org": "personal", "title": "Personal goals", "body": "CANARY-PERSONAL-1 goals for the year.", "kind": "note", "source_type": "human"},
+    {"org": "personal", "title": "Made-up health log", "body": "CANARY-PERSONAL-2 made-up health entry.", "kind": "note", "sensitivity": "health", "source_type": "human"},
+    {"org": "personal", "title": "Made-up brokerage note", "body": "CANARY-PERSONAL-3 made-up finance entry.", "kind": "note", "sensitivity": "finance", "source_type": "human"}
+  ]
+}

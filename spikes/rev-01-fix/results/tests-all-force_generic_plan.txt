@@ -1,0 +1,21 @@
+........................................................x
+    RV-05 scale: toveli brain_list 2.7 ms before, 3.1 ms after 1,500 pages were added to the sibling
+.
+    RV-06 timing by id: forbidden 3488 us, missing 3522 us, difference -33 us (95% interval -184 to 99)
+.
+    RV-06 timing: forbidden 3321 us, missing 3322 us, difference -0 us (95% interval -69 to 77)
+.
+    RV-06 in the database, by path: forbidden 35.35 us, missing 35.48 us, median batch difference -0.100 us
+
+    RV-06 in the database, by id: forbidden 34.35 us, missing 34.63 us, median batch difference -0.055 us
+..................xx
+    scale: toveli brain_list 2.8 -> 2.7 ms, brain_search 2.6 -> 2.8 ms, after the sibling gained 20,000 pages
+    scale with the unfavourable plan forced: brain_list 2.5 ms, brain_search 2.4 ms
+.
+    content timing: toveli brain_search 2.9 ms before, 2.8 ms after the sibling gained 24 million characters
+    content timing with the fence standing alone: 3.3 ms
+.......................
+----------------------------------------------------------------------
+Ran 104 tests in 29.661s
+
+OK (expected failures=3)

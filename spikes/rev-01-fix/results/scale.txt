@@ -1,0 +1,9 @@
+pages added to the sibling | toveli brain_list ms (its own count) | toveli brain_search ms | toveli brain_get own path ms | holding brain_list ms (count) | personal brain_search ms (count)
+                         0 |        3.1 (4) |        3.8 |      3.2 |        4.0 (9) |        3.5 (0)
+                       250 |        3.6 (4) |        3.3 |      2.5 |        3.7 (259) |        4.4 (11)
+                      1000 |        3.0 (4) |        3.3 |      2.7 |        5.0 (1009) |        7.7 (111)
+                      5000 |        2.7 (4) |        2.9 |      2.5 |        9.2 (5009) |       20.7 (111)
+                     10000 |        2.9 (4) |        2.8 |      2.5 |       15.2 (10009) |       43.0 (1111)
+
+The toveli columns are the finding: they must not move. The last two columns are callers who are allowed to read the sibling's pages,
+so their time grows with what they are given; they are shown so that the cost of reading 10,000 pages is on the record.
